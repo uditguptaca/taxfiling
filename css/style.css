@@ -2742,45 +2742,49 @@ p {
   bottom: 12%;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   z-index: 10;
+  background-color: #F2C94C;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border: 1.5px solid #E2B93C;
 }
 
 .hero-badge-item {
-  padding: 6px 12px;
-  border-radius: 6px;
-  color: #ffffff;
-  font-size: 0.7rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #ffffff !important;
+  font-size: 0.74rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
   border: 1px solid rgba(255,255,255,0.15);
   white-space: nowrap;
-  width: 240px;
+  width: 250px;
 }
 
 .hero-badge-item i {
-  font-size: 0.8rem;
+  font-size: 0.95rem;
+  width: 18px;
+  text-align: center;
 }
 
 .badge-orange {
-  background-color: var(--color-bookcloth);
+  background-color: #E04F2F !important;
 }
 
 .badge-blue {
-  background-color: var(--color-kraft);
-  color: var(--color-slate-dark) !important;
+  background-color: #1D61D2 !important;
 }
 
 .badge-green {
-  background-color: var(--color-manilla);
-  color: var(--color-slate-dark) !important;
+  background-color: #145B32 !important;
 }
 
 .badge-dark {
-  background-color: var(--color-slate-dark);
+  background-color: #2D3250 !important;
 }
 
 /* Refund Floating Card */
