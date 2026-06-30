@@ -1573,6 +1573,18 @@ const getIndustryServices = (slug, name) => {
           'US & cross-border tax returns',
           'Holding company tax planning'
         ]
+      },
+      {
+        title: 'GST/HST & Sales Tax Compliance',
+        icon: 'fa-receipt',
+        color: 'rgba(34, 197, 94, 0.1)',
+        iconColor: 'rgb(34, 197, 94)',
+        bullets: [
+          'Audit of medical service exemptions',
+          'Input Tax Credit (ITC) optimization',
+          'GST/HST rebate & netfile filing',
+          'Provincial compliance & audits'
+        ]
       }
     ];
   } else if (slug === 'real-estate') {
@@ -1977,26 +1989,29 @@ const getIndustryServices = (slug, name) => {
       gap: 15px;
       padding: 16px 20px;
       border-radius: 12px;
-      background: #FAF8F5;
-      border: 1px solid rgba(0,0,0,0.02);
+      background: #FFFFFF;
+      border: 1px solid var(--border-gray);
       cursor: pointer;
       transition: all 0.3s ease;
       text-align: left;
       font-family: inherit;
     }
     .showcase-tab:hover {
-      background: #F3EFE9;
+      background: #FAFAF7;
       transform: translateX(5px);
     }
     .showcase-tab.active {
-      background: var(--primary);
-      color: var(--white);
-      border-color: var(--primary);
-      box-shadow: 0 8px 16px rgba(251, 119, 13, 0.15);
+      background: #262625 !important;
+      color: var(--white) !important;
+      border-color: #262625 !important;
+      box-shadow: 0 8px 16px rgba(38,38,37,0.15) !important;
+    }
+    .showcase-tab.active .tab-title {
+      color: var(--white) !important;
     }
     .showcase-tab.active .tab-icon {
-      background: rgba(255, 255, 255, 0.2);
-      color: var(--white);
+      background: rgba(255, 255, 255, 0.2) !important;
+      color: var(--white) !important;
     }
     .tab-icon {
       width: 38px;
@@ -2015,13 +2030,14 @@ const getIndustryServices = (slug, name) => {
       font-size: 0.95rem;
       font-weight: 700;
       line-height: 1.3;
+      color: #262625;
     }
     .showcase-content-area {
       position: relative;
-      background: #FAF8F5;
+      background: #FAFAF7;
       border-radius: 16px;
       padding: 30px;
-      border: 1px solid rgba(0,0,0,0.03);
+      border: 1px solid var(--border-gray);
       min-height: 400px;
       display: flex;
       flex-direction: column;
@@ -2079,10 +2095,11 @@ const getIndustryServices = (slug, name) => {
       background: var(--white);
       padding: 12px 16px;
       border-radius: 10px;
-      border: 1px solid rgba(0,0,0,0.04);
+      border: 1px solid var(--border-gray);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.01);
     }
     .panel-bullet-item i {
-      color: var(--teal);
+      color: var(--primary);
       font-size: 1rem;
       flex-shrink: 0;
     }
