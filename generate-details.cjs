@@ -277,27 +277,257 @@ function writePage(filePath, title, description, activePage, content) {
 // REUSABLE SECTIONS (EXACT REPLICAS)
 // ─────────────────────────────────────────────
 
-const getPricingSection = () => `
-  <section class="section section-gray">
+const getPricingSection = () => {
+  return `
+  <section class="section section-gray" id="pricing" style="padding: 80px 0; background-color: var(--color-ivory-med); border-top: 1px solid var(--border-gray); border-bottom: 1px solid var(--border-gray);">
     <div class="container">
-      <div class="section-header">
-        <h2>Canada Tax & Accounting — Fixed Pricing</h2>
-        <p>No hidden fees. Transparent, affordable, and fixed pricing. Pay only after your service is completed.</p>
+      <div class="section-header" style="margin-bottom: 50px;">
+        <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--dark-green);">Canada Tax &amp; Accounting — Fixed Pricing</h2>
+        <p style="font-size: 1.1rem; color: var(--body-text-light); max-width: 700px; margin: 15px auto 0;">Transparent, fixed-fee pricing with zero hidden fees. Pay only after your work is completed and filed.</p>
         <div class="accent-line"></div>
       </div>
-      <div class="grid-4">
-        ${pricingPlans.map((p, idx) => `
-          <div class="pricing-card ${idx % 2 === 0 ? 'teal' : 'orange'}">
-            <h4>${p.name}</h4>
-            <div class="price">From– ${p.price}</div>
-            <div class="includes">${p.includes}</div>
-            <a href="/affordable-pricing/${p.refSlug}.html" class="btn btn-outline-white btn-sm">Explore More</a>
+
+      <style>
+        .pricing-hub-container {
+          display: flex;
+          flex-direction: column;
+          gap: 35px;
+          max-width: 1000px;
+          margin: 0 auto;
+        }
+        .pricing-tabs {
+          display: flex;
+          justify-content: center;
+          gap: 15px;
+          background: #FFFFFF;
+          padding: 8px;
+          border-radius: 50px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+          border: 1px solid rgba(0,0,0,0.05);
+          width: fit-content;
+          margin: 0 auto;
+        }
+        .pricing-tab {
+          padding: 14px 28px;
+          border-radius: 50px;
+          font-size: 0.95rem;
+          font-weight: 700;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          border: none;
+          background: transparent;
+          color: var(--body-text-light);
+          font-family: inherit;
+        }
+        .pricing-tab.active {
+          background: var(--primary);
+          color: var(--white);
+          box-shadow: 0 8px 16px rgba(251, 119, 13, 0.15);
+        }
+        .pricing-grids-container {
+          position: relative;
+        }
+        .pricing-grid-panel {
+          display: none;
+          opacity: 0;
+          transition: opacity 0.4s ease;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 25px;
+        }
+        .pricing-grid-panel.active {
+          display: grid;
+          opacity: 1;
+        }
+        .pricing-showcase-card {
+          background: #FFFFFF;
+          border: 1px solid rgba(0,0,0,0.06);
+          border-radius: 20px;
+          padding: 35px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          min-height: 320px;
+        }
+        .pricing-showcase-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+          border-color: rgba(251, 119, 13, 0.2);
+        }
+        .pricing-card-header h4 {
+          font-size: 1.25rem;
+          font-weight: 800;
+          color: var(--dark-green);
+          margin: 0 0 15px 0;
+        }
+        .pricing-card-price {
+          font-size: 2.2rem;
+          font-weight: 900;
+          color: var(--primary);
+          display: flex;
+          align-items: baseline;
+          gap: 5px;
+          margin-bottom: 20px;
+          border-bottom: 1px solid rgba(0,0,0,0.06);
+          padding-bottom: 20px;
+        }
+        .pricing-card-price span {
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: var(--body-text-light);
+        }
+        .pricing-card-includes {
+          font-size: 0.92rem;
+          line-height: 1.6;
+          color: #475569;
+          margin-bottom: 25px;
+          flex-grow: 1;
+        }
+        @media (max-width: 768px) {
+          .pricing-tabs {
+            flex-direction: column;
+            border-radius: 20px;
+            width: 100%;
+            padding: 12px;
+          }
+          .pricing-tab {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      </style>
+
+      <div class="pricing-hub-container">
+        <!-- Tabs -->
+        <div class="pricing-tabs">
+          <button class="pricing-tab active" data-target="pricing-panel-corporate">Corporate &amp; Business Tax</button>
+          <button class="pricing-tab" data-target="pricing-panel-accounting">Accounting &amp; Bookkeeping</button>
+          <button class="pricing-tab" data-target="pricing-panel-personal">Personal &amp; Sales Tax</button>
+        </div>
+
+        <!-- Panels -->
+        <div class="pricing-grids-container">
+          <!-- Panel 1: Corporate & Business Tax -->
+          <div class="pricing-grid-panel active" id="pricing-panel-corporate">
+            <!-- Corporate Tax -->
+            <div class="pricing-showcase-card">
+              <div class="pricing-card-header">
+                <h4>Corporate Tax Filing</h4>
+                <div class="pricing-card-price">$90<span>/One-time filing fee</span></div>
+                <p class="pricing-card-includes">T2 corporate tax filing, balance sheets, income statements compilation, corporate tax optimization, and direct CRA representation.</p>
+              </div>
+              <a href="/pricing/corporate-tax.html" class="btn btn-outline" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
+            </div>
+            <!-- Partnership Tax -->
+            <div class="pricing-showcase-card">
+              <div class="pricing-card-header">
+                <h4>Partnership Tax Filing</h4>
+                <div class="pricing-card-price">$250<span>/Partnership return</span></div>
+                <p class="pricing-card-includes">T5013 partnership information returns, K-1 partner schedule allocations, structural planning, and tax minimization advisory.</p>
+              </div>
+              <a href="/pricing/partnership-tax.html" class="btn btn-outline" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
+            </div>
+            <!-- Non-Profit Tax -->
+            <div class="pricing-showcase-card">
+              <div class="pricing-card-header">
+                <h4>Non-Profit Tax Filing</h4>
+                <div class="pricing-card-price">$250<span>/NPO filing fee</span></div>
+                <p class="pricing-card-includes">T3010 registered charity returns, T1044 NPO return filing, financial summaries compilation, and compliance audits support.</p>
+              </div>
+              <a href="/pricing/non-profit-tax.html" class="btn btn-outline" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
+            </div>
+            <!-- Trust-Estate Tax -->
+            <div class="pricing-showcase-card">
+              <div class="pricing-card-header">
+                <h4>Trust-Estate Tax Filing</h4>
+                <div class="pricing-card-price">$300<span>/Trust return</span></div>
+                <p class="pricing-card-includes">T3 trust tax return filing, testamentary trust setups, estate distribution allocations, and strategic inheritance planning.</p>
+              </div>
+              <a href="/pricing/trust-estate-tax.html" class="btn btn-outline" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
+            </div>
           </div>
-        `).join('')}
+
+          <!-- Panel 2: Accounting & Bookkeeping -->
+          <div class="pricing-grid-panel" id="pricing-panel-accounting">
+            <!-- Business Bookkeeping -->
+            <div class="pricing-showcase-card">
+              <div class="pricing-card-header">
+                <h4>Business Bookkeeping</h4>
+                <div class="pricing-card-price">$100<span>/Month (Up to 50 txns)</span></div>
+                <p class="pricing-card-includes">Bank &amp; credit card reconciliations, monthly balance sheet and P&amp;L preparation, payroll ledger syncing, and QuickBooks/Xero ledger support.</p>
+              </div>
+              <a href="/pricing/accounting-bookkeeping.html" class="btn btn-outline" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
+            </div>
+            <!-- Notice to Reader -->
+            <div class="pricing-showcase-card">
+              <div class="pricing-card-header">
+                <h4>Notice to Reader (NTR)</h4>
+                <div class="pricing-card-price">$500<span>/Compilation year</span></div>
+                <p class="pricing-card-includes">Compilation engagement report, corporate financial statement compilation, trial balance adjustments, and full T2 return integration.</p>
+              </div>
+              <a href="/pricing/notice-to-reader.html" class="btn btn-outline" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
+            </div>
+          </div>
+
+          <!-- Panel 3: Personal & Sales Tax -->
+          <div class="pricing-grid-panel" id="pricing-panel-personal">
+            <!-- Personal Tax Filing -->
+            <div class="pricing-showcase-card">
+              <div class="pricing-card-header">
+                <h4>Personal Tax Filing</h4>
+                <div class="pricing-card-price">$25<span>/Return starting fee</span></div>
+                <p class="pricing-card-includes">T1 tax returns compilation for students, salaried employees, and self-employed. Covers T4/T5 matching, RRSP credits, and medical deductions.</p>
+              </div>
+              <a href="/pricing/individual-tax.html" class="btn btn-outline" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
+            </div>
+            <!-- GST/HST Tax Filings -->
+            <div class="pricing-showcase-card">
+              <div class="pricing-card-header">
+                <h4>GST/HST Sales Tax Filing</h4>
+                <div class="pricing-card-price">$75<span>/Filing cycle</span></div>
+                <p class="pricing-card-includes">Sales tax ledger reconciliation, Input Tax Credits (ITCs) verification, Netfile electronic submission to CRA, and provincial compliance checks.</p>
+              </div>
+              <a href="/pricing/gst-hst-pst.html" class="btn btn-outline" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <script>
+        (function() {
+          const initPricingTabs = () => {
+            const tabs = document.querySelectorAll('.pricing-tab');
+            const panels = document.querySelectorAll('.pricing-grid-panel');
+
+            tabs.forEach(tab => {
+              tab.addEventListener('click', () => {
+                // Remove active class
+                tabs.forEach(t => t.classList.remove('active'));
+                panels.forEach(p => p.classList.remove('active'));
+
+                // Add active class
+                tab.classList.add('active');
+                const targetId = tab.getAttribute('data-target');
+                const targetPanel = document.getElementById(targetId);
+                if (targetPanel) {
+                  targetPanel.classList.add('active');
+                }
+              });
+            });
+          };
+
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initPricingTabs);
+          } else {
+            initPricingTabs();
+          }
+        })();
+      </script>
     </div>
   </section>
-`;
+  `;
+};
 
 const getCaseStudiesSection = () => `
   <section class="section">
