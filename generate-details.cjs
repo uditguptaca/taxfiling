@@ -1565,16 +1565,30 @@ const getIndustryServices = (slug, name) => {
   }
 
   return `
-  <div class="grid-3" style="margin-top: 40px;">
+  <style>
+    .service-card-new:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.06) !important;
+      border-color: rgba(34, 197, 94, 0.3) !important;
+    }
+  </style>
+  <div class="grid-3" style="margin-top: 40px; gap: 30px;">
     ${cards.map(c => `
-      <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
-        <div class="card-icon" style="background: ${c.color}; color: ${c.iconColor}; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
-          <i class="fas ${c.icon}"></i>
+      <div class="service-card-new" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.06); padding: 35px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column; gap: 20px; height: 100%; transition: all 0.3s ease; cursor: default;">
+        <div style="display: flex; align-items: center; gap: 15px;">
+          <div class="card-icon" style="background: ${c.color}; color: ${c.iconColor}; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+            <i class="fas ${c.icon}"></i>
+          </div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0; line-height: 1.3;">${c.title}</h4>
         </div>
-        <div>
-          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">${c.title}</h4>
-          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
-            ${c.bullets.map(b => `<li>${b}</li>`).join('')}
+        <div style="flex-grow: 1;">
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+            ${c.bullets.map(b => `
+              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: flex-start; gap: 10px;">
+                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; margin-top: 3px; flex-shrink: 0;"></i>
+                <span>${b}</span>
+              </li>
+            `).join('')}
           </ul>
         </div>
       </div>
@@ -3287,7 +3301,7 @@ industries.forEach(ind => {
             <p>${heroSubtitle}</p>
             <div class="btn-group">
               <a href="/contact.html" class="btn btn-primary btn-lg">Book Free consultation</a>
-              <a href="#pricing-plans" class="btn btn-outline-white btn-lg">Explore Pricing</a>
+              <a href="/pricing.html" class="btn btn-outline-white btn-lg">Explore Pricing</a>
             </div>
           </div>
           <div class="ind-hero-right">
@@ -3444,7 +3458,7 @@ industries.forEach(ind => {
           </div>
           <div style="display:flex;align-items:center;justify-content:center;">
             <div class="why-choose-revslider" style="width: 100%;">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=450&fit=crop" alt="CPA Accounting Experts" class="slider-main-img">
+              <img src="https://taxccount.com/wp-content/uploads/2024/10/Udit-Gupta-Image-1.jpg" alt="Udit Gupta CPA" class="slider-main-img" style="object-position: top; object-fit: cover;">
               <div class="slider-badge-floating">
                 <h4>Udit Gupta, CPA</h4>
                 <p>Founder &amp; Managing Director &bull; Big4 Alumnus &bull; In-depth Corporate Tax Specialist</p>
@@ -3483,36 +3497,7 @@ industries.forEach(ind => {
     <!-- 9. PRICING SECTION -->
     ${getPricingSection()}
 
-    <!-- 10. SERVICE TIERS (PRICING PLANS) -->
-    <section class="section" id="pricing-plans">
-      <div class="container">
-        <div class="section-header">
-          <h2>Tax Planning Services in Canada – Pricing Plans</h2>
-          <p>Our tax planning services in Canada help businesses and individuals develop strategic tax-saving solutions, optimize deductions, and ensure CRA compliance.</p>
-          <div class="accent-line"></div>
-        </div>
-        <div class="grid-3">
-          <div class="tier-card">
-            <h4 class="tier-name" style="font-size: 1.25rem; font-weight: 700; color: var(--dark-green); margin-bottom: 15px;">Basic Accounting Services</h4>
-            <div class="tier-price">$100<span>/Month (For 50 Transactions)</span></div>
-            <p style="font-size:0.88rem;color:var(--body-text-light);margin-bottom:15px;line-height:1.5;">${tier1Desc}</p>
-            <a href="/contact.html" class="btn btn-outline" style="width:100%;">Book Now</a>
-          </div>
-          <div class="tier-card featured">
-            <h4 class="tier-name" style="font-size: 1.25rem; font-weight: 700; color: var(--dark-green); margin-bottom: 15px;">Corporate Tax Filing Services</h4>
-            <div class="tier-price">$499<span>/Corporate Return each year</span></div>
-            <p style="font-size:0.88rem;color:var(--body-text-light);margin-bottom:15px;line-height:1.5;">${tier2Desc}</p>
-            <a href="/contact.html" class="btn btn-primary" style="width:100%;">Book Now</a>
-          </div>
-          <div class="tier-card">
-            <h4 class="tier-name" style="font-size: 1.25rem; font-weight: 700; color: var(--dark-green); margin-bottom: 15px;">Personal Tax Filing Services</h4>
-            <div class="tier-price">$200<span>/Return (For Self-Employed)</span></div>
-            <p style="font-size:0.88rem;color:var(--body-text-light);margin-bottom:15px;line-height:1.5;">${tier3Desc}</p>
-            <a href="/contact.html" class="btn btn-outline" style="width:100%;">Book Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
     <!-- 11. BEGIN YOUR JOURNEY BANNER -->
     <section class="section pt-0 pb-0" style="background:var(--primary);color:var(--white);padding:45px 0;text-align:center;">
