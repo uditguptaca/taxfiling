@@ -5279,7 +5279,7 @@ locations.forEach(loc => {
     ${recommendedLogosHtml}
 
     <!-- 4. WHY CHOOSE US -->
-    ${getWhyChooseUsSection(loc.name, isToronto ? 'Why Choose Tax Filings Toronto?' : `Why Choose Tax Filings ${loc.name}?`, null, null, isToronto ? '/images/toronto_skyline.png' : null)}
+    ${getWhyChooseUsSection(loc.name, isToronto ? 'Why Choose Tax Filings Toronto?' : `Why Choose Tax Filings ${loc.name}?`, null, null, isToronto ? '/images/toronto_office_workspace.png' : null)}
 
     <!-- 5. RISK-FREE WORKFLOW -->
     ${getWorkflowSection()}
