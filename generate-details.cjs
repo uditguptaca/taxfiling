@@ -1040,18 +1040,79 @@ const getCtaBanner = (pageName) => `
   </section>
 `;
 
+const getIndustrySpecializations = (indSlug, indName) => {
+  const specsMap = {
+    healthcare: [
+      { title: 'Operational Structures', desc: 'Custom corporate tax structures designed for medical clinics and professional corporations.', icon: 'fa-network-wired', color: 'card-manilla' },
+      { title: 'Overhead Allocation', desc: 'Accurate clinic overhead costing models, shared space expense splits, and associate payout calculations.', icon: 'fa-percent', color: 'card-kraft' },
+      { title: 'GST/HST Exemption Review', desc: 'Exempt vs. taxable service reviews, complex Input Tax Credit (ITC) optimization, and sales tax filing compliance.', icon: 'fa-calculator', color: 'card-cloud' },
+      { title: 'Late Filings Protection', desc: 'Catch up on back taxes, file late returns, and secure penalty relief via the CRA Voluntary Disclosures Program.', icon: 'fa-shield-alt', color: 'card-slate' },
+      { title: 'CRA Audit Defense', desc: 'Direct representation and professional response coordination for reviews, tax audits, or dispute resolution.', icon: 'fa-gavel', color: 'card-manilla' }
+    ],
+    'real-estate': [
+      { title: 'PREC Tax Structuring', desc: 'Personal Real Estate Corporation tax structures, income splitting, and holding company setups.', icon: 'fa-building', color: 'card-manilla' },
+      { title: 'Rental Property Accounting', desc: 'Detailed rental property bookkeeping, depreciation/CCA claims, and cash flow analysis.', icon: 'fa-home', color: 'card-kraft' },
+      { title: 'Capital Gains Planning', desc: 'Tax deferral plans, capital gains vs. business income categorization, and property flipping tax audits.', icon: 'fa-chart-line', color: 'card-cloud' },
+      { title: 'GST/HST New Housing Rebate', desc: 'Preparation and filing of new residential property GST/HST rebates and builder sales tax compliance.', icon: 'fa-receipt', color: 'card-slate' },
+      { title: 'CRA Audit Support', desc: 'Direct CPA representation for real estate audits, PREC compliance reviews, and expense verification.', icon: 'fa-shield-alt', color: 'card-manilla' }
+    ],
+    construction: [
+      { title: 'Progress Billing & Costing', desc: 'Accurate job costing, progress billing, and Work-in-Progress (WIP) tracking for builders.', icon: 'fa-hard-hat', color: 'card-manilla' },
+      { title: 'Subcontractor Compliance', desc: 'T5018 slip preparation, subcontractor tracking, and reporting to ensure full CRA compliance.', icon: 'fa-users', color: 'card-kraft' },
+      { title: 'WSIB & EHT Compliance', desc: 'Timely filing of WSIB, employer health tax, and provincial payroll remittances to avoid penalties.', icon: 'fa-shield-alt', color: 'card-cloud' },
+      { title: 'Equipment Depreciation', desc: 'Capital Cost Allowance (CCA) optimization on heavy machinery, tools, and company vehicles.', icon: 'fa-truck-pickup', color: 'card-slate' },
+      { title: 'CRA Audit Defense', desc: 'CPA representation for trade business audits, expense claims validation, and tax dispute resolution.', icon: 'fa-gavel', color: 'card-manilla' }
+    ]
+  };
+
+  const defaultSpecs = [
+    { title: 'Custom Tax Structures', desc: `Tailored corporate structures optimized for operational active income in the ${indName.toLowerCase()} sector.`, icon: 'fa-network-wired', color: 'card-manilla' },
+    { title: 'Overhead & Cost Tracking', desc: 'Accurate bookkeeping, cost of goods sold (COGS) tracking, and operational overhead analysis.', icon: 'fa-percent', color: 'card-kraft' },
+    { title: 'GST/HST Compliance', desc: 'Comprehensive sales tax compilation, Input Tax Credit (ITC) reconciliation, and electronic filing.', icon: 'fa-calculator', color: 'card-cloud' },
+    { title: 'Voluntary Disclosures', desc: 'Securing relief from penalties and interest through proactive late filing disclosure applications.', icon: 'fa-shield-alt', color: 'card-slate' },
+    { title: 'CRA Audit Representation', desc: 'Full-service dispute support, notice of assessment appeals, and direct representation before the CRA.', icon: 'fa-gavel', color: 'card-manilla' }
+  ];
+
+  const specs = specsMap[indSlug] || defaultSpecs;
+
+  return `
+    <h3 class="mt-40" style="font-size: 1.6rem; font-weight: 800; color: var(--dark-green); margin-bottom: 25px; text-align: left;"><i class="fas fa-bullseye" style="color:var(--primary); margin-right: 10px;"></i> Our Industry Specializations</h3>
+    <div class="specializations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; margin-bottom: 40px; text-align: left;">
+      ${specs.map(spec => {
+        const isDark = spec.color === 'card-slate' || spec.color === 'card-bookcloth';
+        const titleColor = isDark ? '#fff' : 'var(--dark-green)';
+        const descColor = isDark ? 'rgba(255,255,255,0.9)' : 'var(--body-text-light)';
+        const iconBg = isDark ? 'rgba(255, 255, 255, 0.15)' : 'rgba(251, 119, 13, 0.1)';
+        const iconColor = isDark ? '#fff' : 'rgb(251, 119, 13)';
+        
+        return `
+          <div class="spec-card ${spec.color}" style="padding: 24px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; border: 1px solid rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; height: 100%;">
+            <div class="spec-icon" style="background: ${iconBg}; color: ${iconColor}; width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.4rem;">
+              <i class="fas ${spec.icon}"></i>
+            </div>
+            <div>
+              <h4 style="font-size: 1.1rem; font-weight: 700; margin: 0 0 8px; color: ${titleColor};">${spec.title}</h4>
+              <p style="font-size: 0.9rem; margin: 0; line-height: 1.5; color: ${descColor};">${spec.desc}</p>
+            </div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `;
+};
+
 const getMeetingCtaBox = (customTitle = null) => {
   const title = customTitle || 'Book a Meeting with a Tax Accountant';
   return `
-  <div class="service-card" style="text-align:left;margin-top:30px;border-left:4px solid var(--primary);padding:25px;background:var(--white);">
-    <h4 style="margin-bottom:12px;font-weight:700;color:var(--dark-green);"><i class="fas fa-handshake"></i> ${title}</h4>
-    <ul style="list-style:none;padding:0;margin:0 0 20px;display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:10px;font-size:0.9rem;">
-      <li><i class="fas fa-check-circle text-primary"></i> Free initial consultation</li>
-      <li><i class="fas fa-check-circle text-teal"></i> No obligations</li>
-      <li><i class="fas fa-check-circle text-primary"></i> Speak directly with expert Tax Accountant</li>
-      <li><i class="fas fa-check-circle text-teal"></i> Customized solutions for your needs</li>
-    </ul>
-    <a href="/contact.html" class="btn btn-primary btn-sm">Get Started</a>
+  <div class="cta-banner-box" style="text-align:left; margin-top:40px; padding:30px; background:linear-gradient(135deg, #FAF8F5 0%, #F5F1EB 100%); border:1px solid rgba(251, 119, 13, 0.15); border-radius:16px; box-shadow:var(--shadow-sm);">
+    <h4 style="margin:0 0 15px 0; font-size:1.25rem; font-weight:800; color:var(--dark-green); display:flex; align-items:center; gap:10px;"><i class="fas fa-handshake" style="color:var(--primary);"></i> ${title}</h4>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:15px 25px; margin-bottom:25px;">
+      <div style="display:flex; align-items:center; gap:10px; font-size:0.95rem; font-weight:600; color:var(--body-text);"><i class="fas fa-check-circle" style="color:var(--primary); font-size:1.1rem; flex-shrink:0;"></i> Free initial consultation</div>
+      <div style="display:flex; align-items:center; gap:10px; font-size:0.95rem; font-weight:600; color:var(--teal-light);"><i class="fas fa-check-circle" style="color:var(--teal-light); font-size:1.1rem; flex-shrink:0;"></i> No obligations</div>
+      <div style="display:flex; align-items:center; gap:10px; font-size:0.95rem; font-weight:600; color:var(--body-text);"><i class="fas fa-check-circle" style="color:var(--primary); font-size:1.1rem; flex-shrink:0;"></i> Speak directly with expert CPA/CA</div>
+      <div style="display:flex; align-items:center; gap:10px; font-size:0.95rem; font-weight:600; color:var(--body-text);"><i class="fas fa-check-circle" style="color:var(--teal-light); font-size:1.1rem; flex-shrink:0;"></i> Tailored tax planning strategies</div>
+    </div>
+    <a href="/contact.html" class="btn btn-primary" style="padding:10px 30px; border-radius:50px; font-weight:700;">Get Started <i class="fas fa-arrow-right" style="margin-left:8px;"></i></a>
   </div>
 `;
 };
@@ -1492,15 +1553,31 @@ industries.forEach(ind => {
   let subsectorsList = [];
   let subsectorsWithIcons = [];
   if (isHealthcare) {
-    subsectorsList = ['Dentists', 'Pharmacies', 'Doctors', 'Chiropractors', 'Veterinary', 'Medical Practice & Physicians', 'Therapists & Psychologists'];
+    subsectorsList = [
+      'Medical Clinics', 
+      'Family Doctors & GPs', 
+      'Dentists & Orthodontists', 
+      'Pharmacies', 
+      'Chiropractors', 
+      'Physiotherapists', 
+      'Optometrists', 
+      'Veterinary Clinics', 
+      'Specialists & Surgeons', 
+      'Nurses', 
+      'Mental Health Counselors'
+    ];
     subsectorsWithIcons = [
-      { name: 'Dentists', icon: 'fa-tooth' },
+      { name: 'Medical Clinics', icon: 'fa-clinic-medical' },
+      { name: 'Family Doctors & GPs', icon: 'fa-user-md' },
+      { name: 'Dentists & Orthodontists', icon: 'fa-tooth' },
       { name: 'Pharmacies', icon: 'fa-prescription-bottle-alt' },
-      { name: 'Doctors', icon: 'fa-user-md' },
       { name: 'Chiropractors', icon: 'fa-bone' },
-      { name: 'Veterinary', icon: 'fa-paw' },
-      { name: 'Medical Practice & Physicians', icon: 'fa-clinic-medical' },
-      { name: 'Therapists & Psychologists', icon: 'fa-brain' }
+      { name: 'Physiotherapists', icon: 'fa-accessibility' },
+      { name: 'Optometrists', icon: 'fa-eye' },
+      { name: 'Veterinary Clinics', icon: 'fa-paw' },
+      { name: 'Specialists & Surgeons', icon: 'fa-briefcase-medical' },
+      { name: 'Nurses', icon: 'fa-user-nurse' },
+      { name: 'Mental Health Counselors', icon: 'fa-brain' }
     ];
   } else if (ind.slug === 'real-estate') {
     subsectorsList = ['Realtors', 'Brokers', 'Property Developers', 'Property Managers', 'Appraisers', 'Real Estate Investors', 'Leasing Agencies'];
@@ -1940,29 +2017,29 @@ industries.forEach(ind => {
     </section>
 
     <!-- 3. INTRO BLOCK -->
-    <section class="section" style="padding-bottom: 20px;">
+    <section class="section" style="padding-bottom: 40px; background-color: var(--color-ivory-light);">
       <div class="container">
-        <div class="grid-2-1">
+        <div class="grid-2-1" style="align-items: start; gap: 40px;">
           <div>
-            <h2>Trusted Accounting &amp; Tax Solutions for ${ind.name} Sector</h2>
-            <p style="font-size:1.1rem;line-height:1.6;color:var(--body-text-light);margin-top:15px;margin-bottom:25px;">Our Accounting Firm provides fully compliant personal (T1) and corporate (T2) tax returns, bank reconciliations, bookkeeping, and payroll support customized for professionals and businesses operating in the ${ind.name.toLowerCase()} industry.</p>
+            <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--dark-green); line-height: 1.25;">Trusted Accounting &amp; Tax Solutions for ${ind.name} Sector</h2>
+            <p style="font-size: 1.15rem; line-height: 1.65; color: var(--body-text-light); margin-top: 15px; margin-bottom: 30px;">Our Accounting Firm provides fully compliant personal (T1) and corporate (T2) tax returns, bank reconciliations, bookkeeping, and payroll support customized for professionals and businesses operating in the ${ind.name.toLowerCase()} industry.</p>
             
-            <h3 class="mt-30">Our Industry Specializations</h3>
-            <ul class="check-list mt-20">
-              <li>Custom tax structures for active operational income</li>
-              <li>Accurate overhead cost tracking and shared space expenses allocation</li>
-              <li>Comprehensive GST/HST filings and input tax credits compliance</li>
-              <li>Voluntary disclosure and late filings protection</li>
-              <li>Representation and direct audit support before the CRA</li>
-            </ul>
+            ${getIndustrySpecializations(ind.slug, ind.name)}
 
             ${getMeetingCtaBox(isHealthcare ? 'Book a Meeting with a Tax Accountant' : null)}
           </div>
           <div>
-            <div class="service-card" style="text-align:left;position:sticky;top:100px;">
-              <h3>Consult an Expert</h3>
-              <p>Discuss your ${ind.name.toLowerCase()} tax requirements with our certified accounting specialists.</p>
-              <a href="/contact.html" class="btn btn-primary" style="width:100%;">Book Free Call</a>
+            <div class="service-card card-slate" style="text-align:left; position:sticky; top:120px; padding:35px 30px; border-radius:20px; border:none; box-shadow:var(--shadow-md);">
+              <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.15); padding:6px 14px; border-radius:50px; font-size:0.75rem; font-weight:700; color:#fff; margin-bottom:20px; text-transform:uppercase; letter-spacing:0.5px;">
+                <span style="width:8px; height:8px; background:#22c55e; border-radius:50%; display:inline-block;"></span> Available Now
+              </div>
+              <h3 style="font-size:1.45rem; font-weight:800; color:#fff; margin:0 0 12px 0;">Consult an Expert</h3>
+              <p style="font-size:0.95rem; line-height:1.55; color:rgba(255,255,255,0.85); margin:0 0 25px 0;">Discuss your ${ind.name.toLowerCase()} tax requirements with our certified Canadian accounting specialists.</p>
+              
+              <div style="display:flex; flex-direction:column; gap:12px;">
+                <a href="/contact.html" class="btn btn-primary" style="width:100%; text-align:center; padding:12px; font-weight:700; border-radius:8px;">Book Free Call</a>
+                <a href="tel:+14166190068" style="text-align:center; font-size:1rem; font-weight:700; color:#fff; text-decoration:none; margin-top:5px; display:flex; align-items:center; justify-content:center; gap:8px;"><i class="fas fa-phone-alt"></i> +1 (416) 619-0068</a>
+              </div>
             </div>
           </div>
         </div>
