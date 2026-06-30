@@ -230,7 +230,7 @@ const footer = () => `
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <script src="/js/main.js"></script>
+  <script type="module" src="/js/main.js"></script>
 `;
 
 const pageBanner = (title, breadcrumbs) => `
