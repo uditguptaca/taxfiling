@@ -397,6 +397,643 @@
     </div>
   </section>
 
+</section>
+
+  <!-- Core Services Showcase Tabs Section -->
+  <section class="section" style="background-color: var(--white); border-top: 1px solid var(--border-gray); padding-top: 60px;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Core Services &amp; Features</h2>
+        <p>Expertly tailored accounting, compliance, and corporate tax solutions for businesses and corporations.</p>
+        <div class="accent-line"></div>
+      </div>
+
+      <style>
+        .showcase-container {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          gap: 30px;
+          background: #FFFFFF;
+          border: 1px solid rgba(0,0,0,0.06);
+          border-radius: 24px;
+          padding: 30px;
+          box-shadow: 0 15px 40px rgba(0,0,0,0.02);
+          margin-top: 40px;
+        }
+        .showcase-tabs {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+        .showcase-tab {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          padding: 16px 20px;
+          border-radius: 12px;
+          background: #FFFFFF;
+          border: 1px solid var(--border-gray);
+          cursor: pointer;
+          transition: all 0.3s ease;
+          text-align: left;
+          font-family: inherit;
+        }
+        .showcase-tab:hover {
+          background: #FAFAF7;
+          transform: translateX(5px);
+        }
+        .showcase-tab.active {
+          background: #262625 !important;
+          color: var(--white) !important;
+          border-color: #262625 !important;
+          box-shadow: 0 8px 16px rgba(38,38,37,0.15) !important;
+        }
+        .showcase-tab.active .tab-title {
+          color: var(--white) !important;
+        }
+        .showcase-tab.active .tab-icon {
+          background: rgba(255, 255, 255, 0.2) !important;
+          color: var(--white) !important;
+        }
+        .tab-icon {
+          width: 38px;
+          height: 38px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.1rem;
+          transition: all 0.3s ease;
+          flex-shrink: 0;
+        }
+        .tab-title {
+          font-size: 0.95rem;
+          font-weight: 700;
+          line-height: 1.3;
+          color: #262625;
+        }
+        .showcase-content-area {
+          position: relative;
+          background: #FAFAF7;
+          border-radius: 16px;
+          padding: 30px;
+          border: 1px solid var(--border-gray);
+          min-height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          gap: 20px;
+        }
+        .showcase-panel {
+          display: none;
+          opacity: 0;
+          transition: opacity 0.4s ease;
+          flex-direction: column;
+          justify-content: flex-start;
+          gap: 20px;
+          height: auto;
+        }
+        .showcase-panel.active {
+          display: flex;
+          opacity: 1;
+        }
+        .panel-header {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          border-bottom: 1px solid rgba(0,0,0,0.06);
+          padding-bottom: 15px;
+        }
+        .panel-header-icon {
+          width: 50px;
+          height: 50px;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5rem;
+          color: var(--white);
+        }
+        .panel-header-info h3 {
+          font-size: 1.4rem;
+          font-weight: 800;
+          color: var(--dark-green);
+          margin: 0;
+        }
+        .panel-header-info p {
+          font-size: 0.88rem;
+          color: var(--body-text-light);
+          margin: 3px 0 0;
+        }
+        .panel-bullets-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 15px;
+        }
+        .panel-bullet-item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background: var(--white);
+          padding: 12px 16px;
+          border-radius: 10px;
+          border: 1px solid var(--border-gray);
+          box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+        }
+        .panel-bullet-item i {
+          color: var(--primary);
+          font-size: 1rem;
+          flex-shrink: 0;
+        }
+        .panel-bullet-item span {
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: #334155;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .panel-callout {
+          background: rgba(204, 120, 92, 0.04);
+          border-left: 4px solid var(--primary);
+          padding: 15px 20px;
+          border-radius: 0 10px 10px 0;
+          font-size: 0.88rem;
+          color: #555;
+          line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+          .showcase-container {
+            grid-template-columns: 1fr;
+          }
+          .panel-bullets-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+      </style>
+
+      <div class="showcase-container" id="home-showcase-container">
+        <!-- Tabs Left Column -->
+        <div class="showcase-tabs">
+          <button class="showcase-tab active" data-target="home-panel-0">
+            <div class="tab-icon" style="background: rgba(204, 120, 92, 0.1); color: #CC785C;">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <span class="tab-title">Bookkeeping &amp; Reconciliations</span>
+          </button>
+          <button class="showcase-tab" data-target="home-panel-1">
+            <div class="tab-icon" style="background: rgba(212, 162, 127, 0.1); color: #D4A27F;">
+              <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+            <span class="tab-title">Corporate Tax (T2)</span>
+          </button>
+          <button class="showcase-tab" data-target="home-panel-2">
+            <div class="tab-icon" style="background: rgba(38, 38, 37, 0.08); color: #262625;">
+              <i class="fas fa-users"></i>
+            </div>
+            <span class="tab-title">Payroll &amp; Compensation</span>
+          </button>
+          <button class="showcase-tab" data-target="home-panel-3">
+            <div class="tab-icon" style="background: rgba(102, 102, 99, 0.1); color: #666663;">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <span class="tab-title">CFO &amp; Advisory Services</span>
+          </button>
+          <button class="showcase-tab" data-target="home-panel-4">
+            <div class="tab-icon" style="background: rgba(204, 120, 92, 0.1); color: #CC785C;">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <span class="tab-title">Notice to Reader (NTR)</span>
+          </button>
+          <button class="showcase-tab" data-target="home-panel-5">
+            <div class="tab-icon" style="background: rgba(212, 162, 127, 0.1); color: #D4A27F;">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <span class="tab-title">Personal Tax (T1)</span>
+          </button>
+          <button class="showcase-tab" data-target="home-panel-6">
+            <div class="tab-icon" style="background: rgba(38, 38, 37, 0.08); color: #262625;">
+              <i class="fas fa-file-contract"></i>
+            </div>
+            <span class="tab-title">GST/HST Compliance</span>
+          </button>
+        </div>
+
+        <!-- Content Right Column -->
+        <div class="showcase-content-area">
+          <!-- Panel 0: Bookkeeping -->
+          <div class="showcase-panel active" id="home-panel-0">
+            <div class="panel-header">
+              <div class="panel-header-icon" style="background: #CC785C;">
+                <i class="fas fa-calculator"></i>
+              </div>
+              <div class="panel-header-info">
+                <h3>Bookkeeping &amp; Reconciliations</h3>
+                <p>Tailored compliance, tracking, and tax solutions for your operational efficiency.</p>
+              </div>
+            </div>
+            <div class="panel-bullets-grid">
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Bank &amp; credit card reconciliations</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Cloud accounting (QBO / Xero)</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Financial statements preparation</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>AR &amp; AP management</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Monthly cash flow reporting</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Receipts &amp; expenses tracking (Dext)</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Bank feed setup &amp; clean-up</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Ledger audit reviews</span>
+              </div>
+            </div>
+            <div class="panel-callout">
+              <strong>CRA Compliance Focus:</strong> We guarantee fully optimized corporate/individual deductions, complete trial balance verification, and robust audit trail protection for all clinical activities.
+            </div>
+            <div style="margin-top: 10px;">
+              <a href="/contact.html" class="btn btn-primary" style="padding: 10px 25px; border-radius: 50px; font-size: 0.9rem;">Book Consultation</a>
+            </div>
+          </div>
+
+          <!-- Panel 1: Corporate Tax -->
+          <div class="showcase-panel" id="home-panel-1">
+            <div class="panel-header">
+              <div class="panel-header-icon" style="background: #D4A27F;">
+                <i class="fas fa-file-invoice-dollar"></i>
+              </div>
+              <div class="panel-header-info">
+                <h3>Corporate Tax (T2)</h3>
+                <p>Tailored compliance, tracking, and tax solutions for your operational efficiency.</p>
+              </div>
+            </div>
+            <div class="panel-bullets-grid">
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>T2 Corporate Tax Return filing</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Corporate tax planning &amp; structure</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Active &amp; passive income allocation</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>CRA audit defense representation</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Federal &amp; provincial tax filing</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Shareholder loan monitoring</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Loss carry-back/carry-forward</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Corporate structure optimizations</span>
+              </div>
+            </div>
+            <div class="panel-callout">
+              <strong>CRA Compliance Focus:</strong> We guarantee fully optimized corporate/individual deductions, complete trial balance verification, and robust audit trail protection for all clinical activities.
+            </div>
+            <div style="margin-top: 10px;">
+              <a href="/contact.html" class="btn btn-primary" style="padding: 10px 25px; border-radius: 50px; font-size: 0.9rem;">Book Consultation</a>
+            </div>
+          </div>
+
+          <!-- Panel 2: Payroll -->
+          <div class="showcase-panel" id="home-panel-2">
+            <div class="panel-header">
+              <div class="panel-header-icon" style="background: #262625;">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="panel-header-info">
+                <h3>Payroll &amp; Compensation</h3>
+                <p>Tailored compliance, tracking, and tax solutions for your operational efficiency.</p>
+              </div>
+            </div>
+            <div class="panel-bullets-grid">
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Direct payroll processing &amp; stubs</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>T4/T5 slip compilation &amp; filing</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Salary vs. dividend optimization</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Source deduction remittances</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Employee vs. contractor review</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>EHT &amp; workers' comp reporting</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Year-end T4/T5 summary reports</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Record of Employment (ROE)</span>
+              </div>
+            </div>
+            <div class="panel-callout">
+              <strong>CRA Compliance Focus:</strong> We guarantee fully optimized corporate/individual deductions, complete trial balance verification, and robust audit trail protection for all clinical activities.
+            </div>
+            <div style="margin-top: 10px;">
+              <a href="/contact.html" class="btn btn-primary" style="padding: 10px 25px; border-radius: 50px; font-size: 0.9rem;">Book Consultation</a>
+            </div>
+          </div>
+
+          <!-- Panel 3: CFO -->
+          <div class="showcase-panel" id="home-panel-3">
+            <div class="panel-header">
+              <div class="panel-header-icon" style="background: #666663;">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="panel-header-info">
+                <h3>CFO &amp; Advisory Services</h3>
+                <p>Tailored compliance, tracking, and tax solutions for your operational efficiency.</p>
+              </div>
+            </div>
+            <div class="panel-bullets-grid">
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Financial forecasting &amp; projections</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Unit economics &amp; margin analysis</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Multi-entity cash flow modeling</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Mergers &amp; acquisitions reports</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Strategic growth planning</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Budgeting &amp; variance analyses</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Business valuation models</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Board &amp; stakeholder reports</span>
+              </div>
+            </div>
+            <div class="panel-callout">
+              <strong>CRA Compliance Focus:</strong> We guarantee fully optimized corporate/individual deductions, complete trial balance verification, and robust audit trail protection for all clinical activities.
+            </div>
+            <div style="margin-top: 10px;">
+              <a href="/contact.html" class="btn btn-primary" style="padding: 10px 25px; border-radius: 50px; font-size: 0.9rem;">Book Consultation</a>
+            </div>
+          </div>
+
+          <!-- Panel 4: NTR -->
+          <div class="showcase-panel" id="home-panel-4">
+            <div class="panel-header">
+              <div class="panel-header-icon" style="background: #CC785C;">
+                <i class="fas fa-book-open"></i>
+              </div>
+              <div class="panel-header-info">
+                <h3>Notice to Reader (NTR)</h3>
+                <p>Tailored compliance, tracking, and tax solutions for your operational efficiency.</p>
+              </div>
+            </div>
+            <div class="panel-bullets-grid">
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>NTR compilation reports</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Review &amp; compilation engagements</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Corporate year-end adjustments</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Bank compliance packages</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Compiled balance sheets</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Notes to financial statements</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Trial balance verification</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Adjusting journal entries</span>
+              </div>
+            </div>
+            <div class="panel-callout">
+              <strong>CRA Compliance Focus:</strong> We guarantee fully optimized corporate/individual deductions, complete trial balance verification, and robust audit trail protection for all clinical activities.
+            </div>
+            <div style="margin-top: 10px;">
+              <a href="/contact.html" class="btn btn-primary" style="padding: 10px 25px; border-radius: 50px; font-size: 0.9rem;">Book Consultation</a>
+            </div>
+          </div>
+
+          <!-- Panel 5: Personal Tax -->
+          <div class="showcase-panel" id="home-panel-5">
+            <div class="panel-header">
+              <div class="panel-header-icon" style="background: #D4A27F;">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <div class="panel-header-info">
+                <h3>Personal Tax (T1)</h3>
+                <p>Tailored compliance, tracking, and tax solutions for your operational efficiency.</p>
+              </div>
+            </div>
+            <div class="panel-bullets-grid">
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>T1 returns for owners &amp; partners</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Sole proprietor business T2125</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Rental property &amp; capital gains returns</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Family tax splitting strategies</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Registered plans (RRSP/TFSA)</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Medical &amp; donation tax credits</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Voluntary disclosures &amp; claims</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>E-file submission confirmation</span>
+              </div>
+            </div>
+            <div class="panel-callout">
+              <strong>CRA Compliance Focus:</strong> We guarantee fully optimized corporate/individual deductions, complete trial balance verification, and robust audit trail protection for all clinical activities.
+            </div>
+            <div style="margin-top: 10px;">
+              <a href="/contact.html" class="btn btn-primary" style="padding: 10px 25px; border-radius: 50px; font-size: 0.9rem;">Book Consultation</a>
+            </div>
+          </div>
+
+          <!-- Panel 6: GST/HST -->
+          <div class="showcase-panel" id="home-panel-6">
+            <div class="panel-header">
+              <div class="panel-header-icon" style="background: #262625;">
+                <i class="fas fa-file-contract"></i>
+              </div>
+              <div class="panel-header-info">
+                <h3>GST/HST Compliance</h3>
+                <p>Tailored compliance, tracking, and tax solutions for your operational efficiency.</p>
+              </div>
+            </div>
+            <div class="panel-bullets-grid">
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>GST/HST/PST netfile returns</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Input Tax Credit (ITC) optimization</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Provincial sales tax audit defense</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Mixed-use asset ITC allocations</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>E-commerce sales tax filings</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Real estate purchase tax rebates</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>CRA sales tax dispute responses</span>
+              </div>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Multi-province compliance checks</span>
+              </div>
+            </div>
+            <div class="panel-callout">
+              <strong>CRA Compliance Focus:</strong> We guarantee fully optimized corporate/individual deductions, complete trial balance verification, and robust audit trail protection for all clinical activities.
+            </div>
+            <div style="margin-top: 10px;">
+              <a href="/contact.html" class="btn btn-primary" style="padding: 10px 25px; border-radius: 50px; font-size: 0.9rem;">Book Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const initShowcase = () => {
+          const container = document.getElementById('home-showcase-container');
+          if (!container) return;
+          const tabs = container.querySelectorAll('.showcase-tab');
+          const panels = container.querySelectorAll('.showcase-panel');
+          
+          tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+              tabs.forEach(t => {
+                t.classList.remove('active');
+                const icon = t.querySelector('.tab-icon');
+                if (icon) {
+                  icon.style.background = '';
+                  icon.style.color = '';
+                }
+              });
+              
+              panels.forEach(p => p.classList.remove('active'));
+              
+              tab.classList.add('active');
+              const targetId = tab.getAttribute('data-target');
+              const targetPanel = document.getElementById(targetId);
+              if (targetPanel) {
+                targetPanel.classList.add('active');
+              }
+            });
+          });
+        };
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initShowcase);
+        } else {
+          initShowcase();
+        }
+      })();
+    </script>
+  </section>
+
   <!-- Recommended Logos Section -->
   <section class="section" style="padding: 40px 0; background: var(--white); border-bottom: 1px solid var(--border-gray);">
     <div class="container">
