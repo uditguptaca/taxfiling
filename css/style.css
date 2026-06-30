@@ -3915,6 +3915,99 @@ p {
   }
 }
 
+/* Testimonials Symmetrical Split Section */
+.testimonials-symmetrical-section {
+  padding: 80px 0;
+  background-color: #fcfcf9;
+}
+
+.testimonials-symmetrical-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* Symmetrical Left Box (Dark Gray Card) */
+.testimonials-left-box {
+  background-color: #1e1e1f;
+  border-radius: 20px;
+  padding: 50px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.testimonials-left-box .box-header {
+  margin-bottom: 30px;
+}
+
+.testimonials-left-box .testimonials-subtitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-bookcloth);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.testimonials-left-box .testimonials-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.testimonials-left-box .testimonials-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.7);
+}
+
+/* Symmetrical Right Box (Light Ivory Card) */
+.testimonials-right-box {
+  background-color: #f6f6f3;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #e5e5e0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.testimonials-right-box .software-heading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-slate-dark);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Responsive adjust */
+@media (max-width: 991px) {
+  .testimonials-symmetrical-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .testimonials-left-box {
+    padding: 40px 30px;
+    min-height: auto;
+  }
+  .testimonials-right-box {
+    padding: 30px 20px;
+    min-height: auto;
+  }
+  .testimonials-left-box .testimonials-title {
+    font-size: 1.8rem;
+  }
+}
+
 
 
 
