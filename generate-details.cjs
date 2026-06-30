@@ -305,25 +305,25 @@ const getCaseStudiesSection = () => `
         <div class="case-study-card card-manilla">
           <h4>Case Study 1</h4>
           <h5>CRA Audit for GST/HST – Saving Our Client Over $70,000</h5>
-          <p>A mid-sized e-commerce business faced a CRA audit due to discrepancies in GST/HST filings, leading to a demand of $75,000 for unpaid taxes, interest, and penalties. We conducted a thorough review, identified errors, and restructured the filings to ensure full compliance. As a result, the CRA reassessed the case and reduced the total liability to $3,500, saving the client $71,500.</p>
+          <p>A mid-sized e-commerce business faced a $75,000 CRA GST/HST audit. We identified filing errors and restructured their compliance. The CRA reassessed and reduced the total liability to $3,500, saving the client $71,500.</p>
           <a href="#" class="btn btn-outline btn-sm">Download PDF</a>
         </div>
         <div class="case-study-card card-kraft">
           <h4>Case Study 2</h4>
           <h5>CRA Audit for Personal Tax – Avoiding Unfair Tax Adjustments</h5>
-          <p>A self-employed IT consultant was facing a CRA audit on disputed business expense claims, which resulted in a demand for $20,000 in additional taxes. We gathered the necessary documentation, presented detailed justifications, and prepared a solid response. The CRA accepted 90% of the deductions, reducing the final tax bill to $1,200 and saving the client $18,800.</p>
+          <p>A self-employed IT consultant faced an audit on $20,000 of expense claims. We gathered documentation and defended the deductions. The CRA accepted 90% of claims, saving the client $18,800.</p>
           <a href="#" class="btn btn-outline btn-sm">Download PDF</a>
         </div>
         <div class="case-study-card card-slate">
           <h4 style="color: var(--color-bookcloth) !important;">Case Study 3</h4>
           <h5>Voluntary Disclosure – Avoiding CRA Penalties</h5>
-          <p>A small business owner had missed corporate tax filings for five years and feared significant penalties. We filed under the Voluntary Disclosure Program (VDP), ensuring the CRA waived all penalties and only charged interest. This allowed the client to avoid over $50,000 in penalties and become fully compliant.</p>
+          <p>A small business owner missed filings for five years, facing heavy penalties. We filed under the Voluntary Disclosure Program (VDP). The CRA waived all penalties, saving the client over $50,000.</p>
           <a href="#" class="btn btn-outline-white btn-sm">Download PDF</a>
         </div>
         <div class="case-study-card card-cloud">
           <h4>Case Study 4</h4>
           <h5>Filing 10 Years of Late Tax Returns – Big Refund Secured</h5>
-          <p>A contractor hadn’t filed taxes for 10 years and expected to owe money. We filed all overdue returns, claiming missed tax credits, deductions, and overpaid taxes. Rather than owing, the CRA issued a $28,000 refund, turning what seemed like a financial setback into a positive outcome for the client.</p>
+          <p>A contractor hadn't filed tax returns for 10 years and expected a massive debt. We filed all overdue returns, claiming missed tax credits. Rather than owing, they received a $28,000 refund.</p>
           <a href="#" class="btn btn-outline btn-sm">Download PDF</a>
         </div>
       </div>
@@ -839,12 +839,12 @@ const industries = [
 const locations = [
   { slug: 'toronto', name: 'Toronto', provinceSlug: 'ontario', address: '381 Front St W, Toronto, ON M5V 3R8' },
   { slug: 'vancouver', name: 'Vancouver', provinceSlug: 'british-columbia', address: '997 Seymour St, Vancouver, BC V6B 3M1' },
-  { slug: 'brampton', name: 'Brampton', provinceSlug: 'ontario', address: '30 Alderbury Crescent, Brampton, ON L6T 1P6' },
-  { slug: 'vaughan', name: 'Vaughan', provinceSlug: 'ontario', address: '185 Millway Ave, Vaughan, ON L4K 0L2' },
-  { slug: 'mississauga', name: 'Mississauga', provinceSlug: 'ontario', address: '201 City Centre Dr, Mississauga, ON L5B 2T4' },
   { slug: 'calgary', name: 'Calgary', provinceSlug: 'alberta', address: '120 8 Ave SE, Calgary, AB T2G 0K6' },
-  { slug: 'edmonton', name: 'Edmonton', provinceSlug: 'alberta', address: '10060 Jasper Ave, Edmonton, AB T5J 3R8' },
-  { slug: 'ottawa', name: 'Ottawa', provinceSlug: 'ontario', address: '116 Albert St, Ottawa, ON K1P 5G3' }
+  { slug: 'montreal', name: 'Montreal', provinceSlug: 'quebec', address: '1250 René-Lévesque Blvd W, Montreal, QC H3B 4W8' },
+  { slug: 'winnipeg', name: 'Winnipeg', provinceSlug: 'manitoba', address: '201 Portage Ave, Winnipeg, MB R3B 3K6' },
+  { slug: 'saskatoon', name: 'Saskatoon', provinceSlug: 'saskatchewan', address: '409 3rd Ave S, Saskatoon, SK S7K 5R5' },
+  { slug: 'halifax', name: 'Halifax', provinceSlug: 'nova-scotia', address: '1801 Hollis St, Halifax, NS B3J 3N4' },
+  { slug: 'moncton', name: 'Moncton', provinceSlug: 'new-brunswick', address: '860 Main St, Moncton, NB E1C 1G2' }
 ];
 
 const pricingPlans = [

@@ -1607,20 +1607,26 @@ p {
 
 /* ── FAQ Accordion ─────────────────────────── */
 .faq-list {
-  max-width: 800px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto 0;
 }
 
 .faq-item {
   border: 1px solid var(--border-gray);
   border-radius: var(--radius);
-  margin-bottom: 10px;
+  background-color: #ffffff;
   overflow: hidden;
   transition: var(--transition);
+  height: max-content;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02), 0 2px 4px -1px rgba(0,0,0,0.01);
 }
 
 .faq-item:hover {
   border-color: var(--primary);
+  box-shadow: var(--shadow-md);
 }
 
 .faq-question {
@@ -1628,14 +1634,16 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 22px;
-  background: var(--white);
-  font-weight: 600;
+  padding: 22px 25px;
+  background: #ffffff;
+  font-weight: 700;
   font-size: 0.95rem;
-  color: var(--dark-green);
+  color: var(--color-slate-dark);
   text-align: left;
   cursor: pointer;
+  border: none;
   transition: var(--transition-fast);
+  line-height: 1.4;
 }
 
 .faq-question:hover {
@@ -1644,12 +1652,19 @@ p {
 
 .faq-question i {
   transition: var(--transition);
-  font-size: 0.8rem;
+  font-size: 0.95rem;
+  color: var(--color-cloud-dark);
+  margin-left: 15px;
+  flex-shrink: 0;
+}
+
+.faq-item.active .faq-question {
   color: var(--primary);
 }
 
 .faq-item.active .faq-question i {
-  transform: rotate(180deg);
+  transform: rotate(45deg);
+  color: var(--primary);
 }
 
 .faq-answer {
@@ -1659,15 +1674,28 @@ p {
 }
 
 .faq-answer-inner {
-  padding: 0 22px 18px;
-  font-size: 0.9rem;
+  padding: 0 25px 22px;
+  font-size: 0.88rem;
   color: var(--body-text-light);
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .faq-item.active .faq-answer {
   max-height: 500px;
 }
+
+@media (max-width: 991px) {
+  .faq-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* ── Footer ────────────────────────────────── */
 .footer {
@@ -2731,11 +2759,11 @@ p {
 
 /* Choose Us Cards Styling */
 .choose-card {
-  padding: 25px;
+  padding: 24px;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  aspect-ratio: 1 / 1;
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
@@ -2744,6 +2772,14 @@ p {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
 }
+
+@media (max-width: 991px) {
+  .choose-card {
+    aspect-ratio: auto;
+    min-height: 220px;
+  }
+}
+
 
 .choose-card-header {
   display: flex;
@@ -3141,11 +3177,12 @@ p {
 /* ── Case Study Card Custom Styles ── */
 .case-study-card {
   border-radius: 16px;
-  padding: 30px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   text-align: left;
-  height: 100%;
+  aspect-ratio: 1 / 1;
   border: 1px solid var(--border-gray);
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
@@ -3160,32 +3197,39 @@ p {
 }
 
 .case-study-card h4 {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   color: var(--color-bookcloth);
   font-family: var(--font-serif);
 }
 
 .case-study-card h5 {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 15px;
+  line-height: 1.35;
+  margin-bottom: 10px;
   color: var(--color-slate-dark);
 }
 
 .case-study-card p {
-  font-size: 0.88rem;
-  line-height: 1.55;
+  font-size: 0.82rem;
+  line-height: 1.45;
   color: var(--color-cloud-dark);
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   flex-grow: 1;
 }
 
 .case-study-card .btn {
   align-self: flex-start;
   margin-top: auto;
+}
+
+@media (max-width: 991px) {
+  .case-study-card {
+    aspect-ratio: auto;
+    min-height: 280px;
+  }
 }
 
 /* Color theme mappings for case study cards */
@@ -3217,6 +3261,89 @@ p {
   background-color: var(--color-ivory-dark);
   border-color: rgba(0,0,0,0.05);
 }
+
+/* ── Checkerboard Locations Grid Styles ── */
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-top: 40px;
+}
+
+.location-grid .location-card {
+  border-radius: 4px;
+  padding: 35px 25px;
+  text-align: left;
+  box-shadow: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #ffffff;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.location-grid .location-card.orange {
+  background-color: var(--color-bookcloth);
+}
+
+.location-grid .location-card.teal {
+  background-color: var(--color-slate-med);
+}
+
+.location-grid .location-card h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff !important;
+  font-family: var(--font-serif);
+}
+
+.location-grid .location-card .prov-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.location-grid .location-card .teaser {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.45;
+  margin-bottom: 25px;
+  min-height: 45px;
+}
+
+.location-grid .location-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.location-grid .location-card:hover {
+  transform: scale(1.015);
+  box-shadow: var(--shadow-lg);
+  z-index: 5;
+}
+
+@media (max-width: 991px) {
+  .location-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 
