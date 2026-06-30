@@ -348,57 +348,306 @@ const getTeamSection = () => `
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:20px;">
         <div class="team-card">
           <div style="height:220px; overflow:hidden; border-radius:8px 8px 0 0;">
-            <img src="/images/udit_hero.png" alt="Udit Gupta" style="width:100%; height:100%; object-fit:cover; display:block;">
+            <img src="https://taxccount.com/wp-content/uploads/2024/10/Udit-Gupta-Image-1.jpg" alt="Udit Gupta" style="width:100%; height:100%; object-fit:cover; display:block;">
           </div>
           <div class="team-info" style="padding:15px; text-align:left;">
-            <h3 class="team-name" style="font-size:1.1rem;">Udit Gupta</h3>
-            <div class="team-role">CEO &amp; Founder</div>
-            <p style="font-size:0.8rem; margin-top:8px; line-height:1.4;">CA, CPA (ICAI &amp; MIA), CPA Canada In-Depth Tax, Tax Expert</p>
+            <h3 class="team-name" style="font-size:1.1rem; margin-bottom: 2px;">Udit Gupta</h3>
+            <div class="team-role" style="font-weight: 600; color: var(--primary); font-size: 0.85rem;">CEO &amp; Founder</div>
+            <p style="font-size:0.75rem; margin-top:8px; line-height:1.4; color: #555;">CA, CPA (ICAI &amp; MIA), CPA Canada In-Depth Tax, Tax Expert</p>
           </div>
         </div>
         <div class="team-card">
           <div style="height:220px; overflow:hidden; border-radius:8px 8px 0 0;">
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop" alt="Abhinav Gupta" style="width:100%; height:100%; object-fit:cover; display:block;">
+            <img src="https://taxccount.com/wp-content/uploads/2024/10/Abhinav-Gupta-Image-F1.jpg" alt="Abhinav Gupta" style="width:100%; height:100%; object-fit:cover; display:block;">
           </div>
           <div class="team-info" style="padding:15px; text-align:left;">
-            <h3 class="team-name" style="font-size:1.1rem;">Abhinav Gupta</h3>
-            <div class="team-role">Tax Expert</div>
-            <p style="font-size:0.8rem; margin-top:8px; line-height:1.4;">Canada Tax, International Tax, Cross Border Tax, Transfer Pricing</p>
+            <h3 class="team-name" style="font-size:1.1rem; margin-bottom: 2px;">Abhinav Gupta</h3>
+            <div class="team-role" style="font-weight: 600; color: var(--primary); font-size: 0.85rem;">Canada Tax / International Tax</div>
+            <p style="font-size:0.75rem; margin-top:8px; line-height:1.4; color: #555;">Canada Tax, International Tax, Cross Border Tax, Transfer Pricing</p>
           </div>
         </div>
         <div class="team-card">
           <div style="height:220px; overflow:hidden; border-radius:8px 8px 0 0;">
-            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop" alt="Raghav Gupta" style="width:100%; height:100%; object-fit:cover; display:block;">
+            <img src="https://taxccount.com/wp-content/uploads/2024/10/Untitled-design-60.png" alt="Raghav Gupta" style="width:100%; height:100%; object-fit:cover; display:block;">
           </div>
           <div class="team-info" style="padding:15px; text-align:left;">
-            <h3 class="team-name" style="font-size:1.1rem;">Raghav Gupta</h3>
-            <div class="team-role">Tax Expert</div>
-            <p style="font-size:0.8rem; margin-top:8px; line-height:1.4;">International Tax, Transfer Pricing</p>
+            <h3 class="team-name" style="font-size:1.1rem; margin-bottom: 2px;">Raghav Gupta</h3>
+            <div class="team-role" style="font-weight: 600; color: var(--primary); font-size: 0.85rem;">International Tax Expert</div>
+            <p style="font-size:0.75rem; margin-top:8px; line-height:1.4; color: #555;">International Tax, Transfer Pricing Specialist</p>
           </div>
         </div>
         <div class="team-card">
           <div style="height:220px; overflow:hidden; border-radius:8px 8px 0 0;">
-            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop" alt="Anmol Mittal" style="width:100%; height:100%; object-fit:cover; display:block;">
+            <img src="https://taxccount.com/wp-content/uploads/2025/12/Untitled-design-48.png" alt="Anmol Mittal" style="width:100%; height:100%; object-fit:cover; display:block;">
           </div>
           <div class="team-info" style="padding:15px; text-align:left;">
-            <h3 class="team-name" style="font-size:1.1rem;">Anmol Mittal</h3>
-            <div class="team-role">Cross-Border Expert</div>
-            <p style="font-size:0.8rem; margin-top:8px; line-height:1.4;">CPA Canada, CPA USA, CA (ICAI), Canada Tax Expert</p>
+            <h3 class="team-name" style="font-size:1.1rem; margin-bottom: 2px;">Anmol Mittal</h3>
+            <div class="team-role" style="font-weight: 600; color: var(--primary); font-size: 0.85rem;">Canada Tax Expert</div>
+            <p style="font-size:0.75rem; margin-top:8px; line-height:1.4; color: #555;">CPA Canada, CPA USA, CA (ICAI), Canada Tax Expert</p>
           </div>
         </div>
         <div class="team-card">
           <div style="height:220px; overflow:hidden; border-radius:8px 8px 0 0;">
-            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=400&h=400&fit=crop" alt="Vinayak Indolia" style="width:100%; height:100%; object-fit:cover; display:block;">
+            <img src="https://taxccount.com/wp-content/uploads/2026/01/Untitled-design-46.png" alt="Vinayak Indolia" style="width:100%; height:100%; object-fit:cover; display:block;">
           </div>
           <div class="team-info" style="padding:15px; text-align:left;">
-            <h3 class="team-name" style="font-size:1.1rem;">Vinayak Indolia</h3>
-            <div class="team-role">Senior Advisor</div>
-            <p style="font-size:0.8rem; margin-top:8px; line-height:1.4;">CPA, CA. - CFO Advisory | Fractional CFO</p>
+            <h3 class="team-name" style="font-size:1.1rem; margin-bottom: 2px;">Vinayak Indolia</h3>
+            <div class="team-role" style="font-weight: 600; color: var(--primary); font-size: 0.85rem;">CFO Advisory</div>
+            <p style="font-size:0.75rem; margin-top:8px; line-height:1.4; color: #555;">CPA, CA. Fractional CFO and Senior Advisory Specialist</p>
           </div>
         </div>
       </div>
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="/team.html" class="btn btn-outline" style="border-radius: 50px; font-weight: 700; padding: 12px 35px; border: 2px solid var(--primary); color: var(--primary); background: transparent; transition: all 0.3s ease;">Meet Our Entire Team of Experts</a>
+      </div>
     </div>
   </section>
+`;
+
+const getAccountingBookkeepingPricingTable = () => `
+<section class="section" style="background-color: var(--white); border-top: 1px solid var(--border-gray);">
+  <div class="container">
+    <div class="section-header" style="margin-bottom: 50px;">
+      <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--dark-green);">Accounting and Bookkeeping</h2>
+      <div class="accent-line"></div>
+    </div>
+
+    <!-- 4 Pricing Cards Grid -->
+    <style>
+      .bk-pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-bottom: 50px;
+      }
+      .bk-pricing-card {
+        background: var(--white);
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 30px 20px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 250px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .bk-pricing-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+      }
+      .bk-tier-title {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 20px;
+      }
+      .bk-tier-price {
+        font-size: 2.4rem;
+        font-weight: 800;
+        color: #0f172a;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+      .bk-tier-price span {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: #64748b;
+        margin-top: 5px;
+      }
+      .bk-btn {
+        background-color: rgb(251, 119, 13);
+        color: var(--white);
+        padding: 10px 25px;
+        border-radius: 50px;
+        font-weight: 700;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.2s;
+        border: none;
+        cursor: pointer;
+      }
+      .bk-btn:hover {
+        background-color: rgb(200, 90, 10);
+        color: var(--white);
+      }
+
+      /* Comparison Table Styling */
+      .bk-table-container {
+        overflow-x: auto;
+        margin-top: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        border: 1px solid #e2e8f0;
+      }
+      .bk-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        font-size: 0.95rem;
+      }
+      .bk-table th {
+        background-color: rgb(251, 119, 13);
+        color: var(--white);
+        font-weight: 700;
+        padding: 18px 20px;
+        text-align: center;
+      }
+      .bk-table th:first-child {
+        text-align: left;
+      }
+      .bk-table td {
+        padding: 16px 20px;
+        border-bottom: 1px solid #e2e8f0;
+        text-align: center;
+        color: #334155;
+      }
+      .bk-table td:first-child {
+        text-align: left;
+        font-weight: 600;
+        color: #1e293b;
+      }
+      .bk-table tr:nth-child(even) {
+        background-color: #f8fafc;
+      }
+      .bk-table tr:hover {
+        background-color: #f1f5f9;
+      }
+      .bk-check {
+        color: rgb(251, 119, 13);
+        font-size: 1.2rem;
+      }
+      .bk-cross {
+        color: #ef4444;
+        font-size: 1.2rem;
+      }
+      
+      @media (max-width: 991px) {
+        .bk-pricing-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 576px) {
+        .bk-pricing-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    <div class="bk-pricing-grid">
+      <div class="bk-pricing-card">
+        <div class="bk-tier-title" style="color: var(--dark-green); font-weight:700;">Up to 10 Transactions</div>
+        <div class="bk-pricing-card-inner">
+          <div class="bk-tier-price" style="font-size: 2.2rem; font-weight:800; color: #1e293b;">Free</div>
+        </div>
+        <a href="/contact.html" class="bk-btn">Get Started</a>
+      </div>
+      <div class="bk-pricing-card">
+        <div class="bk-tier-title" style="color: var(--dark-green); font-weight:700;">Up to 200 Transactions</div>
+        <div class="bk-pricing-card-inner">
+          <div class="bk-tier-price" style="font-size: 2.2rem; font-weight:800; color: #1e293b;">$10/month</div>
+        </div>
+        <a href="/contact.html" class="bk-btn">Get Started</a>
+      </div>
+      <div class="bk-pricing-card">
+        <div class="bk-tier-title" style="color: var(--dark-green); font-weight:700;">Up to 500 Transactions</div>
+        <div class="bk-pricing-card-inner">
+          <div class="bk-tier-price" style="font-size: 2.2rem; font-weight:800; color: #1e293b;">$20/month</div>
+        </div>
+        <a href="/contact.html" class="bk-btn">Get Started</a>
+      </div>
+      <div class="bk-pricing-card">
+        <div class="bk-tier-title" style="color: var(--dark-green); font-weight:700;">500+ Transactions</div>
+        <div class="bk-pricing-card-inner">
+          <div class="bk-tier-price" style="font-size: 2.2rem; font-weight:800; color: #1e293b;">$0.50<span style="font-size:0.85rem;font-weight:500;">per extra transaction</span></div>
+        </div>
+        <a href="/contact.html" class="bk-btn">Get Started</a>
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="bk-table-container">
+      <table class="bk-table">
+        <thead>
+          <tr>
+            <th style="width: 30%;">Features</th>
+            <th style="width: 17.5%;">Up to 10 Transactions</th>
+            <th style="width: 17.5%;">Up to 200 Transactions</th>
+            <th style="width: 17.5%;">Up to 500 Transactions</th>
+            <th style="width: 17.5%;">500+ Transactions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Annual Transaction Volume</td>
+            <td>0–10</td>
+            <td>Up to 200</td>
+            <td>Up to 500</td>
+            <td>500+</td>
+          </tr>
+          <tr>
+            <td>Financial Statement Preparation</td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+          </tr>
+          <tr>
+            <td>GST/HST Summary Prep</td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+          </tr>
+          <tr>
+            <td>Annual Bookkeeping Report</td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+          </tr>
+          <tr>
+            <td>Year-End Closing Adjustments</td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+          </tr>
+          <tr>
+            <td>Bank Reconciliation</td>
+            <td><i class="fas fa-times bk-cross"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+          </tr>
+          <tr>
+            <td>Receipt / Invoice Matching</td>
+            <td><i class="fas fa-times bk-cross"></i></td>
+            <td>Included (Organized Data Only)</td>
+            <td>Included (Organized Data Only)</td>
+            <td>Included</td>
+          </tr>
+          <tr>
+            <td>Email Support</td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+            <td><i class="fas fa-check-circle bk-check"></i></td>
+          </tr>
+          <tr>
+            <td>Support Call</td>
+            <td>Free 15-min</td>
+            <td>Free 15-min</td>
+            <td>Free 15-min</td>
+            <td>Free 15-min</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 `;
 
 const getServiceTiersSection = (pageName, pageType = 'service', customTiers = null) => {
@@ -1202,14 +1451,46 @@ writePage(
         <p>Every industry faces unique tax challenges and CRA guidelines. We provide specialized compliance support for every major sector.</p>
         <div class="accent-line"></div>
       </div>
-      <div class="grid-3">
-        ${industries.map(ind => `
-          <a href="/industries/${ind.slug}.html" class="industry-card">
-            <div class="card-icon"><i class="fas ${ind.icon}"></i></div>
-            <h3>${ind.name}</h3>
-            <p>${ind.desc}</p>
-          </a>
-        `).join('')}
+      
+      <div class="industry-acc-list" style="max-width:900px;margin:0 auto;">
+        ${industries.map((ind, idx) => {
+          let subs = [];
+          if (ind.slug === 'healthcare') {
+            subs = ['Dentists', 'Pharmacies', 'Doctors', 'Chiropractors', 'Veterinary', 'Medical Practice & Physicians', 'Therapists & Psychologists'];
+          } else if (ind.slug === 'real-estate') {
+            subs = ['Realtors', 'Brokers', 'Property Developers', 'Property Managers', 'Appraisers', 'Real Estate Investors', 'Leasing Agencies'];
+          } else if (ind.slug === 'construction') {
+            subs = ['General Contractors', 'Subcontractors', 'Home Builders', 'Framers', 'Electricians', 'Plumbers', 'Roofers & Renovation firms'];
+          } else if (ind.slug === 'ecommerce') {
+            subs = ['Shopify Sellers', 'Amazon FBA Sellers', 'Dropshippers', 'WooCommerce Brands', 'eBay Stores', 'Digital Goods Sellers', 'Wholesalers'];
+          } else if (ind.slug === 'restaurants') {
+            subs = ['Cafes', 'Fine Dining', 'Bakeries', 'Bars & Pubs', 'Food Trucks', 'Catering Services', 'Franchises'];
+          } else if (ind.slug === 'professional-services') {
+            subs = ['IT Consultants', 'Tech Startups', 'Sole Proprietors', 'Partnerships', 'Corporations', 'Advisory Consultants', 'Lawyers & Law Firms', 'Marketing Agencies'];
+          } else if (ind.slug === 'technology') {
+            subs = ['Software Developers', 'SaaS Startups', 'Fintech Companies', 'AI & Machine Learning Firms', 'Hardware Manufacturers', 'IT Service Providers'];
+          } else if (ind.slug === 'manufacturing') {
+            subs = ['Product Manufacturers', 'Food & Beverage Processors', 'Chemical Manufacturers', 'Textile Mills', 'Machinery Manufacturers', 'Metal Fabricators'];
+          } else if (ind.slug === 'transportation') {
+            subs = ['Trucking & Freight', 'Delivery & Courier Services', 'Taxi & Ride-Sharing', 'Logistics Providers', 'Warehousing Businesses', 'Public Transit & Charter'];
+          } else if (ind.slug === 'non-profit') {
+            subs = ['Registered Charities', 'Foundations', 'Community Organizations', 'Social Services', 'Professional Associations', 'Recreation & Sports Clubs'];
+          }
+          
+          return `
+            <div class="industry-acc-item ${idx === 0 ? 'active' : ''}">
+              <button class="industry-acc-question">
+                <i class="fas fa-chevron-right"></i>
+                Tax Filings : ${ind.name}
+              </button>
+              <div class="industry-acc-answer">
+                <div class="industry-acc-answer-inner">
+                  ${subs.map(sub => `<a href="/industries/${ind.slug}.html">${sub}</a>`).join('')}
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('')}
       </div>
     </div>
   </section>
@@ -2526,7 +2807,7 @@ pricingPlans.forEach(plan => {
 
     <!-- 3. SERVICE TIERS -->
     <section id="service-tiers" style="padding: 20px 0;">
-      ${getServiceTiersSection(plan.name, 'pricing')}
+      ${plan.slug === 'accounting-bookkeeping' ? getAccountingBookkeepingPricingTable() : getServiceTiersSection(plan.name, 'pricing')}
     </section>
 
     <!-- 4. WHY CHOOSE US -->
