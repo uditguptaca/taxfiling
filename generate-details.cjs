@@ -1185,9 +1185,6 @@ const getWhyChooseUsSection = (pageName, customTitle = null, customSubtitle = nu
   <section class="section section-gray">
     <div class="container">
       <div class="grid-2">
-        <div style="display:flex;align-items:center;justify-content:center;">
-          <img src="${imgUrl}" alt="CPA Tax Experts" style="border-radius:12px;box-shadow:var(--shadow-md);max-width:100%;height:350px;width:100%;object-fit:cover;object-position:center;">
-        </div>
         <div>
           <div class="section-header" style="text-align:left;margin-bottom:30px;">
             <h2>${title}</h2>
@@ -1205,6 +1202,9 @@ const getWhyChooseUsSection = (pageName, customTitle = null, customSubtitle = nu
               </div>
             `).join('')}
           </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;">
+          <img src="${imgUrl}" alt="CPA Tax Experts" style="border-radius:12px;box-shadow:var(--shadow-md);max-width:100%;height:350px;width:100%;object-fit:cover;object-position:center;">
         </div>
       </div>
     </div>
