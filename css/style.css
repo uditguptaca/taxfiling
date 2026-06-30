@@ -806,17 +806,23 @@ p {
 
 .reviews-carousel {
   display: flex;
-  gap: 20px;
-  overflow: hidden;
+  gap: 15px;
+  overflow-x: auto;
   flex: 1;
+  scrollbar-width: none;
+}
+
+.reviews-carousel::-webkit-scrollbar {
+  display: none;
 }
 
 .review-card {
   background: var(--white);
   border: 1px solid var(--border-gray);
   border-radius: var(--radius);
-  padding: 20px;
-  min-width: 280px;
+  padding: 15px;
+  width: 245px;
+  min-width: 245px;
   flex-shrink: 0;
 }
 
