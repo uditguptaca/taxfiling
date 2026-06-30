@@ -4703,9 +4703,33 @@ const generateLocationsHub = () => `
 writePage(path.join(rootDir, 'locations', 'index.html'), 'Our Locations Across Canada', 'We serve clients across Canada.', 'locations', generateLocationsHub());
 writePage(path.join(rootDir, 'tax-accountant-firm', 'index.html'), 'Our Locations Across Canada', 'We serve clients across Canada.', 'locations', generateLocationsHub());
 
+// Read index.html for extracting sections programmatically
+const indexHtmlContent = fs.readFileSync(path.join(rootDir, 'index.html'), 'utf8');
+
+function getSectionFromIndex(startComment, endComment) {
+  const startIdx = indexHtmlContent.indexOf(startComment);
+  if (startIdx === -1) {
+    console.error("Could not find start comment: " + startComment);
+    return "";
+  }
+  const endIdx = indexHtmlContent.indexOf(endComment, startIdx);
+  if (endIdx === -1) {
+    console.error("Could not find end comment: " + endComment);
+    return "";
+  }
+  return indexHtmlContent.substring(startIdx, endIdx);
+}
+
 // Location Detail Pages
 locations.forEach(loc => {
   const isToronto = loc.slug === 'toronto';
+
+  const recommendedLogosHtml = isToronto ? getSectionFromIndex('<!-- Recommended Logos Section -->', '<!-- Why Choose Us / Detailed Description -->') : '';
+  const coreServicesShowcaseHtml = isToronto ? getSectionFromIndex('<!-- Core Services Showcase Tabs Section -->', '<!-- Team Section -->') : '';
+  const pressMediaHtml = isToronto ? getSectionFromIndex('<!-- Symmetrical Testimonials Section -->', '<!-- Software Logos Section -->') : '';
+  const softwareLogosHtml = isToronto ? getSectionFromIndex('<!-- Software Logos Section -->', '<!-- Industries We Serve Section (Interactive Tabbed Layout) -->') : '';
+  const industriesServeHtml = isToronto ? getSectionFromIndex('<!-- Industries We Serve Section (Interactive Tabbed Layout) -->', '<!-- Let\'s Connect / Interactive Office Locator Widget -->') : getIndustriesGridSection(isToronto ? 'Toronto Industries Expert' : 'Canadian');
+  const officeLocatorHtml = isToronto ? getSectionFromIndex('<!-- Let\'s Connect / Interactive Office Locator Widget -->', '<!-- FAQ Section -->') : '';
 
   const introSectionHtml = isToronto ? `
   <!-- Google Reviews Bar -->
@@ -5246,11 +5270,24 @@ locations.forEach(loc => {
 
     ${introSectionHtml}
 
-    <!-- 3. LOCAL SERVICES OFFERED -->
+    <!-- Recommended Logos Section (Toronto Only) -->
+    ${recommendedLogosHtml}
+
+    <!-- 4. WHY CHOOSE US -->
+    ${getWhyChooseUsSection(loc.name, isToronto ? 'Why Choose Tax Filings Toronto?' : `Why Choose Tax Filings ${loc.name}?`)}
+
+    <!-- 5. RISK-FREE WORKFLOW -->
+    ${getWorkflowSection()}
+
+    <!-- Core Services Showcase Section (Toronto Only) -->
+    ${coreServicesShowcaseHtml}
+
+    <!-- 3. LOCAL SERVICES OFFERED (Non-Toronto Only) -->
+    ${isToronto ? '' : `
     <section class="section pt-0" id="local-services">
       <div class="container">
         <div class="section-header">
-          <h2>Tax &amp; Accounting Services We Offer in ${loc.name}</h2>
+          <h2>Tax &amp; Accounting Services We Offer in \${loc.name}</h2>
           <p>Complete financial compliance from standard filings to complex corporate restructuring.</p>
           <div class="accent-line"></div>
         </div>
@@ -5288,21 +5325,25 @@ locations.forEach(loc => {
         </div>
       </div>
     </section>
+    `}
 
-    <!-- 4. WHY CHOOSE US -->
-    ${getWhyChooseUsSection(loc.name, isToronto ? 'Why Choose Tax Filings Toronto?' : `Why Choose Tax Filings ${loc.name}?`)}
+    <!-- Press and Media Section (Toronto Only) -->
+    ${pressMediaHtml}
 
-    <!-- 5. RISK-FREE WORKFLOW -->
-    ${getWorkflowSection()}
+    <!-- Software Logos Marquee (Toronto Only) -->
+    ${softwareLogosHtml}
 
-    <!-- 6. INDUSTRIES PARTNER -->
-    ${getIndustriesGridSection(isToronto ? 'Toronto Industries Expert' : 'Canadian')}
+    <!-- Industries We Serve Section -->
+    ${industriesServeHtml}
 
-    <!-- 7. CLIENTS LOGO BANNER -->
-    ${getClientsLogoSection()}
+    <!-- Office Locator Widget (Toronto Only) -->
+    ${officeLocatorHtml}
 
-    <!-- 8. PRICING SECTION -->
-    ${getPricingSection()}
+    <!-- 7. CLIENTS LOGO BANNER (Non-Toronto Only) -->
+    ${isToronto ? '' : getClientsLogoSection()}
+
+    <!-- 8. PRICING SECTION (Non-Toronto Only) -->
+    ${isToronto ? '' : getPricingSection()}
 
     <!-- 9. CASE STUDIES SECTION -->
     ${getCaseStudiesSection()}
