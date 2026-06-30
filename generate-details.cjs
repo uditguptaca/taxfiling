@@ -3873,7 +3873,7 @@ writePage(
 // Industry Detail Pages
 industries.forEach(ind => {
   const isHealthcare = ind.slug === 'healthcare';
-  const pressMediaHtml = ind.slug === 'healthcare' ? getSectionFromIndex('<!-- Symmetrical Testimonials Section -->', '<!-- Software Logos Section -->') : '';
+  const pressMediaHtml = ind.slug === 'healthcare' ? getSectionFromIndex('<!-- Symmetrical Testimonials Section -->', '<!-- Software Logos Section -->').replace('class="testimonials-symmetrical-section"', 'class="testimonials-symmetrical-section" style="padding: 10px 0 !important; background-color: transparent !important;"') : '';
 
   // Customized Subsectors
   let subsectorsList = [];
@@ -4511,12 +4511,12 @@ industries.forEach(ind => {
     </section>
 
     <!-- 6. RISK-FREE WORKFLOW -->
-    ${getWorkflowSection(ind.slug)}
+    ${isHealthcare ? getWorkflowSection(ind.slug).replace('class="workflow-section"', 'class="workflow-section" style="padding-bottom: 10px !important;"') : getWorkflowSection(ind.slug)}
 
     ${pressMediaHtml}
 
     <!-- 4. CORE SUB-SERVICES FEATURES -->
-    <section class="section" style="padding: 60px 0; background-color: var(--white);">
+    <section class="section" style="${isHealthcare ? 'padding: 20px 0 60px 0;' : 'padding: 60px 0;'} background-color: var(--white);">
       <div class="container">
         <div class="section-header">
           <h2>Core ${ind.name} Sub-Services &amp; Features</h2>
