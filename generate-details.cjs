@@ -1192,14 +1192,17 @@ const getWhyChooseUsSection = (pageName, customTitle = null, customSubtitle = nu
 
 const getClientsLogoSection = () => ``;
 
-const getWorkflowSection = () => `
+const getWorkflowSection = (indSlug = '') => {
+  const isHealthcare = indSlug === 'healthcare';
+  const imgUrl = isHealthcare ? '/images/medical_accounting_team.png' : '/images/office_team.png';
+  return `
   <!-- Workflow Split Section -->
   <section class="workflow-section" id="workflow">
     <div class="container">
       <div class="workflow-grid">
         <!-- Left Column: Image -->
         <div class="workflow-img-col">
-          <img src="/images/office_team.png" alt="Tax Filings Canada Team Office" class="workflow-team-img">
+          <img src="${imgUrl}" alt="Tax Filings Canada Team Office" class="workflow-team-img">
         </div>
         
         <!-- Right Column: dark green list -->
@@ -1240,7 +1243,8 @@ const getWorkflowSection = () => `
       </div>
     </div>
   </section>
-`;
+  `;
+};
 
 const getIndustriesGridSection = (titlePrefix = 'Canadian', customSubsectors = []) => {
   const defaultSubsectors = [
@@ -3830,7 +3834,7 @@ industries.forEach(ind => {
     <!-- Custom styling to replicate WordPress Elementor design -->
     <style>
       .ind-hero {
-        background: ${isHealthcare ? `linear-gradient(rgba(25, 25, 25, 0.86), rgba(25, 25, 25, 0.86)), url('/images/healthcare_hero_bg.png') no-repeat center center / cover` : `linear-gradient(135deg, var(--color-slate-dark) 0%, var(--color-slate-med) 100%)`};
+        background: ${isHealthcare ? `linear-gradient(to right, rgba(25, 25, 25, 0.82) 0%, rgba(25, 25, 25, 0.55) 100%), url('/images/healthcare_hero_bg.png') no-repeat center center / cover` : `linear-gradient(135deg, var(--color-slate-dark) 0%, var(--color-slate-med) 100%)`};
         padding: 80px 0 100px;
         color: var(--white);
         overflow: hidden;
@@ -4267,7 +4271,7 @@ industries.forEach(ind => {
     </section>
 
     <!-- 6. RISK-FREE WORKFLOW -->
-    ${getWorkflowSection()}
+    ${getWorkflowSection(ind.slug)}
 
     <!-- 7. INDUSTRIES WE PARTNER WITH (SECTORS GRID) -->
     <section class="section section-gray">
