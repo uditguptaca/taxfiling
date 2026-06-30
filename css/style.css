@@ -804,16 +804,34 @@ p {
 .reviews-badge .google-logo .g-yellow { color: #FBBC05; }
 .reviews-badge .google-logo .g-green { color: #34A853; }
 
-.reviews-carousel {
+.reviews-marquee-wrapper {
   display: flex;
+  overflow: hidden;
+  width: 100%;
   gap: 15px;
-  overflow-x: auto;
   flex: 1;
-  scrollbar-width: none;
+  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
 }
 
-.reviews-carousel::-webkit-scrollbar {
-  display: none;
+.reviews-marquee-content {
+  display: flex;
+  gap: 15px;
+  flex-shrink: 0;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.reviews-marquee-wrapper:hover .reviews-marquee-content {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 15px));
+  }
 }
 
 .review-card {

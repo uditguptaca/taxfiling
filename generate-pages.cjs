@@ -367,7 +367,7 @@ writePage(
       </div>
       <div class="grid-4">
         <div class="team-card">
-          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=280&fit=crop" alt="Udit Gupta" class="team-photo">
+          <img src="/images/udit_hero.png" alt="Udit Gupta" class="team-photo" style="object-fit:cover;">
           <div class="team-info">
             <h3 class="team-name">Udit Gupta</h3>
             <div class="team-role">CEO & Founder</div>
