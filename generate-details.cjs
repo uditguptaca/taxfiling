@@ -413,6 +413,83 @@ const getPricingSection = (indSlug = '') => {
           margin-bottom: 25px;
           flex-grow: 1;
         }
+        .pricing-showcase-card.card-manilla {
+          background-color: #EBDBBC !important;
+          border-color: #D4A27F !important;
+        }
+        .pricing-showcase-card.card-manilla h4,
+        .pricing-showcase-card.card-manilla .pricing-card-includes,
+        .pricing-showcase-card.card-manilla .pricing-card-price span {
+          color: #191919 !important;
+        }
+        .pricing-showcase-card.card-ivory {
+          background-color: #F0F0EB !important;
+          border-color: #E5E4DF !important;
+        }
+        .pricing-showcase-card.card-ivory h4,
+        .pricing-showcase-card.card-ivory .pricing-card-includes,
+        .pricing-showcase-card.card-ivory .pricing-card-price span {
+          color: #191919 !important;
+        }
+        .pricing-showcase-card.card-cloud {
+          background-color: #BFBFBA !important;
+          border-color: #91918D !important;
+        }
+        .pricing-showcase-card.card-cloud h4,
+        .pricing-showcase-card.card-cloud .pricing-card-includes,
+        .pricing-showcase-card.card-cloud .pricing-card-price span {
+          color: #191919 !important;
+        }
+        .pricing-showcase-card.card-bookcloth {
+          background-color: #CC785C !important;
+          border-color: #CC785C !important;
+          color: #FAFAF7 !important;
+        }
+        .pricing-showcase-card.card-bookcloth h4,
+        .pricing-showcase-card.card-bookcloth .pricing-card-price,
+        .pricing-showcase-card.card-bookcloth .pricing-card-price span,
+        .pricing-showcase-card.card-bookcloth .pricing-card-includes {
+          color: #FAFAF7 !important;
+          border-color: rgba(250,250,247,0.2) !important;
+        }
+        .pricing-showcase-card.card-slate {
+          background-color: #262625 !important;
+          border-color: #191919 !important;
+          color: #FAFAF7 !important;
+        }
+        .pricing-showcase-card.card-slate h4,
+        .pricing-showcase-card.card-slate .pricing-card-price,
+        .pricing-showcase-card.card-slate .pricing-card-price span,
+        .pricing-showcase-card.card-slate .pricing-card-includes {
+          color: #FAFAF7 !important;
+          border-color: rgba(250,250,247,0.2) !important;
+        }
+        .pricing-showcase-card.card-bookcloth .btn,
+        .pricing-showcase-card.card-slate .btn {
+          background-color: #FAFAF7 !important;
+          color: #191919 !important;
+          border-color: #FAFAF7 !important;
+        }
+        .pricing-showcase-card.card-bookcloth .btn:hover,
+        .pricing-showcase-card.card-slate .btn:hover {
+          background-color: #191919 !important;
+          color: #FAFAF7 !important;
+          border-color: #191919 !important;
+        }
+        .pricing-showcase-card.card-manilla .btn,
+        .pricing-showcase-card.card-ivory .btn,
+        .pricing-showcase-card.card-cloud .btn {
+          background-color: #CC785C !important;
+          border-color: #CC785C !important;
+          color: #FAFAF7 !important;
+        }
+        .pricing-showcase-card.card-manilla .btn:hover,
+        .pricing-showcase-card.card-ivory .btn:hover,
+        .pricing-showcase-card.card-cloud .btn:hover {
+          background-color: #191919 !important;
+          border-color: #191919 !important;
+          color: #FAFAF7 !important;
+        }
         @media (max-width: 991px) {
           .pricing-grid-panel.active {
             flex-wrap: wrap;
@@ -453,7 +530,7 @@ const getPricingSection = (indSlug = '') => {
           <!-- Panel 1: Corporate & Business Tax -->
           <div class="pricing-grid-panel active" id="pricing-panel-corporate">
             <!-- Corporate Tax -->
-            <div class="pricing-showcase-card">
+            <div class="pricing-showcase-card card-manilla">
               <div class="pricing-card-header">
                 <h4>${corporateTitle}</h4>
                 <div class="pricing-card-price">$90<span>/One-time filing fee</span></div>
@@ -462,7 +539,7 @@ const getPricingSection = (indSlug = '') => {
               <a href="/pricing/corporate-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
             <!-- Partnership Tax -->
-            <div class="pricing-showcase-card">
+            <div class="pricing-showcase-card card-ivory">
               <div class="pricing-card-header">
                 <h4>${partnershipTitle}</h4>
                 <div class="pricing-card-price">$250<span>/Partnership return</span></div>
@@ -471,7 +548,7 @@ const getPricingSection = (indSlug = '') => {
               <a href="/pricing/partnership-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
             <!-- Non-Profit Tax -->
-            <div class="pricing-showcase-card">
+            <div class="pricing-showcase-card card-bookcloth">
               <div class="pricing-card-header">
                 <h4>${nonProfitTitle}</h4>
                 <div class="pricing-card-price">$250<span>/NPO filing fee</span></div>
@@ -480,7 +557,7 @@ const getPricingSection = (indSlug = '') => {
               <a href="/pricing/non-profit-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
             <!-- Trust-Estate Tax -->
-            <div class="pricing-showcase-card">
+            <div class="pricing-showcase-card card-slate">
               <div class="pricing-card-header">
                 <h4>${trustTitle}</h4>
                 <div class="pricing-card-price">$300<span>/Trust return</span></div>
@@ -493,7 +570,7 @@ const getPricingSection = (indSlug = '') => {
           <!-- Panel 2: Accounting & Bookkeeping -->
           <div class="pricing-grid-panel" id="pricing-panel-accounting">
             <!-- Business Bookkeeping -->
-            <div class="pricing-showcase-card">
+            <div class="pricing-showcase-card card-manilla">
               <div class="pricing-card-header">
                 <h4>${bookkeepingTitle}</h4>
                 <div class="pricing-card-price">$100<span>/Month (Up to 50 txns)</span></div>
@@ -502,7 +579,7 @@ const getPricingSection = (indSlug = '') => {
               <a href="/pricing/accounting-bookkeeping.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
             <!-- Notice to Reader -->
-            <div class="pricing-showcase-card">
+            <div class="pricing-showcase-card card-bookcloth">
               <div class="pricing-card-header">
                 <h4>${ntrTitle}</h4>
                 <div class="pricing-card-price">$500<span>/Compilation year</span></div>
@@ -515,7 +592,7 @@ const getPricingSection = (indSlug = '') => {
           <!-- Panel 3: Personal & Sales Tax -->
           <div class="pricing-grid-panel" id="pricing-panel-personal">
             <!-- Personal Tax Filing -->
-            <div class="pricing-showcase-card">
+            <div class="pricing-showcase-card card-ivory">
               <div class="pricing-card-header">
                 <h4>${personalTitle}</h4>
                 <div class="pricing-card-price">$25<span>/Return starting fee</span></div>
@@ -524,7 +601,7 @@ const getPricingSection = (indSlug = '') => {
               <a href="/pricing/individual-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
             <!-- GST/HST Tax Filings -->
-            <div class="pricing-showcase-card">
+            <div class="pricing-showcase-card card-slate">
               <div class="pricing-card-header">
                 <h4>${salesTitle}</h4>
                 <div class="pricing-card-price">$75<span>/Filing cycle</span></div>
@@ -3676,7 +3753,8 @@ industries.forEach(ind => {
       'Massage Therapists & RMTs',
       'Podiatrists & Foot Clinics',
       'Midwives & OB/GYNs',
-      'Occupational Therapists'
+      'Occupational Therapists',
+      'Medical Labs & Diagnostics'
     ];
     subsectorsWithIcons = [
       { name: 'Medical Clinics', icon: 'fa-house-medical', bg: '#EBDBBC', text: '#191919', border: '#D4A27F' }, // Manilla
@@ -3693,7 +3771,8 @@ industries.forEach(ind => {
       { name: 'Massage Therapists & RMTs', icon: 'fa-hands-holding', bg: '#CC785C', text: '#FAFAF7', border: '#CC785C' }, // Bookcloth
       { name: 'Podiatrists & Foot Clinics', icon: 'fa-shoe-prints', bg: '#D4A27F', text: '#191919', border: '#CC785C' }, // Kraft
       { name: 'Midwives & OB/GYNs', icon: 'fa-baby', bg: '#40403E', text: '#FAFAF7', border: '#262625' }, // Slate Light
-      { name: 'Occupational Therapists', icon: 'fa-hand-holding-medical', bg: '#BFBFBA', text: '#191919', border: '#91918D' } // Cloud Light
+      { name: 'Occupational Therapists', icon: 'fa-hand-holding-medical', bg: '#BFBFBA', text: '#191919', border: '#91918D' }, // Cloud Light
+      { name: 'Medical Labs & Diagnostics', icon: 'fa-microscope', bg: '#FAFAF7', text: '#CC785C', border: '#E5E4DF' } // Ivory Light / Bookcloth
     ];
   } else {
     const claudePresets = [
@@ -3751,7 +3830,7 @@ industries.forEach(ind => {
     <!-- Custom styling to replicate WordPress Elementor design -->
     <style>
       .ind-hero {
-        background: linear-gradient(135deg, var(--color-slate-dark) 0%, var(--color-slate-med) 100%);
+        background: ${isHealthcare ? `linear-gradient(rgba(25, 25, 25, 0.86), rgba(25, 25, 25, 0.86)), url('/images/healthcare_hero_bg.png') no-repeat center center / cover` : `linear-gradient(135deg, var(--color-slate-dark) 0%, var(--color-slate-med) 100%)`};
         padding: 80px 0 100px;
         color: var(--white);
         overflow: hidden;

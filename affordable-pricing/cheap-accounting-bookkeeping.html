@@ -830,6 +830,83 @@
           margin-bottom: 25px;
           flex-grow: 1;
         }
+        .pricing-showcase-card.card-manilla {
+          background-color: #EBDBBC !important;
+          border-color: #D4A27F !important;
+        }
+        .pricing-showcase-card.card-manilla h4,
+        .pricing-showcase-card.card-manilla .pricing-card-includes,
+        .pricing-showcase-card.card-manilla .pricing-card-price span {
+          color: #191919 !important;
+        }
+        .pricing-showcase-card.card-ivory {
+          background-color: #F0F0EB !important;
+          border-color: #E5E4DF !important;
+        }
+        .pricing-showcase-card.card-ivory h4,
+        .pricing-showcase-card.card-ivory .pricing-card-includes,
+        .pricing-showcase-card.card-ivory .pricing-card-price span {
+          color: #191919 !important;
+        }
+        .pricing-showcase-card.card-cloud {
+          background-color: #BFBFBA !important;
+          border-color: #91918D !important;
+        }
+        .pricing-showcase-card.card-cloud h4,
+        .pricing-showcase-card.card-cloud .pricing-card-includes,
+        .pricing-showcase-card.card-cloud .pricing-card-price span {
+          color: #191919 !important;
+        }
+        .pricing-showcase-card.card-bookcloth {
+          background-color: #CC785C !important;
+          border-color: #CC785C !important;
+          color: #FAFAF7 !important;
+        }
+        .pricing-showcase-card.card-bookcloth h4,
+        .pricing-showcase-card.card-bookcloth .pricing-card-price,
+        .pricing-showcase-card.card-bookcloth .pricing-card-price span,
+        .pricing-showcase-card.card-bookcloth .pricing-card-includes {
+          color: #FAFAF7 !important;
+          border-color: rgba(250,250,247,0.2) !important;
+        }
+        .pricing-showcase-card.card-slate {
+          background-color: #262625 !important;
+          border-color: #191919 !important;
+          color: #FAFAF7 !important;
+        }
+        .pricing-showcase-card.card-slate h4,
+        .pricing-showcase-card.card-slate .pricing-card-price,
+        .pricing-showcase-card.card-slate .pricing-card-price span,
+        .pricing-showcase-card.card-slate .pricing-card-includes {
+          color: #FAFAF7 !important;
+          border-color: rgba(250,250,247,0.2) !important;
+        }
+        .pricing-showcase-card.card-bookcloth .btn,
+        .pricing-showcase-card.card-slate .btn {
+          background-color: #FAFAF7 !important;
+          color: #191919 !important;
+          border-color: #FAFAF7 !important;
+        }
+        .pricing-showcase-card.card-bookcloth .btn:hover,
+        .pricing-showcase-card.card-slate .btn:hover {
+          background-color: #191919 !important;
+          color: #FAFAF7 !important;
+          border-color: #191919 !important;
+        }
+        .pricing-showcase-card.card-manilla .btn,
+        .pricing-showcase-card.card-ivory .btn,
+        .pricing-showcase-card.card-cloud .btn {
+          background-color: #CC785C !important;
+          border-color: #CC785C !important;
+          color: #FAFAF7 !important;
+        }
+        .pricing-showcase-card.card-manilla .btn:hover,
+        .pricing-showcase-card.card-ivory .btn:hover,
+        .pricing-showcase-card.card-cloud .btn:hover {
+          background-color: #191919 !important;
+          border-color: #191919 !important;
+          color: #FAFAF7 !important;
+        }
         @media (max-width: 991px) {
           .pricing-grid-panel.active {
             flex-wrap: wrap;
@@ -870,7 +947,7 @@
           <!-- Panel 1: Corporate & Business Tax -->
           <div class="pricing-grid-panel active" id="pricing-panel-corporate">
             <!-- Corporate Tax -->
-            <div class="pricing-showcase-card">
+            <div class="pricing-showcase-card card-manilla">
               <div class="pricing-card-header">
                 <h4>Corporate Tax Filing</h4>
                 <div class="pricing-card-price">$90<span>/One-time filing fee</span></div>
@@ -879,7 +956,7 @@
               <a href="/pricing/corporate-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
             <!-- Partnership Tax -->
-            <div class="pricing-showcase-card">
+            <div class="pricing-showcase-card card-ivory">
               <div class="pricing-card-header">
                 <h4>Partnership Tax Filing</h4>
                 <div class="pricing-card-price">$250<span>/Partnership return</span></div>
@@ -888,7 +965,7 @@
               <a href="/pricing/partnership-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
             <!-- Non-Profit Tax -->
-            <div class="pricing-showcase-card">
+            <div class="pricing-showcase-card card-bookcloth">
               <div class="pricing-card-header">
                 <h4>Non-Profit Tax Filing</h4>
                 <div class="pricing-card-price">$250<span>/NPO filing fee</span></div>
@@ -897,7 +974,7 @@
               <a href="/pricing/non-profit-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
             <!-- Trust-Estate Tax -->
-            <div class="pricing-showcase-card">
+            <div class="pricing-showcase-card card-slate">
               <div class="pricing-card-header">
                 <h4>Trust-Estate Tax Filing</h4>
                 <div class="pricing-card-price">$300<span>/Trust return</span></div>
@@ -910,7 +987,7 @@
           <!-- Panel 2: Accounting & Bookkeeping -->
           <div class="pricing-grid-panel" id="pricing-panel-accounting">
             <!-- Business Bookkeeping -->
-            <div class="pricing-showcase-card">
+            <div class="pricing-showcase-card card-manilla">
               <div class="pricing-card-header">
                 <h4>Business Bookkeeping</h4>
                 <div class="pricing-card-price">$100<span>/Month (Up to 50 txns)</span></div>
@@ -919,7 +996,7 @@
               <a href="/pricing/accounting-bookkeeping.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
             <!-- Notice to Reader -->
-            <div class="pricing-showcase-card">
+            <div class="pricing-showcase-card card-bookcloth">
               <div class="pricing-card-header">
                 <h4>Notice to Reader (NTR)</h4>
                 <div class="pricing-card-price">$500<span>/Compilation year</span></div>
@@ -932,7 +1009,7 @@
           <!-- Panel 3: Personal & Sales Tax -->
           <div class="pricing-grid-panel" id="pricing-panel-personal">
             <!-- Personal Tax Filing -->
-            <div class="pricing-showcase-card">
+            <div class="pricing-showcase-card card-ivory">
               <div class="pricing-card-header">
                 <h4>Personal Tax Filing</h4>
                 <div class="pricing-card-price">$25<span>/Return starting fee</span></div>
@@ -941,7 +1018,7 @@
               <a href="/pricing/individual-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
             <!-- GST/HST Tax Filings -->
-            <div class="pricing-showcase-card">
+            <div class="pricing-showcase-card card-slate">
               <div class="pricing-card-header">
                 <h4>GST/HST Sales Tax Filing</h4>
                 <div class="pricing-card-price">$75<span>/Filing cycle</span></div>
