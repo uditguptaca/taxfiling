@@ -3554,6 +3554,115 @@ p {
   }
 }
 
+/* ── Checkerboard Industry Grid Styles ── */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.industry-grid-card {
+  border-radius: 12px;
+  padding: 35px 25px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.industry-grid-card.card-dark {
+  background-color: var(--dark-green);
+  color: var(--white);
+}
+
+.industry-grid-card.card-dark h4 {
+  color: var(--white) !important;
+}
+
+.industry-grid-card.card-dark .teaser {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.industry-grid-card.card-dark .card-icon {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primary);
+}
+
+.industry-grid-card.card-light {
+  background-color: #f7f5ef;
+  color: var(--dark-green);
+}
+
+.industry-grid-card.card-light h4 {
+  color: var(--dark-green) !important;
+}
+
+.industry-grid-card.card-light .teaser {
+  color: var(--body-text);
+}
+
+.industry-grid-card.card-light .card-icon {
+  background-color: rgba(26, 51, 42, 0.06);
+  color: var(--primary);
+}
+
+.industry-grid-card .card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.industry-grid-card h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-family: var(--font-serif);
+}
+
+.industry-grid-card .teaser {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  margin-bottom: 20px;
+  min-height: 45px;
+}
+
+.industry-grid-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+.industry-grid-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.industry-grid-card:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+@media (max-width: 991px) {
+  .industry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .industry-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 
