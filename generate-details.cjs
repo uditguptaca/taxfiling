@@ -4436,18 +4436,6 @@ industries.forEach(ind => {
       </div>
     </section>
 
-    <!-- 4. CORE SUB-SERVICES FEATURES -->
-    <section class="section" style="padding: 60px 0; background-color: var(--white);">
-      <div class="container">
-        <div class="section-header">
-          <h2>Core ${ind.name} Sub-Services &amp; Features</h2>
-          <p>We provide a comprehensive accounting ecosystem so you can focus on operational execution.</p>
-          <div class="accent-line"></div>
-        </div>
-        ${getIndustryServices(ind.slug, ind.name)}
-      </div>
-    </section>
-
     <!-- 5. WHY CHOOSE US -->
     <section class="section section-gray">
       <div class="container">
@@ -4506,6 +4494,19 @@ industries.forEach(ind => {
 
     <!-- 6. RISK-FREE WORKFLOW -->
     ${getWorkflowSection(ind.slug)}
+
+    <!-- 4. CORE SUB-SERVICES FEATURES -->
+    <section class="section" style="padding: 60px 0; background-color: var(--white);">
+      <div class="container">
+        <div class="section-header">
+          <h2>Core ${ind.name} Sub-Services &amp; Features</h2>
+          <p>We provide a comprehensive accounting ecosystem so you can focus on operational execution.</p>
+          <div class="accent-line"></div>
+        </div>
+        ${getIndustryServices(ind.slug, ind.name)}
+      </div>
+    </section>
+
 
     <!-- 7. INDUSTRIES WE PARTNER WITH (SECTORS GRID) -->
     <section class="section section-gray">
