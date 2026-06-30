@@ -635,16 +635,17 @@ p {
   font-size: 2.6rem;
   line-height: 1.2;
   margin-bottom: 15px;
-  color: var(--dark-green);
+  color: #141413;
 }
 
 .hero-content h1 span {
   display: block;
+  color: #d97757;
 }
 
 .hero-subtitle {
   font-size: 1.05rem;
-  color: var(--dark-green);
+  color: #3a5944;
   font-style: italic;
   margin-bottom: 12px;
   font-weight: 500;
@@ -652,14 +653,14 @@ p {
 
 .hero-tagline {
   font-size: 1.15rem;
-  color: var(--dark-green);
+  color: #141413;
   font-weight: 700;
   margin-bottom: 15px;
 }
 
 .hero-text {
   font-size: 0.95rem;
-  color: var(--body-text-light);
+  color: #2b2b2a;
   margin-bottom: 25px;
   max-width: 520px;
 }
@@ -1705,8 +1706,8 @@ p {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
-  gap: 40px;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr;
+  gap: 30px;
   padding-bottom: 50px;
 }
 
