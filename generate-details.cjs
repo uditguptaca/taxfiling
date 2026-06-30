@@ -308,7 +308,7 @@ const getPricingSection = (indSlug = '') => {
   <section class="section section-gray" id="pricing" style="padding: 80px 0; background-color: var(--color-ivory-med); border-top: 1px solid var(--border-gray); border-bottom: 1px solid var(--border-gray);">
     <div class="container">
       <div class="section-header" style="margin-bottom: 50px;">
-        <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--dark-green);">Canada Tax &amp; Accounting — Fixed Pricing</h2>
+        <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--dark-green);">${isHealthcare ? 'Canada Healthcare Tax &amp; Accounting — Fixed Pricing' : 'Canada Tax &amp; Accounting — Fixed Pricing'}</h2>
         <p style="font-size: 1.1rem; color: var(--body-text-light); max-width: 700px; margin: 15px auto 0;">Transparent, fixed-fee pricing with zero hidden fees. Pay only after your work is completed and filed.</p>
         <div class="accent-line"></div>
       </div>
@@ -1183,7 +1183,7 @@ const getWorkflowSection = (indSlug = '') => {
         
         <!-- Right Column: dark green list -->
         <div class="workflow-content-col">
-          <h2 class="workflow-title">"A Unique Approach – Results First, Payment Later!"</h2>
+          <h2 class="workflow-title">"A Unique ${isHealthcare ? 'Healthcare' : 'Business'} Approach – Results First, Payment Later!"</h2>
           
           <ul class="workflow-list">
             <li>
@@ -1379,14 +1379,14 @@ const getCtaBanner = (pageName) => `
 const getIndustrySpecializations = (indSlug, indName) => {
   const specsMap = {
     healthcare: [
-      { title: 'Operational Structures & MPCs', desc: 'Custom corporate tax structures designed for Medical Professional Corporations (MPCs). We align clinics with optimal shareholder and holding company frameworks to minimize tax exposure.', icon: 'fa-sitemap', color: 'card-manilla' },
-      { title: 'Overhead & Associate Splits', desc: 'Accurate clinic overhead costing models, shared space expense splits, and associate payout calculations. We build robust templates that track billing revenue allocations between partners and staff.', icon: 'fa-percent', color: 'card-kraft' },
-      { title: 'GST/HST Exemption Review', desc: 'In-depth review of exempt healthcare services versus taxable retail sales (e.g. medical devices, cosmetics). We optimize Input Tax Credit (ITC) allocations for mixed-billing clinical practices.', icon: 'fa-file-invoice', color: 'card-cloud' },
-      { title: 'Late Filings & VDP Protection', desc: 'Catch up on back taxes, file late corporate returns, and secure interest or penalty relief via the CRA Voluntary Disclosures Program (VDP). We restore clinic compliance status safely.', icon: 'fa-history', color: 'card-slate' },
-      { title: 'CRA Audit Defense & Reviews', desc: 'Direct CPA representation and professional response coordination for reviews, tax audits, or dispute resolution. We defend your deductions and protect your practice\'s active business limits.', icon: 'fa-shield-alt', color: 'card-manilla' },
-      { title: 'Holding Company Integration', desc: 'Set up holding companies to accumulate passive investment wealth tax-deferred. We transfer clinic surplus cash flow through tax-free inter-corporate dividends while maintaining small business limits.', icon: 'fa-briefcase', color: 'card-kraft' },
-      { title: 'Equipment Depreciation (CCA)', desc: 'Strategic Capital Cost Allowance (CCA) scheduling for medical, dental, and laboratory machinery. We optimize the write-off timing for high-value equipment purchases under CRA rules.', icon: 'fa-microscope', color: 'card-cloud' },
-      { title: 'Succession & Sale Planning', desc: 'Transition structures for medical partnerships, retiring doctors, and associate buy-ins. We optimize the Lifetime Capital Gains Exemption (LCGE) to ensure a tax-free practice transfer.', icon: 'fa-handshake', color: 'card-slate' }
+      { title: 'Healthcare Corporate & MPC Structures', desc: 'Custom corporate tax structures designed for Medical Professional Corporations (MPCs). We align clinics with optimal shareholder and holding company frameworks to minimize tax exposure.', icon: 'fa-sitemap', color: 'card-manilla' },
+      { title: 'Clinic Overhead & Associate Splits', desc: 'Accurate clinic overhead costing models, shared space expense splits, and associate payout calculations. We build robust templates that track billing revenue allocations between partners and staff.', icon: 'fa-percent', color: 'card-kraft' },
+      { title: 'Medical GST/HST Exemption Review', desc: 'In-depth review of exempt healthcare services versus taxable retail sales (e.g. medical devices, cosmetics). We optimize Input Tax Credit (ITC) allocations for mixed-billing clinical practices.', icon: 'fa-file-invoice', color: 'card-cloud' },
+      { title: 'Clinic Late Filings & VDP Protection', desc: 'Catch up on back taxes, file late corporate returns, and secure interest or penalty relief via the CRA Voluntary Disclosures Program (VDP). We restore clinic compliance status safely.', icon: 'fa-history', color: 'card-slate' },
+      { title: 'Medical CRA Audit Defense & Reviews', desc: 'Direct CPA representation and professional response coordination for reviews, tax audits, or dispute resolution. We defend your deductions and protect your practice\'s active business limits.', icon: 'fa-shield-alt', color: 'card-manilla' },
+      { title: 'Clinic Holding Company Integration', desc: 'Set up holding companies to accumulate passive investment wealth tax-deferred. We transfer clinic surplus cash flow through tax-free inter-corporate dividends while maintaining small business limits.', icon: 'fa-briefcase', color: 'card-kraft' },
+      { title: 'Medical Equipment Depreciation (CCA)', desc: 'Strategic Capital Cost Allowance (CCA) scheduling for medical, dental, and laboratory machinery. We optimize the write-off timing for high-value equipment purchases under CRA rules.', icon: 'fa-microscope', color: 'card-cloud' },
+      { title: 'Practice Succession & Sale Planning', desc: 'Transition structures for medical partnerships, retiring doctors, and associate buy-ins. We optimize the Lifetime Capital Gains Exemption (LCGE) to ensure a tax-free practice transfer.', icon: 'fa-handshake', color: 'card-slate' }
     ],
     'real-estate': [
       { title: 'PREC Tax Structuring', desc: 'Personal Real Estate Corporation tax structures, income splitting, and holding company setups.', icon: 'fa-building', color: 'card-manilla' },
@@ -4186,7 +4186,7 @@ industries.forEach(ind => {
     <section class="section" style="padding: 60px 0; background-color: var(--white);">
       <div class="container">
         <div class="section-header">
-          <h2>Core Sub-Services &amp; Features</h2>
+          <h2>Core ${ind.name} Sub-Services &amp; Features</h2>
           <p>We provide a comprehensive accounting ecosystem so you can focus on operational execution.</p>
           <div class="accent-line"></div>
         </div>
@@ -4208,28 +4208,28 @@ industries.forEach(ind => {
               <div style="display:flex;gap:15px;align-items:flex-start;">
                 <div style="width:40px;height:40px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
                 <div>
-                  <h5 style="margin-bottom:5px;font-weight:700;">Tailored Tax Planning</h5>
+                  <h5 style="margin-bottom:5px;font-weight:700;">${isHealthcare ? 'Tailored Healthcare Tax Planning' : 'Tailored Tax Planning'}</h5>
                   <p style="font-size:0.88rem;margin:0;">Specific deductions, cost allocations, and asset depreciation structures optimized for your niche.</p>
                 </div>
               </div>
               <div style="display:flex;gap:15px;align-items:flex-start;">
                 <div style="width:40px;height:40px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
                 <div>
-                  <h5 style="margin-bottom:5px;font-weight:700;">Transparent Fixed Pricing</h5>
+                  <h5 style="margin-bottom:5px;font-weight:700;">${isHealthcare ? 'Transparent Clinic Fixed Pricing' : 'Transparent Fixed Pricing'}</h5>
                   <p style="font-size:0.88rem;margin:0;">No surprise bills. Know exactly what you'll pay with our standard, upfront monthly/annual fees.</p>
                 </div>
               </div>
               <div style="display:flex;gap:15px;align-items:flex-start;">
                 <div style="width:40px;height:40px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
                 <div>
-                  <h5 style="margin-bottom:5px;font-weight:700;">CRA Compliance &amp; Representation</h5>
+                  <h5 style="margin-bottom:5px;font-weight:700;">${isHealthcare ? 'Healthcare CRA Compliance' : 'CRA Compliance &amp; Representation'}</h5>
                   <p style="font-size:0.88rem;margin:0;">We back all prepared files. If CRA raises questions, we represent your interest directly.</p>
                 </div>
               </div>
               <div style="display:flex;gap:15px;align-items:flex-start;">
                 <div style="width:40px;height:40px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
                 <div>
-                  <h5 style="margin-bottom:5px;font-weight:700;">Stress-Free Process</h5>
+                  <h5 style="margin-bottom:5px;font-weight:700;">${isHealthcare ? 'Stress-Free Medical Filing' : 'Stress-Free Process'}</h5>
                   <p style="font-size:0.88rem;margin:0;">Completely remote cloud-based bookkeeping and filing. Submit documents, review draft, pay when done.</p>
                 </div>
               </div>
