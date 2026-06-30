@@ -4707,6 +4707,62 @@ writePage(path.join(rootDir, 'tax-accountant-firm', 'index.html'), 'Our Location
 locations.forEach(loc => {
   const isToronto = loc.slug === 'toronto';
 
+  const rightColumnHtml = isToronto ? `
+            <div class="hero-image" style="position: relative; width: 100%; max-width: 440px; margin: 0 auto; display: block; text-align: left;">
+              <img src="/images/udit_hero.png" alt="Udit Gupta CPA, CA - Taxfilings Canada" class="hero-expert-img" style="width: 100%; height: auto; display: block; border-radius: 20px;">
+              
+              <!-- Left Stack of Badges -->
+              <div class="hero-badge-stack">
+                <div class="hero-badge-item badge-orange">
+                  <i class="fas fa-lightbulb"></i>
+                  <span>+15 Yrs Exp</span>
+                </div>
+                <div class="hero-badge-item badge-blue">
+                  <i class="fas fa-certificate"></i>
+                  <span>CA, CPA <small style="font-size: 0.85em; font-weight: normal; opacity: 0.95;">(ICAI, MIA)</small></span>
+                </div>
+                <div class="hero-badge-item badge-green">
+                  <i class="fas fa-file-alt"></i>
+                  <span>CPA Canada <small style="font-size: 0.85em; font-weight: normal; opacity: 0.95;">(In-Depth Tax Program)</small></span>
+                </div>
+                <div class="hero-badge-item badge-dark">
+                  <i class="fas fa-file-alt"></i>
+                  <span>EX BIG4, EY, Deloitte</span>
+                </div>
+              </div>
+
+              <!-- Top Right Refund Card -->
+              <div class="hero-float-card card-refund-new">
+                <div class="card-header-lbl">TAX REFUND</div>
+                <div class="card-val">$7300</div>
+                <div class="card-footer-lbl">TAX REFUND TAX</div>
+                <div class="card-chart">
+                  <span class="bar" style="height: 12px;"></span>
+                  <span class="bar" style="height: 20px;"></span>
+                  <span class="bar" style="height: 30px;"></span>
+                  <span class="bar" style="height: 42px;"></span>
+                  <span class="bar" style="height: 32px;"></span>
+                </div>
+              </div>
+
+              <!-- Bottom Right Expert Rates Card -->
+              <div class="hero-float-card card-expert-new">
+                <div class="card-header-lbl">TAX EXPERT</div>
+                <div class="stat-line"><span>100%</span> INCOME TAX</div>
+                <div class="stat-line"><span>95%</span> GST/HST/PST</div>
+                <div class="stat-line"><span>85%</span> PAYROLL</div>
+              </div>
+            </div>
+  ` : `
+            <div class="loc-hero-card">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&h=400&fit=crop" alt="Top Tax Accountant in ${loc.name}">
+              <div class="loc-hero-card-body">
+                <h4>Udit Gupta, CPA</h4>
+                <p>Tax Expert &amp; Founder &bull; Providing expert filings in ${loc.name}</p>
+              </div>
+            </div>
+  `;
+
   // Local FAQs
   const localFaqs = [
     { q: `What is the deadline for filing corporate taxes in ${loc.name}?`, a: `In ${loc.name}, corporate tax returns (T2) are due within six months of the corporation's fiscal year-end. If you owe tax, the balance must be paid within 2 or 3 months of the year-end.` },
@@ -4866,13 +4922,7 @@ locations.forEach(loc => {
             </div>
           </div>
           <div class="loc-hero-right">
-            <div class="loc-hero-card">
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&h=400&fit=crop" alt="Top Tax Accountant in ${loc.name}">
-              <div class="loc-hero-card-body">
-                <h4>Udit Gupta, CPA</h4>
-                <p>Tax Expert &amp; Founder &bull; Providing expert filings in ${loc.name}</p>
-              </div>
-            </div>
+            ${rightColumnHtml}
           </div>
         </div>
       </div>
