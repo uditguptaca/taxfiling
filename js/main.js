@@ -238,7 +238,7 @@ document.addEventListener('submit', (e) => {
   }
 });
 
-// ── Location & Industry Accordions ──────────
+// ── Location, Industry & Service Accordions ──────────
 function initLocationAccordion() {
   // Location Accordion
   const locationItems = document.querySelectorAll('.location-prov-item');
@@ -264,6 +264,21 @@ function initLocationAccordion() {
     question.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
       industryItems.forEach(i => i.classList.remove('active'));
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+
+  // Service Accordion
+  const serviceItems = document.querySelectorAll('.service-acc-item');
+  serviceItems.forEach(item => {
+    const question = item.querySelector('.service-acc-question');
+    if (!question) return;
+
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      serviceItems.forEach(i => i.classList.remove('active'));
       if (!isActive) {
         item.classList.add('active');
       }
