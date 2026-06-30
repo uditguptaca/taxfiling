@@ -694,219 +694,524 @@
         </div>
         
   <style>
-    .service-card-new:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.06) !important;
-      border-color: rgba(34, 197, 94, 0.3) !important;
+    .showcase-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 30px;
+      background: #FFFFFF;
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.02);
+      margin-top: 40px;
+    }
+    .showcase-tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .showcase-tab {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 16px 20px;
+      border-radius: 12px;
+      background: #FAF8F5;
+      border: 1px solid rgba(0,0,0,0.02);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: left;
+      font-family: inherit;
+    }
+    .showcase-tab:hover {
+      background: #F3EFE9;
+      transform: translateX(5px);
+    }
+    .showcase-tab.active {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+      box-shadow: 0 8px 16px rgba(251, 119, 13, 0.15);
+    }
+    .showcase-tab.active .tab-icon {
+      background: rgba(255, 255, 255, 0.2);
+      color: var(--white);
+    }
+    .tab-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      background: rgba(251, 119, 13, 0.1);
+      color: var(--primary);
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+    .tab-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .showcase-content-area {
+      position: relative;
+      background: #FAF8F5;
+      border-radius: 16px;
+      padding: 30px;
+      border: 1px solid rgba(0,0,0,0.03);
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .showcase-panel {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      flex-direction: column;
+      gap: 25px;
+      height: 100%;
+    }
+    .showcase-panel.active {
+      display: flex;
+      opacity: 1;
+    }
+    .panel-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      padding-bottom: 15px;
+    }
+    .panel-header-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--white);
+    }
+    .panel-header-info h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--dark-green);
+      margin: 0;
+    }
+    .panel-header-info p {
+      font-size: 0.88rem;
+      color: var(--body-text-light);
+      margin: 3px 0 0;
+    }
+    .panel-bullets-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    .panel-bullet-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .panel-bullet-item i {
+      color: var(--teal);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .panel-bullet-item span {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #334155;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .panel-callout {
+      background: rgba(251, 119, 13, 0.04);
+      border-left: 4px solid var(--primary);
+      padding: 15px 20px;
+      border-radius: 0 10px 10px 0;
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.5;
+    }
+    @media (max-width: 768px) {
+      .showcase-container {
+        grid-template-columns: 1fr;
+      }
+      .panel-bullets-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
-  <div class="grid-3" style="margin-top: 40px; gap: 30px;">
-    
-      <div class="service-card-new" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.06); padding: 35px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column; gap: 20px; height: 100%; transition: all 0.3s ease; cursor: default;">
-        <div style="display: flex; align-items: center; gap: 15px;">
-          <div class="card-icon" style="background: rgba(251, 119, 13, 0.1); color: rgb(251, 119, 13); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+
+  <div class="showcase-container">
+    <div class="showcase-tabs">
+      
+        <button class="showcase-tab active" data-target="panel-0">
+          <div class="tab-icon" style="background:rgba(255,255,255,0.2); color:#fff;">
             <i class="fas fa-hard-hat"></i>
           </div>
-          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0; line-height: 1.3;">Job Costing & Bookkeeping</h4>
-        </div>
-        <div style="flex-grow: 1;">
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">Materials, equipment & labor costing per project</span>
-              </li>
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">Progress billings, holdbacks and retention tracking</span>
-              </li>
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">Subcontractor invoice reconciliations and AP aging</span>
-              </li>
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">Project budget variance and cash flow reporting</span>
-              </li>
-            
-          </ul>
-        </div>
-      </div>
-    
-      <div class="service-card-new" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.06); padding: 35px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column; gap: 20px; height: 100%; transition: all 0.3s ease; cursor: default;">
-        <div style="display: flex; align-items: center; gap: 15px;">
-          <div class="card-icon" style="background: rgba(34, 197, 94, 0.1); color: rgb(34, 197, 94); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <span class="tab-title">Job Costing & Bookkeeping</span>
+        </button>
+      
+        <button class="showcase-tab " data-target="panel-1">
+          <div class="tab-icon" style="">
             <i class="fas fa-file-signature"></i>
           </div>
-          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0; line-height: 1.3;">Subcontractor T5018 Filings</h4>
-        </div>
-        <div style="flex-grow: 1;">
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">Subcontractor verification & compliance reviews</span>
-              </li>
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">T5018 compilation & year-end CRA filing</span>
-              </li>
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">Subcontractor payout reconciliations and checks</span>
-              </li>
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">CRA contractor reporting compliance audits</span>
-              </li>
-            
-          </ul>
-        </div>
-      </div>
-    
-      <div class="service-card-new" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.06); padding: 35px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column; gap: 20px; height: 100%; transition: all 0.3s ease; cursor: default;">
-        <div style="display: flex; align-items: center; gap: 15px;">
-          <div class="card-icon" style="background: rgba(59, 130, 246, 0.1); color: rgb(59, 130, 246); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <span class="tab-title">Subcontractor T5018 Filings</span>
+        </button>
+      
+        <button class="showcase-tab " data-target="panel-2">
+          <div class="tab-icon" style="">
             <i class="fas fa-file-invoice-dollar"></i>
           </div>
-          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0; line-height: 1.3;">Construction Corporate Tax</h4>
-        </div>
-        <div style="flex-grow: 1;">
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">T2 Corporate returns for builders & trade contractors</span>
-              </li>
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">Work-In-Progress (WIP) revenue recognition adjustments</span>
-              </li>
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">Holdback tax deferral optimization strategy</span>
-              </li>
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">CRA audit defense representation for construction firms</span>
-              </li>
-            
-          </ul>
-        </div>
-      </div>
-    
-      <div class="service-card-new" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.06); padding: 35px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column; gap: 20px; height: 100%; transition: all 0.3s ease; cursor: default;">
-        <div style="display: flex; align-items: center; gap: 15px;">
-          <div class="card-icon" style="background: rgba(168, 85, 247, 0.1); color: rgb(168, 85, 247); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <span class="tab-title">Construction Corporate Tax</span>
+        </button>
+      
+        <button class="showcase-tab " data-target="panel-3">
+          <div class="tab-icon" style="">
             <i class="fas fa-users"></i>
           </div>
-          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0; line-height: 1.3;">Payroll & Trade Compliance</h4>
-        </div>
-        <div style="flex-grow: 1;">
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">Source deductions, union payroll & wages administration</span>
-              </li>
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">WSIB / provincial workers' compensation reporting</span>
-              </li>
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">T4, T4A slips and Record of Employment (ROE) filing</span>
-              </li>
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">Direct deposit payroll for clinic & site laborers</span>
-              </li>
-            
-          </ul>
-        </div>
-      </div>
-    
-      <div class="service-card-new" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.06); padding: 35px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column; gap: 20px; height: 100%; transition: all 0.3s ease; cursor: default;">
-        <div style="display: flex; align-items: center; gap: 15px;">
-          <div class="card-icon" style="background: rgba(236, 72, 153, 0.1); color: rgb(236, 72, 153); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <span class="tab-title">Payroll & Trade Compliance</span>
+        </button>
+      
+        <button class="showcase-tab " data-target="panel-4">
+          <div class="tab-icon" style="">
             <i class="fas fa-book-open"></i>
           </div>
-          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0; line-height: 1.3;">Notice to Reader & Bonding</h4>
-        </div>
-        <div style="flex-grow: 1;">
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">Notice to Reader (NTR) Compilation financial statements</span>
-              </li>
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">Bonding company and bank compliance ratio reports</span>
-              </li>
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">Line of credit and capital leasing documentation</span>
-              </li>
-            
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">Capital asset depreciation (CCA schedules) for fleets</span>
-              </li>
-            
-          </ul>
-        </div>
-      </div>
-    
-      <div class="service-card-new" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.06); padding: 35px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column; gap: 20px; height: 100%; transition: all 0.3s ease; cursor: default;">
-        <div style="display: flex; align-items: center; gap: 15px;">
-          <div class="card-icon" style="background: rgba(251, 119, 13, 0.1); color: rgb(251, 119, 13); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <span class="tab-title">Notice to Reader & Bonding</span>
+        </button>
+      
+        <button class="showcase-tab " data-target="panel-5">
+          <div class="tab-icon" style="">
             <i class="fas fa-user-cog"></i>
           </div>
-          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0; line-height: 1.3;">Personal Tax for Tradespeople</h4>
+          <span class="tab-title">Personal Tax for Tradespeople</span>
+        </button>
+      
+    </div>
+
+    <div class="showcase-content-area">
+      
+        <div class="showcase-panel active" id="panel-0">
+          <div class="panel-header">
+            <div class="panel-header-icon" style="background: rgb(251, 119, 13);">
+              <i class="fas fa-hard-hat"></i>
+            </div>
+            <div class="panel-header-info">
+              <h3>Job Costing & Bookkeeping</h3>
+              <p>Tailored compliance, tracking, and tax solutions for your operational efficiency.</p>
+            </div>
+          </div>
+          
+          <div class="panel-bullets-grid">
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Materials, equipment & labor costing per project</span>
+              </div>
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Progress billings, holdbacks and retention tracking</span>
+              </div>
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Subcontractor invoice reconciliations and AP aging</span>
+              </div>
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Project budget variance and cash flow reporting</span>
+              </div>
+            
+          </div>
+
+          <div class="panel-callout">
+            <strong>CRA Compliance Focus:</strong> We guarantee fully optimized corporate/individual deductions, complete trial balance verification, and robust audit trail protection for all clinical activities.
+          </div>
+
+          <div style="margin-top: 10px;">
+            <a href="/contact.html" class="btn btn-primary" style="padding: 10px 25px; border-radius: 50px; font-size: 0.9rem;">Book Consultation for Job</a>
+          </div>
         </div>
-        <div style="flex-grow: 1;">
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+      
+        <div class="showcase-panel " id="panel-1">
+          <div class="panel-header">
+            <div class="panel-header-icon" style="background: rgb(34, 197, 94);">
+              <i class="fas fa-file-signature"></i>
+            </div>
+            <div class="panel-header-info">
+              <h3>Subcontractor T5018 Filings</h3>
+              <p>Tailored compliance, tracking, and tax solutions for your operational efficiency.</p>
+            </div>
+          </div>
+          
+          <div class="panel-bullets-grid">
             
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">T1 returns for self-employed independent contractors</span>
-              </li>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Subcontractor verification & compliance reviews</span>
+              </div>
             
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">Tools, safety equipment, and work clothing deductions</span>
-              </li>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>T5018 compilation & year-end CRA filing</span>
+              </div>
             
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">Vehicle logs, travel and home office write-offs</span>
-              </li>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Subcontractor payout reconciliations and checks</span>
+              </div>
             
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">GST/HST Quick Method tax optimization filings</span>
-              </li>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>CRA contractor reporting compliance audits</span>
+              </div>
             
-          </ul>
+          </div>
+
+          <div class="panel-callout">
+            <strong>CRA Compliance Focus:</strong> We guarantee fully optimized corporate/individual deductions, complete trial balance verification, and robust audit trail protection for all clinical activities.
+          </div>
+
+          <div style="margin-top: 10px;">
+            <a href="/contact.html" class="btn btn-primary" style="padding: 10px 25px; border-radius: 50px; font-size: 0.9rem;">Book Consultation for Subcontractor</a>
+          </div>
         </div>
-      </div>
-    
+      
+        <div class="showcase-panel " id="panel-2">
+          <div class="panel-header">
+            <div class="panel-header-icon" style="background: rgb(59, 130, 246);">
+              <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+            <div class="panel-header-info">
+              <h3>Construction Corporate Tax</h3>
+              <p>Tailored compliance, tracking, and tax solutions for your operational efficiency.</p>
+            </div>
+          </div>
+          
+          <div class="panel-bullets-grid">
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>T2 Corporate returns for builders & trade contractors</span>
+              </div>
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Work-In-Progress (WIP) revenue recognition adjustments</span>
+              </div>
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Holdback tax deferral optimization strategy</span>
+              </div>
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>CRA audit defense representation for construction firms</span>
+              </div>
+            
+          </div>
+
+          <div class="panel-callout">
+            <strong>CRA Compliance Focus:</strong> We guarantee fully optimized corporate/individual deductions, complete trial balance verification, and robust audit trail protection for all clinical activities.
+          </div>
+
+          <div style="margin-top: 10px;">
+            <a href="/contact.html" class="btn btn-primary" style="padding: 10px 25px; border-radius: 50px; font-size: 0.9rem;">Book Consultation for Construction</a>
+          </div>
+        </div>
+      
+        <div class="showcase-panel " id="panel-3">
+          <div class="panel-header">
+            <div class="panel-header-icon" style="background: rgb(168, 85, 247);">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="panel-header-info">
+              <h3>Payroll & Trade Compliance</h3>
+              <p>Tailored compliance, tracking, and tax solutions for your operational efficiency.</p>
+            </div>
+          </div>
+          
+          <div class="panel-bullets-grid">
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Source deductions, union payroll & wages administration</span>
+              </div>
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>WSIB / provincial workers' compensation reporting</span>
+              </div>
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>T4, T4A slips and Record of Employment (ROE) filing</span>
+              </div>
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Direct deposit payroll for clinic & site laborers</span>
+              </div>
+            
+          </div>
+
+          <div class="panel-callout">
+            <strong>CRA Compliance Focus:</strong> We guarantee fully optimized corporate/individual deductions, complete trial balance verification, and robust audit trail protection for all clinical activities.
+          </div>
+
+          <div style="margin-top: 10px;">
+            <a href="/contact.html" class="btn btn-primary" style="padding: 10px 25px; border-radius: 50px; font-size: 0.9rem;">Book Consultation for Payroll</a>
+          </div>
+        </div>
+      
+        <div class="showcase-panel " id="panel-4">
+          <div class="panel-header">
+            <div class="panel-header-icon" style="background: rgb(236, 72, 153);">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <div class="panel-header-info">
+              <h3>Notice to Reader & Bonding</h3>
+              <p>Tailored compliance, tracking, and tax solutions for your operational efficiency.</p>
+            </div>
+          </div>
+          
+          <div class="panel-bullets-grid">
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Notice to Reader (NTR) Compilation financial statements</span>
+              </div>
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Bonding company and bank compliance ratio reports</span>
+              </div>
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Line of credit and capital leasing documentation</span>
+              </div>
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Capital asset depreciation (CCA schedules) for fleets</span>
+              </div>
+            
+          </div>
+
+          <div class="panel-callout">
+            <strong>CRA Compliance Focus:</strong> We guarantee fully optimized corporate/individual deductions, complete trial balance verification, and robust audit trail protection for all clinical activities.
+          </div>
+
+          <div style="margin-top: 10px;">
+            <a href="/contact.html" class="btn btn-primary" style="padding: 10px 25px; border-radius: 50px; font-size: 0.9rem;">Book Consultation for Notice</a>
+          </div>
+        </div>
+      
+        <div class="showcase-panel " id="panel-5">
+          <div class="panel-header">
+            <div class="panel-header-icon" style="background: rgb(251, 119, 13);">
+              <i class="fas fa-user-cog"></i>
+            </div>
+            <div class="panel-header-info">
+              <h3>Personal Tax for Tradespeople</h3>
+              <p>Tailored compliance, tracking, and tax solutions for your operational efficiency.</p>
+            </div>
+          </div>
+          
+          <div class="panel-bullets-grid">
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>T1 returns for self-employed independent contractors</span>
+              </div>
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Tools, safety equipment, and work clothing deductions</span>
+              </div>
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Vehicle logs, travel and home office write-offs</span>
+              </div>
+            
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>GST/HST Quick Method tax optimization filings</span>
+              </div>
+            
+          </div>
+
+          <div class="panel-callout">
+            <strong>CRA Compliance Focus:</strong> We guarantee fully optimized corporate/individual deductions, complete trial balance verification, and robust audit trail protection for all clinical activities.
+          </div>
+
+          <div style="margin-top: 10px;">
+            <a href="/contact.html" class="btn btn-primary" style="padding: 10px 25px; border-radius: 50px; font-size: 0.9rem;">Book Consultation for Personal</a>
+          </div>
+        </div>
+      
+    </div>
   </div>
+
+  <script>
+    (function() {
+      // Showcase tabs interaction
+      const container = document.currentScript ? document.currentScript.parentElement : null;
+      const selectTab = (tab, tabs, panels) => {
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          const icon = t.querySelector('.tab-icon');
+          if (icon) {
+            icon.style.background = '';
+            icon.style.color = '';
+          }
+        });
+        panels.forEach(p => p.classList.remove('active'));
+
+        tab.classList.add('active');
+        const activeIcon = tab.querySelector('.tab-icon');
+        if (activeIcon) {
+          activeIcon.style.background = 'rgba(255,255,255,0.2)';
+          activeIcon.style.color = '#fff';
+        }
+
+        const targetId = tab.getAttribute('data-target');
+        const targetPanel = document.getElementById(targetId);
+        if (targetPanel) {
+          targetPanel.classList.add('active');
+        }
+      };
+
+      const initShowcase = () => {
+        const tabs = document.querySelectorAll('.showcase-tab');
+        const panels = document.querySelectorAll('.showcase-panel');
+        tabs.forEach(tab => {
+          tab.addEventListener('click', () => selectTab(tab, tabs, panels));
+        });
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initShowcase);
+      } else {
+        initShowcase();
+      }
+    })();
+  </script>
   
       </div>
     </section>

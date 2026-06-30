@@ -1569,34 +1569,254 @@ const getIndustryServices = (slug, name) => {
 
   return `
   <style>
-    .service-card-new:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.06) !important;
-      border-color: rgba(34, 197, 94, 0.3) !important;
+    .showcase-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 30px;
+      background: #FFFFFF;
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.02);
+      margin-top: 40px;
+    }
+    .showcase-tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .showcase-tab {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 16px 20px;
+      border-radius: 12px;
+      background: #FAF8F5;
+      border: 1px solid rgba(0,0,0,0.02);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: left;
+      font-family: inherit;
+    }
+    .showcase-tab:hover {
+      background: #F3EFE9;
+      transform: translateX(5px);
+    }
+    .showcase-tab.active {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+      box-shadow: 0 8px 16px rgba(251, 119, 13, 0.15);
+    }
+    .showcase-tab.active .tab-icon {
+      background: rgba(255, 255, 255, 0.2);
+      color: var(--white);
+    }
+    .tab-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      background: rgba(251, 119, 13, 0.1);
+      color: var(--primary);
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+    .tab-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .showcase-content-area {
+      position: relative;
+      background: #FAF8F5;
+      border-radius: 16px;
+      padding: 30px;
+      border: 1px solid rgba(0,0,0,0.03);
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .showcase-panel {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      flex-direction: column;
+      gap: 25px;
+      height: 100%;
+    }
+    .showcase-panel.active {
+      display: flex;
+      opacity: 1;
+    }
+    .panel-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      padding-bottom: 15px;
+    }
+    .panel-header-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--white);
+    }
+    .panel-header-info h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--dark-green);
+      margin: 0;
+    }
+    .panel-header-info p {
+      font-size: 0.88rem;
+      color: var(--body-text-light);
+      margin: 3px 0 0;
+    }
+    .panel-bullets-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    .panel-bullet-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .panel-bullet-item i {
+      color: var(--teal);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .panel-bullet-item span {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #334155;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .panel-callout {
+      background: rgba(251, 119, 13, 0.04);
+      border-left: 4px solid var(--primary);
+      padding: 15px 20px;
+      border-radius: 0 10px 10px 0;
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.5;
+    }
+    @media (max-width: 768px) {
+      .showcase-container {
+        grid-template-columns: 1fr;
+      }
+      .panel-bullets-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
-  <div class="grid-3" style="margin-top: 40px; gap: 30px;">
-    ${cards.map(c => `
-      <div class="service-card-new" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.06); padding: 35px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column; gap: 20px; height: 100%; transition: all 0.3s ease; cursor: default;">
-        <div style="display: flex; align-items: center; gap: 15px;">
-          <div class="card-icon" style="background: ${c.color}; color: ${c.iconColor}; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+
+  <div class="showcase-container">
+    <div class="showcase-tabs">
+      ${cards.map((c, idx) => `
+        <button class="showcase-tab ${idx === 0 ? 'active' : ''}" data-target="panel-${idx}">
+          <div class="tab-icon" style="${idx === 0 ? 'background:rgba(255,255,255,0.2); color:#fff;' : ''}">
             <i class="fas ${c.icon}"></i>
           </div>
-          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0; line-height: 1.3;">${c.title}</h4>
-        </div>
-        <div style="flex-grow: 1;">
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+          <span class="tab-title">${c.title}</span>
+        </button>
+      `).join('')}
+    </div>
+
+    <div class="showcase-content-area">
+      ${cards.map((c, idx) => `
+        <div class="showcase-panel ${idx === 0 ? 'active' : ''}" id="panel-${idx}">
+          <div class="panel-header">
+            <div class="panel-header-icon" style="background: ${c.iconColor};">
+              <i class="fas ${c.icon}"></i>
+            </div>
+            <div class="panel-header-info">
+              <h3>${c.title}</h3>
+              <p>Tailored compliance, tracking, and tax solutions for your operational efficiency.</p>
+            </div>
+          </div>
+          
+          <div class="panel-bullets-grid">
             ${c.bullets.map(b => `
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">${b}</span>
-              </li>
+              <div class="panel-bullet-item">
+                <i class="fas fa-check-circle"></i>
+                <span>${b}</span>
+              </div>
             `).join('')}
-          </ul>
+          </div>
+
+          <div class="panel-callout">
+            <strong>CRA Compliance Focus:</strong> We guarantee fully optimized corporate/individual deductions, complete trial balance verification, and robust audit trail protection for all clinical activities.
+          </div>
+
+          <div style="margin-top: 10px;">
+            <a href="/contact.html" class="btn btn-primary" style="padding: 10px 25px; border-radius: 50px; font-size: 0.9rem;">Book Consultation for ${c.title.split(' ')[0]}</a>
+          </div>
         </div>
-      </div>
-    `).join('')}
+      `).join('')}
+    </div>
   </div>
+
+  <script>
+    (function() {
+      // Showcase tabs interaction
+      const container = document.currentScript ? document.currentScript.parentElement : null;
+      const selectTab = (tab, tabs, panels) => {
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          const icon = t.querySelector('.tab-icon');
+          if (icon) {
+            icon.style.background = '';
+            icon.style.color = '';
+          }
+        });
+        panels.forEach(p => p.classList.remove('active'));
+
+        tab.classList.add('active');
+        const activeIcon = tab.querySelector('.tab-icon');
+        if (activeIcon) {
+          activeIcon.style.background = 'rgba(255,255,255,0.2)';
+          activeIcon.style.color = '#fff';
+        }
+
+        const targetId = tab.getAttribute('data-target');
+        const targetPanel = document.getElementById(targetId);
+        if (targetPanel) {
+          targetPanel.classList.add('active');
+        }
+      };
+
+      const initShowcase = () => {
+        const tabs = document.querySelectorAll('.showcase-tab');
+        const panels = document.querySelectorAll('.showcase-panel');
+        tabs.forEach(tab => {
+          tab.addEventListener('click', () => selectTab(tab, tabs, panels));
+        });
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initShowcase);
+      } else {
+        initShowcase();
+      }
+    })();
+  </script>
   `;
 };
 
