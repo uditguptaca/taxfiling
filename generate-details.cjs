@@ -1122,10 +1122,10 @@ const getIndustryServices = (slug, name) => {
         color: 'rgba(251, 119, 13, 0.1)',
         iconColor: 'rgb(251, 119, 13)',
         bullets: [
-          'Clinic bank & credit card reconciliations',
-          'Jane App & Oscar EMR integrations',
-          'Monthly clinical financial statements',
-          'Associate income tracking & reporting'
+          'Bank & card reconciliations',
+          'Jane App & Oscar integrations',
+          'Clinical financial statements',
+          'Associate income tracking'
         ]
       },
       {
@@ -1135,8 +1135,8 @@ const getIndustryServices = (slug, name) => {
         iconColor: 'rgb(34, 197, 94)',
         bullets: [
           'T2 corporate returns for MPCs',
-          'GST/HST mixed-billing exemption reviews',
-          'Input Tax Credit (ITC) optimization',
+          'Mixed-billing exemption reviews',
+          'Input Tax Credit optimization',
           'CRA audit defense & compliance'
         ]
       },
@@ -1146,10 +1146,10 @@ const getIndustryServices = (slug, name) => {
         color: 'rgba(59, 130, 246, 0.1)',
         iconColor: 'rgb(59, 130, 246)',
         bullets: [
-          'Physician & clinic staff payroll',
-          'Source deductions, WSIB & EHT filings',
-          'T4, T4A & ROE filing compliance',
-          'Employee payslip & tax document portal'
+          'Physician & clinic payroll',
+          'Source deductions & WSIB filings',
+          'T4, T4A & ROE filing',
+          'Employee payslip portal'
         ]
       },
       {
@@ -1158,10 +1158,10 @@ const getIndustryServices = (slug, name) => {
         color: 'rgba(168, 85, 247, 0.1)',
         iconColor: 'rgb(168, 85, 247)',
         bullets: [
-          'Clinic overhead & cost-reduction audits',
-          'Associate fee-split structure designs',
-          'Budgeting & cash flow forecasting',
-          'Practice transitions & partner buy-ins'
+          'Overhead & cost audits',
+          'Associate fee-split designs',
+          'Cash flow forecasting',
+          'Practice transition planning'
         ]
       },
       {
@@ -1170,10 +1170,10 @@ const getIndustryServices = (slug, name) => {
         color: 'rgba(236, 72, 153, 0.1)',
         iconColor: 'rgb(236, 72, 153)',
         bullets: [
-          'Notice to Reader (NTR) compilations',
-          'Clinic corporate setup & structuring',
-          'QuickBooks & Xero integrations',
-          'Shareholders\' agreement tax planning'
+          'Notice to Reader compilations',
+          'Clinic corporate setup',
+          'QuickBooks & Xero setup',
+          'Shareholder tax planning'
         ]
       },
       {
@@ -1182,9 +1182,9 @@ const getIndustryServices = (slug, name) => {
         color: 'rgba(251, 119, 13, 0.1)',
         iconColor: 'rgb(251, 119, 13)',
         bullets: [
-          'T1 returns for doctors & associates',
-          'Malpractice & professional expense claims',
-          'US/cross-border returns for practitioners',
+          'T1 returns for doctors',
+          'Malpractice expense claims',
+          'US & cross-border tax returns',
           'Holding company tax planning'
         ]
       }
@@ -1587,9 +1587,9 @@ const getIndustryServices = (slug, name) => {
         <div style="flex-grow: 1;">
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
             ${c.bullets.map(b => `
-              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: flex-start; gap: 10px;">
-                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; margin-top: 3px; flex-shrink: 0;"></i>
-                <span>${b}</span>
+              <li style="font-size: 0.95rem; line-height: 1.5; color: #334155; display: flex; align-items: center; gap: 10px; overflow: hidden;">
+                <i class="fas fa-check-circle" style="color: var(--teal); font-size: 0.9rem; flex-shrink: 0;"></i>
+                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block;">${b}</span>
               </li>
             `).join('')}
           </ul>
