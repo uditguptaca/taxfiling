@@ -4707,6 +4707,255 @@ writePage(path.join(rootDir, 'tax-accountant-firm', 'index.html'), 'Our Location
 locations.forEach(loc => {
   const isToronto = loc.slug === 'toronto';
 
+  const introSectionHtml = isToronto ? `
+  <!-- Google Reviews Bar -->
+  <section class="reviews-bar" id="reviews" style="background-color: var(--off-white); padding: 40px 0;">
+    <div class="container">
+      <div class="reviews-badge">
+        <div class="excellent">EXCELLENT</div>
+        <div class="reviews-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <div class="reviews-count">Based on <strong>900+ reviews</strong></div>
+        <div class="google-logo">
+          <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span>
+        </div>
+      </div>
+      <div class="reviews-marquee-wrapper">
+        <div class="reviews-marquee-content">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Tax Filings Canada was amazing when I needed help with my tax filing. Udit made everything clear and easy to understand. I’ll definitely be back next year."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">R</div>
+              <span class="reviewer-name">Russell McGehee</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Abhinav was great and registered my business very quickly and diligently."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">T</div>
+              <span class="reviewer-name">Tabasom N</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Very happy with the tax services. Thank you for your help!"</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">J</div>
+              <span class="reviewer-name">James Dzidek</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Tax Filings Canada is a trustworthy accounting firm. Their team handled my business tax filing professionally and kept me informed at every step."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">L</div>
+              <span class="reviewer-name">Louis Adams</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Excellent CPA services! They saved me thousands on my business tax return this year. Highly recommended."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">S</div>
+              <span class="reviewer-name">Sarah Jenkins</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Highly professional, quick response times, and fixed-fee billing. They took care of our bookkeeping and payroll seamlessly."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">M</div>
+              <span class="reviewer-name">Michael Chen</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Duplicated for Infinite Loop -->
+        <div class="reviews-marquee-content" aria-hidden="true">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Tax Filings Canada was amazing when I needed help with my tax filing. Udit made everything clear and easy to understand. I’ll definitely be back next year."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">R</div>
+              <span class="reviewer-name">Russell McGehee</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Abhinav was great and registered my business very quickly and diligently."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">T</div>
+              <span class="reviewer-name">Tabasom N</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Very happy with the tax services. Thank you for your help!"</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">J</div>
+              <span class="reviewer-name">James Dzidek</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Tax Filings Canada is a trustworthy accounting firm. Their team handled my business tax filing professionally and kept me informed at every step."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">L</div>
+              <span class="reviewer-name">Louis Adams</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Excellent CPA services! They saved me thousands on my business tax return this year. Highly recommended."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">S</div>
+              <span class="reviewer-name">Sarah Jenkins</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Highly professional, quick response times, and fixed-fee billing. They took care of our bookkeeping and payroll seamlessly."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">M</div>
+              <span class="reviewer-name">Michael Chen</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Plans Section -->
+  <section class="section" id="pricing" style="padding: 60px 0;">
+    <div class="container">
+      <div class="section-header">
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--dark-green);">Transparent & Fixed Pricing</h2>
+        <p style="color: var(--body-text-light); margin-top: 10px;">No hidden fees. Pay only after your service is completed. Recommended by 1000+ Business & Startups.</p>
+        <div class="accent-line"></div>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card orange">
+          <h4>Business Accounting</h4>
+          <div class="price">From- $10/ M</div>
+          <div class="includes">Bookkeeping | Financials | Reconciliations</div>
+          <a href="/pricing/accounting-bookkeeping.html" class="btn btn-outline-white btn-sm">Explore More</a>
+        </div>
+        <div class="pricing-card teal">
+          <h4>Corporate Tax Filing</h4>
+          <div class="price">From- $90</div>
+          <div class="includes">T2 corporate Tax | NIL Return | Planning</div>
+          <a href="/pricing/corporate-tax.html" class="btn btn-outline-white btn-sm">Explore More</a>
+        </div>
+        <div class="pricing-card orange">
+          <h4>Personal Tax Filing</h4>
+          <div class="price">From- $25</div>
+          <div class="includes">T1 | Student | Employed | Self-employed</div>
+          <a href="/pricing/individual-tax.html" class="btn btn-outline-white btn-sm">Explore More</a>
+        </div>
+        <div class="pricing-card teal">
+          <h4>GST/HST Tax Filings</h4>
+          <div class="price">From $75</div>
+          <div class="includes">GST/HST/PST/QST/RST Tax filings | Registration</div>
+          <a href="/pricing/gst-hst-pst.html" class="btn btn-outline-white btn-sm">Explore More</a>
+        </div>
+        <div class="pricing-card teal">
+          <h4>Partnership Tax Filing</h4>
+          <div class="price">From-$250</div>
+          <div class="includes">T5013 – Partnership Information Return</div>
+          <a href="/pricing/partnership-tax.html" class="btn btn-outline-white btn-sm">Explore More</a>
+        </div>
+        <div class="pricing-card orange">
+          <h4>Non-Profit Tax Filing</h4>
+          <div class="price">From- $250</div>
+          <div class="includes">T1044 | T3010 | T2 | Non-Profits Charities</div>
+          <a href="/pricing/non-profit-tax.html" class="btn btn-outline-white btn-sm">Explore More</a>
+        </div>
+        <div class="pricing-card teal">
+          <h4>Notice to Reader</h4>
+          <div class="price">From- $500</div>
+          <div class="includes">Assistance NTR | Compilation | Audit</div>
+          <a href="/pricing/notice-to-reader.html" class="btn btn-outline-white btn-sm">Explore More</a>
+        </div>
+        <div class="pricing-card orange">
+          <h4>Trust-Estate Tax Filing</h4>
+          <div class="price">From- $300</div>
+          <div class="includes">T3 Trust | Beneficiary Reporting | Allocations</div>
+          <a href="/pricing/trust-estate-tax.html" class="btn btn-outline-white btn-sm">Explore More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  ` : `
+    <!-- 2. INTRO BLOCK -->
+    <section class="section" style="padding-bottom: 20px;">
+      <div class="container">
+        <div class="grid-2-1">
+          <div>
+            <h2>Trusted Tax Filing &amp; Accounting Services in \${loc.name}</h2>
+            <p style="font-size:1.1rem;line-height:1.6;color:var(--body-text-light);margin-top:15px;margin-bottom:25px;">Need professional accounting in \${loc.name}? Our local team provides fully compliant personal (T1) and corporate (T2) tax returns, bank reconciliations, bookkeeping, and payroll support.</p>
+            <p>We work with freelancers, consultants, retail stores, medical clinics, realtors, and manufacturing companies in \${loc.name} and surrounding areas. Our local expertise ensures your provincial taxes, HST returns, and business filings are handled correctly under current CRA guidelines.</p>
+            
+            <h3 class="mt-30">Our \${loc.name} Office Address</h3>
+            <div class="service-card" style="text-align:left;margin:20px 0;border-left:4px solid var(--primary);box-shadow:var(--shadow-md);">
+              <p style="font-size:1.05rem;color:var(--dark-green);margin-bottom:8px;"><strong><i class="fas fa-building text-primary"></i> Office Address:</strong></p>
+              <p style="margin-bottom:12px;font-size:1.05rem;font-weight:700;color:var(--dark-green);">\${loc.address}</p>
+              <p style="margin-bottom:8px;"><strong><i class="fas fa-phone-alt text-primary"></i> Phone:</strong> +1 (416) 619-0068</p>
+              <p style="margin-bottom:0;"><strong><i class="fas fa-envelope text-primary"></i> Email:</strong> contact@taxfilings.ca</p>
+            </div>
+
+            \${getMeetingCtaBox(null)}
+          </div>
+          <div>
+            <div class="service-card" style="text-align:left;position:sticky;top:100px;">
+              <h3>Book a local consultation</h3>
+              <p>Discuss your tax situation with our expert accounting professionals.</p>
+              <a href="/contact.html" class="btn btn-primary" style="width:100%;">Book Free Call</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+
   const leftColumnHtml = isToronto ? `
             <h1>Best Tax Accountant Toronto - Near You</h1>
             <div class="tagline-green" style="color: #22C55E; font-weight: 700; font-style: italic; font-size: 1.15rem; margin-bottom: 15px; line-height: 1.4;">
@@ -4995,35 +5244,7 @@ locations.forEach(loc => {
       </div>
     </section>
 
-    <!-- 2. INTRO BLOCK -->
-    <section class="section" style="padding-bottom: 20px;">
-      <div class="container">
-        <div class="grid-2-1">
-          <div>
-            <h2>Trusted Tax Filing &amp; Accounting Services in ${loc.name}</h2>
-            <p style="font-size:1.1rem;line-height:1.6;color:var(--body-text-light);margin-top:15px;margin-bottom:25px;">Need professional accounting in ${loc.name}? Our local team provides fully compliant personal (T1) and corporate (T2) tax returns, bank reconciliations, bookkeeping, and payroll support.</p>
-            <p>We work with freelancers, consultants, retail stores, medical clinics, realtors, and manufacturing companies in ${loc.name} and surrounding areas. Our local expertise ensures your provincial taxes, HST returns, and business filings are handled correctly under current CRA guidelines.</p>
-            
-            <h3 class="mt-30">Our ${loc.name} Office Address</h3>
-            <div class="service-card" style="text-align:left;margin:20px 0;border-left:4px solid var(--primary);box-shadow:var(--shadow-md);">
-              <p style="font-size:1.05rem;color:var(--dark-green);margin-bottom:8px;"><strong><i class="fas fa-building text-primary"></i> Office Address:</strong></p>
-              <p style="margin-bottom:12px;font-size:1.05rem;font-weight:700;color:var(--dark-green);">${loc.address}</p>
-              <p style="margin-bottom:8px;"><strong><i class="fas fa-phone-alt text-primary"></i> Phone:</strong> +1 (416) 619-0068</p>
-              <p style="margin-bottom:0;"><strong><i class="fas fa-envelope text-primary"></i> Email:</strong> contact@taxfilings.ca</p>
-            </div>
-
-            ${getMeetingCtaBox(isToronto ? 'Book a Meeting with a Tax Accountant in Toronto' : null)}
-          </div>
-          <div>
-            <div class="service-card" style="text-align:left;position:sticky;top:100px;">
-              <h3>Book a local consultation</h3>
-              <p>Discuss your tax situation with our expert accounting professionals.</p>
-              <a href="/contact.html" class="btn btn-primary" style="width:100%;">Book Free Call</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    ${introSectionHtml}
 
     <!-- 3. LOCAL SERVICES OFFERED -->
     <section class="section pt-0" id="local-services">
