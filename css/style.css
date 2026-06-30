@@ -3786,7 +3786,7 @@ p {
 
 /* Vertical Scrolling Testimonial Marquee (Top-to-Bottom) */
 .testimonial-marquee-container {
-  max-height: 480px;
+  max-height: 380px;
   overflow: hidden;
   position: relative;
   padding: 5px 0;
