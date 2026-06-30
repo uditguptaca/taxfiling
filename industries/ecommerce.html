@@ -526,12 +526,10 @@
     <!-- 3. INTRO BLOCK -->
     <section class="section" style="padding-bottom: 40px; background-color: var(--color-ivory-light);">
       <div class="container">
-        <div class="grid-2-1" style="align-items: start; gap: 40px;">
-          <div>
-            <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--dark-green); line-height: 1.25;">Trusted Accounting &amp; Tax Solutions for E-Commerce Sector</h2>
-            <p style="font-size: 1.15rem; line-height: 1.65; color: var(--body-text-light); margin-top: 15px; margin-bottom: 30px;">Our Accounting Firm provides fully compliant personal (T1) and corporate (T2) tax returns, bank reconciliations, bookkeeping, and payroll support customized for professionals and businesses operating in the e-commerce industry.</p>
-            
-            
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--dark-green); line-height: 1.25;">Trusted Accounting &amp; Tax Solutions for E-Commerce Sector</h2>
+        <p style="font-size: 1.15rem; line-height: 1.65; color: var(--body-text-light); margin-top: 15px; margin-bottom: 30px;">Our Accounting Firm provides fully compliant personal (T1) and corporate (T2) tax returns, bank reconciliations, bookkeeping, and payroll support customized for professionals and businesses operating in the e-commerce industry.</p>
+        
+        
     <h3 class="mt-40" style="font-size: 1.6rem; font-weight: 800; color: var(--dark-green); margin-bottom: 25px; text-align: left;"><i class="fas fa-bullseye" style="color:var(--primary); margin-right: 10px;"></i> Our Industry Specializations</h3>
     <div class="specializations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; margin-bottom: 40px; text-align: left;">
       
@@ -588,7 +586,7 @@
     </div>
   
 
-            
+        
   <div class="cta-banner-box" style="text-align:left; margin-top:40px; padding:30px; background:linear-gradient(135deg, #FAF8F5 0%, #F5F1EB 100%); border:1px solid rgba(251, 119, 13, 0.15); border-radius:16px; box-shadow:var(--shadow-sm);">
     <h4 style="margin:0 0 15px 0; font-size:1.25rem; font-weight:800; color:var(--dark-green); display:flex; align-items:center; gap:10px;"><i class="fas fa-handshake" style="color:var(--primary);"></i> Book a Meeting with a Tax Accountant</h4>
     <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:15px 25px; margin-bottom:25px;">
@@ -600,22 +598,6 @@
     <a href="/contact.html" class="btn btn-primary" style="padding:10px 30px; border-radius:50px; font-weight:700;">Get Started <i class="fas fa-arrow-right" style="margin-left:8px;"></i></a>
   </div>
 
-          </div>
-          <div>
-            <div class="service-card card-slate" style="text-align:left; position:sticky; top:120px; padding:35px 30px; border-radius:20px; border:none; box-shadow:var(--shadow-md);">
-              <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.15); padding:6px 14px; border-radius:50px; font-size:0.75rem; font-weight:700; color:#fff; margin-bottom:20px; text-transform:uppercase; letter-spacing:0.5px;">
-                <span style="width:8px; height:8px; background:#22c55e; border-radius:50%; display:inline-block;"></span> Available Now
-              </div>
-              <h3 style="font-size:1.45rem; font-weight:800; color:#fff; margin:0 0 12px 0;">Consult an Expert</h3>
-              <p style="font-size:0.95rem; line-height:1.55; color:rgba(255,255,255,0.85); margin:0 0 25px 0;">Discuss your e-commerce tax requirements with our certified Canadian accounting specialists.</p>
-              
-              <div style="display:flex; flex-direction:column; gap:12px;">
-                <a href="/contact.html" class="btn btn-primary" style="width:100%; text-align:center; padding:12px; font-weight:700; border-radius:8px;">Book Free Call</a>
-                <a href="tel:+14166190068" style="text-align:center; font-size:1rem; font-weight:700; color:#fff; text-decoration:none; margin-top:5px; display:flex; align-items:center; justify-content:center; gap:8px;"><i class="fas fa-phone-alt"></i> +1 (416) 619-0068</a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -1044,6 +1026,893 @@
     </div>
   </section>
 
+
+    <!-- 13b. SPECIALIZED INDUSTRIES TABS -->
+    
+  <!-- Industries We Serve Section (Interactive Tabbed Layout) -->
+  <section class="section" id="industries-serve" style="background-color: var(--white); border-top: 1px solid var(--border-gray);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Specialized Industries We Serve</h2>
+        <p>Explore our accounting and corporate tax services tailored for Canada's major business sectors.</p>
+        <div class="accent-line"></div>
+      </div>
+
+      <style>
+        .industry-container-tabs {
+          display: grid;
+          grid-template-columns: 320px 1fr;
+          gap: 40px;
+          margin-top: 40px;
+          text-align: left;
+        }
+        .industry-tabs-list {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        .industry-tab {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          padding: 16px 20px;
+          background: #f8fafc;
+          border: 1px solid #e2e8f0;
+          border-radius: 12px;
+          cursor: pointer;
+          font-weight: 700;
+          color: #475569;
+          transition: all 0.3s ease;
+        }
+        .industry-tab:hover {
+          background: #f1f5f9;
+          color: var(--primary);
+        }
+        .industry-tab.active {
+          background: rgb(251, 119, 13);
+          color: #fff;
+          border-color: rgb(251, 119, 13);
+          box-shadow: 0 4px 12px rgba(251, 119, 13, 0.25);
+        }
+        .industry-tab i {
+          font-size: 1.25rem;
+          width: 24px;
+          text-align: center;
+        }
+        .industry-content-container {
+          background: #fff;
+          border: 1px solid #e2e8f0;
+          border-radius: 20px;
+          padding: 40px;
+          box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          min-height: 420px;
+        }
+        .industry-panel {
+          display: none;
+          animation: fadeInPanel 0.4s ease;
+        }
+        .industry-panel.active {
+          display: block;
+        }
+        .panel-header {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          margin-bottom: 25px;
+          border-bottom: 1px solid #f1f5f9;
+          padding-bottom: 20px;
+        }
+        .panel-icon {
+          font-size: 2.5rem;
+          color: rgb(251, 119, 13);
+        }
+        .panel-header h3 {
+          font-size: 1.8rem;
+          font-weight: 800;
+          color: var(--dark-green);
+          margin: 0;
+        }
+        .industry-panel p {
+          font-size: 1.1rem;
+          line-height: 1.7;
+          color: #475569;
+          margin-bottom: 25px;
+        }
+        .panel-bullets {
+          list-style: none;
+          padding: 0;
+          margin: 0 0 35px 0;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 15px 30px;
+        }
+        .panel-bullets li {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          font-size: 0.95rem;
+          color: #334155;
+          line-height: 1.4;
+        }
+        .panel-bullets li i {
+          color: var(--primary);
+          margin-top: 3px;
+        }
+        .niche-tag {
+          display: inline-flex;
+          align-items: center;
+          background: var(--light-gray);
+          border: 1px solid var(--border-gray);
+          color: var(--dark-green);
+          padding: 6px 14px;
+          border-radius: 50px;
+          font-size: 0.8rem;
+          font-weight: 700;
+          text-decoration: none;
+          transition: all 0.2s ease;
+          box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+        .niche-tag:hover {
+          background: var(--primary);
+          border-color: var(--primary);
+          color: #fff;
+          transform: translateY(-1px);
+          box-shadow: 0 4px 8px rgba(204, 120, 92, 0.25);
+        }
+        @keyframes fadeInPanel {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 991px) {
+          .industry-container-tabs {
+            grid-template-columns: 1fr;
+            gap: 30px;
+          }
+          .industry-tabs-list {
+            flex-direction: row;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            -webkit-overflow-scrolling: touch;
+          }
+          .industry-tab {
+            flex-shrink: 0;
+          }
+          .panel-bullets {
+            grid-template-columns: 1fr;
+          }
+        }
+      </style>
+
+      <div class="industry-container-tabs">
+        <!-- Tabs Left Column -->
+        <div class="industry-tabs-list">
+          <div class="industry-tab active" data-industry="healthcare">
+            <i class="fas fa-heartbeat"></i>
+            <span>Healthcare &amp; Medical</span>
+          </div>
+          <div class="industry-tab" data-industry="realestate">
+            <i class="fas fa-building"></i>
+            <span>Real Estate &amp; Property</span>
+          </div>
+          <div class="industry-tab" data-industry="construction">
+            <i class="fas fa-hard-hat"></i>
+            <span>Construction &amp; Trades</span>
+          </div>
+          <div class="industry-tab" data-industry="ecommerce">
+            <i class="fas fa-shopping-cart"></i>
+            <span>E-Commerce &amp; Retail</span>
+          </div>
+          <div class="industry-tab" data-industry="services">
+            <i class="fas fa-briefcase"></i>
+            <span>Professional Services</span>
+          </div>
+          <div class="industry-tab" data-industry="restaurants">
+            <i class="fas fa-utensils"></i>
+            <span>Restaurants &amp; Cafes</span>
+          </div>
+          <div class="industry-tab" data-industry="manufacturing">
+            <i class="fas fa-industry"></i>
+            <span>Manufacturing &amp; Logistics</span>
+          </div>
+          <div class="industry-tab" data-industry="nonprofit">
+            <i class="fas fa-hand-holding-heart"></i>
+            <span>Non-Profits &amp; NPOs</span>
+          </div>
+        </div>
+
+        <!-- Content Right Column -->
+        <div class="industry-content-container">
+          <!-- Panel 1: Healthcare -->
+          <div class="industry-panel active" id="panel-healthcare">
+            <div class="panel-header">
+              <i class="fas fa-heartbeat panel-icon"></i>
+              <h3>Healthcare &amp; Medical</h3>
+            </div>
+            <p>Specialized compliance accounting and tax optimization designed for medical clinics, general practitioners, dentists, and pharmacists in Canada.</p>
+            <ul class="panel-bullets" style="margin-bottom: 25px;">
+              <li><i class="fas fa-check"></i> Overhead cost allocation & clinic expense tracking</li>
+              <li><i class="fas fa-check"></i> Medical professional corporation (MPC) tax planning</li>
+              <li><i class="fas fa-check"></i> GST/HST exemption review and input tax credit claims</li>
+              <li><i class="fas fa-check"></i> Full payroll integration for associates and clinic staff</li>
+            </ul>
+            <div class="panel-seo-meta" style="margin-bottom: 30px; border-top: 1px solid var(--border-gray); padding-top: 20px; text-align: left;">
+              <div style="font-weight: 700; font-size: 0.8rem; color: var(--teal-light); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Niches Covered:</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="/industries/healthcare.html#medical-practice-physicians" class="niche-tag">Medical Clinics</a>
+                <a href="/industries/healthcare.html#doctors" class="niche-tag">Family Doctors &amp; GPs</a>
+                <a href="/industries/healthcare.html#dentists" class="niche-tag">Dentists &amp; Orthodontists</a>
+                <a href="/industries/healthcare.html#pharmacies" class="niche-tag">Pharmacies</a>
+                <a href="/industries/healthcare.html#chiropractors" class="niche-tag">Chiropractors</a>
+                <a href="/industries/healthcare.html#therapists-psychologists" class="niche-tag">Physiotherapists</a>
+                <a href="/industries/healthcare.html" class="niche-tag">Optometrists</a>
+                <a href="/industries/healthcare.html#veterinary" class="niche-tag">Veterinary Clinics</a>
+                <a href="/industries/healthcare.html#medical-practice-physicians" class="niche-tag">Specialists &amp; Surgeons</a>
+                <a href="/industries/healthcare.html" class="niche-tag">Nurses</a>
+                <a href="/industries/healthcare.html#therapists-psychologists" class="niche-tag">Mental Health Counselors</a>
+              </div>
+            </div>
+            <a href="/industries/healthcare.html" class="btn btn-primary" style="align-self: flex-start; border-radius: 50px; font-weight: 700; padding: 12px 35px;">Explore Healthcare Services</a>
+          </div>
+
+          <!-- Panel 2: Real Estate -->
+          <div class="industry-panel" id="panel-realestate">
+            <div class="panel-header">
+              <i class="fas fa-building panel-icon"></i>
+              <h3>Real Estate &amp; Property</h3>
+            </div>
+            <p>Strategic tax planning and custom accounting systems built for real estate agents (PRECs), property managers, developers, and property investors.</p>
+            <ul class="panel-bullets" style="margin-bottom: 25px;">
+              <li><i class="fas fa-check"></i> PREC (Personal Real Estate Corporation) tax structuring</li>
+              <li><i class="fas fa-check"></i> Rental property bookkeeping & cash flow analysis</li>
+              <li><i class="fas fa-check"></i> Capital gains tax optimization and deferral strategies</li>
+              <li><i class="fas fa-check"></i> GST/HST rebate filings on new residential properties</li>
+            </ul>
+            <div class="panel-seo-meta" style="margin-bottom: 30px; border-top: 1px solid var(--border-gray); padding-top: 20px; text-align: left;">
+              <div style="font-weight: 700; font-size: 0.8rem; color: var(--teal-light); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Niches Covered:</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="/industries/real-estate.html#realtors" class="niche-tag">Real Estate Agents</a>
+                <a href="/industries/real-estate.html#brokers" class="niche-tag">Brokers</a>
+                <a href="/industries/real-estate.html#property-developers" class="niche-tag">Property Developers</a>
+                <a href="/industries/real-estate.html#property-managers" class="niche-tag">Landlords</a>
+                <a href="/industries/real-estate.html#property-managers" class="niche-tag">Property Managers</a>
+                <a href="/industries/real-estate.html#appraisers" class="niche-tag">Appraisers</a>
+                <a href="/industries/real-estate.html#real-estate-investors" class="niche-tag">Real Estate Holdcos</a>
+                <a href="/industries/real-estate.html#real-estate-investors" class="niche-tag">Property Investors</a>
+              </div>
+            </div>
+            <a href="/industries/real-estate.html" class="btn btn-primary" style="align-self: flex-start; border-radius: 50px; font-weight: 700; padding: 12px 35px;">Explore Real Estate Services</a>
+          </div>
+
+          <!-- Panel 3: Construction -->
+          <div class="industry-panel" id="panel-construction">
+            <div class="panel-header">
+              <i class="fas fa-hard-hat panel-icon"></i>
+              <h3>Construction &amp; Trades</h3>
+            </div>
+            <p>Progress billing systems, subcontractor compliance, and job costing models to keep builders, general contractors, and trades compliant and profitable.</p>
+            <ul class="panel-bullets" style="margin-bottom: 25px;">
+              <li><i class="fas fa-check"></i> Project-by-project job costing & margin tracking</li>
+              <li><i class="fas fa-check"></i> Subcontractor T5018 slip preparation & filing</li>
+              <li><i class="fas fa-check"></i> Work-in-progress (WIP) accounting & bank compliance</li>
+              <li><i class="fas fa-check"></i> WSIB and provincial workers' compensation reporting</li>
+            </ul>
+            <div class="panel-seo-meta" style="margin-bottom: 30px; border-top: 1px solid var(--border-gray); padding-top: 20px; text-align: left;">
+              <div style="font-weight: 700; font-size: 0.8rem; color: var(--teal-light); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Niches Covered:</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="/industries/construction.html#general-contractors" class="niche-tag">General Contractors</a>
+                <a href="/industries/construction.html#subcontractors" class="niche-tag">Subcontractors</a>
+                <a href="/industries/construction.html#home-builders" class="niche-tag">Home Builders</a>
+                <a href="/industries/construction.html#framers" class="niche-tag">Framers</a>
+                <a href="/industries/construction.html#electricians" class="niche-tag">Electricians</a>
+                <a href="/industries/construction.html#plumbers" class="niche-tag">Plumbers</a>
+                <a href="/industries/construction.html#roofers-renovation-firms" class="niche-tag">Roofers</a>
+                <a href="/industries/construction.html#roofers-renovation-firms" class="niche-tag">Painters</a>
+                <a href="/industries/construction.html#subcontractors" class="niche-tag">HVAC Technicians</a>
+                <a href="/industries/construction.html#subcontractors" class="niche-tag">Drywall Contractors</a>
+                <a href="/industries/construction.html#subcontractors" class="niche-tag">Landscapers</a>
+              </div>
+            </div>
+            <a href="/industries/construction.html" class="btn btn-primary" style="align-self: flex-start; border-radius: 50px; font-weight: 700; padding: 12px 35px;">Explore Construction Services</a>
+          </div>
+
+          <!-- Panel 4: E-Commerce -->
+          <div class="industry-panel" id="panel-ecommerce">
+            <div class="panel-header">
+              <i class="fas fa-shopping-cart panel-icon"></i>
+              <h3>E-Commerce &amp; Retail</h3>
+            </div>
+            <p>Multi-channel sales tax tracking, inventory accounting integration, and financial analytics for Shopify, Amazon FBA, and WooCommerce businesses.</p>
+            <ul class="panel-bullets" style="margin-bottom: 25px;">
+              <li><i class="fas fa-check"></i> Automated integrations with Shopify, Amazon, Stripe, etc.</li>
+              <li><i class="fas fa-check"></i> Multi-province GST/HST/PST sales tax filing</li>
+              <li><i class="fas fa-check"></i> Real-time inventory valuation and COGS tracking</li>
+              <li><i class="fas fa-check"></i> Cross-border sales tax compliance and duty tracking</li>
+            </ul>
+            <div class="panel-seo-meta" style="margin-bottom: 30px; border-top: 1px solid var(--border-gray); padding-top: 20px; text-align: left;">
+              <div style="font-weight: 700; font-size: 0.8rem; color: var(--teal-light); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Niches Covered:</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="/industries/ecommerce.html#shopify-sellers" class="niche-tag">Shopify Merchants</a>
+                <a href="/industries/ecommerce.html#amazon-fba-sellers" class="niche-tag">Amazon FBA Sellers</a>
+                <a href="/industries/ecommerce.html#ebay-stores" class="niche-tag">eBay Stores</a>
+                <a href="/industries/ecommerce.html#woocommerce-brands" class="niche-tag">WooCommerce Brands</a>
+                <a href="/industries/ecommerce.html#dropshippers" class="niche-tag">Dropshipping</a>
+                <a href="/industries/ecommerce.html#digital-goods-sellers" class="niche-tag">Digital Sellers</a>
+                <a href="/industries/ecommerce.html#wholesalers" class="niche-tag">Wholesalers</a>
+                <a href="/industries/ecommerce.html" class="niche-tag">Retail Stores</a>
+              </div>
+            </div>
+            <a href="/industries/ecommerce.html" class="btn btn-primary" style="align-self: flex-start; border-radius: 50px; font-weight: 700; padding: 12px 35px;">Explore E-Commerce Services</a>
+          </div>
+
+          <!-- Panel 5: Professional Services -->
+          <div class="industry-panel" id="panel-services">
+            <div class="panel-header">
+              <i class="fas fa-briefcase panel-icon"></i>
+              <h3>Professional Services</h3>
+            </div>
+            <p>Accurate corporate tax filing, monthly bookkeeping, and payroll management for consulting firms, tech startups, legal practices, and creative agencies.</p>
+            <ul class="panel-bullets" style="margin-bottom: 25px;">
+              <li><i class="fas fa-check"></i> Time-tracking integrations and utilization reports</li>
+              <li><i class="fas fa-check"></i> Shareholder compensation and dividend planning</li>
+              <li><i class="fas fa-check"></i> SR&amp;ED tax credit tracking and documentation</li>
+              <li><i class="fas fa-check"></i> Virtual bookkeeping and automated invoicing systems</li>
+            </ul>
+            <div class="panel-seo-meta" style="margin-bottom: 30px; border-top: 1px solid var(--border-gray); padding-top: 20px; text-align: left;">
+              <div style="font-weight: 700; font-size: 0.8rem; color: var(--teal-light); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Niches Covered:</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="/industries/professional-services.html#advisory-consultants" class="niche-tag">IT Consultants</a>
+                <a href="/industries/professional-services.html#startups" class="niche-tag">Software Startups</a>
+                <a href="/industries/professional-services.html#corporations" class="niche-tag">Lawyers</a>
+                <a href="/industries/professional-services.html#independent-practitioners" class="niche-tag">Architects</a>
+                <a href="/industries/professional-services.html#independent-practitioners" class="niche-tag">Engineers</a>
+                <a href="/industries/professional-services.html#sole-proprietors" class="niche-tag">Design Studios</a>
+                <a href="/industries/professional-services.html#partnerships" class="niche-tag">Marketing Agencies</a>
+                <a href="/industries/professional-services.html#advisory-consultants" class="niche-tag">Management Advisors</a>
+                <a href="/industries/professional-services.html#sole-proprietors" class="niche-tag">HR Specialists</a>
+                <a href="/industries/professional-services.html#sole-proprietors" class="niche-tag">Recruiters</a>
+              </div>
+            </div>
+            <a href="/industries/professional-services.html" class="btn btn-primary" style="align-self: flex-start; border-radius: 50px; font-weight: 700; padding: 12px 35px;">Explore Professional Services</a>
+          </div>
+
+          <!-- Panel 6: Restaurants -->
+          <div class="industry-panel" id="panel-restaurants">
+            <div class="panel-header">
+              <i class="fas fa-utensils panel-icon"></i>
+              <h3>Restaurants &amp; Cafes</h3>
+            </div>
+            <p>POS integrations, tip tracking, food cost of goods sold (COGS) analytics, and weekly payroll processing built for Canada's food and beverage sector.</p>
+            <ul class="panel-bullets" style="margin-bottom: 25px;">
+              <li><i class="fas fa-check"></i> POS report synchronization & cash flow daily audit</li>
+              <li><i class="fas fa-check"></i> Tip pooling calculations & CRA compliance audits</li>
+              <li><i class="fas fa-check"></i> Food, beverage, and labor cost variance reports</li>
+              <li><i class="fas fa-check"></i> Vendor payment management (Accounts Payable)</li>
+            </ul>
+            <div class="panel-seo-meta" style="margin-bottom: 30px; border-top: 1px solid var(--border-gray); padding-top: 20px; text-align: left;">
+              <div style="font-weight: 700; font-size: 0.8rem; color: var(--teal-light); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Niches Covered:</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="/industries/restaurants.html#fine-dining" class="niche-tag">Fine Dining</a>
+                <a href="/industries/restaurants.html#cafes" class="niche-tag">Cafes</a>
+                <a href="/industries/restaurants.html#cafes" class="niche-tag">Coffee Shops</a>
+                <a href="/industries/restaurants.html#bakeries" class="niche-tag">Bakeries</a>
+                <a href="/industries/restaurants.html#bakeries" class="niche-tag">Dessert Parlors</a>
+                <a href="/industries/restaurants.html#catering-services" class="niche-tag">Catering Services</a>
+                <a href="/industries/restaurants.html#franchises" class="niche-tag">Fast Food Franchises</a>
+                <a href="/industries/restaurants.html#bars-pubs" class="niche-tag">Bars &amp; Pubs</a>
+                <a href="/industries/restaurants.html#bars-pubs" class="niche-tag">Lounges</a>
+                <a href="/industries/restaurants.html#food-trucks" class="niche-tag">Food Trucks</a>
+              </div>
+            </div>
+            <a href="/industries/restaurants.html" class="btn btn-primary" style="align-self: flex-start; border-radius: 50px; font-weight: 700; padding: 12px 35px;">Explore Restaurant Services</a>
+          </div>
+
+          <!-- Panel 7: Manufacturing -->
+          <div class="industry-panel" id="panel-manufacturing">
+            <div class="panel-header">
+              <i class="fas fa-industry panel-icon"></i>
+              <h3>Manufacturing &amp; Logistics</h3>
+            </div>
+            <p>Cost accounting, raw materials inventory valuation, supply chain overhead tracking, and driver payroll setups for manufacturers and distributors.</p>
+            <ul class="panel-bullets" style="margin-bottom: 25px;">
+              <li><i class="fas fa-check"></i> Bill of materials (BOM) cost tracking & analysis</li>
+              <li><i class="fas fa-check"></i> Standard cost audits & variance analysis</li>
+              <li><i class="fas fa-check"></i> Multi-warehouse inventory accounting controls</li>
+              <li><i class="fas fa-check"></i> Fleet expense monitoring and logbook checks</li>
+            </ul>
+            <div class="panel-seo-meta" style="margin-bottom: 30px; border-top: 1px solid var(--border-gray); padding-top: 20px; text-align: left;">
+              <div style="font-weight: 700; font-size: 0.8rem; color: var(--teal-light); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Niches Covered:</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="/industries/manufacturing.html#product-manufacturers" class="niche-tag">Product Manufacturers</a>
+                <a href="/industries/manufacturing.html#food-processors" class="niche-tag">Food Processors</a>
+                <a href="/industries/manufacturing.html#tool-die-shops" class="niche-tag">Tool &amp; Die Shops</a>
+                <a href="/industries/manufacturing.html#chemical-plants" class="niche-tag">Chemical Plants</a>
+                <a href="/industries/manufacturing.html#textile-mills" class="niche-tag">Textile Mills</a>
+                <a href="/industries/manufacturing.html#wholesalers" class="niche-tag">Wholesalers</a>
+                <a href="/industries/manufacturing.html#distributors" class="niche-tag">Distributors</a>
+                <a href="/industries/manufacturing.html#cargo-transport-firms" class="niche-tag">Cargo &amp; Transport</a>
+              </div>
+            </div>
+            <a href="/industries/manufacturing.html" class="btn btn-primary" style="align-self: flex-start; border-radius: 50px; font-weight: 700; padding: 12px 35px;">Explore Manufacturing Services</a>
+          </div>
+
+          <!-- Panel 8: Non-Profit -->
+          <div class="industry-panel" id="panel-nonprofit">
+            <div class="panel-header">
+              <i class="fas fa-hand-holding-heart panel-icon"></i>
+              <h3>Non-Profits &amp; NPOs</h3>
+            </div>
+            <p>CRA T3010 charity returns, T1044 NPO filing, grant-tracking accounting, and transparent donor financial reporting to maintain status.</p>
+            <ul class="panel-bullets" style="margin-bottom: 25px;">
+              <li><i class="fas fa-check"></i> Fund accounting & grant allocation tracking</li>
+              <li><i class="fas fa-check"></i> T3010 Registered Charity Return filing</li>
+              <li><i class="fas fa-check"></i> T1044 Non-Profit Organization Return filing</li>
+              <li><i class="fas fa-check"></i> Board audit assistance & donor report packs</li>
+            </ul>
+            <div class="panel-seo-meta" style="margin-bottom: 30px; border-top: 1px solid var(--border-gray); padding-top: 20px; text-align: left;">
+              <div style="font-weight: 700; font-size: 0.8rem; color: var(--teal-light); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Niches Covered:</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="/industries/non-profit.html#registered-charities" class="niche-tag">Registered Charities</a>
+                <a href="/industries/non-profit.html#community-foundations" class="niche-tag">Community Foundations</a>
+                <a href="/industries/non-profit.html#social-advocacy-groups" class="niche-tag">Social Advocacy</a>
+                <a href="/industries/non-profit.html#healthcare-foundations" class="niche-tag">Healthcare Foundations</a>
+                <a href="/industries/non-profit.html#professional-associations" class="niche-tag">Professional Associations</a>
+                <a href="/industries/non-profit.html#trade-unions" class="niche-tag">Trade Unions</a>
+                <a href="/industries/non-profit.html#sports-recreation-clubs" class="niche-tag">Sports &amp; Rec Clubs</a>
+              </div>
+            </div>
+            <a href="/industries/non-profit.html" class="btn btn-primary" style="align-self: flex-start; border-radius: 50px; font-weight: 700; padding: 12px 35px;">Explore Non-Profit Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS script to handle interactive tab switching -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const tabs = document.querySelectorAll('.industry-tab');
+        const panels = document.querySelectorAll('.industry-panel');
+        
+        tabs.forEach(tab => {
+          tab.addEventListener('click', () => {
+            // Remove active classes
+            tabs.forEach(t => t.classList.remove('active'));
+            panels.forEach(p => p.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            tab.classList.add('active');
+            
+            // Show corresponding panel
+            const target = tab.getAttribute('data-industry');
+            const panel = document.getElementById('panel-' + target);
+            if (panel) {
+              panel.classList.add('active');
+            }
+          });
+        });
+      });
+    </script>
+  </section>
+  
+
+    <!-- 13c. LOCATIONS SELECTOR WIDGET -->
+    
+  <!-- Let's Connect / Interactive Office Locator Widget -->
+  <section class="section" id="connect" style="background: var(--white); border-top: 1px solid var(--border-gray);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Accounting Firm &amp; Tax Filing Locations</h2>
+        <p>Use our office finder below to select your nearest tax professional or search by city name.</p>
+        <div class="accent-line"></div>
+      </div>
+
+      <style>
+        .locator-widget-container {
+          display: grid;
+          grid-template-columns: 1.3fr 1fr;
+          gap: 40px;
+          margin-top: 40px;
+          text-align: left;
+        }
+        .prov-filter-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-bottom: 25px;
+        }
+        .prov-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          height: 38px;
+          padding: 0 18px;
+          border-radius: 50px;
+          border: 1px solid var(--border-gray);
+          background: #EBDBBC; /* Manilla color - warm beige */
+          font-weight: 600;
+          font-size: 0.85rem;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          color: var(--dark-green);
+          white-space: nowrap;
+          line-height: 1;
+        }
+        .prov-btn:hover {
+          background: #D4A27F; /* Kraft color - warm tan */
+          border-color: var(--medium-gray);
+          color: var(--dark-green);
+        }
+        .prov-btn.active {
+          background: var(--dark-green);
+          color: var(--white);
+          border-color: var(--dark-green);
+        }
+        .loc-list-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+          gap: 12px;
+        }
+        .loc-item {
+          background: var(--light-gray); /* Ivory Dark - cool gray-beige */
+          border: 1px solid var(--border-gray);
+          border-radius: 10px;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 700;
+          font-size: 0.85rem;
+          color: var(--body-text);
+          cursor: pointer;
+          transition: all 0.2s ease;
+          text-align: center;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+          box-sizing: border-box;
+          line-height: 1;
+          padding: 0 10px;
+        }
+        .loc-item:hover {
+          border-color: var(--primary);
+          color: var(--primary);
+          background: var(--primary-light);
+        }
+        .loc-item.active {
+          border-color: var(--primary);
+          background: var(--primary);
+          color: #fff;
+          box-shadow: 0 4px 6px -1px rgba(204, 120, 92, 0.2);
+        }
+        @media (max-width: 991px) {
+          .locator-widget-container {
+            grid-template-columns: 1fr;
+            gap: 30px;
+          }
+        }
+      </style>
+ 
+      <div class="locator-widget-container">
+        <!-- Left Side: Finder Controls -->
+        <div>
+          <!-- Province selection section header -->
+          <h4 style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #64748b; margin-bottom: 12px; margin-top: 0; display: flex; align-items: center; gap: 6px;"><i class="fas fa-map" style="color: rgb(251, 119, 13);"></i> 1. Select Province</h4>
+          
+          <!-- Province selection pills -->
+          <div class="prov-filter-container">
+            <button class="prov-btn active" data-prov="ontario">Ontario</button>
+            <button class="prov-btn" data-prov="bc">British Columbia</button>
+            <button class="prov-btn" data-prov="alberta">Alberta</button>
+            <button class="prov-btn" data-prov="quebec">Quebec</button>
+            <button class="prov-btn" data-prov="manitoba">Manitoba</button>
+            <button class="prov-btn" data-prov="saskatchewan">Saskatchewan</button>
+            <button class="prov-btn" data-prov="novascotia">Nova Scotia</button>
+            <button class="prov-btn" data-prov="newbrunswick">New Brunswick</button>
+            <button class="prov-btn" data-prov="pei">Prince Edward Island</button>
+            <button class="prov-btn" data-prov="newfoundland">Newfoundland &amp; Labrador</button>
+          </div>
+
+          <!-- Cities section header -->
+          <h4 style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #64748b; margin-bottom: 12px; margin-top: 25px; display: flex; align-items: center; gap: 6px;"><i class="fas fa-city" style="color: rgb(251, 119, 13);"></i> 2. Choose City / Town</h4>
+
+          <!-- List of Cities -->
+          <div class="loc-list-grid">
+            <!-- Ontario Cities (20) -->
+            <div class="loc-item active" data-prov="ontario" data-city="Toronto" data-desc="Expert corporate tax filing, personal returns, and comprehensive CPA accounting services in Toronto.">Toronto, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Ottawa" data-desc="Professional bookkeeping, corporate tax preparation, and local CPA solutions in Ottawa.">Ottawa, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Mississauga" data-desc="Top-rated tax planners, corporate filing, and Virtual CFO support in Mississauga.">Mississauga, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Brampton" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Brampton.">Brampton, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Hamilton" data-desc="Affordable corporate tax filing, accounting services, and payroll setups in Hamilton.">Hamilton, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="London" data-desc="Full-service small business bookkeeping and corporate tax consulting in London.">London, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Markham" data-desc="High-quality corporate tax planning and monthly accounting systems in Markham.">Markham, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Vaughan" data-desc="Reliable corporate tax audits, payroll services, and bookkeeping near Vaughan.">Vaughan, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Windsor" data-desc="Experienced tax accountants, bookkeeping, and CRA compliance services in Windsor.">Windsor, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Kitchener" data-desc="Comprehensive business accounting and corporate tax returns in Kitchener.">Kitchener, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Waterloo" data-desc="Advanced tax optimization and virtual CFO advisory services in Waterloo.">Waterloo, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Oakville" data-desc="Premium corporate tax preparation, bookkeeping, and payroll management in Oakville.">Oakville, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Burlington" data-desc="Expert CPA services, company filings, and payroll support in Burlington.">Burlington, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Richmond Hill" data-desc="Professional corporate tax filing and business bookkeeping in Richmond Hill.">Richmond Hill, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Barrie" data-desc="Reliable accounting, GST/HST filing, and corporate tax returns in Barrie.">Barrie, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Oshawa" data-desc="Local tax filing and small business bookkeeping services in Oshawa.">Oshawa, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Guelph" data-desc="Quality accounting, payroll management, and corporate tax consulting in Guelph.">Guelph, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Kingston" data-desc="Expert tax planning, bookkeeping, and business return services in Kingston.">Kingston, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Cambridge" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Cambridge.">Cambridge, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="St. Catharines" data-desc="Corporate tax audits, business tax return prep, and payroll management in St. Catharines.">St. Catharines, ON</div>
+            
+            <!-- BC Cities (20) -->
+            <div class="loc-item" data-prov="bc" data-city="Vancouver" data-desc="Professional small business bookkeeping, Virtual CFO, and corporate tax consulting in Vancouver." style="display: none;">Vancouver, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Surrey" data-desc="Corporate tax filing, payroll processing, and accounting support in Surrey." style="display: none;">Surrey, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Burnaby" data-desc="Experienced business tax accountants and bookkeeping systems in Burnaby." style="display: none;">Burnaby, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Richmond" data-desc="Top-tier corporate tax preparation and multi-provincial compliance in Richmond." style="display: none;">Richmond, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Victoria" data-desc="Comprehensive accounting services and corporate tax filings in Victoria." style="display: none;">Victoria, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Kelowna" data-desc="Reliable corporate tax return preparation, payroll, and bookkeeping in Kelowna." style="display: none;">Kelowna, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Abbotsford" data-desc="Small business tax advice, monthly bookkeeping, and filings in Abbotsford." style="display: none;">Abbotsford, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Coquitlam" data-desc="Expert accounting, tax minimization strategies, and GST returns in Coquitlam." style="display: none;">Coquitlam, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Saanich" data-desc="Corporate T2 returns, business accounting, and local bookkeeping near Saanich." style="display: none;">Saanich, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Delta" data-desc="Top-rated tax planners, corporate filing, and Virtual CFO support in Delta." style="display: none;">Delta, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Nanaimo" data-desc="CRA audit assistance, business setup, and monthly bookkeeping in Nanaimo." style="display: none;">Nanaimo, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Kamloops" data-desc="Experienced corporate tax filing and business accounting in Kamloops." style="display: none;">Kamloops, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Chilliwack" data-desc="Quality accounting, payroll management, and corporate tax consulting in Chilliwack." style="display: none;">Chilliwack, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="North Vancouver" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in North Vancouver." style="display: none;">N. Vancouver, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Prince George" data-desc="Corporate tax audits, business tax return prep, and payroll management in Prince George." style="display: none;">Prince George, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Vernon" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Vernon." style="display: none;">Vernon, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Port Coquitlam" data-desc="Professional tax services and payroll administration in Port Coquitlam." style="display: none;">Port Coquitlam, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Maple Ridge" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Maple Ridge." style="display: none;">Maple Ridge, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="New Westminster" data-desc="Certified tax returns, corporate filings, and general ledger support services in New Westminster." style="display: none;">New West., BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Penticton" data-desc="Expert tax planning, bookkeeping, and business return services in Penticton." style="display: none;">Penticton, BC</div>
+            
+            <!-- Alberta Cities (20) -->
+            <div class="loc-item" data-prov="alberta" data-city="Calgary" data-desc="Strategic tax minimization, payroll setup, and expert accounting solutions in Calgary." style="display: none;">Calgary, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Edmonton" data-desc="Full compliance bookkeeping, payroll, and corporate T2 returns in Edmonton." style="display: none;">Edmonton, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Red Deer" data-desc="Experienced corporate tax filing and business accounting in Red Deer." style="display: none;">Red Deer, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Lethbridge" data-desc="Quality bookkeeping, payroll, and business tax return services in Lethbridge." style="display: none;">Lethbridge, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Wood Buffalo" data-desc="Corporate tax returns, accounting, and compliance in Wood Buffalo." style="display: none;">Wood Buffalo, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Medicine Hat" data-desc="Bookkeeping, payroll, and business tax filing in Medicine Hat." style="display: none;">Medicine Hat, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Grande Prairie" data-desc="CPA accounting, corporate tax preparation, and bookkeeping in Grande Prairie." style="display: none;">Grande Prairie, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Airdrie" data-desc="Professional tax services and payroll administration in Airdrie." style="display: none;">Airdrie, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Spruce Grove" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Spruce Grove." style="display: none;">Spruce Grove, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Leduc" data-desc="Certified tax returns, corporate filings, and general ledger support services in Leduc." style="display: none;">Leduc, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Fort Saskatchewan" data-desc="Expert tax planning, bookkeeping, and business return services in Fort Saskatchewan." style="display: none;">Fort Sask., AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Lloydminster" data-desc="Corporate tax preparation, payroll management, and bookkeeping in Lloydminster." style="display: none;">Lloydminster, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Camrose" data-desc="Professional bookkeeping, corporate tax preparation, and local CPA solutions in Camrose." style="display: none;">Camrose, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Brooks" data-desc="Reliable corporate tax audits, payroll services, and bookkeeping near Brooks." style="display: none;">Brooks, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Wetaskiwin" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Wetaskiwin." style="display: none;">Wetaskiwin, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Canmore" data-desc="Top-rated tax planners, corporate filing, and Virtual CFO support in Canmore." style="display: none;">Canmore, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Cochrane" data-desc="CRA audit assistance, business setup, and monthly bookkeeping in Cochrane." style="display: none;">Cochrane, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Okotoks" data-desc="Experienced corporate tax filing and business accounting in Okotoks." style="display: none;">Okotoks, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="High River" data-desc="Quality accounting, payroll management, and corporate tax consulting in High River." style="display: none;">High River, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Stony Plain" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Stony Plain." style="display: none;">Stony Plain, AB</div>
+            
+            <!-- Quebec Cities (20) -->
+            <div class="loc-item" data-prov="quebec" data-city="Montreal" data-desc="Corporate tax planning, sales tax compliance, and Virtual CFO bookkeeping services in Montreal." style="display: none;">Montreal, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Quebec City" data-desc="Professional corporate tax preparation and payroll services in Quebec City." style="display: none;">Quebec, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Laval" data-desc="Small business accounting, bookkeeping, and tax filings in Laval." style="display: none;">Laval, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Gatineau" data-desc="Reliable accounting services and corporate tax filing in Gatineau." style="display: none;">Gatineau, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Longueuil" data-desc="Corporate T2 returns, business accounting, and local bookkeeping near Longueuil." style="display: none;">Longueuil, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Sherbrooke" data-desc="Top-rated tax planners, corporate filing, and Virtual CFO support in Sherbrooke." style="display: none;">Sherbrooke, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Saguenay" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Saguenay." style="display: none;">Saguenay, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Levis" data-desc="Experienced corporate tax filing and business accounting in Lévis." style="display: none;">Lévis, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Trois-Rivieres" data-desc="Quality accounting, payroll management, and corporate tax consulting in Trois-Rivières." style="display: none;">Trois-Rivières, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Terrebonne" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Terrebonne." style="display: none;">Terrebonne, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Saint-Jean-sur-Richelieu" data-desc="Corporate tax audits, business tax return prep, and payroll management in Saint-Jean-sur-Richelieu." style="display: none;">St-Jean-sur-Rich., QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Brossard" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Brossard." style="display: none;">Brossard, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Repentigny" data-desc="Professional tax services and payroll administration in Repentigny." style="display: none;">Repentigny, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Saint-Jerome" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Saint-Jérôme." style="display: none;">St-Jérôme, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Granby" data-desc="Certified tax returns, corporate filings, and general ledger support services in Granby." style="display: none;">Granby, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Drummondville" data-desc="Expert tax planning, bookkeeping, and business return services in Drummondville." style="display: none;">Drummondville, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Saint-Hyacinthe" data-desc="Corporate tax preparation, payroll management, and bookkeeping in Saint-Hyacinthe." style="display: none;">St-Hyacinthe, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Shawinigan" data-desc="Professional bookkeeping, corporate tax preparation, and local CPA solutions in Shawinigan." style="display: none;">Shawinigan, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Beloeil" data-desc="Reliable corporate tax audits, payroll services, and bookkeeping near Beloeil." style="display: none;">Beloeil, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Blainville" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Blainville." style="display: none;">Blainville, QC</div>
+            
+            <!-- Manitoba Cities (20) -->
+            <div class="loc-item" data-prov="manitoba" data-city="Winnipeg" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Winnipeg." style="display: none;">Winnipeg, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Brandon" data-desc="Local business accounting and corporate tax return services in Brandon." style="display: none;">Brandon, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Steinbach" data-desc="Experienced corporate tax filing and business accounting in Steinbach." style="display: none;">Steinbach, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Portage la Prairie" data-desc="Quality bookkeeping, payroll, and business tax return services in Portage la Prairie." style="display: none;">Portage la Prairie, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Thompson" data-desc="Corporate tax returns, accounting, and compliance in Thompson." style="display: none;">Thompson, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Winkler" data-desc="Bookkeeping, payroll, and business tax filing in Winkler." style="display: none;">Winkler, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Selkirk" data-desc="CPA accounting, corporate tax preparation, and bookkeeping in Selkirk." style="display: none;">Selkirk, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Dauphin" data-desc="Professional tax services and payroll administration in Dauphin." style="display: none;">Dauphin, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Morden" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Morden." style="display: none;">Morden, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="The Pas" data-desc="Certified tax returns, corporate filings, and general ledger support services in The Pas." style="display: none;">The Pas, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Flin Flon" data-desc="Expert tax planning, bookkeeping, and business return services in Flin Flon." style="display: none;">Flin Flon, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Stonewall" data-desc="Corporate tax preparation, payroll management, and bookkeeping in Stonewall." style="display: none;">Stonewall, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Niverville" data-desc="Professional bookkeeping, corporate tax preparation, and local CPA solutions in Niverville." style="display: none;">Niverville, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Neepawa" data-desc="Reliable corporate tax audits, payroll services, and bookkeeping near Neepawa." style="display: none;">Neepawa, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Oakbank" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Oakbank." style="display: none;">Oakbank, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Altona" data-desc="Top-rated tax planners, corporate filing, and Virtual CFO support in Altona." style="display: none;">Altona, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Swan River" data-desc="CRA audit assistance, business setup, and monthly bookkeeping in Swan River." style="display: none;">Swan River, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Virden" data-desc="Experienced corporate tax filing and business accounting in Virden." style="display: none;">Virden, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Minnedosa" data-desc="Quality accounting, payroll management, and corporate tax consulting in Minnedosa." style="display: none;">Minnedosa, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Beausejour" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Beausejour." style="display: none;">Beausejour, MB</div>
+            
+            <!-- Saskatchewan Cities (20) -->
+            <div class="loc-item" data-prov="saskatchewan" data-city="Saskatoon" data-desc="Certified tax returns, corporate filings, and general ledger support services in Saskatoon." style="display: none;">Saskatoon, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Regina" data-desc="Corporate tax preparation, payroll management, and bookkeeping in Regina." style="display: none;">Regina, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Prince Albert" data-desc="Experienced corporate tax filing and business accounting in Prince Albert." style="display: none;">Prince Albert, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Moose Jaw" data-desc="Quality bookkeeping, payroll, and business tax return services in Moose Jaw." style="display: none;">Moose Jaw, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Swift Current" data-desc="Corporate tax returns, accounting, and compliance in Swift Current." style="display: none;">Swift Current, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Yorkton" data-desc="Bookkeeping, payroll, and business tax filing in Yorkton." style="display: none;">Yorkton, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="North Battleford" data-desc="CPA accounting, corporate tax preparation, and bookkeeping in North Battleford." style="display: none;">N. Battleford, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Estevan" data-desc="Professional tax services and payroll administration in Estevan." style="display: none;">Estevan, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Weyburn" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Weyburn." style="display: none;">Weyburn, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Martensville" data-desc="Certified tax returns, corporate filings, and general ledger support services in Martensville." style="display: none;">Martensville, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Warman" data-desc="Expert tax planning, bookkeeping, and business return services in Warman." style="display: none;">Warman, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Melfort" data-desc="Corporate tax preparation, payroll management, and bookkeeping in Melfort." style="display: none;">Melfort, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Humboldt" data-desc="Professional bookkeeping, corporate tax preparation, and local CPA solutions in Humboldt." style="display: none;">Humboldt, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Meadow Lake" data-desc="Reliable corporate tax audits, payroll services, and bookkeeping near Meadow Lake." style="display: none;">Meadow Lake, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Melville" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Melville." style="display: none;">Melville, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Kindersley" data-desc="Top-rated tax planners, corporate filing, and Virtual CFO support in Kindersley." style="display: none;">Kindersley, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Nipawin" data-desc="CRA audit assistance, business setup, and monthly bookkeeping in Nipawin." style="display: none;">Nipawin, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Battleford" data-desc="Experienced corporate tax filing and business accounting in Battleford." style="display: none;">Battleford, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Tisdale" data-desc="Quality accounting, payroll management, and corporate tax consulting in Tisdale." style="display: none;">Tisdale, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Outlook" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Outlook." style="display: none;">Outlook, SK</div>
+            
+            <!-- Nova Scotia Cities (20) -->
+            <div class="loc-item" data-prov="novascotia" data-city="Halifax" data-desc="Professional bookkeeping, corporate tax returns, and Virtual CFO advisory services in Halifax." style="display: none;">Halifax, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Sydney" data-desc="Reliable business tax return preparation and bookkeeping in Sydney." style="display: none;">Sydney, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Dartmouth" data-desc="Experienced corporate tax filing and business accounting in Dartmouth." style="display: none;">Dartmouth, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Truro" data-desc="Quality bookkeeping, payroll, and business tax return services in Truro." style="display: none;">Truro, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="New Glasgow" data-desc="Corporate tax returns, accounting, and compliance in New Glasgow." style="display: none;">New Glasgow, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Glace Bay" data-desc="Bookkeeping, payroll, and business tax filing in Glace Bay." style="display: none;">Glace Bay, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Kentville" data-desc="CPA accounting, corporate tax preparation, and bookkeeping in Kentville." style="display: none;">Kentville, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Amherst" data-desc="Professional tax services and payroll administration in Amherst." style="display: none;">Amherst, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Bridgewater" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Bridgewater." style="display: none;">Bridgewater, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Yarmouth" data-desc="Certified tax returns, corporate filings, and general ledger support services in Yarmouth." style="display: none;">Yarmouth, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Greenwood" data-desc="Expert tax planning, bookkeeping, and business return services in Greenwood." style="display: none;">Greenwood, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Antigonish" data-desc="Corporate tax preparation, payroll management, and bookkeeping in Antigonish." style="display: none;">Antigonish, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Wolfville" data-desc="Professional bookkeeping, corporate tax preparation, and local CPA solutions in Wolfville." style="display: none;">Wolfville, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Windsor" data-desc="Reliable corporate tax audits, payroll services, and bookkeeping near Windsor." style="display: none;">Windsor, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Stellarton" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Stellarton." style="display: none;">Stellarton, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Springhill" data-desc="Top-rated tax planners, corporate filing, and Virtual CFO support in Springhill." style="display: none;">Springhill, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Pictou" data-desc="CRA audit assistance, business setup, and monthly bookkeeping in Pictou." style="display: none;">Pictou, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Port Hawkesbury" data-desc="Experienced corporate tax filing and business accounting in Port Hawkesbury." style="display: none;">Port Hawkesbury, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Digby" data-desc="Quality accounting, payroll management, and corporate tax consulting in Digby." style="display: none;">Digby, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Lunenburg" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Lunenburg." style="display: none;">Lunenburg, NS</div>
+            
+            <!-- New Brunswick Cities (20) -->
+            <div class="loc-item" data-prov="newbrunswick" data-city="Moncton" data-desc="HST/GST compliance netfiling, payroll services, and corporate accounting in Moncton." style="display: none;">Moncton, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Saint John" data-desc="Experienced business tax accountants and bookkeeping services in Saint John." style="display: none;">Saint John, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Fredericton" data-desc="Corporate tax filing, payroll processing, and accounting in Fredericton." style="display: none;">Fredericton, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Dieppe" data-desc="Small business accounting, bookkeeping, and tax filings in Dieppe." style="display: none;">Dieppe, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Riverview" data-desc="Reliable accounting services and corporate tax filing in Riverview." style="display: none;">Riverview, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Quispamsis" data-desc="Corporate T2 returns, business accounting, and local bookkeeping near Quispamsis." style="display: none;">Quispamsis, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Miramichi" data-desc="Top-rated tax planners, corporate filing, and Virtual CFO support in Miramichi." style="display: none;">Miramichi, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Edmundston" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Edmundston." style="display: none;">Edmundston, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Bathurst" data-desc="Experienced corporate tax filing and business accounting in Bathurst." style="display: none;">Bathurst, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Rothesay" data-desc="Quality accounting, payroll management, and corporate tax consulting in Rothesay." style="display: none;">Rothesay, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Campbellton" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Campbellton." style="display: none;">Campbellton, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Oromocto" data-desc="Corporate tax audits, business tax return prep, and payroll management in Oromocto." style="display: none;">Oromocto, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Grand Falls" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Grand Falls." style="display: none;">Grand Falls, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Shediac" data-desc="Professional tax services and payroll administration in Shediac." style="display: none;">Shediac, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Sackville" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Sackville." style="display: none;">Sackville, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Woodstock" data-desc="Certified tax returns, corporate filings, and general ledger support services in Woodstock." style="display: none;">Woodstock, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Caraquet" data-desc="Expert tax planning, bookkeeping, and business return services in Caraquet." style="display: none;">Caraquet, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Saint-Stephen" data-desc="Corporate tax preparation, payroll management, and bookkeeping in Saint-Stephen." style="display: none;">St. Stephen, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Sussex" data-desc="Professional bookkeeping, corporate tax preparation, and local CPA solutions in Sussex." style="display: none;">Sussex, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Hampton" data-desc="Reliable corporate tax audits, payroll services, and bookkeeping near Hampton." style="display: none;">Hampton, NB</div>
+            
+            <!-- PEI Cities (20) -->
+            <div class="loc-item" data-prov="pei" data-city="Charlottetown" data-desc="Corporate tax returns, accounting, and compliance in Charlottetown." style="display: none;">Charlottetown, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Summerside" data-desc="Bookkeeping, payroll, and business tax filing in Summerside." style="display: none;">Summerside, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Stratford" data-desc="Strategic tax planning, corporate T2 filings, and bookkeeping in Stratford." style="display: none;">Stratford, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Cornwall" data-desc="Professional bookkeeping, payroll setups, and tax returns in Cornwall." style="display: none;">Cornwall, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Montague" data-desc="Experienced corporate tax filing and business accounting in Montague." style="display: none;">Montague, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Kensington" data-desc="Quality accounting, payroll management, and corporate tax consulting in Kensington." style="display: none;">Kensington, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Souris" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Souris." style="display: none;">Souris, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Alberton" data-desc="Corporate tax audits, business tax return prep, and payroll management in Alberton." style="display: none;">Alberton, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Tignish" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Tignish." style="display: none;">Tignish, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Georgetown" data-desc="Top-rated tax planners, corporate filing, and Virtual CFO support in Georgetown." style="display: none;">Georgetown, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="O'Leary" data-desc="CRA audit assistance, business setup, and monthly bookkeeping in O'Leary." style="display: none;">O'Leary, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Borden-Carleton" data-desc="Experienced corporate tax filing and business accounting in Borden-Carleton." style="display: none;">Borden-Carleton, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Crapaud" data-desc="Quality accounting, payroll management, and corporate tax consulting in Crapaud." style="display: none;">Crapaud, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Wellington" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Wellington." style="display: none;">Wellington, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Miscouche" data-desc="Corporate tax audits, business tax return prep, and payroll management in Miscouche." style="display: none;">Miscouche, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Kinkora" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Kinkora." style="display: none;">Kinkora, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="St. Peters Bay" data-desc="Professional tax services and payroll administration in St. Peters Bay." style="display: none;">St. Peters Bay, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Tyne Valley" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Tyne Valley." style="display: none;">Tyne Valley, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Hunter River" data-desc="Certified tax returns, corporate filings, and general ledger support services in Hunter River." style="display: none;">Hunter River, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Mount Stewart" data-desc="Expert tax planning, bookkeeping, and business return services in Mount Stewart." style="display: none;">Mount Stewart, PE</div>
+            
+            <!-- Newfoundland Cities (20) -->
+            <div class="loc-item" data-prov="newfoundland" data-city="St. John's" data-desc="CPA accounting, corporate tax preparation, and bookkeeping in St. John's." style="display: none;">St. John's, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Mount Pearl" data-desc="Professional tax services and payroll administration in Mount Pearl." style="display: none;">Mount Pearl, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Corner Brook" data-desc="Experienced corporate tax filing and business accounting in Corner Brook." style="display: none;">Corner Brook, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Conception Bay South" data-desc="Quality bookkeeping, payroll, and business tax return services in Conception Bay South." style="display: none;">Conception Bay S., NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Paradise" data-desc="Corporate tax returns, accounting, and compliance in Paradise." style="display: none;">Paradise, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Gander" data-desc="Bookkeeping, payroll, and business tax filing in Gander." style="display: none;">Gander, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Grand Falls-Windsor" data-desc="CPA accounting, corporate tax preparation, and bookkeeping in Grand Falls-Windsor." style="display: none;">Grand Falls, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Torbay" data-desc="Professional tax services and payroll administration in Torbay." style="display: none;">Torbay, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Labrador City" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Labrador City." style="display: none;">Labrador City, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Happy Valley-Goose Bay" data-desc="Certified tax returns, corporate filings, and general ledger support services in Happy Valley-Goose Bay." style="display: none;">Goose Bay, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Stephenville" data-desc="Expert tax planning, bookkeeping, and business return services in Stephenville." style="display: none;">Stephenville, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Clarenville" data-desc="Corporate tax preparation, payroll management, and bookkeeping in Clarenville." style="display: none;">Clarenville, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Bay Roberts" data-desc="Professional bookkeeping, corporate tax preparation, and local CPA solutions in Bay Roberts." style="display: none;">Bay Roberts, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Marystown" data-desc="Reliable corporate tax audits, payroll services, and bookkeeping near Marystown." style="display: none;">Marystown, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Deer Lake" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Deer Lake." style="display: none;">Deer Lake, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Carbonear" data-desc="Top-rated tax planners, corporate filing, and Virtual CFO support in Carbonear." style="display: none;">Carbonear, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Placentia" data-desc="CRA audit assistance, business setup, and monthly bookkeeping in Placentia." style="display: none;">Placentia, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Holyrood" data-desc="Experienced corporate tax filing and business accounting in Holyrood." style="display: none;">Holyrood, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Channel-Port aux Basques" data-desc="Quality accounting, payroll management, and corporate tax consulting in Channel-Port aux Basques." style="display: none;">Port aux Basques, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Bishops Falls" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Bishop's Falls." style="display: none;">Bishop's Falls, NL</div>
+          </div>
+        </div>
+
+        <!-- Right Side: Details Card -->
+        <div style="height: 100%;">
+          <div id="locator-detail-card" style="background: var(--dark-green); color: var(--white); border-radius: 20px; padding: 35px; box-shadow: var(--shadow-lg); display: flex; flex-direction: column; justify-content: space-between; height: 100%; min-height: 380px; position: relative; overflow: hidden; box-sizing: border-box;">
+            <div>
+              <span style="background: rgba(255,255,255,0.15); padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Service Location</span>
+              <h3 id="loc-card-title" style="font-size: 1.8rem; font-weight: 800; margin-top: 15px; margin-bottom: 10px; color: var(--white);"><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> Toronto, ON</h3>
+              <p id="loc-card-desc" style="font-size: 0.95rem; line-height: 1.6; color: var(--white); opacity: 0.9; margin-bottom: 25px;">Expert corporate tax filing, personal returns, and comprehensive CPA accounting services in Toronto.</p>
+              <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 20px; font-size: 0.9rem; margin-bottom: 25px;">
+                <div style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="width: 20px; color: var(--primary);"></i> Full Province-Wide Service Coverage</div>
+                <div><i class="fas fa-phone-alt" style="width: 20px; color: var(--primary);"></i> +1 (416) 619-0068</div>
+              </div>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <a href="/locations/index.html" class="btn btn-outline-white" style="border-radius: 50px; font-size: 0.85rem; padding: 10px 20px; flex: 1; text-align: center;">View All Locations</a>
+              <a href="/contact.html" class="btn btn-primary" style="border-radius: 50px; font-size: 0.85rem; padding: 10px 20px; background-color: var(--primary); border-color: var(--primary); color: white; flex: 1; text-align: center;">Book Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS to handle locator logic -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const provButtons = document.querySelectorAll('.prov-btn');
+        const cityItems = document.querySelectorAll('.loc-item');
+        const cardTitle = document.getElementById('loc-card-title');
+        const cardDesc = document.getElementById('loc-card-desc');
+        
+        function updateCard(item) {
+          cityItems.forEach(i => i.classList.remove('active'));
+          item.classList.add('active');
+          
+          const desc = item.getAttribute('data-desc');
+          
+          cardTitle.innerHTML = `<i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> ` + item.textContent;
+          cardDesc.textContent = desc;
+        }
+        
+        cityItems.forEach(item => {
+          item.addEventListener('click', () => {
+            updateCard(item);
+          });
+        });
+        
+        provButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            provButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const filter = btn.getAttribute('data-prov');
+            let firstVisible = null;
+            
+            cityItems.forEach(item => {
+              const prov = item.getAttribute('data-prov');
+              const isMatch = prov === filter;
+              
+              if (isMatch) {
+                item.style.display = 'flex';
+                if (!firstVisible) firstVisible = item;
+              } else {
+                item.style.display = 'none';
+              }
+            });
+            
+            if (firstVisible) {
+              updateCard(firstVisible);
+            }
+          });
+        });
+      });
+    </script>
+  </section>
+  
 
     <!-- 14. FAQ SECTION -->
     
