@@ -1034,11 +1034,14 @@ const getCtaBanner = (pageName) => `
 const getIndustrySpecializations = (indSlug, indName) => {
   const specsMap = {
     healthcare: [
-      { title: 'Operational Structures', desc: 'Custom corporate tax structures designed for medical clinics and professional corporations.', icon: 'fa-network-wired', color: 'card-manilla' },
-      { title: 'Overhead Allocation', desc: 'Accurate clinic overhead costing models, shared space expense splits, and associate payout calculations.', icon: 'fa-percent', color: 'card-kraft' },
-      { title: 'GST/HST Exemption Review', desc: 'Exempt vs. taxable service reviews, complex Input Tax Credit (ITC) optimization, and sales tax filing compliance.', icon: 'fa-calculator', color: 'card-cloud' },
-      { title: 'Late Filings Protection', desc: 'Catch up on back taxes, file late returns, and secure penalty relief via the CRA Voluntary Disclosures Program.', icon: 'fa-shield-alt', color: 'card-slate' },
-      { title: 'CRA Audit Defense', desc: 'Direct representation and professional response coordination for reviews, tax audits, or dispute resolution.', icon: 'fa-gavel', color: 'card-manilla' }
+      { title: 'Operational Structures & MPCs', desc: 'Custom corporate tax structures designed for Medical Professional Corporations (MPCs). We align clinics with optimal shareholder and holding company frameworks to minimize tax exposure.', icon: 'fa-sitemap', color: 'card-manilla' },
+      { title: 'Overhead & Associate Splits', desc: 'Accurate clinic overhead costing models, shared space expense splits, and associate payout calculations. We build robust templates that track billing revenue allocations between partners and staff.', icon: 'fa-percent', color: 'card-kraft' },
+      { title: 'GST/HST Exemption Review', desc: 'In-depth review of exempt healthcare services versus taxable retail sales (e.g. medical devices, cosmetics). We optimize Input Tax Credit (ITC) allocations for mixed-billing clinical practices.', icon: 'fa-file-invoice', color: 'card-cloud' },
+      { title: 'Late Filings & VDP Protection', desc: 'Catch up on back taxes, file late corporate returns, and secure interest or penalty relief via the CRA Voluntary Disclosures Program (VDP). We restore clinic compliance status safely.', icon: 'fa-history', color: 'card-slate' },
+      { title: 'CRA Audit Defense & Reviews', desc: 'Direct CPA representation and professional response coordination for reviews, tax audits, or dispute resolution. We defend your deductions and protect your practice\'s active business limits.', icon: 'fa-shield-alt', color: 'card-manilla' },
+      { title: 'Holding Company Integration', desc: 'Set up holding companies to accumulate passive investment wealth tax-deferred. We transfer clinic surplus cash flow through tax-free inter-corporate dividends while maintaining small business limits.', icon: 'fa-briefcase', color: 'card-kraft' },
+      { title: 'Equipment Depreciation (CCA)', desc: 'Strategic Capital Cost Allowance (CCA) scheduling for medical, dental, and laboratory machinery. We optimize the write-off timing for high-value equipment purchases under CRA rules.', icon: 'fa-microscope', color: 'card-cloud' },
+      { title: 'Succession & Sale Planning', desc: 'Transition structures for medical partnerships, retiring doctors, and associate buy-ins. We optimize the Lifetime Capital Gains Exemption (LCGE) to ensure a tax-free practice transfer.', icon: 'fa-handshake', color: 'card-slate' }
     ],
     'real-estate': [
       { title: 'PREC Tax Structuring', desc: 'Personal Real Estate Corporation tax structures, income splitting, and holding company setups.', icon: 'fa-building', color: 'card-manilla' },
@@ -1596,6 +1599,164 @@ const getIndustryServices = (slug, name) => {
   </div>
   `;
 };
+
+const getGoogleReviewsMarquee = () => `
+  <!-- Google Reviews Bar -->
+  <section class="reviews-bar" id="reviews" style="background-color: var(--color-ivory-light); padding: 40px 0; border-top: 1px solid var(--border-gray); border-bottom: 1px solid var(--border-gray);">
+    <div class="container">
+      <div class="reviews-badge">
+        <div class="excellent">EXCELLENT</div>
+        <div class="reviews-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <div class="reviews-count">Based on <strong>900+ reviews</strong></div>
+        <div class="google-logo">
+          <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span>
+        </div>
+      </div>
+      <div class="reviews-marquee-wrapper">
+        <div class="reviews-marquee-content">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Tax Filings Canada was amazing when I needed help with my tax filing. Udit made everything clear and easy to understand. I’ll definitely be back next year."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">R</div>
+              <span class="reviewer-name">Russell McGehee</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Abhinav was great and registered my business very quickly and diligently."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">T</div>
+              <span class="reviewer-name">Tabasom N</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Very happy with the tax services. Thank you for your help!"</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">J</div>
+              <span class="reviewer-name">James Dzidek</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Tax Filings Canada is a trustworthy accounting firm. Their team handled my business tax filing professionally and kept me informed at every step."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">L</div>
+              <span class="reviewer-name">Louis Adams</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Excellent CPA services! They saved me thousands on my business tax return this year. Highly recommended."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">S</div>
+              <span class="reviewer-name">Sarah Jenkins</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Highly professional, quick response times, and fixed-fee billing. They took care of our bookkeeping and payroll seamlessly."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">M</div>
+              <span class="reviewer-name">Michael Chen</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Duplicated for Infinite Loop -->
+        <div class="reviews-marquee-content" aria-hidden="true">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Tax Filings Canada was amazing when I needed help with my tax filing. Udit made everything clear and easy to understand. I’ll definitely be back next year."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">R</div>
+              <span class="reviewer-name">Russell McGehee</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Abhinav was great and registered my business very quickly and diligently."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">T</div>
+              <span class="reviewer-name">Tabasom N</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Very happy with the tax services. Thank you for your help!"</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">J</div>
+              <span class="reviewer-name">James Dzidek</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Tax Filings Canada is a trustworthy accounting firm. Their team handled my business tax filing professionally and kept me informed at every step."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">L</div>
+              <span class="reviewer-name">Louis Adams</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Excellent CPA services! They saved me thousands on my business tax return this year. Highly recommended."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">S</div>
+              <span class="reviewer-name">Sarah Jenkins</span>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fab fa-google google-icon"></i>
+            </div>
+            <p class="review-text">"Highly professional, quick response times, and fixed-fee billing. They took care of our bookkeeping and payroll seamlessly."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">M</div>
+              <span class="reviewer-name">Michael Chen</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+`;
 
 const getLocationsSelectorSection = () => {
   return `
@@ -3330,68 +3491,8 @@ industries.forEach(ind => {
       </div>
     </section>
 
-    <!-- 2. GOOGLE REVIEWS WIDGET -->
-    <section class="google-reviews-widget">
-      <div class="container">
-        <div class="reviews-widget-grid">
-          <div class="reviews-widget-left">
-            <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--dark-green); margin-bottom: 12px;">Google Reviews</h3>
-            <div class="rating-number">4.9</div>
-            <div class="stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-            <div class="count">Based on 929 reviews</div>
-            <div style="font-size: 0.95rem; font-weight: 700; margin-top: 10px; color: #4285F4;">Google Rating Badge</div>
-          </div>
-          <div class="reviews-scroller">
-            <div class="review-bubble">
-              <div class="review-bubble-header">
-                <span class="review-bubble-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                <i class="fab fa-google text-primary"></i>
-              </div>
-              <p style="font-size:0.85rem; line-height:1.5; color:var(--body-text-light); margin:0;">Taxccount Canada was amazing when I needed help with my tax filing. Udit made everything clear and easy to understand. I’ll definitely be back next year.</p>
-              <div class="review-bubble-author">
-                <div class="review-bubble-avatar">R</div>
-                <div class="review-bubble-name">Russell McGehee</div>
-              </div>
-            </div>
-            <div class="review-bubble">
-              <div class="review-bubble-header">
-                <span class="review-bubble-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                <i class="fab fa-google text-primary"></i>
-              </div>
-              <p style="font-size:0.85rem; line-height:1.5; color:var(--body-text-light); margin:0;">Abhinav was great and registered my business very quickly and diligently.</p>
-              <div class="review-bubble-author">
-                <div class="review-bubble-avatar">T</div>
-                <div class="review-bubble-name">Tabasom N</div>
-              </div>
-            </div>
-            <div class="review-bubble">
-              <div class="review-bubble-header">
-                <span class="review-bubble-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                <i class="fab fa-google text-primary"></i>
-              </div>
-              <p style="font-size:0.85rem; line-height:1.5; color:var(--body-text-light); margin:0;">Very happy with the tax services. Thank you for your help!</p>
-              <div class="review-bubble-author">
-                <div class="review-bubble-avatar">J</div>
-                <div class="review-bubble-name">James Dzidek</div>
-              </div>
-            </div>
-            <div class="review-bubble">
-              <div class="review-bubble-header">
-                <span class="review-bubble-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                <i class="fab fa-google text-primary"></i>
-              </div>
-              <p style="font-size:0.85rem; line-height:1.5; color:var(--body-text-light); margin:0;">Taxccount is a trustworthy accounting firm. Their team handled my business tax filing professionally and kept me informed at every step.</p>
-              <div class="review-bubble-author">
-                <div class="review-bubble-avatar">L</div>
-                <div class="review-bubble-name">Louis Adams</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- 2. GOOGLE REVIEWS MARQUEE -->
+    ${getGoogleReviewsMarquee()}
 
     <!-- 3. INTRO BLOCK -->
     <section class="section" style="padding-bottom: 40px; background-color: var(--color-ivory-light);">
