@@ -4237,7 +4237,7 @@ industries.forEach(ind => {
                 </div>
               </div>
               <div style="display:flex;gap:15px;align-items:flex-start;">
-                <div style="width:40px;height:40px;border-radius:50%;background:var(--teal-light);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
+                <div style="width:40px;height:40px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
                 <div>
                   <h5 style="margin-bottom:5px;font-weight:700;">Transparent Fixed Pricing</h5>
                   <p style="font-size:0.88rem;margin:0;">No surprise bills. Know exactly what you'll pay with our standard, upfront monthly/annual fees.</p>
@@ -4251,7 +4251,7 @@ industries.forEach(ind => {
                 </div>
               </div>
               <div style="display:flex;gap:15px;align-items:flex-start;">
-                <div style="width:40px;height:40px;border-radius:50%;background:var(--teal-light);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
+                <div style="width:40px;height:40px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
                 <div>
                   <h5 style="margin-bottom:5px;font-weight:700;">Stress-Free Process</h5>
                   <p style="font-size:0.88rem;margin:0;">Completely remote cloud-based bookkeeping and filing. Submit documents, review draft, pay when done.</p>
