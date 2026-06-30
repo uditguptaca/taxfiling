@@ -1411,7 +1411,7 @@ const getIndustrySpecializations = (indSlug, indName) => {
   const specs = specsMap[indSlug] || defaultSpecs;
 
   return `
-    <div class="specializations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 10px; margin-bottom: 40px; text-align: left;">
+    <div class="specializations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; align-items: start; margin-top: 10px; margin-bottom: 40px; text-align: left;">
       ${specs.map((spec, idx) => {
         const isDark = spec.color === 'card-slate' || spec.color === 'card-bookcloth';
         const titleColor = isDark ? '#fff' : 'var(--dark-green)';
@@ -1420,7 +1420,7 @@ const getIndustrySpecializations = (indSlug, indName) => {
         const iconColor = isDark ? '#fff' : 'rgb(251, 119, 13)';
         
         return `
-          <div class="spec-card ${spec.color}" data-index="${idx}" style="padding: 20px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(0,0,0,0.03); transition: all 0.3s ease; cursor: pointer; min-height: auto; overflow: hidden; position: relative;">
+          <div class="spec-card ${spec.color}" data-index="${idx}" style="padding: 20px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: flex-start; gap: 12px; border: 1px solid rgba(0,0,0,0.03); transition: all 0.3s ease; cursor: pointer; min-height: auto; overflow: hidden; position: relative;">
             <div>
               <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
                 <div class="spec-icon" style="background: ${iconBg}; color: ${iconColor}; width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem;">
@@ -1431,7 +1431,7 @@ const getIndustrySpecializations = (indSlug, indName) => {
               <p class="spec-desc-text" style="font-size: 0.86rem; margin: 0; line-height: 1.45; color: ${descColor}; display: none;">${spec.desc}</p>
             </div>
             
-            <div style="display: flex; align-items: center; margin-top: 15px; padding-top: 10px; border-top: 1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)'};">
+            <div style="display: flex; align-items: center; margin-top: 5px; padding-top: 8px; border-top: 1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)'};">
               <span class="read-more-btn" style="font-size: 0.82rem; font-weight: 700; color: ${isDark ? '#FAF8F5' : 'var(--primary)'}; display: flex; align-items: center; gap: 6px;">
                 Read More <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s ease;"></i>
               </span>
@@ -3873,7 +3873,7 @@ industries.forEach(ind => {
 
   // Specific Titles and Content
   const heroTitle = isHealthcare ? 'Empowering Healthcare Professionals in Canada With Stress- Free Tax Filing by Accounting Firm' : `Empowering ${ind.name} Businesses in Canada With Stress-Free Tax Filing by Accounting Firm`;
-  const heroSubtitle = isHealthcare ? 'At Taxccount, we help Canadian Healthcare professionals streamline finances, reduce stress, and grow with confidence.' : `At Taxccount, we help Canadian ${ind.name} professionals and businesses streamline finances, reduce stress, and grow with confidence.`;
+  const heroSubtitle = isHealthcare ? 'At Tax Filings Canada, we help Canadian Healthcare professionals streamline finances, reduce stress, and grow with confidence.' : `At Tax Filings Canada, we help Canadian ${ind.name} professionals and businesses streamline finances, reduce stress, and grow with confidence.`;
 
   // Specific FAQs
   const industryFaqs = isHealthcare ? [
@@ -4680,7 +4680,7 @@ locations.forEach(loc => {
           <div class="loc-hero-left">
             <h1>Best Tax Accountant ${loc.name} - Near You</h1>
             <div class="tagline">100% Risk-Free &bull; Satisfaction Guarantee &bull; Price Match</div>
-            <p>Taxccount ${loc.name} provides reliable, professional, 100% Risk-Free Tax Filing and affordable tax and accounting services tailored to meet the unique needs of small businesses, entrepreneurs, non-profits, and individuals across ${loc.name}. Pay only after service!</p>
+            <p>Tax Filings Canada ${loc.name} provides reliable, professional, 100% Risk-Free Tax Filing and affordable tax and accounting services tailored to meet the unique needs of small businesses, entrepreneurs, non-profits, and individuals across ${loc.name}. Pay only after service!</p>
             <div class="btn-group">
               <a href="/contact.html" class="btn btn-primary btn-lg">Book Free consultation</a>
               <a href="#local-services" class="btn btn-outline-white btn-lg">Local Services</a>
@@ -4778,7 +4778,7 @@ locations.forEach(loc => {
     </section>
 
     <!-- 4. WHY CHOOSE US -->
-    ${getWhyChooseUsSection(loc.name, isToronto ? 'Why Choose Taxccount Toronto?' : `Why Choose Taxccount ${loc.name}?`)}
+    ${getWhyChooseUsSection(loc.name, isToronto ? 'Why Choose Tax Filings Toronto?' : `Why Choose Tax Filings ${loc.name}?`)}
 
     <!-- 5. RISK-FREE WORKFLOW -->
     ${getWorkflowSection()}
@@ -5462,7 +5462,7 @@ blogPosts.forEach(p => {
     </section>
 
     <!-- 3. WHY CHOOSE US -->
-    ${getWhyChooseUsSection('Taxccount')}
+    ${getWhyChooseUsSection('Tax Filings Canada')}
 
     <!-- 4. RISK-FREE WORKFLOW -->
     ${getWorkflowSection()}
