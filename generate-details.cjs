@@ -2126,14 +2126,15 @@ const getIndustryServices = (slug, name) => {
       display: flex;
       opacity: 1;
     }
-    .panel-header {
+    .showcase-panel-header {
       display: flex;
       align-items: center;
       gap: 10px;
       border-bottom: 1px solid rgba(0,0,0,0.06);
-      padding-bottom: 8px;
+      padding-bottom: 5px;
+      margin-bottom: 6px;
     }
-    .panel-header-icon {
+    .showcase-panel-icon {
       width: 36px;
       height: 36px;
       border-radius: 8px;
@@ -2143,13 +2144,13 @@ const getIndustryServices = (slug, name) => {
       font-size: 1.1rem;
       color: var(--white);
     }
-    .panel-header-info h3 {
+    .showcase-panel-info h3 {
       font-size: 1.15rem;
       font-weight: 800;
       color: var(--dark-green);
       margin: 0;
     }
-    .panel-header-info p {
+    .showcase-panel-info p {
       font-size: 0.8rem;
       color: var(--body-text-light);
       margin: 1px 0 0;
@@ -2227,11 +2228,11 @@ const getIndustryServices = (slug, name) => {
     <div class="showcase-content-area">
       ${cards.map((c, idx) => `
         <div class="showcase-panel ${idx === 0 ? 'active' : ''}" id="panel-${idx}">
-          <div class="panel-header">
-            <div class="panel-header-icon" style="background: ${c.iconColor};">
+          <div class="showcase-panel-header">
+            <div class="showcase-panel-icon" style="background: ${c.iconColor};">
               <i class="fas ${c.icon}"></i>
             </div>
-            <div class="panel-header-info">
+            <div class="showcase-panel-info">
               <h3>${c.title}</h3>
               <p>Tailored compliance, tracking, and tax solutions for your operational efficiency.</p>
             </div>
