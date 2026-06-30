@@ -1406,14 +1406,14 @@ const getCtaBanner = (pageName) => `
 const getIndustrySpecializations = (indSlug, indName) => {
   const specsMap = {
     healthcare: [
-      { title: 'Healthcare Corporate & MPC Structures', desc: 'Custom corporate tax structures designed for Medical Professional Corporations (MPCs). We align clinics with optimal shareholder and holding company frameworks to minimize tax exposure.', icon: 'fa-sitemap', color: 'card-manilla' },
-      { title: 'Clinic Overhead & Associate Splits', desc: 'Accurate clinic overhead costing models, shared space expense splits, and associate payout calculations. We build robust templates that track billing revenue allocations between partners and staff.', icon: 'fa-percent', color: 'card-kraft' },
-      { title: 'Medical GST/HST Exemption Review', desc: 'In-depth review of exempt healthcare services versus taxable retail sales (e.g. medical devices, cosmetics). We optimize Input Tax Credit (ITC) allocations for mixed-billing clinical practices.', icon: 'fa-file-invoice', color: 'card-cloud' },
-      { title: 'Clinic Late Filings & VDP Protection', desc: 'Catch up on back taxes, file late corporate returns, and secure interest or penalty relief via the CRA Voluntary Disclosures Program (VDP). We restore clinic compliance status safely.', icon: 'fa-history', color: 'card-slate' },
-      { title: 'Medical CRA Audit Defense & Reviews', desc: 'Direct CPA representation and professional response coordination for reviews, tax audits, or dispute resolution. We defend your deductions and protect your practice\'s active business limits.', icon: 'fa-shield-alt', color: 'card-manilla' },
-      { title: 'Clinic Holding Company Integration', desc: 'Set up holding companies to accumulate passive investment wealth tax-deferred. We transfer clinic surplus cash flow through tax-free inter-corporate dividends while maintaining small business limits.', icon: 'fa-briefcase', color: 'card-kraft' },
-      { title: 'Medical Equipment Depreciation (CCA)', desc: 'Strategic Capital Cost Allowance (CCA) scheduling for medical, dental, and laboratory machinery. We optimize the write-off timing for high-value equipment purchases under CRA rules.', icon: 'fa-microscope', color: 'card-cloud' },
-      { title: 'Practice Succession & Sale Planning', desc: 'Transition structures for medical partnerships, retiring doctors, and associate buy-ins. We optimize the Lifetime Capital Gains Exemption (LCGE) to ensure a tax-free practice transfer.', icon: 'fa-handshake', color: 'card-slate' }
+      { title: 'Healthcare Corporate & MPCs', desc: 'Custom corporate tax structures designed for Medical Professional Corporations (MPCs). We align clinics with optimal shareholder and holding company frameworks to minimize tax exposure.', icon: 'fa-sitemap', color: 'card-manilla' },
+      { title: 'Clinic Overhead & Splits', desc: 'Accurate clinic overhead costing models, shared space expense splits, and associate payout calculations. We build robust templates that track billing revenue allocations between partners and staff.', icon: 'fa-percent', color: 'card-kraft' },
+      { title: 'Medical GST/HST Review', desc: 'In-depth review of exempt healthcare services versus taxable retail sales (e.g. medical devices, cosmetics). We optimize Input Tax Credit (ITC) allocations for mixed-billing clinical practices.', icon: 'fa-file-invoice', color: 'card-cloud' },
+      { title: 'Late Filings & VDP Protection', desc: 'Catch up on back taxes, file late corporate returns, and secure interest or penalty relief via the CRA Voluntary Disclosures Program (VDP). We restore clinic compliance status safely.', icon: 'fa-history', color: 'card-slate' },
+      { title: 'CRA Audit Defense', desc: 'Direct CPA representation and professional response coordination for reviews, tax audits, or dispute resolution. We defend your deductions and protect your practice\'s active business limits.', icon: 'fa-shield-alt', color: 'card-manilla' },
+      { title: 'Holding Company Prep', desc: 'Set up holding companies to accumulate passive investment wealth tax-deferred. We transfer clinic surplus cash flow through tax-free inter-corporate dividends while maintaining small business limits.', icon: 'fa-briefcase', color: 'card-kraft' },
+      { title: 'Equipment CCA Prep', desc: 'Strategic Capital Cost Allowance (CCA) scheduling for medical, dental, and laboratory machinery. We optimize the write-off timing for high-value equipment purchases under CRA rules.', icon: 'fa-microscope', color: 'card-cloud' },
+      { title: 'Succession & Sale Plan', desc: 'Transition structures for medical partnerships, retiring doctors, and associate buy-ins. We optimize the Lifetime Capital Gains Exemption (LCGE) to ensure a tax-free practice transfer.', icon: 'fa-handshake', color: 'card-slate' }
     ],
     'real-estate': [
       { title: 'PREC Tax Structuring', desc: 'Personal Real Estate Corporation tax structures, income splitting, and holding company setups.', icon: 'fa-building', color: 'card-manilla' },
@@ -4281,6 +4281,10 @@ industries.forEach(ind => {
           padding: 12px 10px;
           border-radius: 12px;
           gap: 6px;
+          height: 110px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
         }
         .spec-card-header {
           gap: 8px;
@@ -4293,7 +4297,7 @@ industries.forEach(ind => {
           font-size: 0.9rem;
         }
         .spec-card h4 {
-          font-size: 0.78rem;
+          font-size: 0.75rem;
         }
         .read-more-btn {
           font-size: 0.72rem !important;
