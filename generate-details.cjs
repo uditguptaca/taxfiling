@@ -682,7 +682,7 @@ const getTeamSection = () => `
   <section class="section section-gray">
     <div class="container">
       <div class="section-header">
-        <h2>Our Team: Alumni of CPA/CA Accounting Institutions</h2>
+        <h2>Our Expert CPA &amp; Accounting Team</h2>
         <p>Our Partners Are Alumni of the World's Top Accounting and Tax Institutions</p>
         <div class="accent-line"></div>
       </div>
@@ -1343,7 +1343,7 @@ const getFaqSection = (pageName, customFaqs = []) => {
   <section class="section section-gray" id="faq">
     <div class="container">
       <div class="section-header">
-        <h2>Frequently Asked Questions about ${pageName}</h2>
+        <h2>${pageName} Service FAQs</h2>
         <p>Common questions regarding our compliance workflows and service guarantees.</p>
         <div class="accent-line"></div>
       </div>
@@ -4176,7 +4176,7 @@ industries.forEach(ind => {
     <!-- 3. INTRO BLOCK -->
     <section class="section" style="padding: 60px 0; background-color: var(--color-ivory-med); border-bottom: 1px solid var(--border-gray);">
       <div class="container">
-        <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--dark-green); line-height: 1.25; margin-bottom: 30px;">Trusted Accounting &amp; Tax Solutions for ${ind.name} Sector</h2>
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--dark-green); line-height: 1.25; margin-bottom: 30px;">${isHealthcare ? 'Clinic Accounting &amp; Tax Solutions' : 'Accounting &amp; Tax Solutions for ' + ind.name}</h2>
         
         ${getIndustrySpecializations(ind.slug, ind.name)}
       </div>
@@ -4200,7 +4200,7 @@ industries.forEach(ind => {
         <div class="grid-2">
           <div>
             <div class="section-header" style="text-align:left;margin-bottom:30px;">
-              <h2>Why ${ind.name} Professionals &amp; Businesses Partner with Us</h2>
+              <h2>Why ${isHealthcare ? 'Clinics' : ind.name + ' Firms'} Partner with Us</h2>
               <p>We are a dedicated accounting firm with years of experience navigating complex CRA rules. Our CPA tax accountants protect your business and optimize overall tax efficiency.</p>
               <div class="accent-line" style="margin:0;"></div>
             </div>
