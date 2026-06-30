@@ -2526,19 +2526,21 @@ p {
 }
 
 .badge-orange {
-  background-color: #FB770D;
+  background-color: var(--color-bookcloth);
 }
 
 .badge-blue {
-  background-color: #0078D7;
+  background-color: var(--color-kraft);
+  color: var(--color-slate-dark) !important;
 }
 
 .badge-green {
-  background-color: #27AE60;
+  background-color: var(--color-manilla);
+  color: var(--color-slate-dark) !important;
 }
 
 .badge-dark {
-  background-color: #01311F;
+  background-color: var(--color-slate-dark);
 }
 
 /* Refund Floating Card */
@@ -2546,7 +2548,7 @@ p {
   position: absolute;
   right: -30px;
   top: 15%;
-  background-color: #01311F;
+  background-color: var(--color-slate-dark);
   border: 1px solid rgba(255,255,255,0.1);
   padding: 12px 18px;
   border-radius: 8px;
@@ -2588,7 +2590,7 @@ p {
 
 .card-refund-new .card-chart .bar {
   flex: 1;
-  background-color: #3B82F6;
+  background-color: var(--color-bookcloth);
   border-radius: 2px 2px 0 0;
   width: 6px;
 }
@@ -2598,12 +2600,12 @@ p {
   position: absolute;
   right: -25px;
   bottom: 8%;
-  background-color: #ADFF2F;
+  background-color: var(--color-manilla);
   border: 1px solid rgba(0,0,0,0.05);
   padding: 12px 16px;
   border-radius: 8px;
   z-index: 10;
-  color: #000000;
+  color: var(--color-slate-dark);
   min-width: 140px;
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
 }
@@ -2613,7 +2615,7 @@ p {
   font-weight: 800;
   letter-spacing: 0.05em;
   margin-bottom: 6px;
-  color: #333;
+  color: var(--color-slate-dark);
 }
 
 .card-expert-new .stat-line {
@@ -2624,10 +2626,11 @@ p {
   margin-bottom: 3px;
   border-bottom: 1px solid rgba(0,0,0,0.08);
   padding-bottom: 2px;
+  color: var(--color-slate-dark);
 }
 
 .card-expert-new .stat-line span {
-  color: #1E3A8A;
+  color: var(--color-bookcloth);
   font-weight: 800;
   margin-right: 5px;
 }
@@ -2779,7 +2782,7 @@ p {
 .workflow-section {
   padding: 0;
   overflow: hidden;
-  background-color: #0B352B;
+  background-color: var(--color-slate-dark);
 }
 
 .workflow-grid {
