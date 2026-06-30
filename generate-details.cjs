@@ -3387,8 +3387,6 @@ industries.forEach(ind => {
         <p style="font-size: 1.15rem; line-height: 1.65; color: var(--body-text-light); margin-top: 15px; margin-bottom: 30px;">Our Accounting Firm provides fully compliant personal (T1) and corporate (T2) tax returns, bank reconciliations, bookkeeping, and payroll support customized for professionals and businesses operating in the ${ind.name.toLowerCase()} industry.</p>
         
         ${getIndustrySpecializations(ind.slug, ind.name)}
-
-        ${getMeetingCtaBox(isHealthcare ? 'Book a Meeting with a Tax Accountant' : null)}
       </div>
     </section>
 
