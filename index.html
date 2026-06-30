@@ -423,11 +423,11 @@
         .showcase-tabs {
           display: flex;
           flex-direction: row;
+          justify-content: center;
           gap: 12px;
-          overflow-x: auto;
+          flex-wrap: wrap;
           padding-bottom: 12px;
           border-bottom: 1px solid var(--border-gray);
-          -webkit-overflow-scrolling: touch;
         }
         .showcase-tab {
           display: flex;
@@ -573,6 +573,12 @@
             padding: 20px;
             gap: 20px;
           }
+          .showcase-tabs {
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+          }
           .panel-bullets-grid {
             grid-template-columns: 1fr;
           }
@@ -586,43 +592,43 @@
             <div class="tab-icon" style="background: rgba(204, 120, 92, 0.1); color: #CC785C;">
               <i class="fas fa-calculator"></i>
             </div>
-            <span class="tab-title">Bookkeeping &amp; Reconciliations</span>
+            <span class="tab-title">Bookkeeping</span>
           </button>
           <button class="showcase-tab" data-target="home-panel-1">
             <div class="tab-icon" style="background: rgba(212, 162, 127, 0.1); color: #D4A27F;">
               <i class="fas fa-file-invoice-dollar"></i>
             </div>
-            <span class="tab-title">Corporate Tax (T2)</span>
+            <span class="tab-title">Corporate</span>
           </button>
           <button class="showcase-tab" data-target="home-panel-2">
             <div class="tab-icon" style="background: rgba(38, 38, 37, 0.08); color: #262625;">
               <i class="fas fa-users"></i>
             </div>
-            <span class="tab-title">Payroll &amp; Compensation</span>
+            <span class="tab-title">Payroll</span>
           </button>
           <button class="showcase-tab" data-target="home-panel-3">
             <div class="tab-icon" style="background: rgba(102, 102, 99, 0.1); color: #666663;">
               <i class="fas fa-chart-line"></i>
             </div>
-            <span class="tab-title">CFO &amp; Advisory Services</span>
+            <span class="tab-title">CFO</span>
           </button>
           <button class="showcase-tab" data-target="home-panel-4">
             <div class="tab-icon" style="background: rgba(204, 120, 92, 0.1); color: #CC785C;">
               <i class="fas fa-book-open"></i>
             </div>
-            <span class="tab-title">Notice to Reader (NTR)</span>
+            <span class="tab-title">NTR</span>
           </button>
           <button class="showcase-tab" data-target="home-panel-5">
             <div class="tab-icon" style="background: rgba(212, 162, 127, 0.1); color: #D4A27F;">
               <i class="fas fa-user-tie"></i>
             </div>
-            <span class="tab-title">Personal Tax (T1)</span>
+            <span class="tab-title">Personal</span>
           </button>
           <button class="showcase-tab" data-target="home-panel-6">
             <div class="tab-icon" style="background: rgba(38, 38, 37, 0.08); color: #262625;">
               <i class="fas fa-file-contract"></i>
             </div>
-            <span class="tab-title">GST/HST Compliance</span>
+            <span class="tab-title">GST/HST</span>
           </button>
         </div>
 
