@@ -2484,3 +2484,295 @@ p {
   color: var(--primary);
   transform: translateX(3px);
 }
+
+/* ── Hero Expert & Badges Stack Custom Styles ── */
+.hero-expert-img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 16px;
+  z-index: 1;
+  position: relative;
+}
+
+.hero-badge-stack {
+  position: absolute;
+  left: -40px;
+  bottom: 12%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 10;
+}
+
+.hero-badge-item {
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  white-space: nowrap;
+}
+
+.hero-badge-item i {
+  font-size: 0.85rem;
+}
+
+.badge-orange {
+  background-color: #FB770D;
+}
+
+.badge-blue {
+  background-color: #0078D7;
+}
+
+.badge-green {
+  background-color: #27AE60;
+}
+
+.badge-dark {
+  background-color: #01311F;
+}
+
+/* Refund Floating Card */
+.card-refund-new {
+  position: absolute;
+  right: -30px;
+  top: 15%;
+  background-color: #01311F;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 12px 18px;
+  border-radius: 8px;
+  z-index: 10;
+  color: #ffffff;
+  min-width: 150px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+.card-refund-new .card-header-lbl {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
+
+.card-refund-new .card-val {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 2px 0;
+  line-height: 1.1;
+}
+
+.card-refund-new .card-footer-lbl {
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  opacity: 0.5;
+}
+
+.card-refund-new .card-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  margin-top: 8px;
+  height: 42px;
+}
+
+.card-refund-new .card-chart .bar {
+  flex: 1;
+  background-color: #3B82F6;
+  border-radius: 2px 2px 0 0;
+  width: 6px;
+}
+
+/* Expert Rates Floating Card */
+.card-expert-new {
+  position: absolute;
+  right: -25px;
+  bottom: 8%;
+  background-color: #ADFF2F;
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 12px 16px;
+  border-radius: 8px;
+  z-index: 10;
+  color: #000000;
+  min-width: 140px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+.card-expert-new .card-header-lbl {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.card-expert-new .stat-line {
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding-bottom: 2px;
+}
+
+.card-expert-new .stat-line span {
+  color: #1E3A8A;
+  font-weight: 800;
+  margin-right: 5px;
+}
+
+/* ── Checkerboard Pricing Grid Styles ── */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-top: 40px;
+}
+
+.pricing-grid .pricing-card {
+  border-radius: 4px;
+  padding: 35px 25px;
+  text-align: left;
+  box-shadow: none;
+  border: none;
+}
+
+.pricing-grid .pricing-card h4 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.pricing-grid .pricing-card .price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.pricing-grid .pricing-card .includes {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  min-height: 40px;
+}
+
+.pricing-grid .pricing-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.pricing-grid .pricing-card:hover {
+  transform: scale(1.015);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  z-index: 5;
+}
+
+@media (max-width: 991px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Recommended Logos Layout ── */
+.logo-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  opacity: 0.75;
+  margin-top: 10px;
+}
+
+.logo-flex-item {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--body-text);
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.logo-flex-item:hover {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  .hero-badge-stack, .card-refund-new, .card-expert-new {
+    display: none !important;
+  }
+  .logo-flex-container {
+    justify-content: center;
+  }
+}
+
+/* Choose Us Cards Styling */
+.choose-card {
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.choose-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.choose-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.choose-card-icon {
+  font-size: 1.4rem;
+  line-height: 1.1;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+}
+
+.choose-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0;
+  color: inherit;
+}
+
+.choose-card-desc {
+  font-size: 0.86rem;
+  line-height: 1.55;
+  margin: 0;
+  color: inherit;
+  opacity: 0.9;
+}
+
+
