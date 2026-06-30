@@ -1725,6 +1725,10 @@ p {
   background: var(--primary);
 }
 
+.footer .logo {
+  color: var(--white);
+}
+
 .footer-about p {
   font-size: 0.88rem;
   color: rgba(255,255,255,0.7);
