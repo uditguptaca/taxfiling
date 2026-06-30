@@ -4716,12 +4716,12 @@ locations.forEach(loc => {
             <div class="slogan-bold" style="font-weight: 800; font-size: 1.1rem; color: var(--white); margin-bottom: 20px;">
               Fixed-Fee. Trusted. Accurate. Quick. Easy. Economical.
             </div>
-            <p style="font-size: 1.05rem; line-height: 1.6; color: #475569; margin-bottom: 30px;">
+            <p style="font-size: 1.05rem; line-height: 1.6; color: #E2E8F0; margin-bottom: 30px;">
               We help businesses, startups, sole proprietors, and corporations with the cheapest, economical, budget and pocket-friendly way to handle their tax filing, accounting, and bookkeeping across Toronto.
             </p>
             <div class="btn-group" style="margin-bottom: 30px; display: flex; gap: 15px;">
               <a href="/pricing.html" class="btn btn-primary btn-lg" style="border-radius: 50px; font-weight: 700; padding: 12px 30px; background-color: var(--primary); border-color: var(--primary); color: white;">CUT 75% TAX PREP FEE</a>
-              <a href="/contact.html" class="btn btn-outline btn-lg" style="border-radius: 50px; font-weight: 700; padding: 12px 30px; background-color: var(--color-slate-dark); border-color: var(--color-slate-dark); color: #fff;">BOOK FREE 15 MIN CALL</a>
+              <a href="/contact.html" class="btn btn-outline btn-lg" style="border-radius: 50px; font-weight: 700; padding: 12px 30px; background-color: rgba(255,255,255,0.1); border-color: var(--white); color: #fff;">BOOK FREE 15 MIN CALL</a>
             </div>
             <div class="loc-hero-badges">
               <span class="loc-badge-item"><i class="fas fa-dollar-sign text-primary"></i> Fixed-Fee Pricing</span>
@@ -4811,42 +4811,26 @@ locations.forEach(loc => {
     <!-- Custom styling to replicate WordPress Elementor location page design -->
     <style>
       .loc-hero.loc-hero-toronto {
-        background: #FAF9F6;
-        color: var(--dark-green);
+        background: linear-gradient(to right, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.65) 100%), url('/images/toronto_hero_bg.png') no-repeat center center / cover !important;
+        color: var(--white);
         position: relative;
-      }
-      .loc-hero.loc-hero-toronto::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('/images/toronto_skyline_full.png') no-repeat bottom center / 100% auto;
-        opacity: 0.12; /* Subtle watermark opacity */
-        pointer-events: none;
-        z-index: 1;
-      }
-      .loc-hero-toronto .loc-hero-left {
-        position: relative;
-        z-index: 2; /* Keep content above watermark */
       }
       .loc-hero-toronto .loc-hero-left h1 {
-        color: var(--dark-green);
+        color: var(--white);
       }
       .loc-hero-toronto .loc-hero-left p {
-        color: var(--body-text-light);
+        color: #E2E8F0;
       }
       .loc-hero-toronto .slogan-bold {
-        color: var(--dark-green) !important;
+        color: var(--white) !important;
       }
       .loc-hero-toronto .loc-hero-badges {
-        border-top: 1px solid rgba(0,0,0,0.08);
+        border-top: 1px solid rgba(255,255,255,0.15);
       }
       .loc-hero-toronto .loc-badge-item {
-        color: var(--dark-green);
-        background: rgba(0,0,0,0.03);
-        border: 1px solid rgba(0,0,0,0.06);
+        color: var(--white);
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.12);
       }
       .loc-hero {
         background: linear-gradient(135deg, var(--color-slate-dark) 0%, var(--color-slate-med) 100%);
