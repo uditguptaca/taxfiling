@@ -337,7 +337,7 @@ p {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 95%;
+  max-width: var(--container);
 }
 
 .logo {
