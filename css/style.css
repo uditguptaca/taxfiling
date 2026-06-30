@@ -2738,7 +2738,7 @@ p {
 
 .hero-badge-stack {
   position: absolute;
-  left: -40px;
+  left: 0px;
   bottom: 12%;
   display: flex;
   flex-direction: column;
