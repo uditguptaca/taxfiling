@@ -4238,10 +4238,12 @@ industries.forEach(ind => {
           <div style="display:flex;align-items:center;justify-content:center;">
             <div class="why-choose-revslider" style="width: 100%;">
               <img src="${isHealthcare ? '/images/healthcare_cpa_desk.png' : 'https://taxccount.com/wp-content/uploads/2024/10/Udit-Gupta-Image-1.jpg'}" alt="${isHealthcare ? 'Clinic Financial Management' : 'Udit Gupta CPA'}" class="slider-main-img" style="object-position: top; object-fit: cover;">
+              ${!isHealthcare ? `
               <div class="slider-badge-floating">
-                <h4>${isHealthcare ? 'Expert Clinic Advisors' : 'Udit Gupta, CPA'}</h4>
-                <p>${isHealthcare ? 'Dedicated healthcare accounting specialists and CPA tax planners' : 'Founder &amp; Managing Director &bull; Big4 Alumnus &bull; In-depth Corporate Tax Specialist'}</p>
+                <h4>Udit Gupta, CPA</h4>
+                <p>Founder &amp; Managing Director &bull; Big4 Alumnus &bull; In-depth Corporate Tax Specialist</p>
               </div>
+              ` : ''}
             </div>
           </div>
         </div>
