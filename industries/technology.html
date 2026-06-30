@@ -356,47 +356,81 @@
         color: #E2E8F0;
       }
       .subsector-card-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 15px;
         margin-top: 30px;
-        max-width: 1100px;
+        max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
+      }
+      @media (max-width: 1200px) {
+        .subsector-card-grid {
+          grid-template-columns: repeat(6, 1fr);
+        }
+      }
+      @media (max-width: 991px) {
+        .subsector-card-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      @media (max-width: 768px) {
+        .subsector-card-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 576px) {
+        .subsector-card-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
       .subsector-hover-card {
         background: var(--white);
         border: 1px solid var(--border-gray);
-        border-radius: 50px;
-        padding: 10px 22px;
-        display: inline-flex;
+        border-radius: 16px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: 10px;
+        justify-content: center;
+        text-align: center;
+        height: 130px;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
         position: relative;
+        overflow: hidden;
+      }
+      .subsector-hover-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; height: 4px;
+        background: var(--primary);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      .subsector-hover-card:hover::before {
+        transform: scaleX(1);
       }
       .subsector-hover-card:hover {
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-sm);
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
         border-color: var(--primary);
-        background: var(--primary-light);
       }
       .subsector-hover-card i {
-        font-size: 1.1rem;
+        font-size: 1.8rem;
         color: var(--primary);
+        margin-bottom: 8px;
         transition: transform 0.3s;
       }
       .subsector-hover-card:hover i {
         transform: scale(1.1);
       }
       .subsector-hover-card h4 {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
         font-weight: 700;
         margin: 0;
         color: var(--dark-green);
-        white-space: nowrap;
+        line-height: 1.3;
       }
       @media (max-width: 991px) {
         .ind-hero-grid {
@@ -1749,7 +1783,7 @@
       </div>
     </div>
   </section>
-
+  
 
     <!-- 13. TEAM SECTION -->
     

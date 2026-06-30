@@ -277,7 +277,33 @@ function writePage(filePath, title, description, activePage, content) {
 // REUSABLE SECTIONS (EXACT REPLICAS)
 // ─────────────────────────────────────────────
 
-const getPricingSection = () => {
+const getPricingSection = (indSlug = '') => {
+  const isHealthcare = indSlug === 'healthcare';
+  
+  const corporateTitle = isHealthcare ? 'MPC T2 Corporate Filing' : 'Corporate Tax Filing';
+  const corporateDesc = isHealthcare ? 'T2 returns for Medical Professional Corporations (MPCs), mixed-billing exemptions, and CRA professional audits defense.' : 'T2 corporate tax filing, balance sheets, income statements compilation, corporate tax optimization, and direct CRA representation.';
+  
+  const partnershipTitle = isHealthcare ? 'Medical Partnership Filing' : 'Partnership Tax Filing';
+  const partnershipDesc = isHealthcare ? 'T5013 returns for healthcare partnerships, clinic cost sharing, associate payout structures, and partner K-1 allocations.' : 'T5013 partnership information returns, K-1 partner schedule allocations, structural planning, and tax minimization advisory.';
+  
+  const nonProfitTitle = isHealthcare ? 'Medical Charity & Foundation' : 'Non-Profit Tax Filing';
+  const nonProfitDesc = isHealthcare ? 'T3010 filings for medical foundations, clinic trust accounts, NPO hospital setups, and financial compliance audits.' : 'T3010 registered charity returns, T1044 NPO return filing, financial summaries compilation, and compliance audits support.';
+  
+  const trustTitle = isHealthcare ? 'Practitioner Family Trusts' : 'Trust-Estate Tax Filing';
+  const trustDesc = isHealthcare ? 'T3 trust returns, corporate tax-free dividend flow, physician succession planning, and family trust allocations.' : 'T3 trust tax return filing, testamentary trust setups, estate distribution allocations, and strategic inheritance planning.';
+  
+  const bookkeepingTitle = isHealthcare ? 'Clinic Bookkeeping & EMR Sync' : 'Business Bookkeeping';
+  const bookkeepingDesc = isHealthcare ? 'Monthly ledger reconciliations, Jane App / Oscar EMR billing integrations, associate fee splits tracking, and clinic overhead cost tracking.' : 'Bank &amp; credit card reconciliations, monthly balance sheet and P&amp;L preparation, payroll ledger syncing, and QuickBooks/Xero ledger support.';
+  
+  const ntrTitle = isHealthcare ? 'Clinic Notice to Reader (NTR)' : 'Notice to Reader (NTR)';
+  const ntrDesc = isHealthcare ? 'Corporate compilation engagement report for clinic finance loans, professional balance sheet compilations, and trial balance updates.' : 'Compilation engagement report, corporate financial statement compilation, trial balance adjustments, and full T2 return integration.';
+  
+  const personalTitle = isHealthcare ? 'Doctor & Practitioner Personal Tax' : 'Personal Tax Filing';
+  const personalDesc = isHealthcare ? 'T1 filings for physicians and associates. Inclusions: medical professional expenses, travel logs, and professional corporation flowthrough.' : 'T1 tax returns compilation for students, salaried employees, and self-employed. Covers T4/T5 matching, RRSP credits, and medical deductions.';
+  
+  const salesTitle = isHealthcare ? 'GST/HST Mixed-Billing Review' : 'GST/HST Sales Tax Filing';
+  const salesDesc = isHealthcare ? 'Audit of tax-exempt clinical services vs retail medical sales, Input Tax Credit (ITC) optimization, and Netfile submissions.' : 'Sales tax ledger reconciliation, Input Tax Credits (ITCs) verification, Netfile electronic submission to CRA, and provincial compliance checks.';
+
   return `
   <section class="section section-gray" id="pricing" style="padding: 80px 0; background-color: var(--color-ivory-med); border-top: 1px solid var(--border-gray); border-bottom: 1px solid var(--border-gray);">
     <div class="container">
@@ -417,9 +443,9 @@ const getPricingSection = () => {
       <div class="pricing-hub-container">
         <!-- Tabs -->
         <div class="pricing-tabs">
-          <button class="pricing-tab active" data-target="pricing-panel-corporate">Corporate &amp; Business Tax</button>
-          <button class="pricing-tab" data-target="pricing-panel-accounting">Accounting &amp; Bookkeeping</button>
-          <button class="pricing-tab" data-target="pricing-panel-personal">Personal &amp; Sales Tax</button>
+          <button class="pricing-tab active" data-target="pricing-panel-corporate">${isHealthcare ? 'Clinic Tax Filing' : 'Corporate &amp; Business Tax'}</button>
+          <button class="pricing-tab" data-target="pricing-panel-accounting">${isHealthcare ? 'Clinic Accounting' : 'Accounting &amp; Bookkeeping'}</button>
+          <button class="pricing-tab" data-target="pricing-panel-personal">${isHealthcare ? 'Practitioner Tax' : 'Personal &amp; Sales Tax'}</button>
         </div>
 
         <!-- Panels -->
@@ -429,36 +455,36 @@ const getPricingSection = () => {
             <!-- Corporate Tax -->
             <div class="pricing-showcase-card">
               <div class="pricing-card-header">
-                <h4>Corporate Tax Filing</h4>
+                <h4>${corporateTitle}</h4>
                 <div class="pricing-card-price">$90<span>/One-time filing fee</span></div>
-                <p class="pricing-card-includes">T2 corporate tax filing, balance sheets, income statements compilation, corporate tax optimization, and direct CRA representation.</p>
+                <p class="pricing-card-includes">${corporateDesc}</p>
               </div>
               <a href="/pricing/corporate-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
             <!-- Partnership Tax -->
             <div class="pricing-showcase-card">
               <div class="pricing-card-header">
-                <h4>Partnership Tax Filing</h4>
+                <h4>${partnershipTitle}</h4>
                 <div class="pricing-card-price">$250<span>/Partnership return</span></div>
-                <p class="pricing-card-includes">T5013 partnership information returns, K-1 partner schedule allocations, structural planning, and tax minimization advisory.</p>
+                <p class="pricing-card-includes">${partnershipDesc}</p>
               </div>
               <a href="/pricing/partnership-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
             <!-- Non-Profit Tax -->
             <div class="pricing-showcase-card">
               <div class="pricing-card-header">
-                <h4>Non-Profit Tax Filing</h4>
+                <h4>${nonProfitTitle}</h4>
                 <div class="pricing-card-price">$250<span>/NPO filing fee</span></div>
-                <p class="pricing-card-includes">T3010 registered charity returns, T1044 NPO return filing, financial summaries compilation, and compliance audits support.</p>
+                <p class="pricing-card-includes">${nonProfitDesc}</p>
               </div>
               <a href="/pricing/non-profit-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
             <!-- Trust-Estate Tax -->
             <div class="pricing-showcase-card">
               <div class="pricing-card-header">
-                <h4>Trust-Estate Tax Filing</h4>
+                <h4>${trustTitle}</h4>
                 <div class="pricing-card-price">$300<span>/Trust return</span></div>
-                <p class="pricing-card-includes">T3 trust tax return filing, testamentary trust setups, estate distribution allocations, and strategic inheritance planning.</p>
+                <p class="pricing-card-includes">${trustDesc}</p>
               </div>
               <a href="/pricing/trust-estate-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
@@ -469,18 +495,18 @@ const getPricingSection = () => {
             <!-- Business Bookkeeping -->
             <div class="pricing-showcase-card">
               <div class="pricing-card-header">
-                <h4>Business Bookkeeping</h4>
+                <h4>${bookkeepingTitle}</h4>
                 <div class="pricing-card-price">$100<span>/Month (Up to 50 txns)</span></div>
-                <p class="pricing-card-includes">Bank &amp; credit card reconciliations, monthly balance sheet and P&amp;L preparation, payroll ledger syncing, and QuickBooks/Xero ledger support.</p>
+                <p class="pricing-card-includes">${bookkeepingDesc}</p>
               </div>
               <a href="/pricing/accounting-bookkeeping.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
             <!-- Notice to Reader -->
             <div class="pricing-showcase-card">
               <div class="pricing-card-header">
-                <h4>Notice to Reader (NTR)</h4>
+                <h4>${ntrTitle}</h4>
                 <div class="pricing-card-price">$500<span>/Compilation year</span></div>
-                <p class="pricing-card-includes">Compilation engagement report, corporate financial statement compilation, trial balance adjustments, and full T2 return integration.</p>
+                <p class="pricing-card-includes">${ntrDesc}</p>
               </div>
               <a href="/pricing/notice-to-reader.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
@@ -491,18 +517,18 @@ const getPricingSection = () => {
             <!-- Personal Tax Filing -->
             <div class="pricing-showcase-card">
               <div class="pricing-card-header">
-                <h4>Personal Tax Filing</h4>
+                <h4>${personalTitle}</h4>
                 <div class="pricing-card-price">$25<span>/Return starting fee</span></div>
-                <p class="pricing-card-includes">T1 tax returns compilation for students, salaried employees, and self-employed. Covers T4/T5 matching, RRSP credits, and medical deductions.</p>
+                <p class="pricing-card-includes">${personalDesc}</p>
               </div>
               <a href="/pricing/individual-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
             <!-- GST/HST Tax Filings -->
             <div class="pricing-showcase-card">
               <div class="pricing-card-header">
-                <h4>GST/HST Sales Tax Filing</h4>
+                <h4>${salesTitle}</h4>
                 <div class="pricing-card-price">$75<span>/Filing cycle</span></div>
-                <p class="pricing-card-includes">Sales tax ledger reconciliation, Input Tax Credits (ITCs) verification, Netfile electronic submission to CRA, and provincial compliance checks.</p>
+                <p class="pricing-card-includes">${salesDesc}</p>
               </div>
               <a href="/pricing/gst-hst-pst.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
@@ -545,43 +571,59 @@ const getPricingSection = () => {
   `;
 };
 
-const getCaseStudiesSection = () => `
+const getCaseStudiesSection = (indSlug = '') => {
+  const isHealthcare = indSlug === 'healthcare';
+  
+  const cs1Title = isHealthcare ? 'CRA Audit for MPCs – Saving Our Medical Clinic Over $70,000' : 'CRA Audit for GST/HST – Saving Our Client Over $70,000';
+  const cs1Desc = isHealthcare ? 'A family medicine practice faced a $75,000 audit regarding overhead expenses split with associates. We defended their shareholder loan agreements and corporate division of income, reducing the reassessment to $3,500.' : 'A mid-sized e-commerce business faced a $75,000 CRA GST/HST audit. We identified filing errors and restructured their compliance. The CRA reassessed and reduced the total liability to $3,500, saving the client $71,500.';
+  
+  const cs2Title = isHealthcare ? 'CRA Audit for Personal Tax – Defending Malpractice Expense Claims' : 'CRA Audit for Personal Tax – Avoiding Unfair Tax Adjustments';
+  const cs2Desc = isHealthcare ? 'A surgeon was audited on $20,000 of professional malpractice fees and travel expenses. We gathered clinic billing documentation and defended the deductions. The CRA accepted 90% of claims.' : 'A self-employed IT consultant faced an audit on $20,000 of expense claims. We gathered documentation and defended the deductions. The CRA accepted 90% of claims, saving the client $18,800.';
+  
+  const cs3Title = isHealthcare ? 'Voluntary Disclosure – Restoring Clinic Compliance Status' : 'Voluntary Disclosure – Avoiding CRA Penalties';
+  const cs3Desc = isHealthcare ? 'A dental clinic missed filings for five years due to EMR system transition errors. We submitted overdue files under VDP, successfully waiving $50,000 in penalties.' : 'A small business owner missed filings for five years, facing heavy penalties. We filed under the Voluntary Disclosure Program (VDP). The CRA waived all penalties, saving the client over $50,000.';
+  
+  const cs4Title = isHealthcare ? 'Filing Overdue Corporate Tax returns – Medical Professional Corp Refund' : 'Filing 10 Years of Late Tax Returns – Big Refund Secured';
+  const cs4Desc = isHealthcare ? 'A specialist doctor hadn\'t filed corporate tax returns for their MPC since inception. We compiled backlogged bookkeeping and secured a $28,000 tax refund.' : 'A contractor hadn\'t filed tax returns for 10 years and expected a massive debt. We filed all overdue returns, claiming missed tax credits. Rather than owing, they received a $28,000 refund.';
+
+  return `
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <h2>Canada Tax &amp; Accounting Case Studies</h2>
+        <h2>${isHealthcare ? 'Healthcare Tax &amp; Accounting Case Studies' : 'Canada Tax &amp; Accounting Case Studies'}</h2>
         <p>See how our expert tax and accounting services have helped corporations and businesses save money, stay compliant.</p>
         <div class="accent-line"></div>
       </div>
       <div class="grid-4" style="align-items: stretch;">
         <div class="case-study-card card-manilla">
           <h4>Case Study 1</h4>
-          <h5>CRA Audit for GST/HST – Saving Our Client Over $70,000</h5>
-          <p>A mid-sized e-commerce business faced a $75,000 CRA GST/HST audit. We identified filing errors and restructured their compliance. The CRA reassessed and reduced the total liability to $3,500, saving the client $71,500.</p>
+          <h5>${cs1Title}</h5>
+          <p>${cs1Desc}</p>
           <a href="#" class="btn btn-outline btn-sm">Download PDF</a>
         </div>
         <div class="case-study-card card-kraft">
           <h4>Case Study 2</h4>
-          <h5>CRA Audit for Personal Tax – Avoiding Unfair Tax Adjustments</h5>
-          <p>A self-employed IT consultant faced an audit on $20,000 of expense claims. We gathered documentation and defended the deductions. The CRA accepted 90% of claims, saving the client $18,800.</p>
+          <h5>${cs2Title}</h5>
+          <p>${cs2Desc}</p>
           <a href="#" class="btn btn-outline btn-sm">Download PDF</a>
         </div>
         <div class="case-study-card card-slate">
           <h4 style="color: var(--color-bookcloth) !important;">Case Study 3</h4>
-          <h5>Voluntary Disclosure – Avoiding CRA Penalties</h5>
-          <p>A small business owner missed filings for five years, facing heavy penalties. We filed under the Voluntary Disclosure Program (VDP). The CRA waived all penalties, saving the client over $50,000.</p>
+          <h5>${cs3Title}</h5>
+          <p>${cs3Desc}</p>
           <a href="#" class="btn btn-outline-white btn-sm">Download PDF</a>
         </div>
         <div class="case-study-card card-cloud">
           <h4>Case Study 4</h4>
-          <h5>Filing 10 Years of Late Tax Returns – Big Refund Secured</h5>
-          <p>A contractor hadn't filed tax returns for 10 years and expected a massive debt. We filed all overdue returns, claiming missed tax credits. Rather than owing, they received a $28,000 refund.</p>
+          <h5>${cs4Title}</h5>
+          <p>${cs4Desc}</p>
           <a href="#" class="btn btn-outline btn-sm">Download PDF</a>
         </div>
       </div>
     </div>
   </section>
-`;
+  `;
+};
 
 const getTeamSection = () => `
   <section class="section section-gray">
@@ -3892,47 +3934,81 @@ industries.forEach(ind => {
         color: #E2E8F0;
       }
       .subsector-card-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 15px;
         margin-top: 30px;
-        max-width: 1100px;
+        max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
+      }
+      @media (max-width: 1200px) {
+        .subsector-card-grid {
+          grid-template-columns: repeat(6, 1fr);
+        }
+      }
+      @media (max-width: 991px) {
+        .subsector-card-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      @media (max-width: 768px) {
+        .subsector-card-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 576px) {
+        .subsector-card-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
       .subsector-hover-card {
         background: var(--white);
         border: 1px solid var(--border-gray);
-        border-radius: 50px;
-        padding: 10px 22px;
-        display: inline-flex;
+        border-radius: 16px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: 10px;
+        justify-content: center;
+        text-align: center;
+        height: 130px;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
         position: relative;
+        overflow: hidden;
+      }
+      .subsector-hover-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; height: 4px;
+        background: var(--primary);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      .subsector-hover-card:hover::before {
+        transform: scaleX(1);
       }
       .subsector-hover-card:hover {
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-sm);
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
         border-color: var(--primary);
-        background: var(--primary-light);
       }
       .subsector-hover-card i {
-        font-size: 1.1rem;
+        font-size: 1.8rem;
         color: var(--primary);
+        margin-bottom: 8px;
         transition: transform 0.3s;
       }
       .subsector-hover-card:hover i {
         transform: scale(1.1);
       }
       .subsector-hover-card h4 {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
         font-weight: 700;
         margin: 0;
         color: var(--dark-green);
-        white-space: nowrap;
+        line-height: 1.3;
       }
       @media (max-width: 991px) {
         .ind-hero-grid {
@@ -4094,7 +4170,7 @@ industries.forEach(ind => {
     ${getClientsLogoSection()}
 
     <!-- 9. PRICING SECTION -->
-    ${getPricingSection()}
+    ${getPricingSection(ind.slug)}
 
 
 
@@ -4106,7 +4182,7 @@ industries.forEach(ind => {
     </section>
 
     <!-- 12. CASE STUDIES -->
-    ${getCaseStudiesSection()}
+    ${getCaseStudiesSection(ind.slug)}
 
     <!-- 13. TEAM SECTION -->
     ${getTeamSection()}
