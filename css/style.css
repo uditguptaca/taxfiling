@@ -151,7 +151,7 @@ p {
 }
 
 .section {
-  padding: 80px 0;
+  padding: 45px 0;
 }
 
 .section-gray {
@@ -177,7 +177,7 @@ p {
 .section-header {
   text-align: center;
   max-width: 700px;
-  margin: 0 auto 50px;
+  margin: 0 auto 25px;
 }
 
 .section-header h2 {
@@ -399,8 +399,7 @@ p {
   transition: var(--transition-fast);
 }
 
-.main-nav > li > a:hover,
-.main-nav > li > a.active {
+.main-nav > li > a:hover {
   color: var(--primary);
 }
 
@@ -2673,7 +2672,7 @@ p {
 
 .pricing-grid .pricing-card {
   border-radius: 4px;
-  padding: 35px 25px;
+  padding: 25px 20px;
   text-align: left;
   box-shadow: none;
   border: none;
@@ -2683,20 +2682,23 @@ p {
   font-size: 1.35rem;
   font-weight: 700;
   margin-bottom: 8px;
+  color: #ffffff !important;
 }
 
 .pricing-grid .pricing-card .price {
   font-size: 1.5rem;
   font-weight: 800;
   margin-bottom: 12px;
+  color: #ffffff !important;
 }
 
 .pricing-grid .pricing-card .includes {
   font-size: 0.85rem;
   opacity: 0.9;
   line-height: 1.4;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   min-height: 40px;
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .pricing-grid .pricing-card .btn {
@@ -2757,15 +2759,34 @@ p {
   }
 }
 
-/* Choose Us Cards Styling */
+/* Choose Us Grid and Cards Styling */
+.choose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
 .choose-card {
-  padding: 24px;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; /* Perfect square constraint */
   border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  aspect-ratio: 1 / 1;
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  overflow: hidden;
+}
+
+.choose-card-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .choose-card:hover {
@@ -2773,10 +2794,17 @@ p {
   box-shadow: var(--shadow-md);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 576px) {
+  .choose-grid {
+    grid-template-columns: 1fr;
+  }
   .choose-card {
-    aspect-ratio: auto;
-    min-height: 220px;
+    height: auto;
+    padding-bottom: 0;
+  }
+  .choose-card-inner {
+    position: static;
+    padding: 24px;
   }
 }
 
