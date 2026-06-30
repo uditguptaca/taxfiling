@@ -238,20 +238,32 @@ document.addEventListener('submit', (e) => {
   }
 });
 
-// ── Location Provincial Accordion ──────────
+// ── Location & Industry Accordions ──────────
 function initLocationAccordion() {
-  const items = document.querySelectorAll('.location-prov-item');
-  items.forEach(item => {
+  // Location Accordion
+  const locationItems = document.querySelectorAll('.location-prov-item');
+  locationItems.forEach(item => {
     const question = item.querySelector('.location-prov-question');
     if (!question) return;
 
     question.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
+      locationItems.forEach(i => i.classList.remove('active'));
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
 
-      // Close all
-      items.forEach(i => i.classList.remove('active'));
+  // Industry Accordion
+  const industryItems = document.querySelectorAll('.industry-acc-item');
+  industryItems.forEach(item => {
+    const question = item.querySelector('.industry-acc-question');
+    if (!question) return;
 
-      // Toggle current
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      industryItems.forEach(i => i.classList.remove('active'));
       if (!isActive) {
         item.classList.add('active');
       }

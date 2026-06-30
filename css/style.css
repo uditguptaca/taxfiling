@@ -2537,6 +2537,89 @@ p {
   transform: translateX(3px);
 }
 
+/* ── Industry Accordion Styles ── */
+.industry-acc-item {
+  border: 1px solid var(--border-gray);
+  border-radius: var(--radius);
+  margin-bottom: 15px;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.industry-acc-item.active {
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.industry-acc-question {
+  width: 100%;
+  padding: 20px 25px;
+  background: var(--white);
+  border: none;
+  text-align: left;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--dark-green);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: var(--transition);
+}
+
+.industry-acc-question i {
+  color: var(--primary);
+  transition: transform var(--transition-fast);
+}
+
+.industry-acc-item.active .industry-acc-question i {
+  transform: rotate(90deg);
+}
+
+.industry-acc-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background: var(--white);
+}
+
+.industry-acc-item.active .industry-acc-answer {
+  max-height: 1000px;
+}
+
+.industry-acc-answer-inner {
+  padding: 20px 25px 30px;
+  border-top: 1px solid var(--border-gray);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.industry-acc-answer-inner a {
+  font-size: 0.95rem;
+  color: var(--body-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+  font-weight: 500;
+  transition: var(--transition-fast);
+}
+
+.industry-acc-answer-inner a::before {
+  content: '•';
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.industry-acc-answer-inner a:hover {
+  color: var(--primary);
+  transform: translateX(3px);
+}
+
 /* ── Hero Expert & Badges Stack Custom Styles ── */
 .hero-expert-img {
   width: 100%;
