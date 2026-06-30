@@ -1989,6 +1989,22 @@ const getIndustryServices = (slug, name) => {
       }
     ];
   }
+  // Override colors using Claude palette
+  const claudePaletteColors = [
+    { bg: 'rgba(204, 120, 92, 0.1)', fg: '#CC785C' }, // Bookcloth (Orange)
+    { bg: 'rgba(212, 162, 127, 0.1)', fg: '#D4A27F' }, // Kraft (Tan)
+    { bg: 'rgba(38, 38, 37, 0.08)', fg: '#262625' }, // Slate Medium (Charcoal)
+    { bg: 'rgba(102, 102, 99, 0.1)', fg: '#666663' }, // Cloud Dark (Grey)
+    { bg: 'rgba(204, 120, 92, 0.1)', fg: '#CC785C' }, // Bookcloth (Orange)
+    { bg: 'rgba(212, 162, 127, 0.1)', fg: '#D4A27F' }, // Kraft (Tan)
+    { bg: 'rgba(38, 38, 37, 0.08)', fg: '#262625' }, // Slate Medium (Charcoal)
+    { bg: 'rgba(102, 102, 99, 0.1)', fg: '#666663' }  // Cloud Dark (Grey)
+  ];
+  cards.forEach((c, idx) => {
+    const col = claudePaletteColors[idx % claudePaletteColors.length];
+    c.color = col.bg;
+    c.iconColor = col.fg;
+  });
 
   return `
   <style>
@@ -2063,10 +2079,11 @@ const getIndustryServices = (slug, name) => {
       border-radius: 16px;
       padding: 30px;
       border: 1px solid var(--border-gray);
-      min-height: 400px;
+      min-height: auto;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
+      gap: 20px;
     }
     .showcase-panel {
       display: none;
