@@ -13,11 +13,11 @@
   --primary-dark: #B06148;
   --primary-light: #FAF2EE;
   --dark-green: #191919; /* Slate Dark */
-  --dark-green-hover: #262626; /* Slate Medium */
-  --teal: #262626; /* Slate Medium */
+  --dark-green-hover: #262625; /* Slate Medium */
+  --teal: #262625; /* Slate Medium */
   --teal-light: #40403E; /* Slate Light */
   --footer-start: #191919;
-  --footer-end: #262626;
+  --footer-end: #262625;
   --body-text: #191919; /* Slate Dark */
   --body-text-light: #666663; /* Cloud Dark */
   --white: #FAFAF7; /* Ivory Light */
@@ -36,7 +36,7 @@
 
   /* Anthropic Custom Colors */
   --color-slate-dark: #191919;
-  --color-slate-med: #262626;
+  --color-slate-med: #262625;
   --color-slate-light: #40403E;
   --color-cloud-dark: #666663;
   --color-cloud-med: #91918D;
