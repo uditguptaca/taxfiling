@@ -3,6 +3,23 @@ const path = require('path');
 
 const rootDir = __dirname;
 
+// Read index.html for extracting sections programmatically
+const indexHtmlContent = fs.readFileSync(path.join(rootDir, 'index.html'), 'utf8');
+
+function getSectionFromIndex(startComment, endComment) {
+  const startIdx = indexHtmlContent.indexOf(startComment);
+  if (startIdx === -1) {
+    console.error("Could not find start comment: " + startComment);
+    return "";
+  }
+  const endIdx = indexHtmlContent.indexOf(endComment, startIdx);
+  if (endIdx === -1) {
+    console.error("Could not find end comment: " + endComment);
+    return "";
+  }
+  return indexHtmlContent.substring(startIdx, endIdx);
+}
+
 // Shared components
 const head = (title, description) => `
   <meta charset="UTF-8">
@@ -3856,6 +3873,7 @@ writePage(
 // Industry Detail Pages
 industries.forEach(ind => {
   const isHealthcare = ind.slug === 'healthcare';
+  const pressMediaHtml = ind.slug === 'healthcare' ? getSectionFromIndex('<!-- Symmetrical Testimonials Section -->', '<!-- Software Logos Section -->') : '';
 
   // Customized Subsectors
   let subsectorsList = [];
@@ -4495,6 +4513,8 @@ industries.forEach(ind => {
     <!-- 6. RISK-FREE WORKFLOW -->
     ${getWorkflowSection(ind.slug)}
 
+    ${pressMediaHtml}
+
     <!-- 4. CORE SUB-SERVICES FEATURES -->
     <section class="section" style="padding: 60px 0; background-color: var(--white);">
       <div class="container">
@@ -4702,23 +4722,6 @@ const generateLocationsHub = () => `
 
 writePage(path.join(rootDir, 'locations', 'index.html'), 'Our Locations Across Canada', 'We serve clients across Canada.', 'locations', generateLocationsHub());
 writePage(path.join(rootDir, 'tax-accountant-firm', 'index.html'), 'Our Locations Across Canada', 'We serve clients across Canada.', 'locations', generateLocationsHub());
-
-// Read index.html for extracting sections programmatically
-const indexHtmlContent = fs.readFileSync(path.join(rootDir, 'index.html'), 'utf8');
-
-function getSectionFromIndex(startComment, endComment) {
-  const startIdx = indexHtmlContent.indexOf(startComment);
-  if (startIdx === -1) {
-    console.error("Could not find start comment: " + startComment);
-    return "";
-  }
-  const endIdx = indexHtmlContent.indexOf(endComment, startIdx);
-  if (endIdx === -1) {
-    console.error("Could not find end comment: " + endComment);
-    return "";
-  }
-  return indexHtmlContent.substring(startIdx, endIdx);
-}
 
 // Location Detail Pages
 locations.forEach(loc => {
