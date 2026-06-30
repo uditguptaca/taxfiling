@@ -292,9 +292,9 @@ function initReviewsSlider() {
   if (!container) return;
 
   const slides = container.querySelectorAll('.testimonial-slide');
-  const prevBtn = container.querySelector('.slider-prev-btn');
-  const nextBtn = container.querySelector('.slider-next-btn');
-  if (!slides.length || !prevBtn || !nextBtn) return;
+  const prevBtn = container.querySelector('.slider-prev-btn') || {};
+  const nextBtn = container.querySelector('.slider-next-btn') || {};
+  if (!slides.length) return;
 
   let currentIndex = 0;
 
