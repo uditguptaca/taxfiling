@@ -3784,6 +3784,57 @@ p {
   }
 }
 
+.testimonial-card-single {
+  background-color: #ffffff;
+  border: 1px solid var(--border-gray);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.testimonial-text {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  font-style: italic;
+  color: var(--color-slate-med);
+  margin: 0;
+  text-align: left;
+}
+
+.testimonial-author-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+
+.author-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-slate-dark);
+  line-height: 1.2;
+}
+
+.author-role {
+  font-size: 0.68rem;
+  color: var(--body-text-light);
+  margin-top: 1px;
+}
+
 /* Vertical Scrolling Testimonial Marquee (Top-to-Bottom) */
 .testimonial-marquee-container {
   max-height: 380px;
