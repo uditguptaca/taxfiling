@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initStatsCounter();
   initReviewsCarousel();
+  initReviewsSlider();
   initLocationAccordion();
 });
 
@@ -255,5 +256,33 @@ function initLocationAccordion() {
         item.classList.add('active');
       }
     });
+  });
+}
+
+// ── Testimonials Reviews Slider ──────────
+function initReviewsSlider() {
+  const container = document.querySelector('.testimonial-slider-container');
+  if (!container) return;
+
+  const slides = container.querySelectorAll('.testimonial-slide');
+  const prevBtn = container.querySelector('.slider-prev-btn');
+  const nextBtn = container.querySelector('.slider-next-btn');
+  if (!slides.length || !prevBtn || !nextBtn) return;
+
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+    showSlide(currentIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+    showSlide(currentIndex);
   });
 }
