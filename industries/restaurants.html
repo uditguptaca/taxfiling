@@ -598,19 +598,79 @@
         </div>
         
   <div class="grid-3" style="margin-top: 40px;">
-    ${cards.map(c => `
+    
       <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
-        <div class="card-icon" style="background: ${c.color}; color: ${c.iconColor}; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
-          <i class="fas ${c.icon}"></i>
+        <div class="card-icon" style="background: rgba(251, 119, 13, 0.1); color: rgb(251, 119, 13); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-utensils"></i>
         </div>
         <div>
-          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">${c.title}</h4>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">POS Reconciliation & Books</h4>
           <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
-            ${c.bullets.map(b => `<li>${b}</li>`).join('')}
+            <li>Daily POS reports (TouchBistro, Clover) reconciliation</li><li>Cash reconciliations and credit card payment audits</li><li>Accounts Payable vendor invoice management (Dext)</li><li>Weekly cash flow and vendor payment schedules</li>
           </ul>
         </div>
       </div>
-    `).join('')}
+    
+      <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
+        <div class="card-icon" style="background: rgba(34, 197, 94, 0.1); color: rgb(34, 197, 94); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-users"></i>
+        </div>
+        <div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">Tip Pooling & Payroll</h4>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>Tip pooling and redistribution model calculations</li><li>CRA compliant tip taxation and reporting structures</li><li>Shift-worker payroll processing with source deductions</li><li>T4, ROE, WSIB, and provincial EHT filings</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
+        <div class="card-icon" style="background: rgba(59, 130, 246, 0.1); color: rgb(59, 130, 246); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-file-invoice-dollar"></i>
+        </div>
+        <div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">Corporate Tax & COGS</h4>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>T2 Corporate returns for food and beverage operations</li><li>Food & beverage Cost of Goods Sold (COGS) auditing</li><li>Spillage, waste, and staff meal adjustment allocations</li><li>Direct CRA representation for restaurant audits</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
+        <div class="card-icon" style="background: rgba(168, 85, 247, 0.1); color: rgb(168, 85, 247); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-book-open"></i>
+        </div>
+        <div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">Notice to Reader & Lease Audits</h4>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>Notice to Reader (NTR) compilation financial statements</li><li>Percentage-rent landlord lease reporting audits</li><li>Franchise disclosure royalty review reports</li><li>Capital asset depreciation schedules for commercial kitchen equipment</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
+        <div class="card-icon" style="background: rgba(236, 72, 153, 0.1); color: rgb(236, 72, 153); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">CFO & Operational Advisory</h4>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>Prime cost monitoring (total food + labor cost ratios)</li><li>Menu item engineering profitability calculations</li><li>Cash flow models for multi-location expansions</li><li>Due diligence audits for franchise purchases</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
+        <div class="card-icon" style="background: rgba(251, 119, 13, 0.1); color: rgb(251, 119, 13); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-user-tie"></i>
+        </div>
+        <div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">Personal Tax for Owners</h4>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>T1 returns for restaurant founders, partners & investors</li><li>Dividend vs salary owner compensation planning</li><li>Capital Gains Exemption strategy on business sales</li><li>Unincorporated partner profit tax allocations</li>
+          </ul>
+        </div>
+      </div>
+    
   </div>
   
       </div>

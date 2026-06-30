@@ -598,19 +598,79 @@
         </div>
         
   <div class="grid-3" style="margin-top: 40px;">
-    ${cards.map(c => `
+    
       <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
-        <div class="card-icon" style="background: ${c.color}; color: ${c.iconColor}; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
-          <i class="fas ${c.icon}"></i>
+        <div class="card-icon" style="background: rgba(251, 119, 13, 0.1); color: rgb(251, 119, 13); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-shopping-cart"></i>
         </div>
         <div>
-          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">${c.title}</h4>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">Multi-Channel Bookkeeping</h4>
           <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
-            ${c.bullets.map(b => `<li>${b}</li>`).join('')}
+            <li>Shopify, Amazon, eBay, and Etsy sales reconciliation</li><li>Stripe, Square, PayPal, and merchant payout matching</li><li>Real-time cloud bookkeeping software integrations</li><li>Digital expenses and advertising cost tracking</li>
           </ul>
         </div>
       </div>
-    `).join('')}
+    
+      <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
+        <div class="card-icon" style="background: rgba(34, 197, 94, 0.1); color: rgb(34, 197, 94); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-receipt"></i>
+        </div>
+        <div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">Sales Tax Netfiling (GST/HST/PST)</h4>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>Cross-provincial sales tax tracking and netfiling</li><li>PST/QST filings for BC, SK, MB, and Quebec</li><li>Mixed-supply Input Tax Credits (ITC) optimizations</li><li>USA sales tax nexus and marketplace tax audits</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
+        <div class="card-icon" style="background: rgba(59, 130, 246, 0.1); color: rgb(59, 130, 246); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-file-invoice-dollar"></i>
+        </div>
+        <div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">Corporate Tax & Import Compliance</h4>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>T2 Corporate returns for online brands & e-retailers</li><li>Cost of Goods Sold (COGS) calculations and adjustments</li><li>International shipping, freight, and duty expense audits</li><li>CRA import tax audit representation and dispute support</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
+        <div class="card-icon" style="background: rgba(168, 85, 247, 0.1); color: rgb(168, 85, 247); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-boxes"></i>
+        </div>
+        <div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">Inventory Valuation Systems</h4>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>Inventory sync tools (QBO Commerce, A2X integration)</li><li>Landing cost valuations (product price + shipping + duty)</li><li>FIFO vs Weighted Average cost of inventory reviews</li><li>Year-end inventory write-offs for obsolete stock</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
+        <div class="card-icon" style="background: rgba(236, 72, 153, 0.1); color: rgb(236, 72, 153); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">CFO & Margin Advisory</h4>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>Gross margin and contribution margin channel reviews</li><li>Advertising spend ROI and customer acquisition cost audits</li><li>Cash flow projections for stock purchases and manufacturing</li><li>Business valuation for online brand acquisition</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
+        <div class="card-icon" style="background: rgba(251, 119, 13, 0.1); color: rgb(251, 119, 13); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-users"></i>
+        </div>
+        <div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">Payroll & Remote Contractor Setup</h4>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>Payroll processing for remote and international staff</li><li>Contract worker T4A compliance and classification reviews</li><li>EHT, source deductions, and provincial tax setups</li><li>Direct deposit payroll and custom employee portals</li>
+          </ul>
+        </div>
+      </div>
+    
   </div>
   
       </div>

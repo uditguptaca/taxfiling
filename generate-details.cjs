@@ -1575,19 +1575,19 @@ const getIndustryServices = (slug, name) => {
 
   return `
   <div class="grid-3" style="margin-top: 40px;">
-    \${cards.map(c => \`
+    ${cards.map(c => `
       <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
-        <div class="card-icon" style="background: \${c.color}; color: \${c.iconColor}; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
-          <i class="fas \${c.icon}"></i>
+        <div class="card-icon" style="background: ${c.color}; color: ${c.iconColor}; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas ${c.icon}"></i>
         </div>
         <div>
-          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">\${c.title}</h4>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">${c.title}</h4>
           <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
-            \${c.bullets.map(b => \`<li>\${b}</li>\`).join('')}
+            ${c.bullets.map(b => `<li>${b}</li>`).join('')}
           </ul>
         </div>
       </div>
-    \`).join('')}
+    `).join('')}
   </div>
   `;
 };

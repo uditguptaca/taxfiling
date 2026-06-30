@@ -598,19 +598,79 @@
         </div>
         
   <div class="grid-3" style="margin-top: 40px;">
-    ${cards.map(c => `
+    
       <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
-        <div class="card-icon" style="background: ${c.color}; color: ${c.iconColor}; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
-          <i class="fas ${c.icon}"></i>
+        <div class="card-icon" style="background: rgba(251, 119, 13, 0.1); color: rgb(251, 119, 13); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-briefcase"></i>
         </div>
         <div>
-          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">${c.title}</h4>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">Bookkeeping & Time Reconciliations</h4>
           <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
-            ${c.bullets.map(b => `<li>${b}</li>`).join('')}
+            <li>Time-billing and practice management tool reconciliation</li><li>Monthly bank, credit card, and operational cash tracking</li><li>Accounts Receivable (AR) management and aging reviews</li><li>Digital expenses auditing and document collection (Dext)</li>
           </ul>
         </div>
       </div>
-    `).join('')}
+    
+      <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
+        <div class="card-icon" style="background: rgba(34, 197, 94, 0.1); color: rgb(34, 197, 94); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-file-invoice-dollar"></i>
+        </div>
+        <div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">Corporate Tax for PC/Holdcos</h4>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>T2 Corporate returns for professional & service corporations</li><li>Work-In-Progress (WIP) service billing tax adjustments</li><li>Passive investment income holding company tax strategies</li><li>CRA audit defense representation and filing protection</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
+        <div class="card-icon" style="background: rgba(59, 130, 246, 0.1); color: rgb(59, 130, 246); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-users"></i>
+        </div>
+        <div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">Partner Compensation Planning</h4>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>Owner dividend vs salary structuring calculations</li><li>Partner profit-sharing split-ratio allocations</li><li>EHT, source deductions, and payroll filings</li><li>Custom employee portal for online payslips</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
+        <div class="card-icon" style="background: rgba(168, 85, 247, 0.1); color: rgb(168, 85, 247); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">CFO & Growth Advisory</h4>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>Service unit economics and billable hour realizations</li><li>Staff utilization and hourly labor efficiency reporting</li><li>Cash flow projections for agency/consultancy scaling</li><li>Due diligence and valuation reports for mergers</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
+        <div class="card-icon" style="background: rgba(236, 72, 153, 0.1); color: rgb(236, 72, 153); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-book-open"></i>
+        </div>
+        <div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">Accounting & Notice to Reader</h4>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>Notice to Reader (NTR) Compilation financial statements</li><li>QuickBooks Online & Xero cloud accounting integrations</li><li>Professional corporation setup and registration checks</li><li>Shared-office lease cost allocation tracking</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
+        <div class="card-icon" style="background: rgba(251, 119, 13, 0.1); color: rgb(251, 119, 13); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">Personal Tax for Partners</h4>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>T1 returns for consultants, partners, and practitioners</li><li>Automobile logbook write-offs & home office calculations</li><li>Professional licensing and training dues write-offs</li><li>Cross-border US/Canada tax return filing services</li>
+          </ul>
+        </div>
+      </div>
+    
   </div>
   
       </div>
