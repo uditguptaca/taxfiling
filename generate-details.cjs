@@ -2200,12 +2200,13 @@ const getIndustryServices = (slug, name) => {
       }
       .showcase-tabs {
         flex-direction: row;
-        overflow-x: auto;
-        padding-bottom: 10px;
-        -webkit-overflow-scrolling: touch;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding-bottom: 0;
       }
       .showcase-tab {
-        flex-shrink: 0;
+        flex-shrink: 1;
       }
       .panel-bullets-grid {
         grid-template-columns: 1fr;
