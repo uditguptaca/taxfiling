@@ -1004,7 +1004,7 @@ services.forEach(s => {
     <!-- Custom styling to replicate WordPress Elementor service page layout -->
     <style>
       .srv-hero {
-        background: #01311F;
+        background: var(--color-slate-dark);
         padding: 80px 0 60px;
         color: var(--white);
         text-align: center;
@@ -1262,7 +1262,7 @@ industries.forEach(ind => {
     <!-- Custom styling to replicate WordPress Elementor design -->
     <style>
       .ind-hero {
-        background: linear-gradient(135deg, #01311F 0%, #144444 100%);
+        background: linear-gradient(135deg, var(--color-slate-dark) 0%, var(--color-slate-med) 100%);
         padding: 80px 0 100px;
         color: var(--white);
         overflow: hidden;
@@ -1470,7 +1470,7 @@ industries.forEach(ind => {
         bottom: 20px;
         left: 20px;
         right: 20px;
-        background: rgba(1, 49, 33, 0.95);
+        background: rgba(25, 25, 25, 0.95);
         color: var(--white);
         padding: 20px;
         border-radius: 8px;
@@ -2024,7 +2024,7 @@ locations.forEach(loc => {
     <!-- Custom styling to replicate WordPress Elementor location page design -->
     <style>
       .loc-hero {
-        background: linear-gradient(135deg, #01311F 0%, #144444 100%);
+        background: linear-gradient(135deg, var(--color-slate-dark) 0%, var(--color-slate-med) 100%);
         padding: 85px 0;
         color: var(--white);
         position: relative;
@@ -2093,7 +2093,7 @@ locations.forEach(loc => {
       }
       .loc-hero-card-body {
         padding: 24px;
-        background: #012215;
+        background: var(--color-slate-dark);
         color: var(--white);
         border-top: 4px solid var(--primary);
       }
@@ -2345,7 +2345,7 @@ pricingPlans.forEach(plan => {
     <!-- Custom styling to replicate WordPress Elementor pricing page design -->
     <style>
       .prc-hero {
-        background: linear-gradient(135deg, #01311F 0%, #144444 100%);
+        background: linear-gradient(135deg, var(--color-slate-dark) 0%, var(--color-slate-med) 100%);
         padding: 85px 0;
         color: var(--white);
       }
@@ -2757,7 +2757,7 @@ blogPosts.forEach(p => {
     <!-- Custom styling to replicate WordPress Elementor blog design -->
     <style>
       .blog-hero {
-        background: linear-gradient(135deg, #01311F 0%, #144444 100%);
+        background: linear-gradient(135deg, var(--color-slate-dark) 0%, var(--color-slate-med) 100%);
         padding: 60px 0;
         color: var(--white);
         margin-bottom: 40px;
