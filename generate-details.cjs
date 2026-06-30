@@ -1169,7 +1169,7 @@ const getServiceTiersSection = (pageName, pageType = 'service', customTiers = nu
   `;
 };
 
-const getWhyChooseUsSection = (pageName, customTitle = null, customSubtitle = null, customPoints = null) => {
+const getWhyChooseUsSection = (pageName, customTitle = null, customSubtitle = null, customPoints = null, customImage = null) => {
   const title = customTitle || 'Why Businesses &amp; Corporations Choose Tax Filings Canada';
   const subtitle = customSubtitle || 'Our team of experienced Tax Accountant provide trusted tax advice, accurate filings, and tailored strategies to minimize liabilities. We offer transparent pricing and full CRA compliance support for bookkeeping, GST/HST, payroll, and corporate taxes.';
   const points = customPoints || [
@@ -1179,12 +1179,14 @@ const getWhyChooseUsSection = (pageName, customTitle = null, customSubtitle = nu
     { title: 'Technology-Driven Bookkeeping &amp; Accounting', desc: 'We use advanced accounting software for seamless bookkeeping, payroll, and small business tax filing.' }
   ];
 
+  const imgUrl = customImage || 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=450&fit=crop';
+
   return `
   <section class="section section-gray">
     <div class="container">
       <div class="grid-2">
         <div style="display:flex;align-items:center;justify-content:center;">
-          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=450&fit=crop" alt="CPA Tax Experts" style="border-radius:12px;box-shadow:var(--shadow-md);max-width:100%;">
+          <img src="${imgUrl}" alt="CPA Tax Experts" style="border-radius:12px;box-shadow:var(--shadow-md);max-width:100%;height:350px;width:100%;object-fit:cover;object-position:center;">
         </div>
         <div>
           <div class="section-header" style="text-align:left;margin-bottom:30px;">
@@ -5277,7 +5279,7 @@ locations.forEach(loc => {
     ${recommendedLogosHtml}
 
     <!-- 4. WHY CHOOSE US -->
-    ${getWhyChooseUsSection(loc.name, isToronto ? 'Why Choose Tax Filings Toronto?' : `Why Choose Tax Filings ${loc.name}?`)}
+    ${getWhyChooseUsSection(loc.name, isToronto ? 'Why Choose Tax Filings Toronto?' : `Why Choose Tax Filings ${loc.name}?`, null, null, isToronto ? '/images/toronto_skyline.png' : null)}
 
     <!-- 5. RISK-FREE WORKFLOW -->
     ${getWorkflowSection()}
