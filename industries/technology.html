@@ -2755,7 +2755,9 @@
             <div>
               <span style="background: rgba(255,255,255,0.15); padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Service Location</span>
               <h3 id="loc-card-title" style="font-size: 1.8rem; font-weight: 800; margin-top: 15px; margin-bottom: 10px; color: var(--white);"><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> Toronto, ON</h3>
-              <p id="loc-card-desc" style="font-size: 0.95rem; line-height: 1.6; color: var(--white); opacity: 0.9; margin-bottom: 25px;">Expert corporate tax filing, personal returns, and comprehensive CPA accounting services in Toronto.</p>
+              <p id="loc-card-desc" style="font-size: 0.95rem; line-height: 1.6; color: var(--white); opacity: 0.9; margin-bottom: 25px;">
+                Expert corporate tax filing, personal returns, and comprehensive CPA accounting services in Toronto.
+              </p>
               <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 20px; font-size: 0.9rem; margin-bottom: 25px;">
                 <div style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="width: 20px; color: var(--primary);"></i> Full Province-Wide Service Coverage</div>
                 <div><i class="fas fa-phone-alt" style="width: 20px; color: var(--primary);"></i> +1 (416) 619-0068</div>
@@ -2782,7 +2784,28 @@
           cityItems.forEach(i => i.classList.remove('active'));
           item.classList.add('active');
           
-          const desc = item.getAttribute('data-desc');
+          let desc = item.getAttribute('data-desc');
+          if (false) {
+            desc = desc
+              .replace(/corporate tax filing/gi, 'clinic corporate tax filing')
+              .replace(/corporate tax preparation/gi, 'medical corporate tax prep')
+              .replace(/corporate filing/gi, 'MPC corporate filing')
+              .replace(/tax return/gi, 'medical tax return')
+              .replace(/tax returns/gi, 'medical tax returns')
+              .replace(/bookkeeping/gi, 'clinic bookkeeping')
+              .replace(/Virtual CFO/gi, 'Healthcare Virtual CFO')
+              .replace(/small business/gi, 'medical practice')
+              .replace(/accounting services/gi, 'clinic accounting services')
+              .replace(/accounting systems/gi, 'clinical accounting systems')
+              .replace(/CPA accounting services/gi, 'medical CPA accounting')
+              .replace(/CPA solutions/gi, 'medical CPA solutions')
+              .replace(/tax planners/gi, 'medical tax planners')
+              .replace(/tax planning/gi, 'medical tax planning')
+              .replace(/tax accountants/gi, 'medical tax accountants')
+              .replace(/CPA services/gi, 'medical CPA services')
+              .replace(/company filings/gi, 'MPC clinic filings')
+              .replace(/personal returns/gi, 'practitioner T1 returns');
+          }
           
           cardTitle.innerHTML = `<i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> ` + item.textContent;
           cardDesc.textContent = desc;
