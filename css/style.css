@@ -3101,7 +3101,7 @@ p {
 
 .workflow-grid {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 1fr 1fr;
   align-items: stretch;
   border-radius: 12px;
   overflow: hidden;
