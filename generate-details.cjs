@@ -3648,37 +3648,49 @@ industries.forEach(ind => {
       'Occupational Therapists'
     ];
     subsectorsWithIcons = [
-      { name: 'Medical Clinics', icon: 'fa-house-medical' },
-      { name: 'Family Doctors & GPs', icon: 'fa-user-doctor' },
-      { name: 'Dentists & Orthodontists', icon: 'fa-tooth' },
-      { name: 'Pharmacies', icon: 'fa-pills' },
-      { name: 'Chiropractors', icon: 'fa-bone' },
-      { name: 'Physiotherapists', icon: 'fa-child-reaching' },
-      { name: 'Optometrists', icon: 'fa-eye' },
-      { name: 'Veterinary Clinics', icon: 'fa-paw' },
-      { name: 'Specialists & Surgeons', icon: 'fa-user-doctor' },
-      { name: 'Nurses', icon: 'fa-user-nurse' },
-      { name: 'Mental Health Counselors', icon: 'fa-brain' },
-      { name: 'Massage Therapists & RMTs', icon: 'fa-hands-holding' },
-      { name: 'Podiatrists & Foot Clinics', icon: 'fa-shoe-prints' },
-      { name: 'Midwives & OB/GYNs', icon: 'fa-baby' },
-      { name: 'Occupational Therapists', icon: 'fa-hand-holding-medical' }
+      { name: 'Medical Clinics', icon: 'fa-house-medical', bg: '#EBDBBC', text: '#191919', border: '#D4A27F' }, // Manilla
+      { name: 'Family Doctors & GPs', icon: 'fa-user-doctor', bg: '#F0F0EB', text: '#CC785C', border: '#E5E4DF' }, // Ivory Medium / Bookcloth
+      { name: 'Dentists & Orthodontists', icon: 'fa-tooth', bg: '#CC785C', text: '#FAFAF7', border: '#CC785C' }, // Bookcloth / Ivory Light
+      { name: 'Pharmacies', icon: 'fa-pills', bg: '#D4A27F', text: '#191919', border: '#CC785C' }, // Kraft
+      { name: 'Chiropractors', icon: 'fa-bone', bg: '#262625', text: '#FAFAF7', border: '#191919' }, // Slate Medium
+      { name: 'Physiotherapists', icon: 'fa-child-reaching', bg: '#BFBFBA', text: '#191919', border: '#91918D' }, // Cloud Light
+      { name: 'Optometrists', icon: 'fa-eye', bg: '#E5E4DF', text: '#262625', border: '#BFBFBA' }, // Ivory Dark
+      { name: 'Veterinary Clinics', icon: 'fa-paw', bg: '#FAFAF7', text: '#CC785C', border: '#E5E4DF' }, // Ivory Light
+      { name: 'Specialists & Surgeons', icon: 'fa-user-doctor', bg: '#191919', text: '#EBDBBC', border: '#191919' }, // Slate Dark
+      { name: 'Nurses', icon: 'fa-user-nurse', bg: '#EBDBBC', text: '#CC785C', border: '#D4A27F' }, // Manilla / Bookcloth
+      { name: 'Mental Health Counselors', icon: 'fa-brain', bg: '#F0F0EB', text: '#191919', border: '#E5E4DF' }, // Ivory Medium
+      { name: 'Massage Therapists & RMTs', icon: 'fa-hands-holding', bg: '#CC785C', text: '#FAFAF7', border: '#CC785C' }, // Bookcloth
+      { name: 'Podiatrists & Foot Clinics', icon: 'fa-shoe-prints', bg: '#D4A27F', text: '#191919', border: '#CC785C' }, // Kraft
+      { name: 'Midwives & OB/GYNs', icon: 'fa-baby', bg: '#40403E', text: '#FAFAF7', border: '#262625' }, // Slate Light
+      { name: 'Occupational Therapists', icon: 'fa-hand-holding-medical', bg: '#BFBFBA', text: '#191919', border: '#91918D' } // Cloud Light
     ];
-  } else if (ind.slug === 'real-estate') {
-    subsectorsList = ['Realtors', 'Brokers', 'Property Developers', 'Property Managers', 'Appraisers', 'Real Estate Investors', 'Leasing Agencies'];
-    subsectorsWithIcons = subsectorsList.map(s => ({ name: s, icon: 'fa-building' }));
-  } else if (ind.slug === 'construction') {
-    subsectorsList = ['General Contractors', 'Subcontractors', 'Home Builders', 'Framers', 'Electricians', 'Plumbers', 'Roofers & Renovation firms'];
-    subsectorsWithIcons = subsectorsList.map(s => ({ name: s, icon: 'fa-hard-hat' }));
-  } else if (ind.slug === 'ecommerce') {
-    subsectorsList = ['Shopify Sellers', 'Amazon FBA Sellers', 'Dropshippers', 'WooCommerce Brands', 'eBay Stores', 'Digital Goods Sellers', 'Wholesalers'];
-    subsectorsWithIcons = subsectorsList.map(s => ({ name: s, icon: 'fa-shopping-cart' }));
-  } else if (ind.slug === 'restaurants') {
-    subsectorsList = ['Cafes', 'Fine Dining', 'Bakeries', 'Bars & Pubs', 'Food Trucks', 'Catering Services', 'Franchises'];
-    subsectorsWithIcons = subsectorsList.map(s => ({ name: s, icon: 'fa-utensils' }));
   } else {
-    subsectorsList = ['Independent Practitioners', 'Sole Proprietors', 'Partnerships', 'Corporations', 'Startups', 'Advisory Consultants'];
-    subsectorsWithIcons = subsectorsList.map(s => ({ name: s, icon: 'fa-briefcase' }));
+    const claudePresets = [
+      { bg: '#EBDBBC', text: '#191919', border: '#D4A27F' }, // Manilla
+      { bg: '#F0F0EB', text: '#CC785C', border: '#E5E4DF' }, // Ivory Medium / Bookcloth
+      { bg: '#CC785C', text: '#FAFAF7', border: '#CC785C' }, // Bookcloth
+      { bg: '#D4A27F', text: '#191919', border: '#CC785C' }, // Kraft
+      { bg: '#262625', text: '#FAFAF7', border: '#191919' }, // Slate Medium
+      { bg: '#BFBFBA', text: '#191919', border: '#91918D' }, // Cloud Light
+      { bg: '#E5E4DF', text: '#262625', border: '#BFBFBA' }  // Ivory Dark
+    ];
+
+    if (ind.slug === 'real-estate') {
+      subsectorsList = ['Realtors', 'Brokers', 'Property Developers', 'Property Managers', 'Appraisers', 'Real Estate Investors', 'Leasing Agencies'];
+      subsectorsWithIcons = subsectorsList.map((s, i) => ({ name: s, icon: 'fa-building', ...claudePresets[i % claudePresets.length] }));
+    } else if (ind.slug === 'construction') {
+      subsectorsList = ['General Contractors', 'Subcontractors', 'Home Builders', 'Framers', 'Electricians', 'Plumbers', 'Roofers & Renovation firms'];
+      subsectorsWithIcons = subsectorsList.map((s, i) => ({ name: s, icon: 'fa-hard-hat', ...claudePresets[i % claudePresets.length] }));
+    } else if (ind.slug === 'ecommerce') {
+      subsectorsList = ['Shopify Sellers', 'Amazon FBA Sellers', 'Dropshippers', 'WooCommerce Brands', 'eBay Stores', 'Digital Goods Sellers', 'Wholesalers'];
+      subsectorsWithIcons = subsectorsList.map((s, i) => ({ name: s, icon: 'fa-shopping-cart', ...claudePresets[i % claudePresets.length] }));
+    } else if (ind.slug === 'restaurants') {
+      subsectorsList = ['Cafes', 'Fine Dining', 'Bakeries', 'Bars & Pubs', 'Food Trucks', 'Catering Services', 'Franchises'];
+      subsectorsWithIcons = subsectorsList.map((s, i) => ({ name: s, icon: 'fa-utensils', ...claudePresets[i % claudePresets.length] }));
+    } else {
+      subsectorsList = ['Independent Practitioners', 'Sole Proprietors', 'Partnerships', 'Corporations', 'Startups', 'Advisory Consultants'];
+      subsectorsWithIcons = subsectorsList.map((s, i) => ({ name: s, icon: 'fa-briefcase', ...claudePresets[i % claudePresets.length] }));
+    }
   }
 
   // Dynamic Tiers
@@ -3990,9 +4002,9 @@ industries.forEach(ind => {
         transform: scaleX(1);
       }
       .subsector-hover-card:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow-md);
-        border-color: var(--primary);
+        transform: translateY(-4px) !important;
+        box-shadow: var(--shadow-md) !important;
+        filter: brightness(0.94) contrast(1.03);
       }
       .subsector-hover-card i {
         font-size: 1.8rem;
@@ -4157,9 +4169,9 @@ industries.forEach(ind => {
         </div>
         <div class="subsector-card-grid">
           ${subsectorsWithIcons.map(sub => `
-            <div class="subsector-hover-card" id="${sub.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">
-              <i class="fas ${sub.icon}"></i>
-              <h4>${sub.name}</h4>
+            <div class="subsector-hover-card" id="${sub.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}" style="background-color: ${sub.bg || 'var(--white)'}; border-color: ${sub.border || 'var(--border-gray)'};">
+              <i class="fas ${sub.icon}" style="color: ${sub.text || 'var(--primary)'};"></i>
+              <h4 style="color: ${sub.text || 'var(--dark-green)'};">${sub.name}</h4>
             </div>
           `).join('')}
         </div>
