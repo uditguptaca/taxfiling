@@ -2770,24 +2770,21 @@ p {
 .choose-card {
   position: relative;
   width: 100%;
-  height: 0;
-  padding-bottom: 100%; /* Perfect square constraint */
   border-radius: 12px;
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100%;
 }
 
 .choose-card-inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 24px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
 }
 
 .choose-card:hover {
@@ -2798,14 +2795,6 @@ p {
 @media (max-width: 576px) {
   .choose-grid {
     grid-template-columns: 1fr;
-  }
-  .choose-card {
-    height: auto;
-    padding-bottom: 0;
-  }
-  .choose-card-inner {
-    position: static;
-    padding: 24px;
   }
 }
 
