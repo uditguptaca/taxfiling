@@ -1442,7 +1442,7 @@ const getIndustrySpecializations = (indSlug, indName) => {
   const specs = specsMap[indSlug] || defaultSpecs;
 
   return `
-    <div class="specializations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; align-items: start; margin-top: 10px; margin-bottom: 40px; text-align: left;">
+    <div class="specializations-grid">
       ${specs.map((spec, idx) => {
         const isDark = spec.color === 'card-slate' || spec.color === 'card-bookcloth';
         const titleColor = isDark ? '#fff' : 'var(--dark-green)';
@@ -1451,13 +1451,13 @@ const getIndustrySpecializations = (indSlug, indName) => {
         const iconColor = isDark ? '#fff' : 'rgb(251, 119, 13)';
         
         return `
-          <div class="spec-card ${spec.color}" data-index="${idx}" style="padding: 20px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: flex-start; gap: 12px; border: 1px solid rgba(0,0,0,0.03); transition: all 0.3s ease; cursor: pointer; min-height: auto; overflow: hidden; position: relative;">
+          <div class="spec-card ${spec.color}" data-index="${idx}">
             <div>
-              <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
-                <div class="spec-icon" style="background: ${iconBg}; color: ${iconColor}; width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem;">
+              <div class="spec-card-header">
+                <div class="spec-icon" style="background: ${iconBg}; color: ${iconColor};">
                   <i class="fas ${spec.icon}"></i>
                 </div>
-                <h4 style="font-size: 1rem; font-weight: 700; margin: 0; color: ${titleColor}; line-height: 1.3;">${spec.title}</h4>
+                <h4 style="color: ${titleColor};">${spec.title}</h4>
               </div>
               <p class="spec-desc-text" style="font-size: 0.86rem; margin: 0; line-height: 1.45; color: ${descColor}; display: none;">${spec.desc}</p>
             </div>
@@ -4197,6 +4197,61 @@ industries.forEach(ind => {
           grid-template-columns: repeat(4, 1fr);
         }
       }
+      /* Specializations / Solutions Grid */
+      .specializations-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        align-items: start;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        text-align: left;
+      }
+      .spec-card {
+        padding: 16px;
+        border-radius: 16px;
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 10px;
+        border: 1px solid rgba(0,0,0,0.03);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        min-height: auto;
+        overflow: hidden;
+        position: relative;
+      }
+      .spec-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 8px;
+      }
+      .spec-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 1.1rem;
+      }
+      .spec-card h4 {
+        font-size: 0.92rem;
+        font-weight: 700;
+        margin: 0;
+        line-height: 1.3;
+      }
+
+      /* Media Queries for Specializations & Subsectors */
+      @media (max-width: 991px) {
+        .specializations-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+        }
+      }
       @media (max-width: 768px) {
         .subsector-card-grid {
           grid-template-columns: repeat(4, 1fr);
@@ -4217,6 +4272,33 @@ industries.forEach(ind => {
           margin: 0 !important;
         }
       }
+      @media (max-width: 576px) {
+        .specializations-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+        }
+        .spec-card {
+          padding: 12px 10px;
+          border-radius: 12px;
+          gap: 6px;
+        }
+        .spec-card-header {
+          gap: 8px;
+          margin-bottom: 4px;
+        }
+        .spec-icon {
+          width: 30px;
+          height: 30px;
+          border-radius: 8px;
+          font-size: 0.9rem;
+        }
+        .spec-card h4 {
+          font-size: 0.78rem;
+        }
+        .read-more-btn {
+          font-size: 0.72rem !important;
+        }
+      }
       @media (max-width: 480px) {
         .subsector-card-grid {
           grid-template-columns: repeat(3, 1fr);
@@ -4228,6 +4310,10 @@ industries.forEach(ind => {
         }
         .subsector-hover-card h4 {
           font-size: 0.65rem !important;
+        }
+        /* Spanning the last child in 3-column subsector grid if it's single */
+        .subsector-hover-card:last-child:nth-child(3n - 2) {
+          grid-column: span 3;
         }
       }
       .subsector-hover-card {
