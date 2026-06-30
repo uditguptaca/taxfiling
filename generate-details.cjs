@@ -3854,9 +3854,29 @@ industries.forEach(ind => {
       }
       .subsector-card-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 15px;
         margin-top: 30px;
+      }
+      @media (max-width: 1200px) {
+        .subsector-card-grid {
+          grid-template-columns: repeat(6, 1fr);
+        }
+      }
+      @media (max-width: 991px) {
+        .subsector-card-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      @media (max-width: 768px) {
+        .subsector-card-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 576px) {
+        .subsector-card-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
       .subsector-hover-card {
         background: var(--white);
