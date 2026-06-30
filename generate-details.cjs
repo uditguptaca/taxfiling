@@ -413,9 +413,13 @@ const getPricingSection = (indSlug = '') => {
           margin-bottom: 25px;
           flex-grow: 1;
         }
+        .pricing-showcase-card {
+          border-top: 5px solid transparent !important;
+        }
         .pricing-showcase-card.card-manilla {
-          background-color: #EBDBBC !important;
-          border-color: #D4A27F !important;
+          background-color: #FFFFFF !important;
+          border-color: var(--border-gray) !important;
+          border-top-color: #D4A27F !important;
         }
         .pricing-showcase-card.card-manilla h4,
         .pricing-showcase-card.card-manilla .pricing-card-includes,
@@ -423,69 +427,41 @@ const getPricingSection = (indSlug = '') => {
           color: #191919 !important;
         }
         .pricing-showcase-card.card-ivory {
-          background-color: #F0F0EB !important;
-          border-color: #E5E4DF !important;
+          background-color: #FAF9F5 !important;
+          border-color: var(--border-gray) !important;
+          border-top-color: #CC785C !important;
         }
         .pricing-showcase-card.card-ivory h4,
         .pricing-showcase-card.card-ivory .pricing-card-includes,
         .pricing-showcase-card.card-ivory .pricing-card-price span {
           color: #191919 !important;
         }
-        .pricing-showcase-card.card-cloud {
-          background-color: #BFBFBA !important;
-          border-color: #91918D !important;
-        }
-        .pricing-showcase-card.card-cloud h4,
-        .pricing-showcase-card.card-cloud .pricing-card-includes,
-        .pricing-showcase-card.card-cloud .pricing-card-price span {
-          color: #191919 !important;
-        }
         .pricing-showcase-card.card-bookcloth {
-          background-color: #CC785C !important;
-          border-color: #CC785C !important;
-          color: #FAFAF7 !important;
+          background-color: #FFFFFF !important;
+          border-color: var(--border-gray) !important;
+          border-top-color: #262625 !important;
         }
         .pricing-showcase-card.card-bookcloth h4,
-        .pricing-showcase-card.card-bookcloth .pricing-card-price,
-        .pricing-showcase-card.card-bookcloth .pricing-card-price span,
-        .pricing-showcase-card.card-bookcloth .pricing-card-includes {
-          color: #FAFAF7 !important;
-          border-color: rgba(250,250,247,0.2) !important;
+        .pricing-showcase-card.card-bookcloth .pricing-card-includes,
+        .pricing-showcase-card.card-bookcloth .pricing-card-price span {
+          color: #191919 !important;
         }
         .pricing-showcase-card.card-slate {
-          background-color: #262625 !important;
-          border-color: #191919 !important;
-          color: #FAFAF7 !important;
+          background-color: #FAF9F5 !important;
+          border-color: var(--border-gray) !important;
+          border-top-color: #BFBFBA !important;
         }
         .pricing-showcase-card.card-slate h4,
-        .pricing-showcase-card.card-slate .pricing-card-price,
-        .pricing-showcase-card.card-slate .pricing-card-price span,
-        .pricing-showcase-card.card-slate .pricing-card-includes {
-          color: #FAFAF7 !important;
-          border-color: rgba(250,250,247,0.2) !important;
-        }
-        .pricing-showcase-card.card-bookcloth .btn,
-        .pricing-showcase-card.card-slate .btn {
-          background-color: #FAFAF7 !important;
+        .pricing-showcase-card.card-slate .pricing-card-includes,
+        .pricing-showcase-card.card-slate .pricing-card-price span {
           color: #191919 !important;
-          border-color: #FAFAF7 !important;
         }
-        .pricing-showcase-card.card-bookcloth .btn:hover,
-        .pricing-showcase-card.card-slate .btn:hover {
-          background-color: #191919 !important;
-          color: #FAFAF7 !important;
-          border-color: #191919 !important;
-        }
-        .pricing-showcase-card.card-manilla .btn,
-        .pricing-showcase-card.card-ivory .btn,
-        .pricing-showcase-card.card-cloud .btn {
+        .pricing-showcase-card .btn {
           background-color: #CC785C !important;
           border-color: #CC785C !important;
           color: #FAFAF7 !important;
         }
-        .pricing-showcase-card.card-manilla .btn:hover,
-        .pricing-showcase-card.card-ivory .btn:hover,
-        .pricing-showcase-card.card-cloud .btn:hover {
+        .pricing-showcase-card .btn:hover {
           background-color: #191919 !important;
           border-color: #191919 !important;
           color: #FAFAF7 !important;
@@ -4261,10 +4237,10 @@ industries.forEach(ind => {
           </div>
           <div style="display:flex;align-items:center;justify-content:center;">
             <div class="why-choose-revslider" style="width: 100%;">
-              <img src="https://taxccount.com/wp-content/uploads/2024/10/Udit-Gupta-Image-1.jpg" alt="Udit Gupta CPA" class="slider-main-img" style="object-position: top; object-fit: cover;">
+              <img src="${isHealthcare ? '/images/healthcare_cpa_desk.png' : 'https://taxccount.com/wp-content/uploads/2024/10/Udit-Gupta-Image-1.jpg'}" alt="${isHealthcare ? 'Clinic Financial Management' : 'Udit Gupta CPA'}" class="slider-main-img" style="object-position: top; object-fit: cover;">
               <div class="slider-badge-floating">
-                <h4>Udit Gupta, CPA</h4>
-                <p>Founder &amp; Managing Director &bull; Big4 Alumnus &bull; In-depth Corporate Tax Specialist</p>
+                <h4>${isHealthcare ? 'Expert Clinic Advisors' : 'Udit Gupta, CPA'}</h4>
+                <p>${isHealthcare ? 'Dedicated healthcare accounting specialists and CPA tax planners' : 'Founder &amp; Managing Director &bull; Big4 Alumnus &bull; In-depth Corporate Tax Specialist'}</p>
               </div>
             </div>
           </div>
