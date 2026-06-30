@@ -1305,8 +1305,29 @@
           line-height: 1.4;
         }
         .panel-bullets li i {
-          color: rgb(251, 119, 13);
+          color: var(--primary);
           margin-top: 3px;
+        }
+        .niche-tag {
+          display: inline-flex;
+          align-items: center;
+          background: var(--light-gray);
+          border: 1px solid var(--border-gray);
+          color: var(--dark-green);
+          padding: 6px 14px;
+          border-radius: 50px;
+          font-size: 0.8rem;
+          font-weight: 700;
+          text-decoration: none;
+          transition: all 0.2s ease;
+          box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+        .niche-tag:hover {
+          background: var(--primary);
+          border-color: var(--primary);
+          color: #fff;
+          transform: translateY(-1px);
+          box-shadow: 0 4px 8px rgba(204, 120, 92, 0.25);
         }
         @keyframes fadeInPanel {
           from { opacity: 0; transform: translateY(10px); }
@@ -1384,8 +1405,21 @@
               <li><i class="fas fa-check"></i> GST/HST exemption review and input tax credit claims</li>
               <li><i class="fas fa-check"></i> Full payroll integration for associates and clinic staff</li>
             </ul>
-            <div class="panel-seo-meta" style="margin-bottom: 25px; font-size: 0.88rem; border-top: 1px solid #f1f5f9; padding-top: 20px; text-align: left; line-height: 1.5;">
-              <div><strong>Niches Covered:</strong> <span style="color:#64748b;">Medical Clinics, Family Doctors &amp; GPs, Dentists &amp; Orthodontists, Pharmacies, Chiropractors, Physiotherapists, Optometrists, Veterinary Clinics, Specialists &amp; Surgeons, Nurses, Mental Health Counselors.</span></div>
+            <div class="panel-seo-meta" style="margin-bottom: 30px; border-top: 1px solid var(--border-gray); padding-top: 20px; text-align: left;">
+              <div style="font-weight: 700; font-size: 0.8rem; color: var(--teal-light); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Niches Covered:</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="/industries/healthcare.html#medical-practice-physicians" class="niche-tag">Medical Clinics</a>
+                <a href="/industries/healthcare.html#doctors" class="niche-tag">Family Doctors &amp; GPs</a>
+                <a href="/industries/healthcare.html#dentists" class="niche-tag">Dentists &amp; Orthodontists</a>
+                <a href="/industries/healthcare.html#pharmacies" class="niche-tag">Pharmacies</a>
+                <a href="/industries/healthcare.html#chiropractors" class="niche-tag">Chiropractors</a>
+                <a href="/industries/healthcare.html#therapists-psychologists" class="niche-tag">Physiotherapists</a>
+                <a href="/industries/healthcare.html" class="niche-tag">Optometrists</a>
+                <a href="/industries/healthcare.html#veterinary" class="niche-tag">Veterinary Clinics</a>
+                <a href="/industries/healthcare.html#medical-practice-physicians" class="niche-tag">Specialists &amp; Surgeons</a>
+                <a href="/industries/healthcare.html" class="niche-tag">Nurses</a>
+                <a href="/industries/healthcare.html#therapists-psychologists" class="niche-tag">Mental Health Counselors</a>
+              </div>
             </div>
             <a href="/industries/healthcare.html" class="btn btn-primary" style="align-self: flex-start; border-radius: 50px; font-weight: 700; padding: 12px 35px;">Explore Healthcare Services</a>
           </div>
@@ -1403,8 +1437,18 @@
               <li><i class="fas fa-check"></i> Capital gains tax optimization and deferral strategies</li>
               <li><i class="fas fa-check"></i> GST/HST rebate filings on new residential properties</li>
             </ul>
-            <div class="panel-seo-meta" style="margin-bottom: 25px; font-size: 0.88rem; border-top: 1px solid #f1f5f9; padding-top: 20px; text-align: left; line-height: 1.5;">
-              <div><strong>Niches Covered:</strong> <span style="color:#64748b;">Real Estate Agents, Brokers, Property Developers, Landlords, Property Managers, Appraisers, Real Estate Holding Companies (Holdcos), Property Investors.</span></div>
+            <div class="panel-seo-meta" style="margin-bottom: 30px; border-top: 1px solid var(--border-gray); padding-top: 20px; text-align: left;">
+              <div style="font-weight: 700; font-size: 0.8rem; color: var(--teal-light); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Niches Covered:</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="/industries/real-estate.html#realtors" class="niche-tag">Real Estate Agents</a>
+                <a href="/industries/real-estate.html#brokers" class="niche-tag">Brokers</a>
+                <a href="/industries/real-estate.html#property-developers" class="niche-tag">Property Developers</a>
+                <a href="/industries/real-estate.html#property-managers" class="niche-tag">Landlords</a>
+                <a href="/industries/real-estate.html#property-managers" class="niche-tag">Property Managers</a>
+                <a href="/industries/real-estate.html#appraisers" class="niche-tag">Appraisers</a>
+                <a href="/industries/real-estate.html#real-estate-investors" class="niche-tag">Real Estate Holdcos</a>
+                <a href="/industries/real-estate.html#real-estate-investors" class="niche-tag">Property Investors</a>
+              </div>
             </div>
             <a href="/industries/real-estate.html" class="btn btn-primary" style="align-self: flex-start; border-radius: 50px; font-weight: 700; padding: 12px 35px;">Explore Real Estate Services</a>
           </div>
@@ -1422,8 +1466,21 @@
               <li><i class="fas fa-check"></i> Work-in-progress (WIP) accounting & bank compliance</li>
               <li><i class="fas fa-check"></i> WSIB and provincial workers' compensation reporting</li>
             </ul>
-            <div class="panel-seo-meta" style="margin-bottom: 25px; font-size: 0.88rem; border-top: 1px solid #f1f5f9; padding-top: 20px; text-align: left; line-height: 1.5;">
-              <div><strong>Niches Covered:</strong> <span style="color:#64748b;">General Contractors, Subcontractors, Home Builders, Framers, Electricians, Plumbers, Roofers, Painters, HVAC Technicians, Drywall Contractors, Landscapers.</span></div>
+            <div class="panel-seo-meta" style="margin-bottom: 30px; border-top: 1px solid var(--border-gray); padding-top: 20px; text-align: left;">
+              <div style="font-weight: 700; font-size: 0.8rem; color: var(--teal-light); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Niches Covered:</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="/industries/construction.html#general-contractors" class="niche-tag">General Contractors</a>
+                <a href="/industries/construction.html#subcontractors" class="niche-tag">Subcontractors</a>
+                <a href="/industries/construction.html#home-builders" class="niche-tag">Home Builders</a>
+                <a href="/industries/construction.html#framers" class="niche-tag">Framers</a>
+                <a href="/industries/construction.html#electricians" class="niche-tag">Electricians</a>
+                <a href="/industries/construction.html#plumbers" class="niche-tag">Plumbers</a>
+                <a href="/industries/construction.html#roofers-renovation-firms" class="niche-tag">Roofers</a>
+                <a href="/industries/construction.html#roofers-renovation-firms" class="niche-tag">Painters</a>
+                <a href="/industries/construction.html#subcontractors" class="niche-tag">HVAC Technicians</a>
+                <a href="/industries/construction.html#subcontractors" class="niche-tag">Drywall Contractors</a>
+                <a href="/industries/construction.html#subcontractors" class="niche-tag">Landscapers</a>
+              </div>
             </div>
             <a href="/industries/construction.html" class="btn btn-primary" style="align-self: flex-start; border-radius: 50px; font-weight: 700; padding: 12px 35px;">Explore Construction Services</a>
           </div>
@@ -1441,8 +1498,18 @@
               <li><i class="fas fa-check"></i> Real-time inventory valuation and COGS tracking</li>
               <li><i class="fas fa-check"></i> Cross-border sales tax compliance and duty tracking</li>
             </ul>
-            <div class="panel-seo-meta" style="margin-bottom: 25px; font-size: 0.88rem; border-top: 1px solid #f1f5f9; padding-top: 20px; text-align: left; line-height: 1.5;">
-              <div><strong>Niches Covered:</strong> <span style="color:#64748b;">Shopify Merchants, Amazon FBA Sellers, eBay Stores, WooCommerce Brands, Dropshipping Businesses, Digital Product Sellers, Wholesalers, Retail Stores.</span></div>
+            <div class="panel-seo-meta" style="margin-bottom: 30px; border-top: 1px solid var(--border-gray); padding-top: 20px; text-align: left;">
+              <div style="font-weight: 700; font-size: 0.8rem; color: var(--teal-light); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Niches Covered:</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="/industries/ecommerce.html#shopify-sellers" class="niche-tag">Shopify Merchants</a>
+                <a href="/industries/ecommerce.html#amazon-fba-sellers" class="niche-tag">Amazon FBA Sellers</a>
+                <a href="/industries/ecommerce.html#ebay-stores" class="niche-tag">eBay Stores</a>
+                <a href="/industries/ecommerce.html#woocommerce-brands" class="niche-tag">WooCommerce Brands</a>
+                <a href="/industries/ecommerce.html#dropshippers" class="niche-tag">Dropshipping</a>
+                <a href="/industries/ecommerce.html#digital-goods-sellers" class="niche-tag">Digital Sellers</a>
+                <a href="/industries/ecommerce.html#wholesalers" class="niche-tag">Wholesalers</a>
+                <a href="/industries/ecommerce.html" class="niche-tag">Retail Stores</a>
+              </div>
             </div>
             <a href="/industries/ecommerce.html" class="btn btn-primary" style="align-self: flex-start; border-radius: 50px; font-weight: 700; padding: 12px 35px;">Explore E-Commerce Services</a>
           </div>
@@ -1460,8 +1527,20 @@
               <li><i class="fas fa-check"></i> SR&amp;ED tax credit tracking and documentation</li>
               <li><i class="fas fa-check"></i> Virtual bookkeeping and automated invoicing systems</li>
             </ul>
-            <div class="panel-seo-meta" style="margin-bottom: 25px; font-size: 0.88rem; border-top: 1px solid #f1f5f9; padding-top: 20px; text-align: left; line-height: 1.5;">
-              <div><strong>Niches Covered:</strong> <span style="color:#64748b;">IT Consultants, Software Startups, Lawyers, Architects, Engineers, Design Studios, Marketing Agencies, Management Advisors, HR Specialists, Recruiters.</span></div>
+            <div class="panel-seo-meta" style="margin-bottom: 30px; border-top: 1px solid var(--border-gray); padding-top: 20px; text-align: left;">
+              <div style="font-weight: 700; font-size: 0.8rem; color: var(--teal-light); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Niches Covered:</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="/industries/professional-services.html#advisory-consultants" class="niche-tag">IT Consultants</a>
+                <a href="/industries/professional-services.html#startups" class="niche-tag">Software Startups</a>
+                <a href="/industries/professional-services.html#corporations" class="niche-tag">Lawyers</a>
+                <a href="/industries/professional-services.html#independent-practitioners" class="niche-tag">Architects</a>
+                <a href="/industries/professional-services.html#independent-practitioners" class="niche-tag">Engineers</a>
+                <a href="/industries/professional-services.html#sole-proprietors" class="niche-tag">Design Studios</a>
+                <a href="/industries/professional-services.html#partnerships" class="niche-tag">Marketing Agencies</a>
+                <a href="/industries/professional-services.html#advisory-consultants" class="niche-tag">Management Advisors</a>
+                <a href="/industries/professional-services.html#sole-proprietors" class="niche-tag">HR Specialists</a>
+                <a href="/industries/professional-services.html#sole-proprietors" class="niche-tag">Recruiters</a>
+              </div>
             </div>
             <a href="/industries/professional-services.html" class="btn btn-primary" style="align-self: flex-start; border-radius: 50px; font-weight: 700; padding: 12px 35px;">Explore Professional Services</a>
           </div>
@@ -1479,8 +1558,20 @@
               <li><i class="fas fa-check"></i> Food, beverage, and labor cost variance reports</li>
               <li><i class="fas fa-check"></i> Vendor payment management (Accounts Payable)</li>
             </ul>
-            <div class="panel-seo-meta" style="margin-bottom: 25px; font-size: 0.88rem; border-top: 1px solid #f1f5f9; padding-top: 20px; text-align: left; line-height: 1.5;">
-              <div><strong>Niches Covered:</strong> <span style="color:#64748b;">Fine Dining Restaurants, Cafes, Coffee Shops, Bakeries, Dessert Parlors, Catering Services, Fast Food Franchises, Bars, Pubs, Lounges, Food Trucks.</span></div>
+            <div class="panel-seo-meta" style="margin-bottom: 30px; border-top: 1px solid var(--border-gray); padding-top: 20px; text-align: left;">
+              <div style="font-weight: 700; font-size: 0.8rem; color: var(--teal-light); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Niches Covered:</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="/industries/restaurants.html#fine-dining" class="niche-tag">Fine Dining</a>
+                <a href="/industries/restaurants.html#cafes" class="niche-tag">Cafes</a>
+                <a href="/industries/restaurants.html#cafes" class="niche-tag">Coffee Shops</a>
+                <a href="/industries/restaurants.html#bakeries" class="niche-tag">Bakeries</a>
+                <a href="/industries/restaurants.html#bakeries" class="niche-tag">Dessert Parlors</a>
+                <a href="/industries/restaurants.html#catering-services" class="niche-tag">Catering Services</a>
+                <a href="/industries/restaurants.html#franchises" class="niche-tag">Fast Food Franchises</a>
+                <a href="/industries/restaurants.html#bars-pubs" class="niche-tag">Bars &amp; Pubs</a>
+                <a href="/industries/restaurants.html#bars-pubs" class="niche-tag">Lounges</a>
+                <a href="/industries/restaurants.html#food-trucks" class="niche-tag">Food Trucks</a>
+              </div>
             </div>
             <a href="/industries/restaurants.html" class="btn btn-primary" style="align-self: flex-start; border-radius: 50px; font-weight: 700; padding: 12px 35px;">Explore Restaurant Services</a>
           </div>
@@ -1498,8 +1589,18 @@
               <li><i class="fas fa-check"></i> Multi-warehouse inventory accounting controls</li>
               <li><i class="fas fa-check"></i> Fleet expense monitoring and logbook checks</li>
             </ul>
-            <div class="panel-seo-meta" style="margin-bottom: 25px; font-size: 0.88rem; border-top: 1px solid #f1f5f9; padding-top: 20px; text-align: left; line-height: 1.5;">
-              <div><strong>Niches Covered:</strong> <span style="color:#64748b;">Product Manufacturers, Food Processors, Tool &amp; Die Shops, Chemical Plants, Textile Manufacturers, Wholesalers, Distributors, Cargo &amp; Transport Firms.</span></div>
+            <div class="panel-seo-meta" style="margin-bottom: 30px; border-top: 1px solid var(--border-gray); padding-top: 20px; text-align: left;">
+              <div style="font-weight: 700; font-size: 0.8rem; color: var(--teal-light); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Niches Covered:</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="/industries/manufacturing.html#product-manufacturers" class="niche-tag">Product Manufacturers</a>
+                <a href="/industries/manufacturing.html#food-processors" class="niche-tag">Food Processors</a>
+                <a href="/industries/manufacturing.html#tool-die-shops" class="niche-tag">Tool &amp; Die Shops</a>
+                <a href="/industries/manufacturing.html#chemical-plants" class="niche-tag">Chemical Plants</a>
+                <a href="/industries/manufacturing.html#textile-mills" class="niche-tag">Textile Mills</a>
+                <a href="/industries/manufacturing.html#wholesalers" class="niche-tag">Wholesalers</a>
+                <a href="/industries/manufacturing.html#distributors" class="niche-tag">Distributors</a>
+                <a href="/industries/manufacturing.html#cargo-transport-firms" class="niche-tag">Cargo &amp; Transport</a>
+              </div>
             </div>
             <a href="/industries/manufacturing.html" class="btn btn-primary" style="align-self: flex-start; border-radius: 50px; font-weight: 700; padding: 12px 35px;">Explore Manufacturing Services</a>
           </div>
@@ -1517,8 +1618,17 @@
               <li><i class="fas fa-check"></i> T1044 Non-Profit Organization Return filing</li>
               <li><i class="fas fa-check"></i> Board audit assistance & donor report packs</li>
             </ul>
-            <div class="panel-seo-meta" style="margin-bottom: 25px; font-size: 0.88rem; border-top: 1px solid #f1f5f9; padding-top: 20px; text-align: left; line-height: 1.5;">
-              <div><strong>Niches Covered:</strong> <span style="color:#64748b;">Registered Charities, Community Foundations, Social Advocacy Groups, Healthcare Foundations, Professional Associations, Trade Unions, Sports &amp; Recreation Clubs.</span></div>
+            <div class="panel-seo-meta" style="margin-bottom: 30px; border-top: 1px solid var(--border-gray); padding-top: 20px; text-align: left;">
+              <div style="font-weight: 700; font-size: 0.8rem; color: var(--teal-light); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Niches Covered:</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="/industries/non-profit.html#registered-charities" class="niche-tag">Registered Charities</a>
+                <a href="/industries/non-profit.html#community-foundations" class="niche-tag">Community Foundations</a>
+                <a href="/industries/non-profit.html#social-advocacy-groups" class="niche-tag">Social Advocacy</a>
+                <a href="/industries/non-profit.html#healthcare-foundations" class="niche-tag">Healthcare Foundations</a>
+                <a href="/industries/non-profit.html#professional-associations" class="niche-tag">Professional Associations</a>
+                <a href="/industries/non-profit.html#trade-unions" class="niche-tag">Trade Unions</a>
+                <a href="/industries/non-profit.html#sports-recreation-clubs" class="niche-tag">Sports &amp; Rec Clubs</a>
+              </div>
             </div>
             <a href="/industries/non-profit.html" class="btn btn-primary" style="align-self: flex-start; border-radius: 50px; font-weight: 700; padding: 12px 35px;">Explore Non-Profit Services</a>
           </div>

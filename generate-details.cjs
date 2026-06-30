@@ -2097,7 +2097,7 @@ industries.forEach(ind => {
         </div>
         <div class="subsector-card-grid">
           ${subsectorsWithIcons.map(sub => `
-            <div class="subsector-hover-card">
+            <div class="subsector-hover-card" id="${sub.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">
               <i class="fas ${sub.icon}"></i>
               <h4>${sub.name}</h4>
             </div>
