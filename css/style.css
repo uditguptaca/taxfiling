@@ -2742,37 +2742,38 @@ p {
   bottom: 12%;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
   z-index: 10;
-  background-color: #F2C94C;
-  padding: 8px;
+  background-color: var(--color-manilla);
+  padding: 6px;
   border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  border: 1.5px solid #E2B93C;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border: 1.5px solid var(--color-kraft);
+  width: 230px;
 }
 
 .hero-badge-item {
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: 4px;
   color: #ffffff !important;
-  font-size: 0.74rem;
+  font-size: 0.68rem;
   font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 8px;
-  border: 1px solid rgba(255,255,255,0.15);
+  gap: 6px;
+  border: 1px solid rgba(255,255,255,0.12);
   white-space: nowrap;
-  width: 250px;
+  width: 100%;
 }
 
 .hero-badge-item i {
-  font-size: 0.95rem;
-  width: 18px;
+  font-size: 0.85rem;
+  width: 16px;
   text-align: center;
 }
 
 .badge-orange {
-  background-color: #E04F2F !important;
+  background-color: var(--color-bookcloth) !important;
 }
 
 .badge-blue {
@@ -2784,7 +2785,7 @@ p {
 }
 
 .badge-dark {
-  background-color: #2D3250 !important;
+  background-color: var(--color-slate-dark) !important;
 }
 
 /* Refund Floating Card */
