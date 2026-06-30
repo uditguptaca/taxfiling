@@ -1318,7 +1318,7 @@ const getIndustrySpecializations = (indSlug, indName) => {
   return `
     <h3 class="mt-40" style="font-size: 1.6rem; font-weight: 800; color: var(--dark-green); margin-bottom: 25px; text-align: left;"><i class="fas fa-bullseye" style="color:var(--primary); margin-right: 10px;"></i> Our Industry Specializations</h3>
     <div class="specializations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; margin-bottom: 40px; text-align: left;">
-      ${specs.map(spec => {
+      ${specs.map((spec, idx) => {
         const isDark = spec.color === 'card-slate' || spec.color === 'card-bookcloth';
         const titleColor = isDark ? '#fff' : 'var(--dark-green)';
         const descColor = isDark ? 'rgba(255,255,255,0.9)' : 'var(--body-text-light)';
@@ -1326,18 +1326,58 @@ const getIndustrySpecializations = (indSlug, indName) => {
         const iconColor = isDark ? '#fff' : 'rgb(251, 119, 13)';
         
         return `
-          <div class="spec-card ${spec.color}" style="padding: 24px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; border: 1px solid rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; height: 100%;">
-            <div class="spec-icon" style="background: ${iconBg}; color: ${iconColor}; width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.4rem;">
-              <i class="fas ${spec.icon}"></i>
+          <div class="spec-card ${spec.color}" data-index="${idx}" style="padding: 20px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(0,0,0,0.03); transition: all 0.3s ease; cursor: pointer; min-height: 110px; overflow: hidden; position: relative;">
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <div class="spec-icon" style="background: ${iconBg}; color: ${iconColor}; width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem;">
+                <i class="fas ${spec.icon}"></i>
+              </div>
+              <h4 style="font-size: 1rem; font-weight: 700; margin: 0; color: ${titleColor}; line-height: 1.3;">${spec.title}</h4>
             </div>
-            <div>
-              <h4 style="font-size: 1.1rem; font-weight: 700; margin: 0 0 8px; color: ${titleColor};">${spec.title}</h4>
-              <p style="font-size: 0.9rem; margin: 0; line-height: 1.5; color: ${descColor};">${spec.desc}</p>
+            
+            <div class="spec-collapse" style="max-height: 0px; overflow: hidden; transition: max-height 0.3s ease; margin-top: 5px;">
+              <p style="font-size: 0.88rem; margin: 0; line-height: 1.5; color: ${descColor}; padding-top: 10px;">${spec.desc}</p>
+            </div>
+            
+            <div style="display: flex; align-items: center; margin-top: 15px; padding-top: 10px; border-top: 1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)'};">
+              <span class="read-more-btn" style="font-size: 0.82rem; font-weight: 700; color: ${isDark ? '#FAF8F5' : 'var(--primary)'}; display: flex; align-items: center; gap: 6px;">
+                Read More <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s ease;"></i>
+              </span>
             </div>
           </div>
         `;
       }).join('')}
     </div>
+
+    <script>
+      (function() {
+        const initSpecCollapses = () => {
+          const cards = document.querySelectorAll('.spec-card');
+          cards.forEach(card => {
+            card.addEventListener('click', (e) => {
+              const collapse = card.querySelector('.spec-collapse');
+              const btn = card.querySelector('.read-more-btn');
+              const isExpanded = card.classList.contains('expanded');
+              
+              if (isExpanded) {
+                card.classList.remove('expanded');
+                collapse.style.maxHeight = '0px';
+                btn.innerHTML = 'Read More <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s ease;"></i>';
+              } else {
+                card.classList.add('expanded');
+                collapse.style.maxHeight = collapse.scrollHeight + 'px';
+                btn.innerHTML = 'Read Less <i class="fas fa-chevron-up" style="font-size: 0.7rem; transition: transform 0.3s ease; transform: rotate(180deg);"></i>';
+              }
+            });
+          });
+        };
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initSpecCollapses);
+        } else {
+          initSpecCollapses();
+        }
+      })();
+    </script>
   `;
 };
 
