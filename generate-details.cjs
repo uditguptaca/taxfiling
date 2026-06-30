@@ -620,20 +620,31 @@ const getPricingSection = (indSlug = '') => {
   `;
 };
 
-const getCaseStudiesSection = (indSlug = '') => {
+const getCaseStudiesSection = (indSlug) => {
   const isHealthcare = indSlug === 'healthcare';
   
   const cs1Title = isHealthcare ? 'CRA Audit for MPCs – Saving Our Medical Clinic Over $70,000' : 'CRA Audit for GST/HST – Saving Our Client Over $70,000';
   const cs1Desc = isHealthcare ? 'A family medicine practice faced a $75,000 audit regarding overhead expenses split with associates. We defended their shareholder loan agreements and corporate division of income, reducing the reassessment to $3,500.' : 'A mid-sized e-commerce business faced a $75,000 CRA GST/HST audit. We identified filing errors and restructured their compliance. The CRA reassessed and reduced the total liability to $3,500, saving the client $71,500.';
+  const cs1Long = isHealthcare ? 'In-depth review of clinic financial statements revealed that the CRA was disputing overhead allocation splits (40/60) with associate physicians, attempting to classify the revenue as clinic business income subject to full HST. Our CPA team gathered the overhead agreement contracts, documented direct expenses, and proved that the splits complied with CRA medical practitioner rules. We successfully defended the structures, slashing the reassessment from $75,000 to just $3,500.' : 'A mid-sized Canadian e-commerce business was audited by the CRA for GST/HST filings over a 3-year period. The auditor proposed a $75,000 reassessment based on mismatched input tax credits (ITCs) and shipping logs. We audited all invoices, matched shipping records to provincial tax rules, and submitted structured reconciliations. The CRA reduced the reassessment to $3,500, saving the client $71,500.';
   
   const cs2Title = isHealthcare ? 'CRA Audit for Personal Tax – Defending Malpractice Expense Claims' : 'CRA Audit for Personal Tax – Avoiding Unfair Tax Adjustments';
   const cs2Desc = isHealthcare ? 'A surgeon was audited on $20,000 of professional malpractice fees and travel expenses. We gathered clinic billing documentation and defended the deductions. The CRA accepted 90% of claims.' : 'A self-employed IT consultant faced an audit on $20,000 of expense claims. We gathered documentation and defended the deductions. The CRA accepted 90% of claims, saving the client $18,800.';
+  const cs2Long = isHealthcare ? 'The surgeon faced a desk audit targeting professional deductions including malpractice insurance (CMPA premiums), travel expenses between surgical facilities, and continuing medical education. We compiled official CMPA receipts, provincial billing log summaries, and travel logs matching surgical rotas. We submitted a detailed response to the auditor. 90% of the claims were accepted without adjustments.' : 'An IT consultant was audited for claiming $20,000 in home office, vehicle, and subcontractor expenses. We compiled home floor plans, travel mileage logs, and subcontractor invoices with proof of payments. The auditor accepted 90% of the deductions, saving the client $18,800.';
   
   const cs3Title = isHealthcare ? 'Voluntary Disclosure – Restoring Clinic Compliance Status' : 'Voluntary Disclosure – Avoiding CRA Penalties';
   const cs3Desc = isHealthcare ? 'A dental clinic missed filings for five years due to EMR system transition errors. We submitted overdue files under VDP, successfully waiving $50,000 in penalties.' : 'A small business owner missed filings for five years, facing heavy penalties. We filed under the Voluntary Disclosure Program (VDP). The CRA waived all penalties, saving the client over $50,000.';
+  const cs3Long = isHealthcare ? 'Due to a chaotic transition from legacy software to a new Oscar EMR billing system, a dental clinic failed to file corporate income tax returns (T2) and payroll reconciliation summaries (T4/T5) for five years. Facing imminent CRA enforcement and massive penalties, we reconciled 60 months of billing journals, submitted a formal Voluntary Disclosures Program (VDP) application, and secured a full waiver of $50,000 in penalties.' : 'A small business had missed filing corporate tax returns for five consecutive years due to severe personal issues. We prepared all backlogged accounting records, completed filings under the CRA\'s Voluntary Disclosures Program (VDP), and successfully waived all late-filing penalties, saving over $50,000.';
   
   const cs4Title = isHealthcare ? 'Filing Overdue Corporate Tax returns – Medical Professional Corp Refund' : 'Filing 10 Years of Late Tax Returns – Big Refund Secured';
   const cs4Desc = isHealthcare ? 'A specialist doctor hadn\'t filed corporate tax returns for their MPC since inception. We compiled backlogged bookkeeping and secured a $28,000 tax refund.' : 'A contractor hadn\'t filed tax returns for 10 years and expected a massive debt. We filed all overdue returns, claiming missed tax credits. Rather than owing, they received a $28,000 refund.';
+  const cs4Long = isHealthcare ? 'A specialist physician had incorporated an MPC but neglected to file corporate tax returns since inception, assuming no tax was due because the clinic billed only exempt medical services. We compiled the corporate records, categorized the clinic expenses, set up proper shareholder dividend/salary allocations, and filed the backlogged returns. The filing revealed substantial tax overpayments, resulting in a $28,000 tax refund.' : 'A construction contractor had not filed personal or corporate tax returns for 10 years and expected a massive CRA debt. We reconstructed their books from bank statements, claimed historical business expense deductions and GST/HST credits, and EFILED the returns. Instead of owing, they received a $28,000 refund.';
+
+  const cases = [
+    { title: cs1Title, desc: cs1Desc, long: cs1Long, color: 'card-manilla', isDark: false },
+    { title: cs2Title, desc: cs2Desc, long: cs2Long, color: 'card-kraft', isDark: false },
+    { title: cs3Title, desc: cs3Desc, long: cs3Long, color: 'card-slate', isDark: true },
+    { title: cs4Title, desc: cs4Desc, long: cs4Long, color: 'card-cloud', isDark: false }
+  ];
 
   return `
   <section class="section">
@@ -643,34 +654,54 @@ const getCaseStudiesSection = (indSlug = '') => {
         <p>See how our expert tax and accounting services have helped corporations and businesses save money, stay compliant.</p>
         <div class="accent-line"></div>
       </div>
-      <div class="grid-4" style="align-items: stretch;">
-        <div class="case-study-card card-manilla">
-          <h4>Case Study 1</h4>
-          <h5>${cs1Title}</h5>
-          <p>${cs1Desc}</p>
-          <a href="#" class="btn btn-outline btn-sm">Download PDF</a>
-        </div>
-        <div class="case-study-card card-kraft">
-          <h4>Case Study 2</h4>
-          <h5>${cs2Title}</h5>
-          <p>${cs2Desc}</p>
-          <a href="#" class="btn btn-outline btn-sm">Download PDF</a>
-        </div>
-        <div class="case-study-card card-slate">
-          <h4 style="color: var(--color-bookcloth) !important;">Case Study 3</h4>
-          <h5>${cs3Title}</h5>
-          <p>${cs3Desc}</p>
-          <a href="#" class="btn btn-outline-white btn-sm">Download PDF</a>
-        </div>
-        <div class="case-study-card card-cloud">
-          <h4>Case Study 4</h4>
-          <h5>${cs4Title}</h5>
-          <p>${cs4Desc}</p>
-          <a href="#" class="btn btn-outline btn-sm">Download PDF</a>
-        </div>
+      <div class="grid-4" style="align-items: start;">
+        ${cases.map((cs, idx) => `
+          <div class="case-study-card ${cs.color}" style="padding: 20px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: flex-start; gap: 12px; border: 1px solid rgba(0,0,0,0.03); transition: all 0.3s ease; cursor: pointer; min-height: auto; position: relative;">
+            <h4 style="${cs.isDark ? 'color: var(--color-bookcloth) !important;' : ''}">Case Study ${idx + 1}</h4>
+            <h5 style="font-size: 1rem; font-weight: 700; margin: 0; line-height: 1.3;">${cs.title}</h5>
+            <p style="font-size: 0.86rem; margin: 0; line-height: 1.45;">${cs.desc}</p>
+            <p class="cs-long-text" style="font-size: 0.86rem; margin: 0; line-height: 1.45; display: none; margin-top: 5px;">${cs.long}</p>
+            
+            <div style="margin-top: auto; padding-top: 8px; border-top: 1px solid ${cs.isDark ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.06)'};">
+              <span class="cs-read-more-btn" style="font-size: 0.82rem; font-weight: 700; color: ${cs.isDark ? '#FAF8F5' : 'var(--primary)'}; display: flex; align-items: center; gap: 6px;">
+                Read More <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s ease;"></i>
+              </span>
+            </div>
+          </div>
+        `).join('')}
       </div>
     </div>
   </section>
+
+  <script>
+    (function() {
+      const initCaseStudies = () => {
+        const cards = document.querySelectorAll('.case-study-card');
+        cards.forEach(card => {
+          card.addEventListener('click', () => {
+            const longText = card.querySelector('.cs-long-text');
+            const btn = card.querySelector('.cs-read-more-btn');
+            const isExpanded = card.classList.contains('expanded');
+            
+            if (isExpanded) {
+              card.classList.remove('expanded');
+              longText.style.display = 'none';
+              btn.innerHTML = 'Read More <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s ease;"></i>';
+            } else {
+              card.classList.add('expanded');
+              longText.style.display = 'block';
+              btn.innerHTML = 'Read Less <i class="fas fa-chevron-up" style="font-size: 0.7rem; transition: transform 0.3s ease;"></i>';
+            }
+          });
+        });
+      };
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCaseStudies);
+      } else {
+        initCaseStudies();
+      }
+    })();
+  </script>
   `;
 };
 
