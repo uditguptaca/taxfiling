@@ -1122,10 +1122,10 @@ const getIndustryServices = (slug, name) => {
         color: 'rgba(251, 119, 13, 0.1)',
         iconColor: 'rgb(251, 119, 13)',
         bullets: [
-          'Clinic bank and credit card reconciliations',
-          'Patient management software reports (Jane App, Oscar)',
-          'Detailed monthly clinical financial statements',
-          'Division of income tracking for clinic associates'
+          'Clinic bank & credit card reconciliations',
+          'Jane App & Oscar EMR integrations',
+          'Monthly clinical financial statements',
+          'Associate income tracking & reporting'
         ]
       },
       {
@@ -1134,10 +1134,10 @@ const getIndustryServices = (slug, name) => {
         color: 'rgba(34, 197, 94, 0.1)',
         iconColor: 'rgb(34, 197, 94)',
         bullets: [
-          'T2 Corporate returns for Medical Professional Corporations',
-          'GST/HST exemption review and mixed billing audits',
-          'Input Tax Credit (ITC) optimization on overhead',
-          'CRA audit defense representation and review compliance'
+          'T2 corporate returns for MPCs',
+          'GST/HST mixed-billing exemption reviews',
+          'Input Tax Credit (ITC) optimization',
+          'CRA audit defense & compliance'
         ]
       },
       {
@@ -1146,10 +1146,10 @@ const getIndustryServices = (slug, name) => {
         color: 'rgba(59, 130, 246, 0.1)',
         iconColor: 'rgb(59, 130, 246)',
         bullets: [
-          'Full-service payroll for physicians, nurses & clinic staff',
-          'Source deductions, WSIB, and EHT calculations',
-          'T4, T4A slips and Record of Employment (ROE) filing',
-          'Custom employee payslip and tax document portal'
+          'Physician & clinic staff payroll',
+          'Source deductions, WSIB & EHT filings',
+          'T4, T4A & ROE filing compliance',
+          'Employee payslip & tax document portal'
         ]
       },
       {
@@ -1158,10 +1158,10 @@ const getIndustryServices = (slug, name) => {
         color: 'rgba(168, 85, 247, 0.1)',
         iconColor: 'rgb(168, 85, 247)',
         bullets: [
-          'Clinic overhead costing and cost-reduction audits',
-          'Associate fee-split structure design and checks',
-          'Annual budgeting and clinic cash flow forecasting',
-          'Practice transition and medical partnership buy-ins'
+          'Clinic overhead & cost-reduction audits',
+          'Associate fee-split structure designs',
+          'Budgeting & cash flow forecasting',
+          'Practice transitions & partner buy-ins'
         ]
       },
       {
@@ -1170,10 +1170,10 @@ const getIndustryServices = (slug, name) => {
         color: 'rgba(236, 72, 153, 0.1)',
         iconColor: 'rgb(236, 72, 153)',
         bullets: [
-          'Notice to Reader (NTR) Compilation financial statements',
-          'Corporate setup and clinic incorporation tax structures',
-          'QuickBooks Online & Xero clinic software integrations',
-          'Shareholders\' agreement tax planning & compliance'
+          'Notice to Reader (NTR) compilations',
+          'Clinic corporate setup & structuring',
+          'QuickBooks & Xero integrations',
+          'Shareholders\' agreement tax planning'
         ]
       },
       {
@@ -1182,10 +1182,10 @@ const getIndustryServices = (slug, name) => {
         color: 'rgba(251, 119, 13, 0.1)',
         iconColor: 'rgb(251, 119, 13)',
         bullets: [
-          'Self-employed doctor and clinical associate T1 returns',
-          'Malpractice dues and professional expenses deductions',
-          'US/cross-border returns for practicing practitioners',
-          'Investment income tax planning inside MPC holding corps'
+          'T1 returns for doctors & associates',
+          'Malpractice & professional expense claims',
+          'US/cross-border returns for practitioners',
+          'Holding company tax planning'
         ]
       }
     ];
@@ -3495,7 +3495,7 @@ industries.forEach(ind => {
     ${getGoogleReviewsMarquee()}
 
     <!-- 3. INTRO BLOCK -->
-    <section class="section" style="padding-bottom: 40px; background-color: var(--color-ivory-light);">
+    <section class="section" style="padding: 60px 0; background-color: var(--color-ivory-med); border-bottom: 1px solid var(--border-gray);">
       <div class="container">
         <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--dark-green); line-height: 1.25;">Trusted Accounting &amp; Tax Solutions for ${ind.name} Sector</h2>
         <p style="font-size: 1.15rem; line-height: 1.65; color: var(--body-text-light); margin-top: 15px; margin-bottom: 30px;">Our Accounting Firm provides fully compliant personal (T1) and corporate (T2) tax returns, bank reconciliations, bookkeeping, and payroll support customized for professionals and businesses operating in the ${ind.name.toLowerCase()} industry.</p>
@@ -3505,7 +3505,7 @@ industries.forEach(ind => {
     </section>
 
     <!-- 4. CORE SUB-SERVICES FEATURES -->
-    <section class="section pt-0">
+    <section class="section" style="padding: 60px 0; background-color: var(--white);">
       <div class="container">
         <div class="section-header">
           <h2>Core Sub-Services &amp; Features</h2>
