@@ -308,7 +308,7 @@ const getPricingSection = (indSlug = '') => {
   <section class="section section-gray" id="pricing" style="padding: 80px 0; background-color: var(--color-ivory-med); border-top: 1px solid var(--border-gray); border-bottom: 1px solid var(--border-gray);">
     <div class="container">
       <div class="section-header" style="margin-bottom: 50px;">
-        <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--dark-green);">${isHealthcare ? 'Canada Healthcare Tax &amp; Accounting — Fixed Pricing' : 'Canada Tax &amp; Accounting — Fixed Pricing'}</h2>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: var(--dark-green); letter-spacing: -0.5px;">${isHealthcare ? 'Canada Healthcare Fixed Pricing' : 'Canada Tax Fixed Pricing'}</h2>
         <p style="font-size: 1.1rem; color: var(--body-text-light); max-width: 700px; margin: 15px auto 0;">Transparent, fixed-fee pricing with zero hidden fees. Pay only after your work is completed and filed.</p>
         <div class="accent-line"></div>
       </div>
@@ -678,12 +678,12 @@ const getCaseStudiesSection = (indSlug = '') => {
   `;
 };
 
-const getTeamSection = () => `
+const getTeamSection = (isHealthcare = false) => `
   <section class="section section-gray">
     <div class="container">
       <div class="section-header">
-        <h2>Our Expert CPA &amp; Accounting Team</h2>
-        <p>Our Partners Are Alumni of the World's Top Accounting and Tax Institutions</p>
+        <h2>${isHealthcare ? 'Clinic Expert CPA &amp; Accounting Team' : 'Our Expert CPA &amp; Accounting Team'}</h2>
+        <p>${isHealthcare ? 'Our Partners Are Alumni of the World\'s Top Medical &amp; Corporate Tax Institutions' : 'Our Partners Are Alumni of the World\'s Top Accounting and Tax Institutions'}</p>
         <div class="accent-line"></div>
       </div>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:20px;">
@@ -2062,7 +2062,7 @@ const getIndustryServices = (slug, name) => {
       align-items: center;
       justify-content: center;
       font-size: 1.1rem;
-      background: rgba(251, 119, 13, 0.1);
+      background: rgba(204, 120, 92, 0.1);
       color: var(--primary);
       transition: all 0.3s ease;
       flex-shrink: 0;
@@ -2090,8 +2090,9 @@ const getIndustryServices = (slug, name) => {
       opacity: 0;
       transition: opacity 0.4s ease;
       flex-direction: column;
-      gap: 25px;
-      height: 100%;
+      justify-content: flex-start;
+      gap: 20px;
+      height: auto;
     }
     .showcase-panel.active {
       display: flex;
@@ -2423,14 +2424,14 @@ const getGoogleReviewsMarquee = () => `
   </section>
 `;
 
-const getLocationsSelectorSection = () => {
+const getLocationsSelectorSection = (isHealthcare = false) => {
   return `
   <!-- Let's Connect / Interactive Office Locator Widget -->
   <section class="section" id="connect" style="background: var(--white); border-top: 1px solid var(--border-gray);">
     <div class="container">
       <div class="section-header">
-        <h2>Accounting Firm &amp; Tax Filing Locations</h2>
-        <p>Use our office finder below to select your nearest tax professional or search by city name.</p>
+        <h2>${isHealthcare ? 'Clinic Accounting &amp; Tax Locations' : 'Accounting Firm &amp; Tax Filing Locations'}</h2>
+        <p>${isHealthcare ? 'Use our office finder below to select your nearest medical CPA tax planner.' : 'Use our office finder below to select your nearest tax professional or search by city name.'}</p>
         <div class="accent-line"></div>
       </div>
 
@@ -4350,13 +4351,13 @@ industries.forEach(ind => {
     ${getCaseStudiesSection(ind.slug)}
 
     <!-- 13. TEAM SECTION -->
-    ${getTeamSection()}
+    ${getTeamSection(isHealthcare)}
 
     <!-- 13b. SPECIALIZED INDUSTRIES TABS -->
     ${getSpecializedIndustriesSection()}
 
     <!-- 13c. LOCATIONS SELECTOR WIDGET -->
-    ${getLocationsSelectorSection()}
+    ${getLocationsSelectorSection(isHealthcare)}
 
     <!-- 14. FAQ SECTION -->
     ${getFaqSection(ind.name, industryFaqs)}
