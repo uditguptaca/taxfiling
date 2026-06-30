@@ -2919,7 +2919,11 @@ industries.forEach(ind => {
       'Veterinary Clinics', 
       'Specialists & Surgeons', 
       'Nurses', 
-      'Mental Health Counselors'
+      'Mental Health Counselors',
+      'Massage Therapists & RMTs',
+      'Podiatrists & Foot Clinics',
+      'Midwives & OB/GYNs',
+      'Occupational Therapists'
     ];
     subsectorsWithIcons = [
       { name: 'Medical Clinics', icon: 'fa-clinic-medical' },
@@ -2932,7 +2936,11 @@ industries.forEach(ind => {
       { name: 'Veterinary Clinics', icon: 'fa-paw' },
       { name: 'Specialists & Surgeons', icon: 'fa-briefcase-medical' },
       { name: 'Nurses', icon: 'fa-user-nurse' },
-      { name: 'Mental Health Counselors', icon: 'fa-brain' }
+      { name: 'Mental Health Counselors', icon: 'fa-brain' },
+      { name: 'Massage Therapists & RMTs', icon: 'fa-hands' },
+      { name: 'Podiatrists & Foot Clinics', icon: 'fa-shoe-prints' },
+      { name: 'Midwives & OB/GYNs', icon: 'fa-baby' },
+      { name: 'Occupational Therapists', icon: 'fa-hand-holding-medical' }
     ];
   } else if (ind.slug === 'real-estate') {
     subsectorsList = ['Realtors', 'Brokers', 'Property Developers', 'Property Managers', 'Appraisers', 'Real Estate Investors', 'Leasing Agencies'];
