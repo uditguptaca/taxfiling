@@ -376,12 +376,35 @@
       }
       @media (max-width: 768px) {
         .subsector-card-grid {
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(4, 1fr);
+          gap: 8px;
+        }
+        .subsector-hover-card {
+          height: 95px;
+          padding: 10px 4px;
+          border-radius: 12px;
+        }
+        .subsector-hover-card i {
+          font-size: 1.3rem;
+          margin-bottom: 5px;
+        }
+        .subsector-hover-card h4 {
+          font-size: 0.72rem !important;
+          line-height: 1.25 !important;
+          margin: 0 !important;
         }
       }
-      @media (max-width: 576px) {
+      @media (max-width: 480px) {
         .subsector-card-grid {
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(3, 1fr);
+          gap: 6px;
+        }
+        .subsector-hover-card {
+          height: 90px;
+          padding: 8px 4px;
+        }
+        .subsector-hover-card h4 {
+          font-size: 0.65rem !important;
         }
       }
       .subsector-hover-card {
