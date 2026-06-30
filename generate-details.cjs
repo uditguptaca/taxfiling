@@ -2193,6 +2193,17 @@ const getIndustryServices = (slug, name) => {
     @media (max-width: 768px) {
       .showcase-container {
         grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+      }
+      .showcase-tabs {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+      }
+      .showcase-tab {
+        flex-shrink: 0;
       }
       .panel-bullets-grid {
         grid-template-columns: 1fr;
