@@ -1316,8 +1316,7 @@ const getIndustrySpecializations = (indSlug, indName) => {
   const specs = specsMap[indSlug] || defaultSpecs;
 
   return `
-    <h3 class="mt-40" style="font-size: 1.6rem; font-weight: 800; color: var(--dark-green); margin-bottom: 25px; text-align: left;"><i class="fas fa-bullseye" style="color:var(--primary); margin-right: 10px;"></i> Our Industry Specializations</h3>
-    <div class="specializations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; margin-bottom: 40px; text-align: left;">
+    <div class="specializations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 10px; margin-bottom: 40px; text-align: left;">
       ${specs.map((spec, idx) => {
         const isDark = spec.color === 'card-slate' || spec.color === 'card-bookcloth';
         const titleColor = isDark ? '#fff' : 'var(--dark-green)';
@@ -3607,18 +3606,18 @@ industries.forEach(ind => {
       'Occupational Therapists'
     ];
     subsectorsWithIcons = [
-      { name: 'Medical Clinics', icon: 'fa-clinic-medical' },
-      { name: 'Family Doctors & GPs', icon: 'fa-user-md' },
+      { name: 'Medical Clinics', icon: 'fa-house-medical' },
+      { name: 'Family Doctors & GPs', icon: 'fa-user-doctor' },
       { name: 'Dentists & Orthodontists', icon: 'fa-tooth' },
-      { name: 'Pharmacies', icon: 'fa-prescription-bottle-alt' },
+      { name: 'Pharmacies', icon: 'fa-pills' },
       { name: 'Chiropractors', icon: 'fa-bone' },
-      { name: 'Physiotherapists', icon: 'fa-accessibility' },
+      { name: 'Physiotherapists', icon: 'fa-child-reaching' },
       { name: 'Optometrists', icon: 'fa-eye' },
       { name: 'Veterinary Clinics', icon: 'fa-paw' },
-      { name: 'Specialists & Surgeons', icon: 'fa-briefcase-medical' },
+      { name: 'Specialists & Surgeons', icon: 'fa-user-doctor' },
       { name: 'Nurses', icon: 'fa-user-nurse' },
       { name: 'Mental Health Counselors', icon: 'fa-brain' },
-      { name: 'Massage Therapists & RMTs', icon: 'fa-hands' },
+      { name: 'Massage Therapists & RMTs', icon: 'fa-hands-holding' },
       { name: 'Podiatrists & Foot Clinics', icon: 'fa-shoe-prints' },
       { name: 'Midwives & OB/GYNs', icon: 'fa-baby' },
       { name: 'Occupational Therapists', icon: 'fa-hand-holding-medical' }
@@ -3893,73 +3892,47 @@ industries.forEach(ind => {
         color: #E2E8F0;
       }
       .subsector-card-grid {
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        gap: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
         margin-top: 30px;
-      }
-      @media (max-width: 1200px) {
-        .subsector-card-grid {
-          grid-template-columns: repeat(6, 1fr);
-        }
-      }
-      @media (max-width: 991px) {
-        .subsector-card-grid {
-          grid-template-columns: repeat(4, 1fr);
-        }
-      }
-      @media (max-width: 768px) {
-        .subsector-card-grid {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-      @media (max-width: 576px) {
-        .subsector-card-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
       }
       .subsector-hover-card {
         background: var(--white);
         border: 1px solid var(--border-gray);
-        border-radius: 12px;
-        padding: 24px 20px;
-        text-align: center;
+        border-radius: 50px;
+        padding: 10px 22px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
         position: relative;
-        overflow: hidden;
-      }
-      .subsector-hover-card::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0; height: 4px;
-        background: var(--primary);
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
-      }
-      .subsector-hover-card:hover::before {
-        transform: scaleX(1);
       }
       .subsector-hover-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-lg);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-sm);
         border-color: var(--primary);
+        background: var(--primary-light);
       }
       .subsector-hover-card i {
-        font-size: 2.2rem;
-        color: var(--dark-green);
-        margin-bottom: 15px;
+        font-size: 1.1rem;
+        color: var(--primary);
         transition: transform 0.3s;
       }
       .subsector-hover-card:hover i {
         transform: scale(1.1);
-        color: var(--primary);
       }
       .subsector-hover-card h4 {
-        font-size: 1rem;
+        font-size: 0.95rem;
         font-weight: 700;
         margin: 0;
         color: var(--dark-green);
+        white-space: nowrap;
       }
       @media (max-width: 991px) {
         .ind-hero-grid {
@@ -4023,8 +3996,7 @@ industries.forEach(ind => {
     <!-- 3. INTRO BLOCK -->
     <section class="section" style="padding: 60px 0; background-color: var(--color-ivory-med); border-bottom: 1px solid var(--border-gray);">
       <div class="container">
-        <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--dark-green); line-height: 1.25;">Trusted Accounting &amp; Tax Solutions for ${ind.name} Sector</h2>
-        <p style="font-size: 1.15rem; line-height: 1.65; color: var(--body-text-light); margin-top: 15px; margin-bottom: 30px;">Our Accounting Firm provides fully compliant personal (T1) and corporate (T2) tax returns, bank reconciliations, bookkeeping, and payroll support customized for professionals and businesses operating in the ${ind.name.toLowerCase()} industry.</p>
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--dark-green); line-height: 1.25; margin-bottom: 30px;">Trusted Accounting &amp; Tax Solutions for ${ind.name} Sector</h2>
         
         ${getIndustrySpecializations(ind.slug, ind.name)}
       </div>
