@@ -4008,6 +4008,31 @@ p {
   }
 }
 
+/* Software Logos RTL Marquee */
+.software-marquee-container-rtl {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.software-marquee-wrapper-rtl {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scroll-right-to-left 25s linear infinite;
+}
+
+@keyframes scroll-right-to-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+
 
 
 
