@@ -181,11 +181,11 @@ p {
 }
 
 .section-header h2 {
-  margin-bottom: 15px;
+  margin-bottom: 0;
 }
 
 .section-header p {
-  font-size: 1.05rem;
+  display: none;
 }
 
 .section-header .accent-line {
