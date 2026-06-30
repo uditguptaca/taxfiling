@@ -1424,7 +1424,7 @@ const getIndustrySpecializations = (indSlug, indName) => {
         const iconColor = isDark ? '#fff' : 'rgb(251, 119, 13)';
         
         return `
-          <div class="spec-card ${spec.color}" data-index="${idx}" style="padding: 20px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(0,0,0,0.03); transition: all 0.3s ease; cursor: pointer; min-height: 160px; overflow: hidden; position: relative;">
+          <div class="spec-card ${spec.color}" data-index="${idx}" style="padding: 20px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(0,0,0,0.03); transition: all 0.3s ease; cursor: pointer; min-height: auto; overflow: hidden; position: relative;">
             <div>
               <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
                 <div class="spec-icon" style="background: ${iconBg}; color: ${iconColor}; width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem;">
@@ -1432,7 +1432,7 @@ const getIndustrySpecializations = (indSlug, indName) => {
                 </div>
                 <h4 style="font-size: 1rem; font-weight: 700; margin: 0; color: ${titleColor}; line-height: 1.3;">${spec.title}</h4>
               </div>
-              <p class="spec-desc-text" style="font-size: 0.86rem; margin: 0; line-height: 1.45; color: ${descColor}; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${spec.desc}</p>
+              <p class="spec-desc-text" style="font-size: 0.86rem; margin: 0; line-height: 1.45; color: ${descColor}; display: none;">${spec.desc}</p>
             </div>
             
             <div style="display: flex; align-items: center; margin-top: 15px; padding-top: 10px; border-top: 1px solid ${isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)'};">
@@ -1457,14 +1457,11 @@ const getIndustrySpecializations = (indSlug, indName) => {
               
               if (isExpanded) {
                 card.classList.remove('expanded');
-                descText.style.display = '-webkit-box';
-                descText.style.webkitLineClamp = '2';
-                descText.style.webkitBoxOrient = 'vertical';
+                descText.style.display = 'none';
                 btn.innerHTML = 'Read More <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s ease;"></i>';
               } else {
                 card.classList.add('expanded');
                 descText.style.display = 'block';
-                descText.style.webkitLineClamp = 'none';
                 btn.innerHTML = 'Read Less <i class="fas fa-chevron-up" style="font-size: 0.7rem; transition: transform 0.3s ease; transform: rotate(180deg);"></i>';
               }
             });
@@ -1511,7 +1508,11 @@ const getIndustryServices = (slug, name) => {
           'Bank & card reconciliations',
           'Jane App & Oscar integrations',
           'Clinical financial statements',
-          'Associate income tracking'
+          'Associate income tracking',
+          'Overhead cost distribution reports',
+          'Monthly cash flow reporting',
+          'Clinic expense classification',
+          'Bookkeeping ledger reviews'
         ]
       },
       {
@@ -1523,7 +1524,11 @@ const getIndustryServices = (slug, name) => {
           'T2 corporate returns for MPCs',
           'Mixed-billing exemption reviews',
           'Input Tax Credit optimization',
-          'CRA audit defense & compliance'
+          'CRA audit defense & compliance',
+          'Shareholder loan monitoring',
+          'Corporate tax deferral planning',
+          'Holding company cash transfers',
+          'Salary vs dividend optimizations'
         ]
       },
       {
@@ -1535,7 +1540,11 @@ const getIndustryServices = (slug, name) => {
           'Physician & clinic payroll',
           'Source deductions & WSIB filings',
           'T4, T4A & ROE filing',
-          'Employee payslip portal'
+          'Employee payslip portal',
+          'Employer Health Tax (EHT) returns',
+          'Direct deposit setup & sweeps',
+          'CPP/EI clinical payroll audits',
+          'Record of Employment preparation'
         ]
       },
       {
@@ -1547,7 +1556,11 @@ const getIndustryServices = (slug, name) => {
           'Overhead & cost audits',
           'Associate fee-split designs',
           'Cash flow forecasting',
-          'Practice transition planning'
+          'Practice transition planning',
+          'Clinic buy-in valuation support',
+          'Financial performance dashboarding',
+          'Group clinic overhead reviews',
+          'Capital allocation advisories'
         ]
       },
       {
@@ -1559,7 +1572,11 @@ const getIndustryServices = (slug, name) => {
           'Notice to Reader compilations',
           'Clinic corporate setup',
           'QuickBooks & Xero setup',
-          'Shareholder tax planning'
+          'Shareholder tax planning',
+          'Trial balance adjustments',
+          'Year-end compilation engagement',
+          'General ledger setup & tuning',
+          'Retained earnings allocations'
         ]
       },
       {
@@ -1571,7 +1588,11 @@ const getIndustryServices = (slug, name) => {
           'T1 returns for doctors',
           'Malpractice expense claims',
           'US & cross-border tax returns',
-          'Holding company tax planning'
+          'Holding company tax planning',
+          'T5 dividend income tax filing',
+          'Capital gains exemption setup',
+          'Multi-province tax structures',
+          'Family trust tax allocations'
         ]
       },
       {
@@ -1583,7 +1604,11 @@ const getIndustryServices = (slug, name) => {
           'Audit of medical service exemptions',
           'Input Tax Credit (ITC) optimization',
           'GST/HST rebate & netfile filing',
-          'Provincial compliance & audits'
+          'Provincial compliance & audits',
+          'Mixed-use clinic ITC allocation',
+          'Real estate purchase tax rebates',
+          'CRA sales tax dispute responses',
+          'E-file tax status monitoring'
         ]
       }
     ];
