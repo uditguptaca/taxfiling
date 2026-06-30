@@ -1117,6 +1117,481 @@ const getMeetingCtaBox = (customTitle = null) => {
 `;
 };
 
+const getIndustryServices = (slug, name) => {
+  let cards = [];
+
+  if (slug === 'healthcare') {
+    cards = [
+      {
+        title: 'Bookkeeping & Clinic Reconciliations',
+        icon: 'fa-calculator',
+        color: 'rgba(251, 119, 13, 0.1)',
+        iconColor: 'rgb(251, 119, 13)',
+        bullets: [
+          'Clinic bank and credit card reconciliations',
+          'Patient management software reports (Jane App, Oscar)',
+          'Detailed monthly clinical financial statements',
+          'Division of income tracking for clinic associates'
+        ]
+      },
+      {
+        title: 'Corporate Tax for MPCs',
+        icon: 'fa-file-invoice-dollar',
+        color: 'rgba(34, 197, 94, 0.1)',
+        iconColor: 'rgb(34, 197, 94)',
+        bullets: [
+          'T2 Corporate returns for Medical Professional Corporations',
+          'GST/HST exemption review and mixed billing audits',
+          'Input Tax Credit (ITC) optimization on overhead',
+          'CRA audit defense representation and review compliance'
+        ]
+      },
+      {
+        title: 'Medical Payroll Services',
+        icon: 'fa-users',
+        color: 'rgba(59, 130, 246, 0.1)',
+        iconColor: 'rgb(59, 130, 246)',
+        bullets: [
+          'Full-service payroll for physicians, nurses & clinic staff',
+          'Source deductions, WSIB, and EHT calculations',
+          'T4, T4A slips and Record of Employment (ROE) filing',
+          'Custom employee payslip and tax document portal'
+        ]
+      },
+      {
+        title: 'CFO Advisory Services',
+        icon: 'fa-briefcase',
+        color: 'rgba(168, 85, 247, 0.1)',
+        iconColor: 'rgb(168, 85, 247)',
+        bullets: [
+          'Clinic overhead costing and cost-reduction audits',
+          'Associate fee-split structure design and checks',
+          'Annual budgeting and clinic cash flow forecasting',
+          'Practice transition and medical partnership buy-ins'
+        ]
+      },
+      {
+        title: 'Accounting & Notice to Reader',
+        icon: 'fa-book-open',
+        color: 'rgba(236, 72, 153, 0.1)',
+        iconColor: 'rgb(236, 72, 153)',
+        bullets: [
+          'Notice to Reader (NTR) Compilation financial statements',
+          'Corporate setup and clinic incorporation tax structures',
+          'QuickBooks Online & Xero clinic software integrations',
+          'Shareholders\' agreement tax planning & compliance'
+        ]
+      },
+      {
+        title: 'Personal Tax for Practitioners',
+        icon: 'fa-user-md',
+        color: 'rgba(251, 119, 13, 0.1)',
+        iconColor: 'rgb(251, 119, 13)',
+        bullets: [
+          'Self-employed doctor and clinical associate T1 returns',
+          'Malpractice dues and professional expenses deductions',
+          'US/cross-border returns for practicing practitioners',
+          'Investment income tax planning inside MPC holding corps'
+        ]
+      }
+    ];
+  } else if (slug === 'real-estate') {
+    cards = [
+      {
+        title: 'PREC Tax Structuring',
+        icon: 'fa-building',
+        color: 'rgba(251, 119, 13, 0.1)',
+        iconColor: 'rgb(251, 119, 13)',
+        bullets: [
+          'Personal Real Estate Corporation setup & compliance',
+          'Commission income tracking, splits & deferral models',
+          'Tax-deductible marketing, gifts and auto expenses',
+          'PREC shareholder dividend vs salary optimization'
+        ]
+      },
+      {
+        title: 'Rental Property Bookkeeping',
+        icon: 'fa-calculator',
+        color: 'rgba(34, 197, 94, 0.1)',
+        iconColor: 'rgb(34, 197, 94)',
+        bullets: [
+          'Monthly rental income, utilities & interest tracking',
+          'Direct maintenance repairs vs capital improvement audits',
+          'Detailed cash flow reports per rental property address',
+          'QBO / Xero bookkeeping tailored for landlords'
+        ]
+      },
+      {
+        title: 'Real Estate Corporate Tax',
+        icon: 'fa-file-invoice-dollar',
+        color: 'rgba(59, 130, 246, 0.1)',
+        iconColor: 'rgb(59, 130, 246)',
+        bullets: [
+          'T2 Corporate returns for property holdcos & dev corps',
+          'Section 85 asset rollover tax-deferred property transfers',
+          'Passive rental investment income tax structures',
+          'Capital gains vs business income tax characterization'
+        ]
+      },
+      {
+        title: 'GST/HST Rebates & Filings',
+        icon: 'fa-receipt',
+        color: 'rgba(168, 85, 247, 0.1)',
+        iconColor: 'rgb(168, 85, 247)',
+        bullets: [
+          'New Residential Rental Property Rebate (NRRPR) filings',
+          'GST/HST calculations on commercial property leasing',
+          'Input Tax Credit (ITC) tracking on construction expenses',
+          'CRA audit support for multi-residential rebates'
+        ]
+      },
+      {
+        title: 'CFO & Advisory Services',
+        icon: 'fa-briefcase',
+        color: 'rgba(236, 72, 153, 0.1)',
+        iconColor: 'rgb(236, 72, 153)',
+        bullets: [
+          'Buy-and-hold vs property flip cash flow forecasting',
+          'Joint Venture (JV) partnership accounting structures',
+          'Capital Cost Allowance (CCA) depreciation schedules',
+          'Holding company partnership tax allocation strategies'
+        ]
+      },
+      {
+        title: 'Personal Tax for Realtors',
+        icon: 'fa-user-tie',
+        color: 'rgba(251, 119, 13, 0.1)',
+        iconColor: 'rgb(251, 119, 13)',
+        bullets: [
+          'T1 returns for self-employed realtors and brokers',
+          'Automobile logbook write-offs & home office calculations',
+          'Marketing, client entertainment, and travel deductions',
+          'Quarterly income tax installment calculations'
+        ]
+      }
+    ];
+  } else if (slug === 'construction') {
+    cards = [
+      {
+        title: 'Job Costing & Bookkeeping',
+        icon: 'fa-hard-hat',
+        color: 'rgba(251, 119, 13, 0.1)',
+        iconColor: 'rgb(251, 119, 13)',
+        bullets: [
+          'Materials, equipment & labor costing per project',
+          'Progress billings, holdbacks and retention tracking',
+          'Subcontractor invoice reconciliations and AP aging',
+          'Project budget variance and cash flow reporting'
+        ]
+      },
+      {
+        title: 'Subcontractor T5018 Filings',
+        icon: 'fa-file-signature',
+        color: 'rgba(34, 197, 94, 0.1)',
+        iconColor: 'rgb(34, 197, 94)',
+        bullets: [
+          'Subcontractor verification & compliance reviews',
+          'T5018 compilation & year-end CRA filing',
+          'Subcontractor payout reconciliations and checks',
+          'CRA contractor reporting compliance audits'
+        ]
+      },
+      {
+        title: 'Construction Corporate Tax',
+        icon: 'fa-file-invoice-dollar',
+        color: 'rgba(59, 130, 246, 0.1)',
+        iconColor: 'rgb(59, 130, 246)',
+        bullets: [
+          'T2 Corporate returns for builders & trade contractors',
+          'Work-In-Progress (WIP) revenue recognition adjustments',
+          'Holdback tax deferral optimization strategy',
+          'CRA audit defense representation for construction firms'
+        ]
+      },
+      {
+        title: 'Payroll & Trade Compliance',
+        icon: 'fa-users',
+        color: 'rgba(168, 85, 247, 0.1)',
+        iconColor: 'rgb(168, 85, 247)',
+        bullets: [
+          'Source deductions, union payroll & wages administration',
+          'WSIB / provincial workers\' compensation reporting',
+          'T4, T4A slips and Record of Employment (ROE) filing',
+          'Direct deposit payroll for clinic & site laborers'
+        ]
+      },
+      {
+        title: 'Notice to Reader & Bonding',
+        icon: 'fa-book-open',
+        color: 'rgba(236, 72, 153, 0.1)',
+        iconColor: 'rgb(236, 72, 153)',
+        bullets: [
+          'Notice to Reader (NTR) Compilation financial statements',
+          'Bonding company and bank compliance ratio reports',
+          'Line of credit and capital leasing documentation',
+          'Capital asset depreciation (CCA schedules) for fleets'
+        ]
+      },
+      {
+        title: 'Personal Tax for Tradespeople',
+        icon: 'fa-user-cog',
+        color: 'rgba(251, 119, 13, 0.1)',
+        iconColor: 'rgb(251, 119, 13)',
+        bullets: [
+          'T1 returns for self-employed independent contractors',
+          'Tools, safety equipment, and work clothing deductions',
+          'Vehicle logs, travel and home office write-offs',
+          'GST/HST Quick Method tax optimization filings'
+        ]
+      }
+    ];
+  } else if (slug === 'ecommerce') {
+    cards = [
+      {
+        title: 'Multi-Channel Bookkeeping',
+        icon: 'fa-shopping-cart',
+        color: 'rgba(251, 119, 13, 0.1)',
+        iconColor: 'rgb(251, 119, 13)',
+        bullets: [
+          'Shopify, Amazon, eBay, and Etsy sales reconciliation',
+          'Stripe, Square, PayPal, and merchant payout matching',
+          'Real-time cloud bookkeeping software integrations',
+          'Digital expenses and advertising cost tracking'
+        ]
+      },
+      {
+        title: 'Sales Tax Netfiling (GST/HST/PST)',
+        icon: 'fa-receipt',
+        color: 'rgba(34, 197, 94, 0.1)',
+        iconColor: 'rgb(34, 197, 94)',
+        bullets: [
+          'Cross-provincial sales tax tracking and netfiling',
+          'PST/QST filings for BC, SK, MB, and Quebec',
+          'Mixed-supply Input Tax Credits (ITC) optimizations',
+          'USA sales tax nexus and marketplace tax audits'
+        ]
+      },
+      {
+        title: 'Corporate Tax & Import Compliance',
+        icon: 'fa-file-invoice-dollar',
+        color: 'rgba(59, 130, 246, 0.1)',
+        iconColor: 'rgb(59, 130, 246)',
+        bullets: [
+          'T2 Corporate returns for online brands & e-retailers',
+          'Cost of Goods Sold (COGS) calculations and adjustments',
+          'International shipping, freight, and duty expense audits',
+          'CRA import tax audit representation and dispute support'
+        ]
+      },
+      {
+        title: 'Inventory Valuation Systems',
+        icon: 'fa-boxes',
+        color: 'rgba(168, 85, 247, 0.1)',
+        iconColor: 'rgb(168, 85, 247)',
+        bullets: [
+          'Inventory sync tools (QBO Commerce, A2X integration)',
+          'Landing cost valuations (product price + shipping + duty)',
+          'FIFO vs Weighted Average cost of inventory reviews',
+          'Year-end inventory write-offs for obsolete stock'
+        ]
+      },
+      {
+        title: 'CFO & Margin Advisory',
+        icon: 'fa-briefcase',
+        color: 'rgba(236, 72, 153, 0.1)',
+        iconColor: 'rgb(236, 72, 153)',
+        bullets: [
+          'Gross margin and contribution margin channel reviews',
+          'Advertising spend ROI and customer acquisition cost audits',
+          'Cash flow projections for stock purchases and manufacturing',
+          'Business valuation for online brand acquisition'
+        ]
+      },
+      {
+        title: 'Payroll & Remote Contractor Setup',
+        icon: 'fa-users',
+        color: 'rgba(251, 119, 13, 0.1)',
+        iconColor: 'rgb(251, 119, 13)',
+        bullets: [
+          'Payroll processing for remote and international staff',
+          'Contract worker T4A compliance and classification reviews',
+          'EHT, source deductions, and provincial tax setups',
+          'Direct deposit payroll and custom employee portals'
+        ]
+      }
+    ];
+  } else if (slug === 'restaurants') {
+    cards = [
+      {
+        title: 'POS Reconciliation & Books',
+        icon: 'fa-utensils',
+        color: 'rgba(251, 119, 13, 0.1)',
+        iconColor: 'rgb(251, 119, 13)',
+        bullets: [
+          'Daily POS reports (TouchBistro, Clover) reconciliation',
+          'Cash reconciliations and credit card payment audits',
+          'Accounts Payable vendor invoice management (Dext)',
+          'Weekly cash flow and vendor payment schedules'
+        ]
+      },
+      {
+        title: 'Tip Pooling & Payroll',
+        icon: 'fa-users',
+        color: 'rgba(34, 197, 94, 0.1)',
+        iconColor: 'rgb(34, 197, 94)',
+        bullets: [
+          'Tip pooling and redistribution model calculations',
+          'CRA compliant tip taxation and reporting structures',
+          'Shift-worker payroll processing with source deductions',
+          'T4, ROE, WSIB, and provincial EHT filings'
+        ]
+      },
+      {
+        title: 'Corporate Tax & COGS',
+        icon: 'fa-file-invoice-dollar',
+        color: 'rgba(59, 130, 246, 0.1)',
+        iconColor: 'rgb(59, 130, 246)',
+        bullets: [
+          'T2 Corporate returns for food and beverage operations',
+          'Food & beverage Cost of Goods Sold (COGS) auditing',
+          'Spillage, waste, and staff meal adjustment allocations',
+          'Direct CRA representation for restaurant audits'
+        ]
+      },
+      {
+        title: 'Notice to Reader & Lease Audits',
+        icon: 'fa-book-open',
+        color: 'rgba(168, 85, 247, 0.1)',
+        iconColor: 'rgb(168, 85, 247)',
+        bullets: [
+          'Notice to Reader (NTR) compilation financial statements',
+          'Percentage-rent landlord lease reporting audits',
+          'Franchise disclosure royalty review reports',
+          'Capital asset depreciation schedules for commercial kitchen equipment'
+        ]
+      },
+      {
+        title: 'CFO & Operational Advisory',
+        icon: 'fa-briefcase',
+        color: 'rgba(236, 72, 153, 0.1)',
+        iconColor: 'rgb(236, 72, 153)',
+        bullets: [
+          'Prime cost monitoring (total food + labor cost ratios)',
+          'Menu item engineering profitability calculations',
+          'Cash flow models for multi-location expansions',
+          'Due diligence audits for franchise purchases'
+        ]
+      },
+      {
+        title: 'Personal Tax for Owners',
+        icon: 'fa-user-tie',
+        color: 'rgba(251, 119, 13, 0.1)',
+        iconColor: 'rgb(251, 119, 13)',
+        bullets: [
+          'T1 returns for restaurant founders, partners & investors',
+          'Dividend vs salary owner compensation planning',
+          'Capital Gains Exemption strategy on business sales',
+          'Unincorporated partner profit tax allocations'
+        ]
+      }
+    ];
+  } else {
+    // Default / Professional Services
+    cards = [
+      {
+        title: 'Bookkeeping & Time Reconciliations',
+        icon: 'fa-briefcase',
+        color: 'rgba(251, 119, 13, 0.1)',
+        iconColor: 'rgb(251, 119, 13)',
+        bullets: [
+          'Time-billing and practice management tool reconciliation',
+          'Monthly bank, credit card, and operational cash tracking',
+          'Accounts Receivable (AR) management and aging reviews',
+          'Digital expenses auditing and document collection (Dext)'
+        ]
+      },
+      {
+        title: 'Corporate Tax for PC/Holdcos',
+        icon: 'fa-file-invoice-dollar',
+        color: 'rgba(34, 197, 94, 0.1)',
+        iconColor: 'rgb(34, 197, 94)',
+        bullets: [
+          'T2 Corporate returns for professional & service corporations',
+          'Work-In-Progress (WIP) service billing tax adjustments',
+          'Passive investment income holding company tax strategies',
+          'CRA audit defense representation and filing protection'
+        ]
+      },
+      {
+        title: 'Partner Compensation Planning',
+        icon: 'fa-users',
+        color: 'rgba(59, 130, 246, 0.1)',
+        iconColor: 'rgb(59, 130, 246)',
+        bullets: [
+          'Owner dividend vs salary structuring calculations',
+          'Partner profit-sharing split-ratio allocations',
+          'EHT, source deductions, and payroll filings',
+          'Custom employee portal for online payslips'
+        ]
+      },
+      {
+        title: 'CFO & Growth Advisory',
+        icon: 'fa-chart-line',
+        color: 'rgba(168, 85, 247, 0.1)',
+        iconColor: 'rgb(168, 85, 247)',
+        bullets: [
+          'Service unit economics and billable hour realizations',
+          'Staff utilization and hourly labor efficiency reporting',
+          'Cash flow projections for agency/consultancy scaling',
+          'Due diligence and valuation reports for mergers'
+        ]
+      },
+      {
+        title: 'Accounting & Notice to Reader',
+        icon: 'fa-book-open',
+        color: 'rgba(236, 72, 153, 0.1)',
+        iconColor: 'rgb(236, 72, 153)',
+        bullets: [
+          'Notice to Reader (NTR) Compilation financial statements',
+          'QuickBooks Online & Xero cloud accounting integrations',
+          'Professional corporation setup and registration checks',
+          'Shared-office lease cost allocation tracking'
+        ]
+      },
+      {
+        title: 'Personal Tax for Partners',
+        icon: 'fa-user-graduate',
+        color: 'rgba(251, 119, 13, 0.1)',
+        iconColor: 'rgb(251, 119, 13)',
+        bullets: [
+          'T1 returns for consultants, partners, and practitioners',
+          'Automobile logbook write-offs & home office calculations',
+          'Professional licensing and training dues write-offs',
+          'Cross-border US/Canada tax return filing services'
+        ]
+      }
+    ];
+  }
+
+  return `
+  <div class="grid-3" style="margin-top: 40px;">
+    \${cards.map(c => \`
+      <div class="service-card" style="text-align: left; background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; height: 100%;">
+        <div class="card-icon" style="background: \${c.color}; color: \${c.iconColor}; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+          <i class="fas \${c.icon}"></i>
+        </div>
+        <div>
+          <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin: 0 0 12px 0;">\${c.title}</h4>
+          <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--body-text-light); margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            \${c.bullets.map(b => \`<li>\${b}</li>\`).join('')}
+          </ul>
+        </div>
+      </div>
+    \`).join('')}
+  </div>
+  `;
+};
+
 const getLocationsSelectorSection = () => {
   return `
   <!-- Let's Connect / Interactive Office Locator Widget -->
@@ -2925,38 +3400,7 @@ industries.forEach(ind => {
           <p>We provide a comprehensive accounting ecosystem so you can focus on operational execution.</p>
           <div class="accent-line"></div>
         </div>
-        <div class="grid-3">
-          <div class="service-card" style="text-align:left;">
-            <div class="card-icon" style="margin:0 0 15px;"><i class="fas fa-book-open"></i></div>
-            <h5>Bookkeeping &amp; Accounting</h5>
-            <ul style="padding-left:20px;font-size:0.9rem;line-height:1.6;margin-top:10px;">
-              <li>Monthly financial statements</li>
-              <li>Notice to Reader</li>
-              <li>Software setup and integration</li>
-              <li>Reconciliation of statement</li>
-            </ul>
-          </div>
-          <div class="service-card" style="text-align:left;">
-            <div class="card-icon" style="margin:0 0 15px;"><i class="fas fa-file-invoice-dollar"></i></div>
-            <h5>Corporate Tax Returns</h5>
-            <ul style="padding-left:20px;font-size:0.9rem;line-height:1.6;margin-top:10px;">
-              <li>T2 Corporate Tax Returns</li>
-              <li>GST/HST Filings</li>
-              <li>Tax Planning</li>
-              <li>CRA Audit Support</li>
-            </ul>
-          </div>
-          <div class="service-card" style="text-align:left;">
-            <div class="card-icon" style="margin:0 0 15px;"><i class="fas fa-users"></i></div>
-            <h5>Payroll Services</h5>
-            <ul style="padding-left:20px;font-size:0.9rem;line-height:1.6;margin-top:10px;">
-              <li>Full-service payroll</li>
-              <li>Unlimited support</li>
-              <li>T4, ROE, WSIB, EHT</li>
-              <li>Custom payslip portal for employees</li>
-            </ul>
-          </div>
-        </div>
+        ${getIndustryServices(ind.slug, ind.name)}
       </div>
     </section>
 
