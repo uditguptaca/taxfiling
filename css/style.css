@@ -2981,8 +2981,39 @@ p {
 }
 
 @media (max-width: 991px) {
-  .hero-badge-stack, .card-refund-new, .card-expert-new {
-    display: none !important;
+  .hero-badge-stack {
+    display: flex !important;
+    left: 8px !important;
+    bottom: 8px !important;
+    width: 175px !important;
+    padding: 4px !important;
+    gap: 4px !important;
+  }
+  .hero-badge-item {
+    font-size: 0.58rem !important;
+    padding: 4px 6px !important;
+    gap: 4px !important;
+  }
+  .hero-badge-item i {
+    font-size: 0.7rem !important;
+    width: 12px !important;
+  }
+  .hero-badge-item small {
+    font-size: 0.85em !important;
+  }
+  .card-refund-new {
+    display: block !important;
+    right: 8px !important;
+    top: 8px !important;
+    transform: scale(0.75) !important;
+    transform-origin: top right !important;
+  }
+  .card-expert-new {
+    display: block !important;
+    right: 8px !important;
+    bottom: 8px !important;
+    transform: scale(0.75) !important;
+    transform-origin: bottom right !important;
   }
   .logo-flex-container {
     justify-content: center;
