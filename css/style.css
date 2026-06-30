@@ -3826,12 +3826,41 @@ p {
   animation-play-state: paused;
 }
 
+.testimonial-marquee-wrapper-reverse {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: scroll-bottom-to-top 45s linear infinite;
+}
+
+.testimonial-marquee-wrapper-reverse:hover {
+  animation-play-state: paused;
+}
+
 @keyframes scroll-top-to-bottom {
   0% {
     transform: translate3d(0, -50%, 0);
   }
   100% {
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes scroll-bottom-to-top {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-two-cols-wrapper {
+    flex-direction: column;
+  }
+  .testimonial-col-2 {
+    display: none !important;
   }
 }
 
