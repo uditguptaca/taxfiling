@@ -3733,6 +3733,108 @@ p {
   }
 }
 
+/* ============================================
+   Horizontal & Vertical Marquees (Scrolling)
+   ============================================ */
+
+/* Left-to-Right Scrolling Marquee for Logos */
+.software-marquee-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 10px 0;
+  background-color: var(--color-ivory-light);
+  border: 1px solid var(--border-gray);
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.software-marquee-wrapper {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  animation: scroll-left-to-right 25s linear infinite;
+}
+
+.software-marquee-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-gray);
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--color-slate-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.software-marquee-item i {
+  font-size: 1.1rem;
+}
+
+@keyframes scroll-left-to-right {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Vertical Scrolling Testimonial Marquee (Top-to-Bottom) */
+.testimonial-marquee-container {
+  max-height: 480px;
+  overflow: hidden;
+  position: relative;
+  padding: 5px 0;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.testimonial-marquee-container::before,
+.testimonial-marquee-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 40px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.testimonial-marquee-container::before {
+  top: 0;
+  background: linear-gradient(to bottom, var(--color-ivory-light), rgba(250, 250, 247, 0));
+}
+
+.testimonial-marquee-container::after {
+  bottom: 0;
+  background: linear-gradient(to top, var(--color-ivory-light), rgba(250, 250, 247, 0));
+}
+
+.testimonial-marquee-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: scroll-top-to-bottom 45s linear infinite;
+}
+
+.testimonial-marquee-wrapper:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-top-to-bottom {
+  0% {
+    transform: translate3d(0, -50%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 
 
 
