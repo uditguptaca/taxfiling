@@ -1385,6 +1385,55 @@ const getCorporateTaxTimeline4Steps = (customTitle = null, customSubtitle = null
 };
 
 const getCorporateTaxIndustriesGrid = () => {
+  const industries = [
+    { title: "Corporate Tax Filing for Startups", desc: "Specialized startup tax & accounting", link: "/industries/technology.html" },
+    { title: "Corporate Tax Filing for Healthcare", desc: "Specialized healthcare tax & accounting", link: "/industries/healthcare.html" },
+    { title: "Corporate Tax Filing for Consultants", desc: "Specialized consulting tax & accounting", link: "/industries/professional-services.html" },
+    { title: "Corporate Tax Filing for Small Businesses", desc: "Specialized small business tax & accounting", link: "/services/small-business-accounting.html" },
+    { title: "Corporate Tax Filing for Restaurants", desc: "Specialized restaurant tax & accounting", link: "/industries/restaurants.html" },
+    { title: "Corporate Tax Filing for Franchises", desc: "Specialized franchise tax & accounting", link: "/industries/restaurants.html" },
+    { title: "Corporate Tax Filing for Self-Employed", desc: "Specialized self-employed tax & accounting", link: "/pricing/individual-tax.html" },
+    { title: "Corporate Tax Filing for Manufacturing", desc: "Specialized manufacturing tax & accounting", link: "/industries/manufacturing.html" },
+    { title: "Corporate Tax Filing for Grocery Stores", desc: "Specialized grocery tax & accounting", link: "/industries/ecommerce.html" },
+    { title: "Corporate Tax Filing for Import & Export", desc: "Specialized import/export tax & accounting", link: "/industries/transportation.html" }
+  ];
+
+  const classes = ["", "card-manilla", "card-cloud", "card-kraft", "card-bookcloth"];
+
+  const cardsHtml = industries.map((ind, idx) => {
+    const styleClass = classes[idx % classes.length];
+    
+    let bulletColor = 'var(--primary)';
+    let linkColor = 'var(--primary)';
+    let descColor = 'var(--body-text-light)';
+    
+    if (styleClass === 'card-manilla' || styleClass === 'card-kraft' || styleClass === 'card-cloud') {
+      bulletColor = 'var(--color-slate-dark)';
+      linkColor = 'var(--color-slate-dark)';
+      descColor = 'var(--color-slate-dark)';
+    } else if (styleClass === 'card-bookcloth') {
+      bulletColor = 'var(--color-ivory-light)';
+      linkColor = 'var(--color-ivory-light)';
+      descColor = 'var(--color-ivory-light)';
+    }
+
+    const cardStyle = styleClass 
+      ? '' 
+      : 'background:#ffffff; border:1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.01);';
+
+    return `
+        <div class="seo-ind-card \${styleClass}" style="display:flex; align-items:flex-start; gap:12px; padding:12px 15px; border-radius:8px; \${cardStyle}">
+          <div class="seo-ind-bullet" style="width:18px; height:18px; border-radius:50%; border:2px solid \${bulletColor}; background:transparent; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:3px;">
+            <div style="width:6px; height:6px; border-radius:50%; background:\${bulletColor};"></div>
+          </div>
+          <div class="seo-ind-info" style="font-family:var(--font-primary); font-size:0.88rem; line-height:1.35; color:\${descColor}; font-weight:500; text-align:left;">
+            <a href="\${ind.link}" style="display:block; font-weight:700; color:\${linkColor}; text-decoration:underline; margin-bottom:4px;">\${ind.title}</a>
+            \${ind.desc}
+          </div>
+        </div>
+    `;
+  }).join('\n');
+
   return `
   <section class="section" style="background-color: #ffffff; padding: 60px 0;">
     <div class="container">
@@ -1399,53 +1448,6 @@ const getCorporateTaxIndustriesGrid = () => {
           grid-template-columns: repeat(5, 1fr);
           gap: 15px;
           margin-bottom: 40px;
-        }
-        .seo-ind-card {
-          display: flex;
-          align-items: flex-start;
-          gap: 12px;
-          background: #ffffff;
-          border: 1px solid #e2e8f0;
-          border-radius: 8px;
-          padding: 12px 15px;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.01);
-        }
-        .seo-ind-bullet {
-          width: 18px;
-          height: 18px;
-          border-radius: 50%;
-          border: 2px solid var(--primary);
-          background: #ffffff;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-          margin-top: 3px;
-        }
-        .seo-ind-bullet::after {
-          content: "";
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background: var(--primary);
-        }
-        .seo-ind-info {
-          font-family: var(--font-primary);
-          font-size: 0.88rem;
-          line-height: 1.35;
-          color: var(--body-text-light);
-          font-weight: 500;
-          text-align: left;
-        }
-        .seo-ind-info a {
-          display: block;
-          font-weight: 700;
-          color: var(--primary);
-          text-decoration: underline;
-          margin-bottom: 4px;
-        }
-        .seo-ind-info a:hover {
-          color: var(--primary-dark);
         }
         @media (max-width: 1100px) {
           .seo-ind-grid {
@@ -1465,76 +1467,7 @@ const getCorporateTaxIndustriesGrid = () => {
       </style>
 
       <div class="seo-ind-grid">
-        <div class="seo-ind-card">
-          <div class="seo-ind-bullet"></div>
-          <div class="seo-ind-info">
-            <a href="/industries/technology.html">Corporate Tax Filing for Startups</a>
-            Specialized startup tax &amp; accounting
-          </div>
-        </div>
-        <div class="seo-ind-card">
-          <div class="seo-ind-bullet"></div>
-          <div class="seo-ind-info">
-            <a href="/industries/healthcare.html">Corporate Tax Filing for Healthcare</a>
-            Specialized healthcare tax &amp; accounting
-          </div>
-        </div>
-        <div class="seo-ind-card">
-          <div class="seo-ind-bullet"></div>
-          <div class="seo-ind-info">
-            <a href="/industries/professional-services.html">Corporate Tax Filing for Consultants</a>
-            Specialized consulting tax &amp; accounting
-          </div>
-        </div>
-        <div class="seo-ind-card">
-          <div class="seo-ind-bullet"></div>
-          <div class="seo-ind-info">
-            <a href="/services/small-business-accounting.html">Corporate Tax Filing for Small Businesses</a>
-            Specialized small business tax &amp; accounting
-          </div>
-        </div>
-        <div class="seo-ind-card">
-          <div class="seo-ind-bullet"></div>
-          <div class="seo-ind-info">
-            <a href="/industries/restaurants.html">Corporate Tax Filing for Restaurants</a>
-            Specialized restaurant tax &amp; accounting
-          </div>
-        </div>
-        <div class="seo-ind-card">
-          <div class="seo-ind-bullet"></div>
-          <div class="seo-ind-info">
-            <a href="/industries/restaurants.html">Corporate Tax Filing for Franchises</a>
-            Specialized franchise tax &amp; accounting
-          </div>
-        </div>
-        <div class="seo-ind-card">
-          <div class="seo-ind-bullet"></div>
-          <div class="seo-ind-info">
-            <a href="/pricing/individual-tax.html">Corporate Tax Filing for Self-Employed</a>
-            Specialized self-employed tax &amp; accounting
-          </div>
-        </div>
-        <div class="seo-ind-card">
-          <div class="seo-ind-bullet"></div>
-          <div class="seo-ind-info">
-            <a href="/industries/manufacturing.html">Corporate Tax Filing for Manufacturing</a>
-            Specialized manufacturing tax &amp; accounting
-          </div>
-        </div>
-        <div class="seo-ind-card">
-          <div class="seo-ind-bullet"></div>
-          <div class="seo-ind-info">
-            <a href="/industries/ecommerce.html">Corporate Tax Filing for Grocery Stores</a>
-            Specialized grocery tax &amp; accounting
-          </div>
-        </div>
-        <div class="seo-ind-card">
-          <div class="seo-ind-bullet"></div>
-          <div class="seo-ind-info">
-            <a href="/industries/transportation.html">Corporate Tax Filing for Import &amp; Export</a>
-            Specialized import/export tax &amp; accounting
-          </div>
-        </div>
+        ${cardsHtml}
       </div>
 
       <div style="text-align: center;">
@@ -1546,97 +1479,121 @@ const getCorporateTaxIndustriesGrid = () => {
 };
 
 const getCorporateTaxStrategiesSection = () => {
+  const strategies = [
+    {
+      title: "File Your T2 Return Within Six Months",
+      summary: "Your T2 corporate tax return is due six months after fiscal year-end.",
+      details: "Missing this CRA filing deadline triggers a 5% penalty on unpaid tax plus 1% per month for up to 12 months. Filing on time keeps thousands inside your corporation.",
+      iconClass: "fas fa-calendar-check",
+      styleClass: ""
+    },
+    {
+      title: "Pay Corporate Tax Balance Early",
+      summary: "CCPCs claiming the Small Business Deduction must pay corporate tax within three months of year-end.",
+      details: "Others within two months. Late payment triggers CRA prescribed interest at roughly 9%, compounded daily and non-deductible. Paying early protects margins on every T2 return.",
+      iconClass: "fas fa-hand-holding-usd",
+      styleClass: "card-manilla"
+    },
+    {
+      title: "Maximize the Small Business Deduction",
+      summary: "Claim the full $500,000 Small Business Deduction limit on Schedule 1.",
+      details: "Do this by reviewing every associated corporation relationship under ITA section 256. Mistakes here cost you up to 17% in extra corporate tax. We allocate the SBD across your group correctly.",
+      iconClass: "fas fa-percentage",
+      styleClass: "card-cloud"
+    },
+    {
+      title: "Use Accelerated CCA on Schedule 8",
+      summary: "Apply the Accelerated Investment Incentive on new equipment, vehicles, and Class 50 computer hardware through Schedule 8.",
+      details: "This front-loads capital cost allowance, defers corporate tax for years, and improves cash flow without changing the long-term position of your T2 corporate tax return.",
+      iconClass: "fas fa-chart-line",
+      styleClass: "card-kraft"
+    },
+    {
+      title: "Track Capital Dividend Account Balance",
+      summary: "File Form T2054 alongside your T2 corporate tax return to distribute the non-taxable portion of capital gains as completely tax-free capital dividends.",
+      details: "Most corporate tax filings miss this entirely. We reconcile your CDA balance every year so shareholders extract retained earnings without personal tax.",
+      iconClass: "fas fa-coins",
+      styleClass: "card-bookcloth"
+    },
+    {
+      title: "Map GIFI Codes Accurately",
+      summary: "Your trial balance must map cleanly to GIFI codes on Schedule 100 and Schedule 125.",
+      details: "Mismatched corporate deductions, revenue, or balance sheet items trigger CRA review letters within weeks of T2 filing. Clean GIFI mapping reduces your audit risk substantially.",
+      iconClass: "fas fa-map-signs",
+      styleClass: ""
+    },
+    {
+      title: "Reconcile Shareholder Loans Annually",
+      summary: "Schedule 50 must show every shareholder loan accurately.",
+      details: "Under subsection 15(2), unpaid balances become taxable personal income if not repaid within one year of your corporation's year-end. We track loan dates so your T2 corporate tax return avoids this costly trap.",
+      iconClass: "fas fa-user-friends",
+      styleClass: "card-manilla"
+    },
+    {
+      title: "Split Income Through Reasonable Salaries",
+      summary: "Pay your spouse or adult children a reasonable salary for genuine work performed in the corporation.",
+      details: "Salaries are deductible on Schedule 1, escape TOSI rules that hit dividends, and lower combined family tax. CRA accepts this when documentation supports the role and hours.",
+      iconClass: "fas fa-users-cog",
+      styleClass: "card-cloud"
+    },
+    {
+      title: "Claim Every Eligible Corporate Deduction",
+      summary: "Home office, business-use vehicle, 50% meals, cell phone, and software subscriptions are all deductible against corporate income.",
+      details: "Each missed deduction directly increases your T2 tax bill. We review the full general ledger before filing so nothing legitimate is left on the table.",
+      iconClass: "fas fa-check-double",
+      styleClass: "card-kraft"
+    },
+    {
+      title: "Plan Loss Carrybacks on Schedule 4",
+      summary: "If your corporation has a non-capital loss this year, Schedule 4 lets you carry it back three years and recover corporate tax already paid to the CRA.",
+      details: "Going forward, the loss carries 20 years. This is real cash refunded back to your business.",
+      iconClass: "fas fa-history",
+      styleClass: "card-bookcloth"
+    }
+  ];
+
+  const cardsHtml = strategies.map(s => {
+    // Determine icon colors based on card class
+    let iconBg = 'rgba(204, 120, 92, 0.15)';
+    let iconColor = '#CC785C';
+    let linkColor = 'var(--primary)';
+    
+    if (s.styleClass === 'card-manilla' || s.styleClass === 'card-kraft' || s.styleClass === 'card-cloud') {
+      iconBg = 'rgba(25, 25, 25, 0.08)';
+      iconColor = 'var(--color-slate-dark)';
+      linkColor = 'var(--color-slate-dark)';
+    } else if (s.styleClass === 'card-bookcloth') {
+      iconBg = 'rgba(255, 255, 255, 0.15)';
+      iconColor = 'var(--color-ivory-light)';
+      linkColor = 'var(--color-ivory-light)';
+    }
+
+    const cardStyle = s.styleClass 
+      ? '' 
+      : 'background:#ffffff; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02);';
+
+    return `
+        <div class="service-card \${s.styleClass}" style="text-align:left; padding:25px; border-radius:12px; display:flex; gap:20px; align-items:flex-start; \${cardStyle}">
+          <div style="width:40px; height:40px; border-radius:50%; background:\${iconBg}; color:\${iconColor}; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="\${s.iconClass}"></i></div>
+          <div>
+            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem;">\${s.title}</h5>
+            <p style="font-size:0.88rem; line-height:1.55; margin:0; opacity:0.95;">\${s.summary} <span style="display:none;">\${s.details}</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:\${linkColor}; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
+          </div>
+        </div>
+    `;
+  }).join('\n');
+
   return `
   <section class="section" style="background-color: var(--color-ivory-light); padding: 80px 0; border-top: 1px solid var(--color-ivory-dark); border-bottom: 1px solid var(--color-ivory-dark);">
     <div class="container">
       <div class="section-header" style="margin-bottom: 50px; text-align: center;">
-        <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">10 Smart Corporate Tax Filing Strategies That Save You Money</h2>
+        <h2 style="font-family: var(--font-serif); font-size: 2.5rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">10 Smart Corporate Tax Filing Strategies That Save You Money</h2>
         <p style="font-size: 1.1rem; color: var(--color-slate-medium); max-width: 800px; margin: 0 auto;">Implement these proven tax-saving strategies to ensure compliance and maximize profitability for your business.</p>
-        <div class="accent-line" style="margin: 20px auto 0;"></div>
+        <div class="accent-line" style="background-color: var(--primary); margin: 20px auto 0;"></div>
       </div>
 
       <div class="grid-3" style="gap: 30px;">
-        
-        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
-          <div style="width:40px; height:40px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-calendar-check"></i></div>
-          <div>
-            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">File Your T2 Return Within Six Months</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Your T2 corporate tax return is due six months after fiscal year-end. <span style="display:none;">Missing this CRA filing deadline triggers a 5% penalty on unpaid tax plus 1% per month for up to 12 months. Filing on time keeps thousands inside your corporation.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
-          </div>
-        </div>
-
-        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
-          <div style="width:40px; height:40px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-hand-holding-usd"></i></div>
-          <div>
-            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Pay Corporate Tax Balance Early</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">CCPCs claiming the Small Business Deduction must pay corporate tax within three months of year-end. <span style="display:none;">Others within two months. Late payment triggers CRA prescribed interest at roughly 9%, compounded daily and non-deductible. Paying early protects margins on every T2 return.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
-          </div>
-        </div>
-
-        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
-          <div style="width:40px; height:40px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-percentage"></i></div>
-          <div>
-            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Maximize the Small Business Deduction</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Claim the full $500,000 Small Business Deduction limit on Schedule 1. <span style="display:none;">Do this by reviewing every associated corporation relationship under ITA section 256. Mistakes here cost you up to 17% in extra corporate tax. We allocate the SBD across your group correctly.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
-          </div>
-        </div>
-
-        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
-          <div style="width:40px; height:40px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-chart-line"></i></div>
-          <div>
-            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Use Accelerated CCA on Schedule 8</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Apply the Accelerated Investment Incentive on new equipment, vehicles, and Class 50 computer hardware through Schedule 8. <span style="display:none;">This front-loads capital cost allowance, defers corporate tax for years, and improves cash flow without changing the long-term position of your T2 corporate tax return.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
-          </div>
-        </div>
-
-        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
-          <div style="width:40px; height:40px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-coins"></i></div>
-          <div>
-            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Track Capital Dividend Account Balance</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">File Form T2054 alongside your T2 corporate tax return to distribute the non-taxable portion of capital gains as completely tax-free capital dividends. <span style="display:none;">Most corporate tax filings miss this entirely. We reconcile your CDA balance every year so shareholders extract retained earnings without personal tax.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
-          </div>
-        </div>
-
-        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
-          <div style="width:40px; height:40px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-map-signs"></i></div>
-          <div>
-            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Map GIFI Codes Accurately</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Your trial balance must map cleanly to GIFI codes on Schedule 100 and Schedule 125. <span style="display:none;">Mismatched corporate deductions, revenue, or balance sheet items trigger CRA review letters within weeks of T2 filing. Clean GIFI mapping reduces your audit risk substantially.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
-          </div>
-        </div>
-
-        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
-          <div style="width:40px; height:40px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-user-friends"></i></div>
-          <div>
-            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Reconcile Shareholder Loans Annually</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Schedule 50 must show every shareholder loan accurately. <span style="display:none;">Under subsection 15(2), unpaid balances become taxable personal income if not repaid within one year of your corporation's year-end. We track loan dates so your T2 corporate tax return avoids this costly trap.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
-          </div>
-        </div>
-
-        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
-          <div style="width:40px; height:40px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-users-cog"></i></div>
-          <div>
-            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Split Income Through Reasonable Salaries</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Pay your spouse or adult children a reasonable salary for genuine work performed in the corporation. <span style="display:none;">Salaries are deductible on Schedule 1, escape TOSI rules that hit dividends, and lower combined family tax. CRA accepts this when documentation supports the role and hours.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
-          </div>
-        </div>
-
-        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
-          <div style="width:40px; height:40px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-check-double"></i></div>
-          <div>
-            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Claim Every Eligible Corporate Deduction</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Home office, business-use vehicle, 50% meals, cell phone, and software subscriptions are all deductible against corporate income. <span style="display:none;">Each missed deduction directly increases your T2 tax bill. We review the full general ledger before filing so nothing legitimate is left on the table.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
-          </div>
-        </div>
-
-        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
-          <div style="width:40px; height:40px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-history"></i></div>
-          <div>
-            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Plan Loss Carrybacks on Schedule 4</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">If your corporation has a non-capital loss this year, Schedule 4 lets you carry it back three years and recover corporate tax already paid to the CRA. <span style="display:none;">Going forward, the loss carries 20 years. This is real cash refunded back to your business.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
-          </div>
-        </div>
-
+        ${cardsHtml}
       </div>
     </div>
   </section>
@@ -2022,6 +1979,55 @@ const getCorporateTaxServicesAccordion = () => {
 };
 
 const getCorporateTaxLocationsSection = () => {
+  const locations = [
+    { name: "Ontario", path: "/locations/toronto.html" },
+    { name: "British Columbia", path: "/locations/vancouver.html" },
+    { name: "Alberta", path: "/locations/calgary.html" },
+    { name: "Quebec", path: "/locations/montreal.html" },
+    { name: "Manitoba", path: "/locations/winnipeg.html" },
+    { name: "Saskatchewan", path: "/locations/saskatoon.html" },
+    { name: "Nova Scotia", path: "/locations/halifax.html" },
+    { name: "New Brunswick", path: "/locations/moncton.html" },
+    { name: "Newfoundland", path: "/locations/index.html" },
+    { name: "PEI", path: "/locations/index.html" }
+  ];
+
+  const classes = ["", "card-manilla", "card-cloud", "card-kraft", "card-bookcloth"];
+
+  const cardsHtml = locations.map((loc, idx) => {
+    const styleClass = classes[idx % classes.length];
+    
+    let bulletColor = 'var(--primary)';
+    let linkColor = 'var(--primary)';
+    let textColor = 'var(--color-cloud-dark)';
+    
+    if (styleClass === 'card-manilla' || styleClass === 'card-kraft' || styleClass === 'card-cloud') {
+      bulletColor = 'var(--color-slate-dark)';
+      linkColor = 'var(--color-slate-dark)';
+      textColor = 'var(--color-slate-dark)';
+    } else if (styleClass === 'card-bookcloth') {
+      bulletColor = 'var(--color-ivory-light)';
+      linkColor = 'var(--color-ivory-light)';
+      textColor = 'var(--color-ivory-light)';
+    }
+
+    const cardStyle = styleClass 
+      ? '' 
+      : 'background:#ffffff; border:1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.01);';
+
+    return `
+        <div class="seo-loc-card \${styleClass}" style="display:flex; align-items:center; gap:12px; padding:15px 20px; border-radius:8px; \${cardStyle}">
+          <div class="seo-loc-bullet" style="width:18px; height:18px; border-radius:50%; border:2px solid \${bulletColor}; background:transparent; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0;">
+            <div style="width:6px; height:6px; border-radius:50%; background:\${bulletColor};"></div>
+          </div>
+          <div class="seo-loc-info" style="font-family:var(--font-primary); font-size:0.9rem; line-height:1.35; color:\${textColor}; font-weight:500;">
+            Corporate Tax Filing
+            <a href="\${loc.path}" style="display:block; font-weight:700; color:\${linkColor}; text-decoration:underline;">in \${loc.name}</a>
+          </div>
+        </div>
+    `;
+  }).join('\n');
+
   return `
   <section class="section" style="background-color: #fafaf9; padding: 80px 0; border-top: 1px solid var(--color-ivory-dark);">
     <div class="container">
@@ -2031,155 +2037,8 @@ const getCorporateTaxLocationsSection = () => {
         <div class="accent-line" style="background-color: var(--primary); margin: 20px auto 0;"></div>
       </div>
 
-      <style>
-        .seo-loc-grid {
-          display: grid;
-          grid-template-columns: repeat(5, 1fr);
-          gap: 20px;
-        }
-        .seo-loc-card {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          background: #ffffff;
-          border: 1px solid #e2e8f0;
-          border-radius: 8px;
-          padding: 15px 20px;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.01);
-        }
-        .seo-loc-bullet {
-          width: 18px;
-          height: 18px;
-          border-radius: 50%;
-          border: 2px solid var(--primary);
-          background: #ffffff;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-        }
-        .seo-loc-bullet::after {
-          content: "";
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background: var(--primary);
-        }
-        .seo-loc-info {
-          font-family: var(--font-primary);
-          font-size: 0.9rem;
-          line-height: 1.35;
-          color: var(--color-cloud-dark);
-          font-weight: 500;
-        }
-        .seo-loc-info a {
-          display: block;
-          font-weight: 700;
-          color: var(--primary);
-          text-decoration: underline;
-        }
-        .seo-loc-info a:hover {
-          color: var(--primary-dark);
-        }
-        @media (max-width: 1200px) {
-          .seo-loc-grid {
-            grid-template-columns: repeat(3, 1fr);
-          }
-        }
-        @media (max-width: 768px) {
-          .seo-loc-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-        @media (max-width: 480px) {
-          .seo-loc-grid {
-            grid-template-columns: 1fr;
-          }
-        }
-      </style>
-
       <div class="seo-loc-grid">
-        
-        <div class="seo-loc-card">
-          <div class="seo-loc-bullet"></div>
-          <div class="seo-loc-info">
-            Corporate Tax Filing
-            <a href="/locations/toronto.html">in Ontario</a>
-          </div>
-        </div>
-
-        <div class="seo-loc-card">
-          <div class="seo-loc-bullet"></div>
-          <div class="seo-loc-info">
-            Corporate Tax Filing
-            <a href="/locations/vancouver.html">in British Columbia</a>
-          </div>
-        </div>
-
-        <div class="seo-loc-card">
-          <div class="seo-loc-bullet"></div>
-          <div class="seo-loc-info">
-            Corporate Tax Filing
-            <a href="/locations/calgary.html">in Alberta</a>
-          </div>
-        </div>
-
-        <div class="seo-loc-card">
-          <div class="seo-loc-bullet"></div>
-          <div class="seo-loc-info">
-            Corporate Tax Filing
-            <a href="/locations/montreal.html">in Quebec</a>
-          </div>
-        </div>
-
-        <div class="seo-loc-card">
-          <div class="seo-loc-bullet"></div>
-          <div class="seo-loc-info">
-            Corporate Tax Filing
-            <a href="/locations/winnipeg.html">in Manitoba</a>
-          </div>
-        </div>
-
-        <div class="seo-loc-card">
-          <div class="seo-loc-bullet"></div>
-          <div class="seo-loc-info">
-            Corporate Tax Filing
-            <a href="/locations/saskatoon.html">in Saskatchewan</a>
-          </div>
-        </div>
-
-        <div class="seo-loc-card">
-          <div class="seo-loc-bullet"></div>
-          <div class="seo-loc-info">
-            Corporate Tax Filing
-            <a href="/locations/halifax.html">in Nova Scotia</a>
-          </div>
-        </div>
-
-        <div class="seo-loc-card">
-          <div class="seo-loc-bullet"></div>
-          <div class="seo-loc-info">
-            Corporate Tax Filing
-            <a href="/locations/moncton.html">in New Brunswick</a>
-          </div>
-        </div>
-
-        <div class="seo-loc-card">
-          <div class="seo-loc-bullet"></div>
-          <div class="seo-loc-info">
-            Corporate Tax Filing
-            <a href="/locations/index.html">in Newfoundland</a>
-          </div>
-        </div>
-
-        <div class="seo-loc-card">
-          <div class="seo-loc-bullet"></div>
-          <div class="seo-loc-info">
-            Corporate Tax Filing
-            <a href="/locations/index.html">in PEI</a>
-          </div>
-        </div>
-
+        ${cardsHtml}
       </div>
     </div>
   </section>
