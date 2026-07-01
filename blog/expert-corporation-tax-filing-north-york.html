@@ -4,8 +4,8 @@
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Management Accounting Services in Canada | Tax Filings Canada</title>
-  <meta name="description" content="Professional Management Accounting services across Canada.">
+  <title>Expert Corporation Tax Filing Support for North York Corporations | Tax Filings Canada</title>
+  <meta name="description" content="Find out how North York small businesses and corporations can optimize their corporate tax filing, claim local credits, and maintain strict CRA compliance.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
@@ -38,7 +38,7 @@
             </ul>
           </li>
           <li>
-            <a href="/services.html" class="active">Services <i class="fas fa-chevron-down"></i></a>
+            <a href="/services.html" class="">Services <i class="fas fa-chevron-down"></i></a>
             <div class="mega-menu">
               <div class="mega-menu-col">
                 <h4>Tax Filings</h4>
@@ -109,7 +109,7 @@
               <li><a href="/affordable-pricing/cheap-partnership-tax-filing.html">Partnership Tax</a></li>
             </ul>
           </li>
-          <li><a href="/blog.html" class="">Blog</a></li>
+          <li><a href="/blog.html" class="active">Blog</a></li>
           <li><a href="/contact.html" class="">Contact</a></li>
         </ul>
       </nav>
@@ -127,156 +127,214 @@
   </header>
   
   
-    <!-- Custom styling to replicate WordPress Elementor service page layout -->
+    <!-- Custom styling to replicate WordPress Elementor blog design -->
     <style>
-      
-      .srv-hero {
-        background: var(--color-slate-dark);
-        padding: 80px 0 60px;
+      .blog-hero {
+        background: linear-gradient(135deg, var(--color-slate-dark) 0%, var(--color-slate-med) 100%);
+        padding: 60px 0;
         color: var(--white);
-        text-align: center;
+        margin-bottom: 40px;
       }
-      .srv-hero h1 {
-        font-size: 2.6rem;
+      .blog-hero-crumbs {
+        font-size: 0.85rem;
+        color: var(--primary);
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+      .blog-hero-crumbs a {
+        color: var(--white);
+        text-decoration: none;
+      }
+      .blog-hero-crumbs a:hover {
+        color: var(--primary);
+      }
+      .blog-hero h1 {
+        font-size: 2.5rem;
         font-weight: 800;
         line-height: 1.2;
         color: var(--white);
+        margin-bottom: 20px;
         max-width: 900px;
-        margin: 0 auto 20px;
       }
-      .srv-hero p {
-        font-size: 1.15rem;
-        line-height: 1.6;
-        color: #CBD5E1;
-        max-width: 800px;
-        margin: 0 auto 40px;
-      }
-      .srv-collage-container {
-        max-width: 960px;
-        margin: 40px auto 0;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        border-radius: 12px;
-        overflow: hidden;
-        border: 1px solid rgba(255,255,255,0.1);
-      }
-      .srv-collage-img {
-        width: 100%;
-        display: block;
-        height: auto;
-      }
-  
-      .google-reviews-bar {
-        background: var(--white);
-        padding: 20px 0;
-        border-top: 1px solid var(--border-gray);
-        border-bottom: 1px solid var(--border-gray);
+      .blog-meta-bar {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
+        gap: 20px;
+        font-size: 0.85rem;
+        color: #E2E8F0;
         flex-wrap: wrap;
+        border-top: 1px solid rgba(255,255,255,0.15);
+        padding-top: 15px;
       }
-      .google-reviews-bar .stars {
-        color: var(--star-gold);
-        font-size: 1.15rem;
-        display: flex;
-        gap: 2px;
+      .blog-meta-bar i {
+        color: var(--primary);
       }
-      .google-reviews-bar .badge-txt {
+      .toc-box {
+        background: var(--white);
+        border: 1px solid var(--border-gray);
+        border-radius: 8px;
+        padding: 20px;
+        margin: 25px 0 35px;
+      }
+      .toc-box h4 {
+        margin: 0 0 10px;
+        font-size: 1.05rem;
         font-weight: 700;
         color: var(--dark-green);
         text-transform: uppercase;
-        font-size: 0.9rem;
         letter-spacing: 0.05em;
       }
-      .google-reviews-bar .rating {
-        font-weight: 800;
-        font-size: 1.1rem;
+      .toc-box ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .toc-box li {
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+      }
+      .toc-box a {
         color: var(--body-text);
+        text-decoration: none;
+        transition: color 0.2s;
       }
-      .intro-img-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      .toc-box a:hover {
+        color: var(--primary);
       }
-      .intro-img {
-        max-width: 100%;
-        border-radius: 12px;
-        box-shadow: var(--shadow-md);
+      .blog-main-content h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--dark-green);
+        margin-top: 40px;
+        margin-bottom: 15px;
+      }
+      .blog-main-content h3 {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: var(--dark-green);
+        margin-top: 30px;
+        margin-bottom: 12px;
+      }
+      .blog-main-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--body-text);
+        margin-bottom: 20px;
+      }
+      .blog-main-content ul {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+      .blog-main-content li {
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+      .callout-box {
+        background: var(--primary-light);
+        border-left: 4px solid var(--primary);
+        padding: 24px;
+        border-radius: 0 8px 8px 0;
+        margin: 30px 0;
+      }
+      .callout-box h4 {
+        margin: 0 0 10px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--dark-green);
+      }
+      .callout-box p {
+        margin: 0;
+        font-size: 0.92rem;
+        line-height: 1.6;
       }
     </style>
 
     <!-- 1. HERO BANNER -->
-    
-    <section class="srv-hero">
+    <section class="blog-hero">
       <div class="container">
-        <h1>Tailored Management Accounting Accounting & Services for Canadian Businesses</h1>
-        <p>At Tax Filings Canada, we provide expert management accounting accounting and advisory services tailored to your business needs. We handle compliance, tracking, and filings using secure digital solutions.</p>
-        <div class="btn-group" style="justify-content:center;">
-          <a href="/contact.html" class="btn btn-primary btn-lg">Book Free Consultation</a>
-          <a href="#service-pricing" class="btn btn-outline-white btn-lg">Explore Pricing</a>
+        <div class="blog-hero-crumbs">
+          <a href="/index.html">Home</a> / <a href="/blog.html">Blog</a> / Article
         </div>
-        <div class="srv-collage-container">
-          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&h=500&fit=crop" alt="Collage of Team & Credentials" class="srv-collage-img">
+        <h1>Expert Corporation Tax Filing Support for North York Corporations</h1>
+        <div class="blog-meta-bar">
+          <span><i class="far fa-calendar-alt"></i> Published: January 6, 2026</span>
+          <span><i class="fas fa-user"></i> Written by Udit Gupta, CPA</span>
+          <span><i class="fas fa-folder"></i> Category: Tax Guides &amp; Tips</span>
         </div>
       </div>
     </section>
-  
 
-    <!-- 2. GOOGLE REVIEWS BAR -->
-    
-      <div class="google-reviews-bar">
-        <span class="badge-txt">Excellent</span>
-        <div class="stars">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <span class="rating">Based on 929 reviews</span>
-        <span style="font-weight:700;color:#4285F4;"><i class="fab fa-google"></i> Google Rating</span>
-      </div>
-    
-
-    <!-- 3. INTRO BLOCK -->
-    
-    <!-- 3. INTRO BLOCK -->
-    <section class="section" style="padding-bottom: 20px;">
+    <!-- 2. CONTENT AREA & SIDEBAR -->
+    <section class="section pt-0" style="padding-bottom: 40px;">
       <div class="container">
-        <div class="grid-2-1">
-          <div>
-            <h2>${introTitle}</h2>
-            <p style="font-size:1.1rem;line-height:1.6;color:var(--body-text-light);margin-top:15px;margin-bottom:25px;">${introBody}</p>
-            <ul class="check-list mt-15" style="margin-bottom:30px;">
-              ${introItems.map(item => `<li>${item}</li>`).join('')}
-            </ul>
-            ${getMeetingCtaBox(null)}
+        <div class="grid-3-1">
+          <div class="blog-main-content">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=400&fit=crop" alt="Expert Corporation Tax Filing Support for North York Corporations" style="border-radius:12px;margin-bottom:30px;width:100%;box-shadow:var(--shadow-sm);">
+            
+            <!-- Table of Contents -->
+            <div class="toc-box">
+              <h4>Table of Contents</h4>
+              <ul>
+                <li><a href="#section-1">1. Primary Filing Overview</a></li>
+                <li><a href="#section-2">2. Crucial CRA Compliance Requirements</a></li>
+                <li><a href="#section-3">3. Key Takeaways &amp; Next Steps</a></li>
+              </ul>
+            </div>
+
+            <div id="section-1">
+              
+      <h2>Corporate Tax Filing in North York</h2>
+      <p>North York is home to thousands of growing businesses and startups. Operating a corporation here requires meticulous tax management to satisfy both federal CRA expectations and provincial tax filings.</p>
+      
+      <h3>Key Tax Obligations for Corporations</h3>
+      <p>Every incorporated business must file a T2 corporate tax return annually, even if there is no taxable income or active operations. Having a certified CPA ensure your filings are completed accurately prevents audit triggers.</p>
+      
+      <h3>Maximizing Capital Cost Allowances</h3>
+      <p>By claiming the Capital Cost Allowance (CCA) on company equipment, vehicles, and computers, North York corporations can defer tax obligations and redirect cash flow to hire local talent and scale operations.</p>
+    
+            </div>
+
+            <!-- Author Box -->
+            <div class="author-box" style="margin-top:50px;">
+              <div class="author-avatar">U</div>
+              <div>
+                <div class="author-name">Udit Gupta</div>
+                <div class="author-role">Founder, Tax Filings Canada</div>
+                <p class="author-bio">Udit is a Chartered Professional Accountant (CPA) in Canada with years of corporate tax, bookkeeping, and advisory experience, helping entrepreneurs scale operations compliant with CRA guidelines.</p>
+              </div>
+            </div>
           </div>
-          <div class="intro-img-container">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop" alt="A Team of CPA Experts" class="intro-img">
+          
+          <div class="blog-sidebar">
+            <div class="widget">
+              <h3>Get Professional Help</h3>
+              <p style="font-size:0.88rem;margin-bottom:15px;">Need expert assistance implementing these tax strategies for your business?</p>
+              <a href="/contact.html" class="btn btn-primary btn-sm" style="width:100%;">Book Free Call</a>
+            </div>
+            <div class="widget">
+              <h3>Recent Posts</h3>
+              <ul>
+                <li><a href="/blog/what-tax-forms-do-you-need-to-file-taxes-in-canada.html">What Tax Forms Do You Need to File Taxes in Canada? | CRA Guide</a></li><li><a href="/blog/complete-guide-to-corporate-tax-filing-in-canada.html">Complete Guide to Corporate Tax Filing in Canada</a></li><li><a href="/blog/gst-hst-explained-complete-guide-for-canadian-businesses.html">GST/HST Explained: A Complete Guide for Canadian Businesses</a></li><li><a href="/blog/expert-corporation-tax-filing-north-york.html">Expert Corporation Tax Filing Support for North York Corporations</a></li><li><a href="/blog/ottawa-corporate-tax-filing-experts.html">Ottawa Corporate Tax Filing Experts: Avoiding Penalties and Late Fees</a></li><li><a href="/blog/toronto-corporation-tax-filing-101.html">Toronto Corporation Tax Filing 101: Avoiding Common T2 Return Mistakes</a></li><li><a href="/blog/affordable-corporate-tax-solutions-small-business.html">Affordable Corporate Tax Filing Solutions for Small Businesses</a></li><li><a href="/blog/mississauga-corporate-tax-filing-made-simple.html">Mississauga Corporate Tax Filing Made Simple: Tips for First-Time Filers</a></li><li><a href="/blog/toronto-corporate-tax-filing-checklist.html">Toronto Corporate Tax Filing Checklist: Documents and Deadlines to Remember</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
-  
 
-    <!-- 4. SERVICE TIERS -->
-    
-    <section id="service-pricing" style="padding: 20px 0;">
-      ${getServiceTiersSection(s.name, 'service', customTiers)}
-    </section>
-    
-
-    <!-- 5. WHY CHOOSE US -->
+    <!-- 3. WHY CHOOSE US -->
     
   <section class="section section-gray" style="padding: 70px 0; background-color: var(--color-ivory-med);">
     <div class="container">
       <div class="grid-2" style="align-items: stretch; gap: 50px;">
         <div style="display:flex; flex-direction:column; justify-content:center;">
           <div class="section-header" style="text-align:left; margin-bottom:30px; max-width:100%;">
-            <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--color-slate-dark); margin-bottom: 12px; line-height: 1.25;">Why to choose Tax Filings Canada for Management Accounting?</h2>
-            <p style="display:block !important; font-size:0.95rem; line-height:1.55; color: var(--color-slate-medium); margin: 10px 0 15px 0;">Why you should partner with Tax Filings Canada Experts for all your management accounting needs?</p>
+            <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--color-slate-dark); margin-bottom: 12px; line-height: 1.25;">Why Businesses &amp; Corporations Choose Tax Filings Canada</h2>
+            <p style="display:block !important; font-size:0.95rem; line-height:1.55; color: var(--color-slate-medium); margin: 10px 0 15px 0;">Our team of experienced Tax Accountant provide trusted tax advice, accurate filings, and tailored strategies to minimize liabilities. We offer transparent pricing and full CRA compliance support for bookkeeping, GST/HST, payroll, and corporate taxes.</p>
             <div class="accent-line" style="margin:0; display:block !important; width:50px; height:3px; background:var(--color-bookcloth); border-radius:2px;"></div>
           </div>
           <div class="grid-2" style="gap:20px;">
-            <div style="display:flex; gap:15px; align-items:flex-start; background:var(--color-manilla); padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid rgba(25, 25, 25, 0.08);"><div style="width:36px; height:36px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div><div><h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">Experienced Management Accounting Accountants</h5><p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-dark);">Providing tailored management accounting services to ensure compliance and maximize deductions.</p></div></div><div style="display:flex; gap:15px; align-items:flex-start; background:#ffffff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid var(--color-ivory-dark);"><div style="width:36px; height:36px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div><div><h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">Full CRA & Federal Compliance</h5><p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-medium);">Our certified accountants protect your business with complete federal and provincial tax compliance.</p></div></div><div style="display:flex; gap:15px; align-items:flex-start; background:#ffffff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid var(--color-ivory-dark);"><div style="width:36px; height:36px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div><div><h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">Hassle-Free Tax Filing</h5><p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-medium);">A dedicated team that handles your financials quickly, accurately, and without upfront fees.</p></div></div><div style="display:flex; gap:15px; align-items:flex-start; background:var(--color-manilla); padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid rgba(25, 25, 25, 0.08);"><div style="width:36px; height:36px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div><div><h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">Management Accounting Preparation Service</h5><p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-dark);">Dedicated preparation processes customized for Canadian businesses.</p></div></div><div style="display:flex; gap:15px; align-items:flex-start; background:#ffffff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid var(--color-ivory-dark);"><div style="width:36px; height:36px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div><div><h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">Seamless Digital Solutions</h5><p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-medium);">Advanced accounting software integrations with QuickBooks, Xero, and wave accounting.</p></div></div><div style="display:flex; gap:15px; align-items:flex-start; background:#ffffff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid var(--color-ivory-dark);"><div style="width:36px; height:36px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div><div><h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">Scalable services for growth and expansion</h5><p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-medium);">Customized packages designed to grow as your business operations expand.</p></div></div>
+            <div style="display:flex; gap:15px; align-items:flex-start; background:var(--color-manilla); padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid rgba(25, 25, 25, 0.08);"><div style="width:36px; height:36px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div><div><h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">Expert Tax Filing &amp; Planning</h5><p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-dark);">Providing tailored tax filing and planning to reduce liabilities, maximize refunds, and ensure CRA compliance.</p></div></div><div style="display:flex; gap:15px; align-items:flex-start; background:#ffffff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid var(--color-ivory-dark);"><div style="width:36px; height:36px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div><div><h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">Transparent &amp; Risk-Free Tax Services</h5><p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-medium);">100% risk-free tax filing with clear pricing, no hidden fees, plus support for personal taxes, small business accounting, and bookkeeping.</p></div></div><div style="display:flex; gap:15px; align-items:flex-start; background:#ffffff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid var(--color-ivory-dark);"><div style="width:36px; height:36px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div><div><h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">CRA Compliance &amp; Cross Border Tax</h5><p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-medium);">From bookkeeping to corporate audits, protect your business with CRA compliance and expert cross border tax strategies.</p></div></div><div style="display:flex; gap:15px; align-items:flex-start; background:var(--color-manilla); padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid rgba(25, 25, 25, 0.08);"><div style="width:36px; height:36px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div><div><h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">Technology-Driven Bookkeeping &amp; Accounting</h5><p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-dark);">We use advanced accounting software for seamless bookkeeping, payroll, and small business tax filing.</p></div></div>
           </div>
         </div>
         <div style="position:relative; display:flex; align-items:stretch; justify-content:center; width:100%; height:100%; border-radius:16px; overflow:hidden; box-shadow:0 12px 30px rgba(0,0,0,0.08); border:1px solid var(--color-ivory-dark);">
@@ -288,37 +346,7 @@
   </section>
   
 
-    <!-- 6. CORPORATE TAX PROCESS PHASES (ONLY FOR CORPORATE TAX OR RELEVANT) -->
-    
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Management Accounting Execution Phases</h2>
-        <p>Our simplified delivery timeline for management accounting services.</p>
-        <div class="accent-line"></div>
-      </div>
-      <div class="grid-3">
-        <div class="service-card" style="text-align:left;border-top:4px solid var(--primary);padding:25px;">
-          <div style="font-size:1.25rem;font-weight:700;color:var(--primary);margin-bottom:10px;"><i class="fas fa-search-dollar"></i> Phase 1</div>
-          <h5 style="font-weight:700;margin-bottom:8px;">Corporate Tax Planning &amp; Compliance Strategy Review</h5>
-          <p style="font-size:0.88rem;color:var(--body-text-light);">We analyze your operations, setup eligible CCA asset deprecation classes, and strategize deductions prior to final calculations.</p>
-        </div>
-        <div class="service-card" style="text-align:left;border-top:4px solid var(--teal);padding:25px;">
-          <div style="font-size:1.25rem;font-weight:700;color:var(--teal);margin-bottom:10px;"><i class="fas fa-file-invoice"></i> Phase 2</div>
-          <h5 style="font-weight:700;margin-bottom:8px;">Corporate Tax Filing, Financial Reporting &amp; GST/HST Management</h5>
-          <p style="font-size:0.88rem;color:var(--body-text-light);">Preparation of Balance Sheet, Income Statement (Schedule 100 &amp; 125), T2 returns, and corresponding provincial filings.</p>
-        </div>
-        <div class="service-card" style="text-align:left;border-top:4px solid var(--primary);padding:25px;">
-          <div style="font-size:1.25rem;font-weight:700;color:var(--primary);margin-bottom:10px;"><i class="fas fa-chart-line"></i> Phase 3</div>
-          <h5 style="font-weight:700;margin-bottom:8px;">Ongoing Tax Advisory &amp; Business Growth Strategies</h5>
-          <p style="font-size:0.88rem;color:var(--body-text-light);">Proactive advice on shareholder remuneration (salary vs. dividends), holding company integration, and compliance advisory.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-    <!-- 7. RISK-FREE WORKFLOW -->
+    <!-- 4. RISK-FREE WORKFLOW -->
     
   <!-- Workflow Split Section -->
   <section class="workflow-section" id="workflow">
@@ -369,10 +397,7 @@
   </section>
   
 
-    <!-- 7b. 10 SMART STRATEGIES -->
-    
-
-    <!-- 8. INDUSTRIES PARTNER -->
+    <!-- 5. INDUSTRIES PARTNER -->
     
   <section class="section section-gray">
     <div class="container">
@@ -441,13 +466,10 @@
   </section>
   
 
-    <!-- 9. CLIENTS BANNERS -->
+    <!-- 6. CLIENTS LOGO BANNER -->
     
 
-    <!-- 9b. PAN-CANADA LOCATIONS -->
-    
-
-    <!-- 10. GLOBAL PRICING -->
+    <!-- 7. PRICING SECTION -->
     
   <section class="section section-gray" id="pricing" style="padding: 80px 0; background-color: var(--color-ivory-med); border-top: 1px solid var(--border-gray); border-bottom: 1px solid var(--border-gray);">
     <div class="container">
@@ -763,7 +785,7 @@
   </section>
   
 
-    <!-- 11. CASE STUDIES -->
+    <!-- 8. CASE STUDIES SECTION -->
     
   <section class="section">
     <div class="container">
@@ -861,7 +883,7 @@
   </script>
   
 
-    <!-- 12. TEAM SECTION -->
+    <!-- 9. TEAM SECTION -->
     
   <section class="section section-gray">
     <div class="container">
@@ -929,31 +951,25 @@
   </section>
 
 
-    <!-- 12b. SERVICES ACCORDION -->
-    
-
-    <!-- 12c. INSIGHTS SECTION -->
-    
-
-    <!-- 13. FAQ SECTION -->
+    <!-- 10. FAQ SECTION -->
     
   <section class="section section-gray" id="faq">
     <div class="container">
       <div class="section-header">
-        <h2>Management Accounting Service FAQs</h2>
+        <h2>Filing Service FAQs</h2>
         <p>Common questions regarding our compliance workflows and service guarantees.</p>
         <div class="accent-line"></div>
       </div>
       <div class="faq-list">
         
           <div class="faq-item">
-            <button class="faq-question">What is included in Management Accounting services? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer"><div class="faq-answer-inner">Our management accounting services include complete filing, compliance management, and strategic advice customized to Canadian tax laws.</div></div>
+            <button class="faq-question">Can I file taxes in Canada completely online? <i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><div class="faq-answer-inner">Yes. CRA allows electronic filing (EFILE) for personal T1 and corporate T2 returns through certified software packages.</div></div>
           </div>
         
           <div class="faq-item">
-            <button class="faq-question">How do I start with Management Accounting services? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer"><div class="faq-answer-inner">You can start by booking a free 15-minute call. We will review your files, provide a fixed quote, and start working immediately.</div></div>
+            <button class="faq-question">What happens if I miss the filing deadline? <i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer"><div class="faq-answer-inner">CRA charges a late-filing penalty of 5% of your balance owing, plus 1% for each full month that the return is late, up to 12 months.</div></div>
           </div>
         
       </div>
@@ -964,7 +980,7 @@
   </section>
   
 
-    <!-- 14. CTA BANNER -->
+    <!-- 11. CTA BANNER -->
     
   <section class="cta-banner">
     <div class="container">

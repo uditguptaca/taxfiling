@@ -1542,13 +1542,6 @@ const getCorporateTaxStrategiesSection = () => {
       details: "Each missed deduction directly increases your T2 tax bill. We review the full general ledger before filing so nothing legitimate is left on the table.",
       iconClass: "fas fa-check-double",
       styleClass: "card-kraft"
-    },
-    {
-      title: "Plan Loss Carrybacks on Schedule 4",
-      summary: "If your corporation has a non-capital loss this year, Schedule 4 lets you carry it back three years and recover corporate tax already paid to the CRA.",
-      details: "Going forward, the loss carries 20 years. This is real cash refunded back to your business.",
-      iconClass: "fas fa-history",
-      styleClass: "card-bookcloth"
     }
   ];
 
@@ -1576,7 +1569,7 @@ const getCorporateTaxStrategiesSection = () => {
         <div class="service-card ${s.styleClass}" style="text-align:left; padding:25px; border-radius:12px; display:flex; gap:20px; align-items:flex-start; ${cardStyle}">
           <div style="width:40px; height:40px; border-radius:50%; background:${iconBg}; color:${iconColor}; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="${s.iconClass}"></i></div>
           <div>
-            <h5 style="font-weight:700; margin-bottom:6px; font-size:1.05rem; line-height:1.3;">${s.title}</h5>
+            <h5 style="font-weight:700; margin-bottom:6px; font-size:1.05rem; line-height:1.3; min-height: 2.8rem; display: flex; align-items: center;">${s.title}</h5>
             <div style="font-size:0.88rem; line-height:1.5; margin:0; opacity:0.95;">
               <div style="display:none; margin-bottom:6px;">${s.summary} ${s.details}</div>
               <a href="javascript:void(0);" onclick="const d = this.previousElementSibling; const open = d.style.display === 'block'; d.style.display = open ? 'none' : 'block'; this.innerText = open ? 'Read More...' : 'Show Less';" style="color:${linkColor}; font-weight:700; text-decoration:underline;">Read More...</a>
@@ -1590,7 +1583,7 @@ const getCorporateTaxStrategiesSection = () => {
   <section class="section" style="background-color: var(--color-ivory-light); padding: 80px 0; border-top: 1px solid var(--color-ivory-dark); border-bottom: 1px solid var(--color-ivory-dark);">
     <div class="container">
       <div class="section-header" style="margin-bottom: 50px; text-align: center;">
-        <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">10 Smart Corporate Tax Strategies</h2>
+        <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">9 Smart Corporate Tax Strategies</h2>
         <div class="accent-line" style="background-color: var(--primary); margin: 20px auto 0;"></div>
       </div>
 
@@ -2000,6 +1993,100 @@ const getCorporateTaxFeeComparisonSection = () => {
         <div class="fee-table-footer">
           All fees include HST. No hourly billing. No hidden charges. 60-Day Fees-Matching Policy: if you find the same service cheaper from a licensed Ontario CPA, we match it.
         </div>
+      </div>
+    </div>
+  </section>
+  `;
+};
+
+const getCorporateTaxInsightsSection = () => {
+  const targetBlogs = [
+    {
+      slug: 'expert-corporation-tax-filing-north-york',
+      title: 'Expert Corporation Tax Filing Support for North York Corporations',
+      date: 'January 6, 2026',
+      img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=250&fit=crop'
+    },
+    {
+      slug: 'ottawa-corporate-tax-filing-experts',
+      title: 'Ottawa Corporate Tax Filing Experts: Avoiding Penalties and Late Fees',
+      date: 'January 5, 2026',
+      img: 'https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=400&h=250&fit=crop'
+    },
+    {
+      slug: 'toronto-corporation-tax-filing-101',
+      title: 'Toronto Corporation Tax Filing 101: Avoiding Common T2 Return Mistakes',
+      date: 'December 28, 2025',
+      img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop'
+    },
+    {
+      slug: 'affordable-corporate-tax-solutions-small-business',
+      title: 'Affordable Corporate Tax Filing Solutions for Small Businesses',
+      date: 'December 26, 2025',
+      img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=250&fit=crop'
+    },
+    {
+      slug: 'mississauga-corporate-tax-filing-made-simple',
+      title: 'Mississauga Corporate Tax Filing Made Simple: Tips for First-Time Filers',
+      date: 'December 18, 2025',
+      img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=250&fit=crop'
+    },
+    {
+      slug: 'toronto-corporate-tax-filing-checklist',
+      title: 'Toronto Corporate Tax Filing Checklist: Documents and Deadlines to Remember',
+      date: 'December 17, 2025',
+      img: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?w=400&h=250&fit=crop'
+    }
+  ];
+
+  const cardsHtml = targetBlogs.map(b => `
+    <div class="blog-card" style="background:#ffffff; border:1px solid var(--color-ivory-dark); border-radius:12px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.02); display:flex; flex-direction:column; text-align:left;">
+      <img src="${b.img}" alt="${b.title}" style="width:100%; height:200px; object-fit:cover; border-bottom:1px solid var(--color-ivory-dark);">
+      <div style="padding:22px; display:flex; flex-direction:column; gap:12px; flex-grow:1; justify-content:space-between;">
+        <div>
+          <h3 style="font-family:var(--font-primary); font-size:1.05rem; font-weight:700; line-height:1.4; color:var(--color-slate-dark); margin:0 0 10px;">
+            <a href="/blog/${b.slug}.html" style="color:var(--color-slate-dark); text-decoration:none; transition:color 0.2s ease;">${b.title}</a>
+          </h3>
+          <div style="font-size:0.82rem; color:var(--color-cloud-dark); display:flex; align-items:center; gap:8px;">
+            <span><i class="far fa-user"></i> Sharad Gondaliya CPA</span>
+            <span>•</span>
+            <span><i class="far fa-calendar-alt"></i> ${b.date}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join('\n');
+
+  return `
+  <section class="section" style="background-color: var(--color-ivory-light); padding: 80px 0; border-top: 1px solid var(--color-ivory-dark);">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+        <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">Insights Relevant to Corporate Tax Filing</h2>
+        <div class="accent-line" style="background-color: var(--primary); margin: 20px auto 0;"></div>
+      </div>
+
+      <style>
+        .seo-insights-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 30px;
+        }
+        @media (max-width: 992px) {
+          .seo-insights-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+          }
+        }
+        @media (max-width: 576px) {
+          .seo-insights-grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+          }
+        }
+      </style>
+
+      <div class="seo-insights-grid">
+        ${cardsHtml}
       </div>
     </div>
   </section>
@@ -4639,7 +4726,7 @@ services.forEach(s => {
     ${isCorporateTax ? getCorporateTaxTimeline4Steps('Corporate Tax Process Phases', 'Our clear four-stage workflow ensuring absolute tax optimization and complete CRA compliance.') : getCorporateTaxTimeline(`${s.name} Execution Phases`, `Our simplified delivery timeline for ${s.name.toLowerCase()} services.`)}
 
     <!-- 7. RISK-FREE WORKFLOW -->
-    ${getWorkflowSection()}
+    ${isCorporateTax ? getWorkflowSection('', '/images/toronto_office_cn_tower.png') : getWorkflowSection()}
 
     <!-- 7b. 10 SMART STRATEGIES -->
     ${isCorporateTax ? getCorporateTaxStrategiesSection() : ''}
@@ -4664,6 +4751,9 @@ services.forEach(s => {
 
     <!-- 12b. SERVICES ACCORDION -->
     ${isCorporateTax ? getCorporateTaxServicesGrid() : ''}
+
+    <!-- 12c. INSIGHTS SECTION -->
+    ${isCorporateTax ? getCorporateTaxInsightsSection() : ''}
 
     <!-- 13. FAQ SECTION -->
     ${getFaqSection(s.name, serviceFaqs)}
@@ -6650,6 +6740,107 @@ const blogPosts = [
 
       <h2>Input Tax Credits (ITCs)</h2>
       <p>ITCs are the mechanism by which you recover sales taxes paid on business expenses. When filing your GST/HST return, you subtract the GST/HST paid on expenses (ITCs) from the GST/HST collected from clients, paying the net difference to the CRA.</p>
+    `
+  },
+  {
+    slug: 'expert-corporation-tax-filing-north-york',
+    title: 'Expert Corporation Tax Filing Support for North York Corporations',
+    date: 'January 6, 2026',
+    desc: 'Find out how North York small businesses and corporations can optimize their corporate tax filing, claim local credits, and maintain strict CRA compliance.',
+    content: `
+      <h2>Corporate Tax Filing in North York</h2>
+      <p>North York is home to thousands of growing businesses and startups. Operating a corporation here requires meticulous tax management to satisfy both federal CRA expectations and provincial tax filings.</p>
+      
+      <h3>Key Tax Obligations for Corporations</h3>
+      <p>Every incorporated business must file a T2 corporate tax return annually, even if there is no taxable income or active operations. Having a certified CPA ensure your filings are completed accurately prevents audit triggers.</p>
+      
+      <h3>Maximizing Capital Cost Allowances</h3>
+      <p>By claiming the Capital Cost Allowance (CCA) on company equipment, vehicles, and computers, North York corporations can defer tax obligations and redirect cash flow to hire local talent and scale operations.</p>
+    `
+  },
+  {
+    slug: 'ottawa-corporate-tax-filing-experts',
+    title: 'Ottawa Corporate Tax Filing Experts: Avoiding Penalties and Late Fees',
+    date: 'January 5, 2026',
+    desc: 'Learn how Ottawa businesses navigate T2 filing deadlines, avoid costly interest charges, and leverage professional CPA guidance for tax peace of mind.',
+    content: `
+      <h2>Avoiding Corporate Tax Penalties in Ottawa</h2>
+      <p>The Canada Revenue Agency (CRA) enforces strict deadlines for corporate tax filing. Late submissions and unpaid balances lead to compounded daily interest and major penalties.</p>
+      
+      <h3>The Six-Month Filing Rule</h3>
+      <p>While a corporation has six months after its fiscal year-end to file its T2 return, any taxes owed must be paid within three months (for CCPCs) or two months (for others) of year-end to avoid interest accumulation.</p>
+      
+      <h3>Outsourcing to Ottawa Tax Experts</h3>
+      <p>Partnering with a seasoned corporate tax accountant ensures that balance sheets, income statements, and GIFI schedules match CRA expectations perfectly, eliminating penalty risks.</p>
+    `
+  },
+  {
+    slug: 'toronto-corporation-tax-filing-101',
+    title: 'Toronto Corporation Tax Filing 101: Avoiding Common T2 Return Mistakes',
+    date: 'December 28, 2025',
+    desc: 'A guide for Toronto startup founders and business owners on GIFI mapping, associated corporations allocation, and common filing errors to prevent.',
+    content: `
+      <h2>T2 Return Common Pitfalls for Toronto Startups</h2>
+      <p>Toronto’s fast-moving business environment demands accurate bookkeeping and tax strategy. Startups frequently make errors on their first T2 corporate returns that attract audits.</p>
+      
+      <h3>GIFI Coding Errors</h3>
+      <p>Incorrectly classifying assets, liabilities, revenues, or expenses under GIFI (General Index of Financial Information) codes triggers immediate CRA processing flags. Accurate trial balance mapping is essential.</p>
+      
+      <h3>Associated Corporation SBD Limits</h3>
+      <p>When multiple corporations share common control, the $500,000 Small Business Deduction limit must be shared among them. Mismatched allocations on Schedule 23 lead to reassessments and tax hikes.</p>
+    `
+  },
+  {
+    slug: 'affordable-corporate-tax-solutions-small-business',
+    title: 'Affordable Corporate Tax Filing Solutions for Small Businesses',
+    date: 'December 26, 2025',
+    desc: 'Discover fixed-fee corporate tax preparation options, from simple holding companies to active business returns, without sacrificing quality.',
+    content: `
+      <h2>Fixed-Fee Corporate Tax Solutions</h2>
+      <p>Many small business owners delay filing their T2 returns because they fear unpredictable hourly accounting bills. Fixed-fee corporate tax packages provide clarity and confidence.</p>
+      
+      <h3>Holding Company vs Active Corporation Pricing</h3>
+      <p>A holding company with minimal investment transactions requires different filing effort compared to an active retail business. Certified CPA services offer custom pricing plans suited to your complexity.</p>
+      
+      <h3>Why Pay Only After Delivery Matters</h3>
+      <p>A transparent "pay after filing is complete" policy guarantees that you receive excellent service, accurate schedules, and timely electronic submission before paying a single dollar.</p>
+    `
+  },
+  {
+    slug: 'mississauga-corporate-tax-filing-made-simple',
+    title: 'Mississauga Corporate Tax Filing Made Simple: Tips for First-Time Filers',
+    date: 'December 18, 2025',
+    desc: 'A step-by-step primer on compiling financial statements, source deductions reconciliation, and filing your first T2 corporate tax return in Mississauga.',
+    content: `
+      <h2>First-Time Corporate Filing in Mississauga</h2>
+      <p>Filing your corporation's first T2 return can feel overwhelming. Establishing a clear, step-by-step workflow simplifies the process and ensures CRA compliance.</p>
+      
+      <h3>Step 1: Balance Sheet and P&L Compilation</h3>
+      <p>Assemble your general ledger and verify bank accounts match trial balances. This financial compilation is the foundation of your tax return.</p>
+      
+      <h3>Step 2: Source Deductions Reconciliation</h3>
+      <p>Ensure that all monthly payroll source deductions match annual T4 summaries. Discrepancies here trigger CRA payroll audits quickly.</p>
+    `
+  },
+  {
+    slug: 'toronto-corporate-tax-filing-checklist',
+    title: 'Toronto Corporate Tax Filing Checklist: Documents and Deadlines to Remember',
+    date: 'December 17, 2025',
+    desc: 'Save time and money during tax season with our comprehensive list of financial records, trial balance requirements, and corporate tax schedules.',
+    content: `
+      <h2>The Ultimate T2 Filing Checklist</h2>
+      <p>Being prepared for tax season reduces stress and helps your CPA uncover additional deductions. Gather these crucial documents early.</p>
+      
+      <h3>Required Financial Records</h3>
+      <ul>
+        <li>Year-end trial balance & general ledger</li>
+        <li>Corporate bank statements and reconciliations</li>
+        <li>Fixed asset purchase receipts (for CCA calculations)</li>
+        <li>Details of shareholder loans or transfers</li>
+      </ul>
+      
+      <h3>CRA Correspondence</h3>
+      <p>Keep previous Notice of Assessments, corporate tax accounts status sheets, and direct communication logs with the CRA safe for reference.</p>
     `
   }
 ];
