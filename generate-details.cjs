@@ -3937,7 +3937,6 @@ services.forEach(s => {
     <!-- 2. GOOGLE REVIEWS BAR -->
     ${isCorporateTax ? `
       ${getGoogleReviewsMarquee()}
-      ${getPricingSection()}
     ` : `
       <div class="google-reviews-bar">
         <span class="badge-txt">Excellent</span>
