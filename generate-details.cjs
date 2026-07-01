@@ -1171,7 +1171,7 @@ const getServiceTiersSection = (pageName, pageType = 'service', customTiers = nu
 
 const getWhyChooseUsSection = (pageName, customTitle = null, customSubtitle = null, customPoints = null, customImage = null) => {
   const title = customTitle || 'Why Businesses &amp; Corporations Choose Tax Filings Canada';
-  const subtitle = customSubtitle || ''; // Removed paragraph text
+  const subtitle = customSubtitle || 'Our team of experienced Tax Accountant provide trusted tax advice, accurate filings, and tailored strategies to minimize liabilities. We offer transparent pricing and full CRA compliance support for bookkeeping, GST/HST, payroll, and corporate taxes.';
   const points = customPoints || [
     { title: 'Expert Tax Filing &amp; Planning', desc: 'Providing tailored tax filing and planning to reduce liabilities, maximize refunds, and ensure CRA compliance.' },
     { title: 'Transparent &amp; Risk-Free Tax Services', desc: '100% risk-free tax filing with clear pricing, no hidden fees, plus support for personal taxes, small business accounting, and bookkeeping.' },
@@ -1201,7 +1201,8 @@ const getWhyChooseUsSection = (pageName, customTitle = null, customSubtitle = nu
         <div style="display:flex; flex-direction:column; justify-content:center;">
           <div class="section-header" style="text-align:left; margin-bottom:30px; max-width:100%;">
             <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--color-slate-dark); margin-bottom: 12px; line-height: 1.25;">${title}</h2>
-            <div class="accent-line" style="margin:15px 0 0 0; display:block !important; width:50px; height:3px; background:var(--color-bookcloth); border-radius:2px;"></div>
+            <p style="display:block !important; font-size:0.95rem; line-height:1.55; color: var(--color-slate-medium); margin: 10px 0 15px 0;">${subtitle}</p>
+            <div class="accent-line" style="margin:0; display:block !important; width:50px; height:3px; background:var(--color-bookcloth); border-radius:2px;"></div>
           </div>
           <div class="grid-2" style="gap:20px;">
             ${cardsHtml}
