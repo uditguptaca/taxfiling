@@ -1218,9 +1218,9 @@ const getWhyChooseUsSection = (pageName, customTitle = null, customSubtitle = nu
 
 const getClientsLogoSection = () => ``;
 
-const getWorkflowSection = (indSlug = '') => {
+const getWorkflowSection = (indSlug = '', customImage = null) => {
   const isHealthcare = indSlug === 'healthcare';
-  const imgUrl = isHealthcare ? '/images/medical_accounting_team.png' : '/images/office_team.png';
+  const imgUrl = customImage || (isHealthcare ? '/images/medical_accounting_team.png' : '/images/office_team.png');
   return `
   <!-- Workflow Split Section -->
   <section class="workflow-section" id="workflow">
@@ -5283,10 +5283,10 @@ locations.forEach(loc => {
     ${recommendedLogosHtml}
 
     <!-- 4. WHY CHOOSE US -->
-    ${getWhyChooseUsSection(loc.name, isToronto ? 'Why Choose Tax Filings Toronto?' : `Why Choose Tax Filings ${loc.name}?`, null, null, isToronto ? '/images/toronto_office_workspace.png' : null)}
+    ${getWhyChooseUsSection(loc.name, isToronto ? 'Why Choose Tax Filings Toronto?' : `Why Choose Tax Filings ${loc.name}?`, null, null, isToronto ? '/images/toronto_hero_bg.png' : null)}
 
     <!-- 5. RISK-FREE WORKFLOW -->
-    ${getWorkflowSection()}
+    ${isToronto ? getWorkflowSection('', '/images/toronto_office_workspace.png') : getWorkflowSection()}
 
     <!-- Core Services Showcase Section (Toronto Only) -->
     ${coreServicesShowcaseHtml}
