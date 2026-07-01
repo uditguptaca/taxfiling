@@ -1576,8 +1576,11 @@ const getCorporateTaxStrategiesSection = () => {
         <div class="service-card ${s.styleClass}" style="text-align:left; padding:25px; border-radius:12px; display:flex; gap:20px; align-items:flex-start; ${cardStyle}">
           <div style="width:40px; height:40px; border-radius:50%; background:${iconBg}; color:${iconColor}; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="${s.iconClass}"></i></div>
           <div>
-            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem;">${s.title}</h5>
-            <p style="font-size:0.88rem; line-height:1.55; margin:0; opacity:0.95;">${s.summary} <span style="display:none;">${s.details}</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:${linkColor}; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
+            <h5 style="font-weight:700; margin-bottom:6px; font-size:1.05rem; line-height:1.3;">${s.title}</h5>
+            <div style="font-size:0.88rem; line-height:1.5; margin:0; opacity:0.95;">
+              <div style="display:none; margin-bottom:6px;">${s.summary} ${s.details}</div>
+              <a href="javascript:void(0);" onclick="const d = this.previousElementSibling; const open = d.style.display === 'block'; d.style.display = open ? 'none' : 'block'; this.innerText = open ? 'Read More...' : 'Show Less';" style="color:${linkColor}; font-weight:700; text-decoration:underline;">Read More...</a>
+            </div>
           </div>
         </div>
     `;
@@ -1588,7 +1591,6 @@ const getCorporateTaxStrategiesSection = () => {
     <div class="container">
       <div class="section-header" style="margin-bottom: 50px; text-align: center;">
         <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">10 Smart Corporate Tax Strategies</h2>
-        <p style="font-size: 1.1rem; color: var(--color-slate-medium); max-width: 800px; margin: 0 auto;">Implement these proven tax-saving strategies to ensure compliance and maximize profitability for your business.</p>
         <div class="accent-line" style="background-color: var(--primary); margin: 20px auto 0;"></div>
       </div>
 
@@ -1600,374 +1602,180 @@ const getCorporateTaxStrategiesSection = () => {
   `;
 };
 
-const getCorporateTaxServicesAccordion = () => {
+const getCorporateTaxServicesGrid = () => {
+  const categories = [
+    {
+      title: "Corporate Tax Services",
+      iconClass: "fas fa-file-invoice-dollar",
+      styleClass: "card-manilla",
+      services: [
+        { label: "Corporate Tax Filing", url: "/pricing/corporate-tax.html" },
+        { label: "Corporate Tax Return Filing (T2)", url: "/pricing/corporate-tax.html" },
+        { label: "Corporate Tax Planning", url: "/services/tax-planning.html" },
+        { label: "Catch-Up Corporate Tax Filing", url: "/pricing/corporate-tax.html" },
+        { label: "Corporate Tax Cleanup", url: "/pricing/corporate-tax.html" },
+        { label: "Holding Company Tax Planning", url: "/services/tax-planning.html" },
+        { label: "Corporate Year-End Accounting and Filings", url: "/services/financial-accounting.html" },
+        { label: "Trust and Estate Tax Returns (T3)", url: "/pricing/trust-estate-tax.html" },
+        { label: "SR&ED Tax Credit Filings", url: "/services/tax-planning.html" }
+      ]
+    },
+    {
+      title: "Accounting & Bookkeeping",
+      iconClass: "fas fa-calculator",
+      styleClass: "card-cloud",
+      services: [
+        { label: "Business Bookkeeping", url: "/pricing/accounting-bookkeeping.html" },
+        { label: "Business Accounting", url: "/services/accounting.html" },
+        { label: "Virtual CFO Services", url: "/services/virtual-cfo.html" },
+        { label: "QuickBooks & Xero Reconciliation", url: "/services/bookkeeping.html" },
+        { label: "Monthly Financial Statements", url: "/services/financial-accounting.html" },
+        { label: "Accounts Payable & Receivable", url: "/pricing/accounting-bookkeeping.html" }
+      ]
+    },
+    {
+      title: "Incorporation & Setup",
+      iconClass: "fas fa-building",
+      styleClass: "card-kraft",
+      services: [
+        { label: "Federal Incorporation in Canada", url: "/services/business-transformation.html" },
+        { label: "Provincial Incorporation (Ontario)", url: "/services/business-transformation.html" },
+        { label: "Corporate Structuring & Setup", url: "/services/accounting-advisory.html" }
+      ]
+    },
+    {
+      title: "Payroll Services",
+      iconClass: "fas fa-users-cog",
+      styleClass: "card-bookcloth",
+      services: [
+        { label: "Corporate Payroll Setup", url: "/services/payroll.html" },
+        { label: "T4 & T5 Slip Filings", url: "/services/payroll.html" },
+        { label: "Direct Deposit & Source Deductions", url: "/services/payroll.html" }
+      ]
+    },
+    {
+      title: "GST / HST Filing",
+      iconClass: "fas fa-percent",
+      styleClass: "",
+      services: [
+        { label: "GST/HST Tax Filings", url: "/pricing/gst-hst-pst.html" },
+        { label: "GST/HST Input Tax Credits (ITCs)", url: "/services/gst-returns.html" },
+        { label: "PST/QST/RST Provincial Filing", url: "/pricing/gst-hst-pst.html" }
+      ]
+    },
+    {
+      title: "International Tax",
+      iconClass: "fas fa-globe",
+      styleClass: "card-cloud",
+      services: [
+        { label: "Non-Resident Corporate Filing", url: "/services/tax-planning.html" },
+        { label: "Cross-Border Corporate Planning", url: "/services/tax-planning.html" },
+        { label: "US-Canada Tax Treaty Advisory", url: "/services/tax-planning.html" }
+      ]
+    },
+    {
+      title: "CRA Audit & Objections",
+      iconClass: "fas fa-shield-alt",
+      styleClass: "card-manilla",
+      services: [
+        { label: "CRA Audit Representation", url: "/pricing/notice-to-reader.html" },
+        { label: "Dispute Resolution & Objections", url: "/pricing/notice-to-reader.html" },
+        { label: "Voluntary Disclosure Program (VDP)", url: "/pricing/notice-to-reader.html" }
+      ]
+    },
+    {
+      title: "Advisory & Specialized",
+      iconClass: "fas fa-chart-line",
+      styleClass: "card-kraft",
+      services: [
+        { label: "Notice to Reader (NTR) Financials", url: "/pricing/notice-to-reader.html" },
+        { label: "Management Accounting Advisory", url: "/services/management-accounting.html" },
+        { label: "Corporate Advisory & Strategy", url: "/services/accounting-advisory.html" }
+      ]
+    }
+  ];
+
+  const cardsHtml = categories.map((cat, idx) => {
+    let bulletColor = 'var(--primary)';
+    let linkColor = 'var(--primary)';
+    let textColor = 'var(--color-slate-dark)';
+    let titleColor = 'var(--color-slate-dark)';
+    let iconBg = 'rgba(204, 120, 92, 0.1)';
+    let iconColor = 'var(--primary)';
+
+    if (cat.styleClass === 'card-manilla' || cat.styleClass === 'card-kraft' || cat.styleClass === 'card-cloud') {
+      bulletColor = 'var(--color-slate-dark)';
+      linkColor = 'var(--color-slate-dark)';
+      textColor = 'var(--color-slate-dark)';
+      titleColor = 'var(--color-slate-dark)';
+      iconBg = 'rgba(25, 25, 25, 0.06)';
+      iconColor = 'var(--color-slate-dark)';
+    } else if (cat.styleClass === 'card-bookcloth') {
+      bulletColor = 'var(--color-ivory-light)';
+      linkColor = 'var(--color-ivory-light)';
+      textColor = 'var(--color-ivory-light)';
+      titleColor = 'var(--color-ivory-light)';
+      iconBg = 'rgba(255, 255, 255, 0.2)';
+      iconColor = 'var(--color-ivory-light)';
+    }
+
+    const cardStyle = cat.styleClass 
+      ? '' 
+      : 'background:#ffffff; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02);';
+
+    const listItemsHtml = cat.services.map(s => `
+      <li style="color:${bulletColor}; font-size:0.92rem; margin-bottom:8px;">
+        <a href="${s.url}" style="color:${linkColor}; font-weight:600; text-decoration:underline;">${s.label}</a>
+      </li>
+    `).join('\n');
+
+    return `
+      <div class="service-cat-card ${cat.styleClass}" style="padding:25px; border-radius:12px; display:flex; flex-direction:column; gap:20px; text-align:left; ${cardStyle}">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="width:36px; height:36px; border-radius:50%; background:${iconBg}; color:${iconColor}; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;">
+            <i class="${cat.iconClass}"></i>
+          </div>
+          <h4 style="font-family:var(--font-serif); font-size:1.2rem; font-weight:700; color:${titleColor}; margin:0;">${cat.title}</h4>
+        </div>
+        <ul style="list-style-type:disc; padding-left:20px; margin:0; display:flex; flex-direction:column; gap:6px;">
+          ${listItemsHtml}
+        </ul>
+      </div>
+    `;
+  }).join('\n');
+
   return `
-  <section class="section" style="background-color: #ffffff; padding: 60px 0; border-top: 1px solid var(--color-ivory-dark);">
+  <section class="section" style="background-color: var(--color-ivory-light); padding: 80px 0; border-top: 1px solid var(--color-ivory-dark); border-bottom: 1px solid var(--color-ivory-dark);">
     <div class="container">
-      <div class="section-header" style="text-align: center; margin-bottom: 40px;">
-        <h2 style="font-family: var(--font-serif); font-size: 2.5rem; font-weight: 700; color: var(--color-slate-dark); text-transform: none;">Browse Our Affordable CPA Services</h2>
+      <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+        <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">Browse Our Affordable CPA Services</h2>
+        <div class="accent-line" style="background-color: var(--primary); margin: 20px auto 0;"></div>
       </div>
 
       <style>
-        .seo-accordion-container {
-          border: 1px solid #e2e8f0;
-          border-radius: 8px;
-          overflow: hidden;
-          background: #ffffff;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-        }
-        .seo-accordion-item {
-          border-bottom: 1px solid #e2e8f0;
-        }
-        .seo-accordion-item:last-child {
-          border-bottom: none;
-        }
-        .seo-accordion-header {
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 18px 24px;
-          background: #ffffff;
-          border: none;
-          font-size: 1.05rem;
-          font-weight: 700;
-          color: var(--color-slate-dark);
-          text-align: left;
-          cursor: pointer;
-          transition: background 0.2s ease;
-        }
-        .seo-accordion-header:hover {
-          background: #f8fafc;
-        }
-        .seo-accordion-icon {
-          font-size: 1.25rem;
-          font-weight: 300;
-          color: #64748b;
-          user-select: none;
-          line-height: 1;
-        }
-        .seo-accordion-content {
-          max-height: 0;
-          overflow: hidden;
-          transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
-          background: #f8fafc;
-        }
-        .seo-accordion-content-inner {
-          padding: 24px 32px;
-        }
-        .seo-services-ul {
-          list-style-type: disc;
-          padding-left: 20px;
-          margin: 0;
+        .seo-services-grid {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 15px 30px;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 25px;
         }
-        .seo-services-ul li {
-          color: var(--primary);
-        }
-        .seo-services-ul a {
-          color: var(--primary);
-          text-decoration: underline;
-          font-size: 0.95rem;
-          font-weight: 600;
-          transition: color 0.2s ease;
-        }
-        .seo-services-ul a:hover {
-          color: var(--primary-dark);
+        @media (max-width: 992px) {
+          .seo-services-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
         }
         @media (max-width: 576px) {
-          .seo-services-ul {
+          .seo-services-grid {
             grid-template-columns: 1fr;
-            gap: 10px;
+            gap: 15px;
           }
         }
       </style>
 
-      <div class="seo-accordion-container">
-        
-        <!-- Tab 1: Corporate Tax Services -->
-        <div class="seo-accordion-item">
-          <button class="seo-accordion-header" onclick="
-            const item = this.parentElement;
-            const content = item.querySelector('.seo-accordion-content');
-            const icon = this.querySelector('.seo-accordion-icon');
-            const isOpen = content.style.maxHeight;
-            
-            // Close all other panels
-            document.querySelectorAll('.seo-accordion-content').forEach(c => {
-              c.style.maxHeight = null;
-              c.previousElementSibling.querySelector('.seo-accordion-icon').innerText = '+';
-            });
-            
-            if (!isOpen) {
-              content.style.maxHeight = content.scrollHeight + 'px';
-              icon.innerText = '−';
-            }
-          ">
-            <span>Corporate Tax Services</span>
-            <span class="seo-accordion-icon">+</span>
-          </button>
-          <div class="seo-accordion-content">
-            <div class="seo-accordion-content-inner">
-              <ul class="seo-services-ul">
-                <li><a href="/pricing/corporate-tax.html">Corporate Tax Filing</a></li>
-                <li><a href="/pricing/corporate-tax.html">Corporate Tax Return Filing (T2)</a></li>
-                <li><a href="/services/tax-planning.html">Corporate Tax Planning</a></li>
-                <li><a href="/pricing/corporate-tax.html">Catch-Up Corporate Tax Filing</a></li>
-                <li><a href="/pricing/corporate-tax.html">Corporate Tax Cleanup</a></li>
-                <li><a href="/services/tax-planning.html">Holding Company Tax Planning</a></li>
-                <li><a href="/services/financial-accounting.html">Corporate Year-End Accounting and Filings</a></li>
-                <li><a href="/pricing/trust-estate-tax.html">Trust and Estate Tax Returns (T3)</a></li>
-                <li><a href="/services/tax-planning.html">SR&ED Tax Credit Filings</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 2: Accounting & Bookkeeping -->
-        <div class="seo-accordion-item">
-          <button class="seo-accordion-header" onclick="
-            const item = this.parentElement;
-            const content = item.querySelector('.seo-accordion-content');
-            const icon = this.querySelector('.seo-accordion-icon');
-            const isOpen = content.style.maxHeight;
-            
-            document.querySelectorAll('.seo-accordion-content').forEach(c => {
-              c.style.maxHeight = null;
-              c.previousElementSibling.querySelector('.seo-accordion-icon').innerText = '+';
-            });
-            
-            if (!isOpen) {
-              content.style.maxHeight = content.scrollHeight + 'px';
-              icon.innerText = '−';
-            }
-          ">
-            <span>Accounting &amp; Bookkeeping</span>
-            <span class="seo-accordion-icon">+</span>
-          </button>
-          <div class="seo-accordion-content">
-            <div class="seo-accordion-content-inner">
-              <ul class="seo-services-ul">
-                <li><a href="/pricing/accounting-bookkeeping.html">Business Bookkeeping</a></li>
-                <li><a href="/services/accounting.html">Business Accounting</a></li>
-                <li><a href="/services/virtual-cfo.html">Virtual CFO Services</a></li>
-                <li><a href="/services/bookkeeping.html">QuickBooks &amp; Xero Reconciliation</a></li>
-                <li><a href="/services/financial-accounting.html">Monthly Financial Statements</a></li>
-                <li><a href="/pricing/accounting-bookkeeping.html">Accounts Payable &amp; Receivable</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 3: Incorporation & Business Setup -->
-        <div class="seo-accordion-item">
-          <button class="seo-accordion-header" onclick="
-            const item = this.parentElement;
-            const content = item.querySelector('.seo-accordion-content');
-            const icon = this.querySelector('.seo-accordion-icon');
-            const isOpen = content.style.maxHeight;
-            
-            document.querySelectorAll('.seo-accordion-content').forEach(c => {
-              c.style.maxHeight = null;
-              c.previousElementSibling.querySelector('.seo-accordion-icon').innerText = '+';
-            });
-            
-            if (!isOpen) {
-              content.style.maxHeight = content.scrollHeight + 'px';
-              icon.innerText = '−';
-            }
-          ">
-            <span>Incorporation &amp; Business Setup</span>
-            <span class="seo-accordion-icon">+</span>
-          </button>
-          <div class="seo-accordion-content">
-            <div class="seo-accordion-content-inner">
-              <ul class="seo-services-ul">
-                <li><a href="/services/business-transformation.html">Federal Incorporation in Canada</a></li>
-                <li><a href="/services/business-transformation.html">Provincial Incorporation (Ontario)</a></li>
-                <li><a href="/services/accounting-advisory.html">Corporate Structuring &amp; Setup</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 4: Payroll Services -->
-        <div class="seo-accordion-item">
-          <button class="seo-accordion-header" onclick="
-            const item = this.parentElement;
-            const content = item.querySelector('.seo-accordion-content');
-            const icon = this.querySelector('.seo-accordion-icon');
-            const isOpen = content.style.maxHeight;
-            
-            document.querySelectorAll('.seo-accordion-content').forEach(c => {
-              c.style.maxHeight = null;
-              c.previousElementSibling.querySelector('.seo-accordion-icon').innerText = '+';
-            });
-            
-            if (!isOpen) {
-              content.style.maxHeight = content.scrollHeight + 'px';
-              icon.innerText = '−';
-            }
-          ">
-            <span>Payroll Services</span>
-            <span class="seo-accordion-icon">+</span>
-          </button>
-          <div class="seo-accordion-content">
-            <div class="seo-accordion-content-inner">
-              <ul class="seo-services-ul">
-                <li><a href="/services/payroll.html">Corporate Payroll Setup</a></li>
-                <li><a href="/services/payroll.html">T4 &amp; T5 Slip Filings</a></li>
-                <li><a href="/services/payroll.html">Direct Deposit &amp; CRA Source Deductions</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 5: GST / HST -->
-        <div class="seo-accordion-item">
-          <button class="seo-accordion-header" onclick="
-            const item = this.parentElement;
-            const content = item.querySelector('.seo-accordion-content');
-            const icon = this.querySelector('.seo-accordion-icon');
-            const isOpen = content.style.maxHeight;
-            
-            document.querySelectorAll('.seo-accordion-content').forEach(c => {
-              c.style.maxHeight = null;
-              c.previousElementSibling.querySelector('.seo-accordion-icon').innerText = '+';
-            });
-            
-            if (!isOpen) {
-              content.style.maxHeight = content.scrollHeight + 'px';
-              icon.innerText = '−';
-            }
-          ">
-            <span>GST / HST</span>
-            <span class="seo-accordion-icon">+</span>
-          </button>
-          <div class="seo-accordion-content">
-            <div class="seo-accordion-content-inner">
-              <ul class="seo-services-ul">
-                <li><a href="/pricing/gst-hst-pst.html">GST/HST Tax Filings</a></li>
-                <li><a href="/services/gst-returns.html">GST/HST Input Tax Credits (ITCs)</a></li>
-                <li><a href="/pricing/gst-hst-pst.html">PST/QST/RST Provincial Filing</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 6: International & Non-Resident Tax -->
-        <div class="seo-accordion-item">
-          <button class="seo-accordion-header" onclick="
-            const item = this.parentElement;
-            const content = item.querySelector('.seo-accordion-content');
-            const icon = this.querySelector('.seo-accordion-icon');
-            const isOpen = content.style.maxHeight;
-            
-            document.querySelectorAll('.seo-accordion-content').forEach(c => {
-              c.style.maxHeight = null;
-              c.previousElementSibling.querySelector('.seo-accordion-icon').innerText = '+';
-            });
-            
-            if (!isOpen) {
-              content.style.maxHeight = content.scrollHeight + 'px';
-              icon.innerText = '−';
-            }
-          ">
-            <span>International &amp; Non-Resident Tax</span>
-            <span class="seo-accordion-icon">+</span>
-          </button>
-          <div class="seo-accordion-content">
-            <div class="seo-accordion-content-inner">
-              <ul class="seo-services-ul">
-                <li><a href="/services/tax-planning.html">Non-Resident Corporate Tax Filing</a></li>
-                <li><a href="/services/tax-planning.html">Cross-Border Corporate Planning</a></li>
-                <li><a href="/services/tax-planning.html">US-Canada Tax Treaty Advisory</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 7: CRA Audit & Tax Resolution -->
-        <div class="seo-accordion-item">
-          <button class="seo-accordion-header" onclick="
-            const item = this.parentElement;
-            const content = item.querySelector('.seo-accordion-content');
-            const icon = this.querySelector('.seo-accordion-icon');
-            const isOpen = content.style.maxHeight;
-            
-            document.querySelectorAll('.seo-accordion-content').forEach(c => {
-              c.style.maxHeight = null;
-              c.previousElementSibling.querySelector('.seo-accordion-icon').innerText = '+';
-            });
-            
-            if (!isOpen) {
-              content.style.maxHeight = content.scrollHeight + 'px';
-              icon.innerText = '−';
-            }
-          ">
-            <span>CRA Audit &amp; Tax Resolution</span>
-            <span class="seo-accordion-icon">+</span>
-          </button>
-          <div class="seo-accordion-content">
-            <div class="seo-accordion-content-inner">
-              <ul class="seo-services-ul">
-                <li><a href="/pricing/notice-to-reader.html">CRA Audit Representation &amp; Support</a></li>
-                <li><a href="/pricing/notice-to-reader.html">Dispute Resolution &amp; Objections</a></li>
-                <li><a href="/pricing/notice-to-reader.html">Voluntary Disclosure Program (VDP)</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 8: Advisory & Specialized Services -->
-        <div class="seo-accordion-item">
-          <button class="seo-accordion-header" onclick="
-            const item = this.parentElement;
-            const content = item.querySelector('.seo-accordion-content');
-            const icon = this.querySelector('.seo-accordion-icon');
-            const isOpen = content.style.maxHeight;
-            
-            document.querySelectorAll('.seo-accordion-content').forEach(c => {
-              c.style.maxHeight = null;
-              c.previousElementSibling.querySelector('.seo-accordion-icon').innerText = '+';
-            });
-            
-            if (!isOpen) {
-              content.style.maxHeight = content.scrollHeight + 'px';
-              icon.innerText = '−';
-            }
-          ">
-            <span>Advisory &amp; Specialized Services</span>
-            <span class="seo-accordion-icon">+</span>
-          </button>
-          <div class="seo-accordion-content">
-            <div class="seo-accordion-content-inner">
-              <ul class="seo-services-ul">
-                <li><a href="/pricing/notice-to-reader.html">Notice to Reader (NTR) Financials</a></li>
-                <li><a href="/services/management-accounting.html">Management Accounting Advisory</a></li>
-                <li><a href="/services/accounting-advisory.html">Corporate Advisory &amp; Strategy</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
+      <div class="seo-services-grid">
+        ${cardsHtml}
       </div>
     </div>
   </section>
-  <script>
-    // Initialize the first panel (Corporate Tax Services) to be open by default
-    document.addEventListener("DOMContentLoaded", () => {
-      const firstHeader = document.querySelector(".seo-accordion-header");
-      if (firstHeader) {
-        const firstContent = firstHeader.nextElementSibling;
-        const firstIcon = firstHeader.querySelector(".seo-accordion-icon");
-        firstContent.style.maxHeight = firstContent.scrollHeight + "px";
-        firstIcon.innerText = "−";
-      }
-    });
-  </script>
   `;
 };
 
@@ -4710,7 +4518,7 @@ services.forEach(s => {
     ${getTeamSection()}
 
     <!-- 12b. SERVICES ACCORDION -->
-    ${isCorporateTax ? getCorporateTaxServicesAccordion() : ''}
+    ${isCorporateTax ? getCorporateTaxServicesGrid() : ''}
 
     <!-- 13. FAQ SECTION -->
     ${getFaqSection(s.name, serviceFaqs)}
