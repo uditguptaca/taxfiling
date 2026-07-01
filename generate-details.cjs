@@ -1389,13 +1389,18 @@ const getCorporateTaxIndustriesGrid = () => {
     { title: "Corporate Tax Filing for Startups", desc: "Specialized startup tax & accounting", link: "/industries/technology.html" },
     { title: "Corporate Tax Filing for Healthcare", desc: "Specialized healthcare tax & accounting", link: "/industries/healthcare.html" },
     { title: "Corporate Tax Filing for Consultants", desc: "Specialized consulting tax & accounting", link: "/industries/professional-services.html" },
+    { title: "Corporate Tax Filing for Real Estate", desc: "Specialized real estate tax & accounting", link: "/industries/real-estate.html" },
+    { title: "Corporate Tax Filing for Construction", desc: "Specialized construction tax & accounting", link: "/industries/construction.html" },
+    { title: "Tax Filing for Non-Profit Organizations", desc: "Specialized NPO tax & accounting", link: "/industries/non-profit.html" },
     { title: "Corporate Tax Filing for Small Businesses", desc: "Specialized small business tax & accounting", link: "/services/small-business-accounting.html" },
     { title: "Corporate Tax Filing for Restaurants", desc: "Specialized restaurant tax & accounting", link: "/industries/restaurants.html" },
     { title: "Corporate Tax Filing for Franchises", desc: "Specialized franchise tax & accounting", link: "/industries/restaurants.html" },
     { title: "Corporate Tax Filing for Self-Employed", desc: "Specialized self-employed tax & accounting", link: "/pricing/individual-tax.html" },
     { title: "Corporate Tax Filing for Manufacturing", desc: "Specialized manufacturing tax & accounting", link: "/industries/manufacturing.html" },
-    { title: "Corporate Tax Filing for Grocery Stores", desc: "Specialized grocery tax & accounting", link: "/industries/ecommerce.html" },
-    { title: "Corporate Tax Filing for Import & Export", desc: "Specialized import/export tax & accounting", link: "/industries/transportation.html" }
+    { title: "Corporate Tax Filing for E-Commerce", desc: "Specialized e-commerce tax & accounting", link: "/industries/ecommerce.html" },
+    { title: "Corporate Tax Filing for Import & Export", desc: "Specialized import/export tax & accounting", link: "/industries/transportation.html" },
+    { title: "Corporate Tax Filing for Holding Companies", desc: "Specialized holding company tax", link: "/services/corporate-tax.html" },
+    { title: "Corporate Tax Filing for Logistics & Freight", desc: "Specialized logistics tax & accounting", link: "/industries/transportation.html" }
   ];
 
   const classes = ["", "card-manilla", "card-cloud", "card-kraft", "card-bookcloth"];
@@ -1979,7 +1984,9 @@ const getCorporateTaxLocationsSection = () => {
     { name: "Nova Scotia", path: "/locations/halifax.html" },
     { name: "New Brunswick", path: "/locations/moncton.html" },
     { name: "Newfoundland", path: "/locations/index.html" },
-    { name: "PEI", path: "/locations/index.html" }
+    { name: "PEI", path: "/locations/index.html" },
+    { name: "Yukon", path: "/locations/index.html" },
+    { name: "Northwest Territories", path: "/locations/index.html" }
   ];
 
   const classes = ["", "card-manilla", "card-cloud", "card-kraft", "card-bookcloth"];
