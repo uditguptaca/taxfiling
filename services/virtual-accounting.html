@@ -234,27 +234,18 @@
     </div>
 
     <!-- 3. INTRO BLOCK -->
+    
+    <!-- 3. INTRO BLOCK -->
     <section class="section" style="padding-bottom: 20px;">
       <div class="container">
         <div class="grid-2-1">
           <div>
-            <h2>Expert Solutions for Virtual Accounting Across Canada</h2>
-            <p style="font-size:1.1rem;line-height:1.6;color:var(--body-text-light);margin-top:15px;margin-bottom:25px;">Stay compliant and optimize your financial processes with our specialized virtual accounting services.</p>
+            <h2>${introTitle}</h2>
+            <p style="font-size:1.1rem;line-height:1.6;color:var(--body-text-light);margin-top:15px;margin-bottom:25px;">${introBody}</p>
             <ul class="check-list mt-15" style="margin-bottom:30px;">
-              <li>Virtual Accounting Compliance and Filing support</li><li>Virtual Accounting Planning & Preparation Service</li><li>Accurate Virtual Accounting reporting in Canada</li><li>Expert dispute resolution and client support</li>
+              ${introItems.map(item => `<li>${item}</li>`).join('')}
             </ul>
-            
-  <div class="cta-banner-box" style="text-align:left; margin-top:40px; padding:30px; background:linear-gradient(135deg, #FAF8F5 0%, #F5F1EB 100%); border:1px solid rgba(251, 119, 13, 0.15); border-radius:16px; box-shadow:var(--shadow-sm);">
-    <h4 style="margin:0 0 15px 0; font-size:1.25rem; font-weight:800; color:var(--dark-green); display:flex; align-items:center; gap:10px;"><i class="fas fa-handshake" style="color:var(--primary);"></i> Book a Meeting with a Tax Accountant</h4>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:15px 25px; margin-bottom:25px;">
-      <div style="display:flex; align-items:center; gap:10px; font-size:0.95rem; font-weight:600; color:var(--body-text);"><i class="fas fa-check-circle" style="color:var(--primary); font-size:1.1rem; flex-shrink:0;"></i> Free initial consultation</div>
-      <div style="display:flex; align-items:center; gap:10px; font-size:0.95rem; font-weight:600; color:var(--teal-light);"><i class="fas fa-check-circle" style="color:var(--teal-light); font-size:1.1rem; flex-shrink:0;"></i> No obligations</div>
-      <div style="display:flex; align-items:center; gap:10px; font-size:0.95rem; font-weight:600; color:var(--body-text);"><i class="fas fa-check-circle" style="color:var(--primary); font-size:1.1rem; flex-shrink:0;"></i> Speak directly with expert CPA/CA</div>
-      <div style="display:flex; align-items:center; gap:10px; font-size:0.95rem; font-weight:600; color:var(--body-text);"><i class="fas fa-check-circle" style="color:var(--teal-light); font-size:1.1rem; flex-shrink:0;"></i> Tailored tax planning strategies</div>
-    </div>
-    <a href="/contact.html" class="btn btn-primary" style="padding:10px 30px; border-radius:50px; font-weight:700;">Get Started <i class="fas fa-arrow-right" style="margin-left:8px;"></i></a>
-  </div>
-
+            ${getMeetingCtaBox(null)}
           </div>
           <div class="intro-img-container">
             <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop" alt="A Team of CPA Experts" class="intro-img">
@@ -262,62 +253,14 @@
         </div>
       </div>
     </section>
+  
 
     <!-- 4. SERVICE TIERS -->
+    
     <section id="service-pricing" style="padding: 20px 0;">
-      
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2>Virtual Accounting – Service Pricing Tiers</h2>
-          <p>Providing transparent fixed pricing and high-quality CPA compliance for your virtual accounting requirements.</p>
-          <div class="accent-line"></div>
-        </div>
-        <div class="grid-3">
-          <div class="tier-card">
-            <h4 class="tier-name" style="font-size: 1.25rem; font-weight: 700; color: var(--dark-green); margin-bottom: 15px;">Basic Virtual Accounting</h4>
-            <div class="tier-price">$150<span>/monthly</span></div>
-            <p style="font-size:0.85rem;color:var(--body-text-light);margin-bottom:8px;"><strong>Coverage:</strong> Standard bookkeeping and virtual accounting preparation.</p>
-            <div style="font-size:0.85rem;line-height:1.5;margin-bottom:15px;">
-              <strong>Deliverables:</strong>
-              <ul style="padding-left:15px;margin-top:5px;">
-                <li>Preparation of basic virtual accounting files</li><li>Monthly status review via email</li><li>Basic compliance validation</li>
-              </ul>
-            </div>
-            <p style="font-style:italic;font-size:0.8rem;color:var(--body-text-light);">Ideal for early-stage startups and sole proprietors.</p>
-            <a href="/contact.html" class="btn btn-outline" style="width:100%;margin-top:15px;">Book Now</a>
-          </div>
-          <div class="tier-card featured">
-            <h4 class="tier-name" style="font-size: 1.25rem; font-weight: 700; color: var(--dark-green); margin-bottom: 15px;">Standard Virtual Accounting</h4>
-            <div class="tier-price">$350<span>/monthly</span></div>
-            <p style="font-size:0.85rem;color:var(--body-text-light);margin-bottom:8px;"><strong>Coverage:</strong> Full-service bookkeeping, filings, and CRA compliance support.</p>
-            <div style="font-size:0.85rem;line-height:1.5;margin-bottom:15px;">
-              <strong>Deliverables:</strong>
-              <ul style="padding-left:15px;margin-top:5px;">
-                <li>All features of Basic virtual accounting</li><li>GST/HST tracking & reconciliations support</li><li>Direct CPA communication portal access</li>
-              </ul>
-            </div>
-            <p style="font-style:italic;font-size:0.8rem;color:var(--body-text-light);">Perfect for established small businesses.</p>
-            <a href="/contact.html" class="btn btn-primary" style="width:100%;margin-top:15px;">Book Now</a>
-          </div>
-          <div class="tier-card">
-            <h4 class="tier-name" style="font-size: 1.25rem; font-weight: 700; color: var(--dark-green); margin-bottom: 15px;">Premium Virtual Accounting</h4>
-            <div class="tier-price">$750<span>/monthly</span></div>
-            <p style="font-size:0.85rem;color:var(--body-text-light);margin-bottom:8px;"><strong>Coverage:</strong> Strategic advisory and fractional CFO integration.</p>
-            <div style="font-size:0.85rem;line-height:1.5;margin-bottom:15px;">
-              <strong>Deliverables:</strong>
-              <ul style="padding-left:15px;margin-top:5px;">
-                <li>All features of Standard virtual accounting</li><li>Variance tracking & cost allocation advice</li><li>Quarterly tax planning advisory sessions</li>
-              </ul>
-            </div>
-            <p style="font-style:italic;font-size:0.8rem;color:var(--body-text-light);">Ideal for companies seeking high-growth financial structuring.</p>
-            <a href="/contact.html" class="btn btn-outline" style="width:100%;margin-top:15px;">Book Now</a>
-          </div>
-        </div>
-      </div>
+      ${getServiceTiersSection(s.name, 'service', customTiers)}
     </section>
     
-    </section>
 
     <!-- 5. WHY CHOOSE US -->
     
