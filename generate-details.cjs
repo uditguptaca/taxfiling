@@ -3812,7 +3812,65 @@ services.forEach(s => {
   `;
 
   const customIntroHtml = isCorporateTax ? `
-    ${getPricingSection()}
+  <section class="section" id="pricing" style="padding: 60px 0;">
+    <div class="container">
+      <div class="section-header">
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--dark-green);">Transparent & Fixed Pricing</h2>
+        <p style="color: var(--body-text-light); margin-top: 10px;">No hidden fees. Pay only after your service is completed. Recommended by 1000+ Business & Startups.</p>
+        <div class="accent-line"></div>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card orange">
+          <h4>Business Accounting</h4>
+          <div class="price">From- $10/ M</div>
+          <div class="includes">Bookkeeping | Financials | Reconciliations</div>
+          <a href="/pricing/accounting-bookkeeping.html" class="btn btn-outline-white btn-sm">Explore More</a>
+        </div>
+        <div class="pricing-card teal">
+          <h4>Corporate Tax Filing</h4>
+          <div class="price">From- $90</div>
+          <div class="includes">T2 corporate Tax | NIL Return | Planning</div>
+          <a href="/pricing/corporate-tax.html" class="btn btn-outline-white btn-sm">Explore More</a>
+        </div>
+        <div class="pricing-card orange">
+          <h4>Personal Tax Filing</h4>
+          <div class="price">From- $25</div>
+          <div class="includes">T1 | Student | Employed | Self-employed</div>
+          <a href="/pricing/individual-tax.html" class="btn btn-outline-white btn-sm">Explore More</a>
+        </div>
+        <div class="pricing-card teal">
+          <h4>GST/HST Tax Filings</h4>
+          <div class="price">From $75</div>
+          <div class="includes">GST/HST/PST/QST/RST Tax filings | Registration</div>
+          <a href="/pricing/gst-hst-pst.html" class="btn btn-outline-white btn-sm">Explore More</a>
+        </div>
+        <div class="pricing-card teal">
+          <h4>Partnership Tax Filing</h4>
+          <div class="price">From-$250</div>
+          <div class="includes">T5013 – Partnership Information Return</div>
+          <a href="/pricing/partnership-tax.html" class="btn btn-outline-white btn-sm">Explore More</a>
+        </div>
+        <div class="pricing-card orange">
+          <h4>Non-Profit Tax Filing</h4>
+          <div class="price">From- $250</div>
+          <div class="includes">T1044 | T3010 | T2 | Non-Profits Charities</div>
+          <a href="/pricing/non-profit-tax.html" class="btn btn-outline-white btn-sm">Explore More</a>
+        </div>
+        <div class="pricing-card teal">
+          <h4>Notice to Reader</h4>
+          <div class="price">From- $500</div>
+          <div class="includes">Assistance NTR | Compilation | Audit</div>
+          <a href="/pricing/notice-to-reader.html" class="btn btn-outline-white btn-sm">Explore More</a>
+        </div>
+        <div class="pricing-card orange">
+          <h4>Trust-Estate Tax Filing</h4>
+          <div class="price">From- $300</div>
+          <div class="includes">T3 Trust | Beneficiary Reporting | Allocations</div>
+          <a href="/pricing/trust-estate-tax.html" class="btn btn-outline-white btn-sm">Explore More</a>
+        </div>
+      </div>
+    </div>
+  </section>
   ` : `
     <!-- 3. INTRO BLOCK -->
     <section class="section" style="padding-bottom: 20px;">
