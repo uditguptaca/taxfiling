@@ -1397,35 +1397,57 @@ const getCorporateTaxIndustriesGrid = () => {
         .seo-ind-grid {
           display: grid;
           grid-template-columns: repeat(5, 1fr);
-          gap: 30px;
+          gap: 15px;
           margin-bottom: 40px;
         }
         .seo-ind-card {
-          text-align: center;
-          padding: 10px;
+          display: flex;
+          align-items: flex-start;
+          gap: 12px;
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
+          border-radius: 8px;
+          padding: 12px 15px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.01);
         }
-        .seo-ind-card a {
-          display: block;
+        .seo-ind-bullet {
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          border: 2px solid var(--primary);
+          background: #ffffff;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          margin-top: 3px;
+        }
+        .seo-ind-bullet::after {
+          content: "";
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: var(--primary);
+        }
+        .seo-ind-info {
           font-family: var(--font-primary);
-          font-size: 1.05rem;
+          font-size: 0.88rem;
+          line-height: 1.35;
+          color: var(--body-text-light);
+          font-weight: 500;
+          text-align: left;
+        }
+        .seo-ind-info a {
+          display: block;
           font-weight: 700;
           color: var(--primary);
           text-decoration: underline;
-          margin-bottom: 8px;
-          line-height: 1.3;
-          transition: color 0.2s ease;
+          margin-bottom: 4px;
         }
-        .seo-ind-card a:hover {
+        .seo-ind-info a:hover {
           color: var(--primary-dark);
         }
-        .seo-ind-card p {
-          font-family: var(--font-primary);
-          font-size: 0.88rem;
-          color: var(--body-text-light);
-          margin: 0;
-          line-height: 1.4;
-        }
-        @media (max-width: 1200px) {
+        @media (max-width: 1100px) {
           .seo-ind-grid {
             grid-template-columns: repeat(3, 1fr);
           }
@@ -1444,44 +1466,74 @@ const getCorporateTaxIndustriesGrid = () => {
 
       <div class="seo-ind-grid">
         <div class="seo-ind-card">
-          <a href="/industries/technology.html">Corporate Tax Filing for Startups</a>
-          <p>Specialized startup tax &amp; accounting</p>
+          <div class="seo-ind-bullet"></div>
+          <div class="seo-ind-info">
+            <a href="/industries/technology.html">Corporate Tax Filing for Startups</a>
+            Specialized startup tax &amp; accounting
+          </div>
         </div>
         <div class="seo-ind-card">
-          <a href="/industries/healthcare.html">Corporate Tax Filing for Healthcare</a>
-          <p>Specialized healthcare tax &amp; accounting</p>
+          <div class="seo-ind-bullet"></div>
+          <div class="seo-ind-info">
+            <a href="/industries/healthcare.html">Corporate Tax Filing for Healthcare</a>
+            Specialized healthcare tax &amp; accounting
+          </div>
         </div>
         <div class="seo-ind-card">
-          <a href="/industries/professional-services.html">Corporate Tax Filing for Consultants</a>
-          <p>Specialized consulting tax &amp; accounting</p>
+          <div class="seo-ind-bullet"></div>
+          <div class="seo-ind-info">
+            <a href="/industries/professional-services.html">Corporate Tax Filing for Consultants</a>
+            Specialized consulting tax &amp; accounting
+          </div>
         </div>
         <div class="seo-ind-card">
-          <a href="/services/small-business-accounting.html">Corporate Tax Filing for Small Businesses</a>
-          <p>Specialized small business tax &amp; accounting</p>
+          <div class="seo-ind-bullet"></div>
+          <div class="seo-ind-info">
+            <a href="/services/small-business-accounting.html">Corporate Tax Filing for Small Businesses</a>
+            Specialized small business tax &amp; accounting
+          </div>
         </div>
         <div class="seo-ind-card">
-          <a href="/industries/restaurants.html">Corporate Tax Filing for Restaurants</a>
-          <p>Specialized restaurant tax &amp; accounting</p>
+          <div class="seo-ind-bullet"></div>
+          <div class="seo-ind-info">
+            <a href="/industries/restaurants.html">Corporate Tax Filing for Restaurants</a>
+            Specialized restaurant tax &amp; accounting
+          </div>
         </div>
         <div class="seo-ind-card">
-          <a href="/industries/restaurants.html">Corporate Tax Filing for Franchises</a>
-          <p>Specialized franchise tax &amp; accounting</p>
+          <div class="seo-ind-bullet"></div>
+          <div class="seo-ind-info">
+            <a href="/industries/restaurants.html">Corporate Tax Filing for Franchises</a>
+            Specialized franchise tax &amp; accounting
+          </div>
         </div>
         <div class="seo-ind-card">
-          <a href="/pricing/individual-tax.html">Corporate Tax Filing for Self-Employed</a>
-          <p>Specialized self-employed tax &amp; accounting</p>
+          <div class="seo-ind-bullet"></div>
+          <div class="seo-ind-info">
+            <a href="/pricing/individual-tax.html">Corporate Tax Filing for Self-Employed</a>
+            Specialized self-employed tax &amp; accounting
+          </div>
         </div>
         <div class="seo-ind-card">
-          <a href="/industries/manufacturing.html">Corporate Tax Filing for Manufacturing</a>
-          <p>Specialized manufacturing tax &amp; accounting</p>
+          <div class="seo-ind-bullet"></div>
+          <div class="seo-ind-info">
+            <a href="/industries/manufacturing.html">Corporate Tax Filing for Manufacturing</a>
+            Specialized manufacturing tax &amp; accounting
+          </div>
         </div>
         <div class="seo-ind-card">
-          <a href="/industries/ecommerce.html">Corporate Tax Filing for Grocery Stores</a>
-          <p>Specialized grocery tax &amp; accounting</p>
+          <div class="seo-ind-bullet"></div>
+          <div class="seo-ind-info">
+            <a href="/industries/ecommerce.html">Corporate Tax Filing for Grocery Stores</a>
+            Specialized grocery tax &amp; accounting
+          </div>
         </div>
         <div class="seo-ind-card">
-          <a href="/industries/transportation.html">Corporate Tax Filing for Import &amp; Export</a>
-          <p>Specialized import/export tax &amp; accounting</p>
+          <div class="seo-ind-bullet"></div>
+          <div class="seo-ind-info">
+            <a href="/industries/transportation.html">Corporate Tax Filing for Import &amp; Export</a>
+            Specialized import/export tax &amp; accounting
+          </div>
         </div>
       </div>
 
