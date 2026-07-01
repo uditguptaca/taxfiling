@@ -7227,45 +7227,9 @@ blogPosts.forEach(p => {
     </section>
 
     <!-- 3. WHY CHOOSE US -->
-    ${getWhyChooseUsSection('Tax Filings Canada')}
+    ${p.slug === 'expert-corporation-tax-filing-north-york' ? '' : getWhyChooseUsSection('Tax Filings Canada')}
 
-    ${p.slug === 'expert-corporation-tax-filing-north-york' ? `
-      <!-- Process Timeline -->
-      ${getCorporateTaxTimeline4Steps('Corporate Tax Process Phases', 'Our clear four-stage workflow ensuring absolute tax optimization and complete CRA compliance.')}
-
-      <!-- Workflow Split Section -->
-      ${getWorkflowSection('', '/images/toronto_office_cn_tower.png')}
-
-      <!-- Smart Strategies -->
-      ${getCorporateTaxStrategiesSection()}
-
-      <!-- Industries Partner -->
-      ${getCorporateTaxIndustriesGrid()}
-
-      <!-- Pan-Canada Locations -->
-      ${getCorporateTaxLocationsSection()}
-
-      <!-- Global Pricing -->
-      ${getCorporateTaxFeeComparisonSection()}
-
-      <!-- Case Studies -->
-      ${getCaseStudiesSection()}
-
-      <!-- Team Section -->
-      ${getTeamSection()}
-
-      <!-- Services Accordion -->
-      ${getCorporateTaxDetailedServicesDropdown()}
-
-      <!-- Insights Section -->
-      ${getCorporateTaxInsightsSection()}
-
-      <!-- FAQ Section -->
-      ${getFaqSection('Corporate Tax', [
-        { q: 'What corporate tax filing services do you offer in North York?', a: 'We offer full T2 corporate tax return preparation, bookkeeping reconciliation, GIFI mapping, corporate tax planning, and CRA audit representation.' },
-        { q: 'What is the cost of filing corporate taxes for a North York business?', a: 'Our corporate tax filing fees start from $90. We offer simple holding company filings as well as active business returns at transparent, flat rates.' }
-      ])}
-    ` : `
+    ${p.slug === 'expert-corporation-tax-filing-north-york' ? '' : `
       <!-- 4. RISK-FREE WORKFLOW -->
       ${getWorkflowSection()}
 
