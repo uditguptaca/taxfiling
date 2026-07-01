@@ -1772,6 +1772,124 @@ const getCorporateTaxServicesGrid = () => {
   `;
 };
 
+const getCorporateTaxDetailedServicesDropdown = () => {
+  const items = [
+    {
+      num: 1,
+      title: "T2 Corporate Tax Return Preparation",
+      summary: "Complete T2 corporate tax return preparation for Canadian corporations, including the federal T2 and provincial tax schedules combined filing. Every active and inactive corporation must file a T2 within six months of fiscal year end, even with no income, and accurate GIFI coding determines how CRA reads your return.",
+      points: [
+        "We map your full trial balance to the correct GIFI codes on Schedule 100 (balance sheet) and Schedule 125 (income statement), so your T2 corporate tax return reconciles to your financial statements line by line before CRA's automated system ever reviews it.",
+        "We reconcile accounting net income to taxable income on Schedule 1, adding back non-deductible items such as 50% of meals, club dues, and accounting reserves, then deducting amounts like CCA and the eligible portion of capital gains for an accurate corporate tax filing corporations can rely on.",
+        "We complete Schedule 50 to report each shareholder owning 10% or more of any share class, with name, SIN or business number, and shareholding percentage — a disclosure CRA matches against personal returns during corporate tax compliance reviews.",
+        "We calculate the Small Business Deduction on Schedule 7, applying the 9% federal and provincial small business rate to active business income up to the $500,000 limit, and reduce that limit where taxable capital exceeds $10 million.",
+        "We claim Capital Cost Allowance on Schedule 8 across the correct asset classes and track the undepreciated capital cost pool forward each year, so depreciation on equipment and vehicles is never lost or double claimed in your corporate tax preparation services file."
+      ]
+    },
+    {
+      num: 2,
+      title: "Review of Corporate Tax Deductions & Credits",
+      summary: "A focused review of every corporate tax deduction and credit your corporation is entitled to claim. Most missed savings come from overlooked credits, unclaimed losses, and deductions filed in the wrong year — this review recovers them before your T2 corporate tax return is finalized.",
+      points: [
+        "We apply non-capital loss carryforwards on Schedule 4, using losses within the 20-year window against current taxable income, and elect the optimal year to claim them so corporate tax deductions rules allow your corporation to smooth tax across profitable and lean years.",
+        "We identify and document SR&ED (Scientific Research & Experimental Development) eligible expenditures on Form T661, claiming the 35% refundable Investment Tax Credit available to Canadian controlled private corporations on the first $3 million of qualified spending.",
+        "We claim the Ontario Made Manufacturing Investment Tax Credit and apprenticeship related credits where your corporation qualifies, mapping each to the correct line of the T2 and supporting schedules for a defensible corporate tax filing.",
+        "We review associated corporation status under section 256, since associated corporations must share the single $500,000 Small Business Deduction limit — an allocation we file on Schedule 23 to prevent CRA from reassessing an over-claim.",
+        "We test eligibility for the dividend refund through the RDTOH (Refundable Dividend Tax On Hand) pools, ensuring refundable tax on investment income is recovered when taxable dividends are paid — a benefit included in our service at no surprise fee."
+      ]
+    },
+    {
+      num: 3,
+      title: "Electronic Filing & Deadline Management",
+      summary: "CRA corporate tax filing through certified EFILE software, with every deadline tracked so your corporation never triggers an avoidable penalty. The T2 is due six months after year-end, but the balance due date is earlier — and missing either has a direct dollar cost we manage for you.",
+      points: [
+        "We EFILE your T2 corporate tax return through CRA-certified software with a confirmation number recorded in your file, meeting the mandatory electronic filing requirement that applies to corporations with annual gross revenue over $1 million.",
+        "We calculate and schedule your monthly or quarterly CRA instalments, since corporations with tax payable over $3,000 must remit instalments and CRA charges instalment interest plus a potential 50% additional charge on deficient amounts.",
+        "We track the corporate tax balance due date — two months after year-end for most corporations, three months for CCPCs claiming the Small Business Deduction — so interest at the prescribed rate never accrues unnoticed on your balance.",
+        "We prevent late filing penalties of 5% of unpaid tax plus 1% per month for up to 12 months, which escalate to 10% plus 2% per month where CRA issued a demand to file — a cost-effective safeguard built into our deadline management.",
+        "We coordinate your Ontario Annual Return filing, now separated from the T2 and filed through the Ontario Business Registry, so your corporation stays in good standing for corporate tax compliance purposes alongside its CRA filing."
+      ]
+    },
+    {
+      num: 4,
+      title: "Amendments & Re-Filings",
+      summary: "Correcting a previously filed T2 corporate tax return when income, deductions, or schedules were reported wrong. CRA allows amendments, but the procedure, the time limits, and the supporting documentation must be exact — otherwise the change is rejected or invites a closer look at the original return.",
+      points: [
+        "We prepare and submit Form T2-ADJ (T2 Adjustment Request) along with the amended schedules, detail explanation, and full general ledger support to adjust your corporate tax filing, avoiding the risk of outright rejection by CRA.",
+        "We claim carrybacks of current year non-capital or capital losses to any of the three preceding tax years by filing Schedule 4 or Schedule 12, recovering corporate taxes paid in those years and generating an immediate refund.",
+        "We manage the three-year normal reassessment period, filing adjustments within the deadline (three years from the date of the original Notice of Assessment) to secure your right to refunds and deductions."
+      ]
+    },
+    {
+      num: 5,
+      title: "CRA Correspondence & Audit Support",
+      summary: "Direct handling of CRA letters, review requests, and audits on your behalf as your authorized representative. Most corporate enquiries are document-matching reviews, not full audits — answered correctly and on time, they close quickly; answered poorly, they escalate.",
+      points: [
+        "We obtain authorization as your representative through CRA Represent a Client, giving us direct access to your corporate tax account history, balance sheets, and correspondence without adding administrative burden to you.",
+        "We respond to CRA Pre-Assessment and Post-Assessment reviews, providing the requested general ledger detail, bank statements, and invoice support formatted to resolve the auditor's query without triggering a wider audit.",
+        "We manage full corporate tax audits, acting as the sole point of contact for the CRA auditor, reviewing audit proposals, and filing formal notices of objection to the CRA Appeals Division if an incorrect assessment is issued."
+      ]
+    },
+    {
+      num: 6,
+      title: "Year-Round Compliance & Advisory Support",
+      summary: "Corporate tax advisory services that run through the full year, not only at filing time. The decisions that lower your T2 — compensation mix, asset timing, instalment planning — are made months before the return is prepared. We keep your corporation aligned.",
+      points: [
+        "We optimize the shareholder-manager compensation mix, calculating the tax-efficient balance between T4 salary (deductible to the corp, generates RRSP room) and dividends (non-deductible, lower personal rate, no CPP cost).",
+        "We structure shareholder loans to comply with section 15(2), planning repayments or salary allocations within the one-year window to prevent the loan balance from being added to the shareholder's personal taxable income.",
+        "We provide year-round corporate tax planning advice for major transactions, including asset purchases, leasing vs buying decisions, and business structure changes, keeping your business fully compliant and tax-optimized."
+      ]
+    }
+  ];
+
+  const accordionHtml = items.map(item => `
+    <div class="srv-accordion-item" style="border: 1px solid var(--color-ivory-dark); border-radius: 8px; margin-bottom: 12px; background: #ffffff; overflow: hidden; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.01);">
+      <div class="srv-accordion-header" style="padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; background: var(--color-ivory-light); user-select: none;" onclick="const body = this.nextElementSibling; const icon = this.querySelector('.arrow-icon'); const isOpen = body.style.display === 'block'; body.style.display = isOpen ? 'none' : 'block'; icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 700;">
+            ${item.num}
+          </div>
+          <h4 style="font-family: var(--font-primary); font-size: 1.05rem; font-weight: 700; color: var(--color-slate-dark); margin: 0;">
+            ${item.title}
+          </h4>
+        </div>
+        <i class="fas fa-chevron-down arrow-icon" style="transition: transform 0.3s ease; color: var(--color-cloud-dark); transform: rotate(0deg);"></i>
+      </div>
+      <div class="srv-accordion-body" style="display: none; padding: 20px 25px; border-top: 1px solid var(--color-ivory-dark); background: #ffffff;">
+        <p style="font-size: 0.9rem; line-height: 1.55; color: var(--color-slate-medium); margin-bottom: 15px;">
+          ${item.summary}
+        </p>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+          ${item.points.map(p => `
+            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; line-height: 1.5; color: var(--color-slate-dark); text-align: left;">
+              <i class="fas fa-check" style="color: #2e7d32; margin-top: 3px; font-size: 0.85rem; flex-shrink: 0;"></i>
+              <span>${p}</span>
+            </li>
+          `).join('\n')}
+        </ul>
+      </div>
+    </div>
+  `).join('\n');
+
+  return `
+  <section class="section" style="background-color: var(--color-ivory-light); padding: 60px 0; border-top: 1px solid var(--color-ivory-dark); border-bottom: 1px solid var(--color-ivory-dark);">
+    <div class="container" style="max-width: 900px;">
+      <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+        <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">Corporate Tax Filing Services</h2>
+        <p style="font-size: 1rem; color: var(--color-cloud-dark); font-weight: 500; margin: 0 auto; max-width: 800px; line-height: 1.6;">
+          Practitioner-level T2 corporate tax return preparation, CRA corporate tax filing, and corporate tax advisory services — built around correct GIFI coding, every schedule CRA cross-checks, and AFFORDABLE flat-fee pricing with no surprise fees.
+        </p>
+        <div class="accent-line" style="background-color: var(--primary); margin: 20px auto 0;"></div>
+      </div>
+
+      <div class="srv-accordion-container">
+        ${accordionHtml}
+      </div>
+    </div>
+  </section>
+  `;
+};
+
 const getCorporateTaxLocationsSection = () => {
   const locations = [
     { name: "Ontario", path: "/locations/toronto.html" },
@@ -4750,7 +4868,7 @@ services.forEach(s => {
     ${getTeamSection()}
 
     <!-- 12b. SERVICES ACCORDION -->
-    ${isCorporateTax ? getCorporateTaxServicesGrid() : ''}
+    ${isCorporateTax ? getCorporateTaxDetailedServicesDropdown() : ''}
 
     <!-- 12c. INSIGHTS SECTION -->
     ${isCorporateTax ? getCorporateTaxInsightsSection() : ''}
