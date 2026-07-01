@@ -6894,517 +6894,410 @@ const blogPosts = [
     date: 'January 6, 2026',
     desc: 'Find out how North York small businesses and corporations can optimize their corporate tax filing, claim local credits, and maintain strict CRA compliance.',
     content: `
-<!-- ================= SECTION 1: INTRODUCTION & OVERVIEW ================= -->
-<div style="background:var(--color-ivory-light); padding:35px; border-radius:16px; border:1px solid var(--border-gray); margin-bottom:35px; box-shadow:var(--shadow-sm);">
-  <p style="font-size:1.15rem; line-height:1.8; color:var(--body-text); margin-bottom:25px;">
-    For reliable corporation tax filing services in North York, Tax Filings Canada offers expert support to ensure accurate CRA compliance through timely preparation of T2 returns, tax schedules, and electronic submissions. Our corporate tax accountants specialize in working with retail, tech startups, and professional services to provide complete corporate income tax preparation and audit protection.
-  </p>
+<div class="gcpa-eyebrow">Corporate Tax Guide</div>
+<p style="font-size: 1.15rem; line-height: 1.8; color: var(--body-text); margin-bottom: 25px;">
+  For reliable corporation tax filing services in North York, Tax Filings Canada offers expert support to ensure accurate CRA compliance through timely preparation of T2 returns, tax schedules, and electronic submissions. Our corporate tax accountants specialize in working with retail, tech startups, and professional services to provide complete corporate income tax preparation and audit protection.
+</p>
 
-  <!-- Key Insights Summary -->
-  <div style="background:white; padding:25px; border-radius:12px; border-left:6px solid var(--primary); margin:25px 0; box-shadow:var(--shadow-sm);">
-    <h3 style="margin-top:0; color:var(--primary); font-family:var(--font-serif); font-size:1.35rem; margin-bottom:20px;">
-      <i class="fas fa-clipboard-list" style="margin-right:10px;"></i> Key Insights Summary
-    </h3>
-    <div style="display:grid; grid-template-columns:1fr; gap:15px;">
-      <div style="display:flex; gap:12px; align-items:flex-start;">
-        <span style="color:var(--primary); font-size:1.1rem; margin-top:2px;"><i class="fas fa-check-circle"></i></span>
-        <div>
-          <strong style="color:var(--dark-green); font-size:0.95rem;">Accurate corporate tax filing reduces risk and penalties</strong>
-          <p style="font-size:0.88rem; color:var(--body-text-light); margin:2px 0 0 0;">North York businesses benefit from expert Accounting Firm oversight to ensure T2 filings, HST compliance, and timely payments, avoiding costly CRA penalties.</p>
-        </div>
-      </div>
-      <div style="display:flex; gap:12px; align-items:flex-start;">
-        <span style="color:var(--primary); font-size:1.1rem; margin-top:2px;"><i class="fas fa-check-circle"></i></span>
-        <div>
-          <strong style="color:var(--dark-green); font-size:0.95rem;">Streamlined preparation saves time and stress</strong>
-          <p style="font-size:0.88rem; color:var(--body-text-light); margin:2px 0 0 0;">Document collection, T2 preparation, and electronic submission are handled efficiently, allowing business owners to focus on growth rather than paperwork.</p>
-        </div>
-      </div>
-      <div style="display:flex; gap:12px; align-items:flex-start;">
-        <span style="color:var(--primary); font-size:1.1rem; margin-top:2px;"><i class="fas fa-check-circle"></i></span>
-        <div>
-          <strong style="color:var(--dark-green); font-size:0.95rem;">Expert involvement maximizes credits and deductions</strong>
-          <p style="font-size:0.88rem; color:var(--body-text-light); margin:2px 0 0 0;">Professional tax filing ensures eligible credits (like SR&amp;ED) and deductions are claimed correctly, improving cash flow and reducing overall tax liability.</p>
-        </div>
-      </div>
-      <div style="display:flex; gap:12px; align-items:flex-start;">
-        <span style="color:var(--primary); font-size:1.1rem; margin-top:2px;"><i class="fas fa-check-circle"></i></span>
-        <div>
-          <strong style="color:var(--dark-green); font-size:0.95rem;">Ongoing guidance supports proactive tax planning</strong>
-          <p style="font-size:0.88rem; color:var(--body-text-light); margin:2px 0 0 0;">Continuous planning and periodic review of corporate tax strategy help North York corporations stay compliant, prepared for audits, and positioned for savings.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Table 1: Overview -->
-  <h3 style="font-family:var(--font-serif); font-size:1.35rem; color:var(--primary); margin-top:30px; margin-bottom:15px;">
-    <i class="fas fa-table" style="margin-right:8px;"></i> Table 1: Overview of Corporate Tax Filing Services &amp; Benefits
-  </h3>
-  <div style="overflow-x:auto; border:1px solid var(--border-gray); border-radius:12px; box-shadow:var(--shadow-sm); background:white;">
-    <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.9rem; line-height:1.5;">
-      <thead>
-        <tr style="background:var(--primary); color:white;">
-          <th style="padding:12px 15px; font-weight:600;">Service</th>
-          <th style="padding:12px 15px; font-weight:600;">Benefit</th>
-          <th style="padding:12px 15px; font-weight:600;">Ideal For</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">T2 Corporate Return Preparation</td>
-          <td style="padding:12px 15px;">Accurate filing and CRA compliance</td>
-          <td style="padding:12px 15px; color:var(--body-text-light);">All North York corporations</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">HST Filing &amp; Remittance</td>
-          <td style="padding:12px 15px;">Timely submissions to avoid interest</td>
-          <td style="padding:12px 15px; color:var(--body-text-light);">Businesses registered for HST</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Document Collection &amp; Review</td>
-          <td style="padding:12px 15px;">Saves time and ensures completeness</td>
-          <td style="padding:12px 15px; color:var(--body-text-light);">Small &amp; medium corporations</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Electronic Submission</td>
-          <td style="padding:12px 15px;">Fast, secure, CRA-approved filing</td>
-          <td style="padding:12px 15px; color:var(--body-text-light);">All incorporated businesses</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Audit Support &amp; Risk Reduction</td>
-          <td style="padding:12px 15px;">Minimize CRA audit risk</td>
-          <td style="padding:12px 15px; color:var(--body-text-light);">Corporations with complex structures</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Tax Credit &amp; Deduction Optimization</td>
-          <td style="padding:12px 15px;">Maximize eligible savings</td>
-          <td style="padding:12px 15px; color:var(--body-text-light);">Tech, manufacturing, and service sectors</td>
-        </tr>
-        <tr>
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Proactive Tax Planning</td>
-          <td style="padding:12px 15px;">Year-round strategies for cash flow &amp; savings</td>
-          <td style="padding:12px 15px; color:var(--body-text-light);">Growing or multi-entity businesses</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<!-- ================= SECTION 2: WHY CHOOSE US & STREAMLINING ================= -->
-<div style="background:var(--primary-light); padding:35px; border-radius:16px; border-left:6px solid var(--primary); margin-bottom:35px; box-shadow:var(--shadow-sm);">
-  <h3 style="font-family:var(--font-serif); font-size:1.5rem; color:var(--primary); margin-top:0; margin-bottom:15px;">
-    <i class="fas fa-question-circle" style="margin-right:8px;"></i> Why North York Businesses Choose Tax Filings Canada for Corporate Tax Filing
-  </h3>
-  <p style="margin-bottom:15px; line-height:1.7;">
-    Many North York businesses pick Tax Filings Canada for their <strong>corporation tax filing services</strong>. We focus on corporate income tax preparation that follows CRA rules closely. Filing on time is important to avoid fines and keep your business in good shape.
-  </p>
-  <p style="margin-bottom:25px; line-height:1.7;">
-    Our team includes fully licensed tax pros who offer help with audit protection and risk reduction. We listen to what your business needs and give service that fits. Plus, we make sure you get the benefits you deserve.
-  </p>
-
-  <h3 style="font-family:var(--font-serif); font-size:1.35rem; color:var(--primary); margin-bottom:12px;">
-    Streamlining Your Corporate Income Tax Preparation in North York
-  </h3>
-  <p style="margin-bottom:15px;">We make corporate income tax preparation simple and accurate. Here’s what we do:</p>
-  <ul style="list-style:none; padding-left:0; margin-bottom:25px;">
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-check-circle"></i></span>Prepare your T2 tax returns carefully.</li>
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-check-circle"></i></span>Submit taxes electronically for speed.</li>
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-check-circle"></i></span>Help if you’re setting up a new business.</li>
-  </ul>
-
-  <h3 style="font-family:var(--font-serif); font-size:1.35rem; color:var(--primary); margin-bottom:12px;">
-    Ensuring CRA Compliance &amp; Avoiding Penalties
-  </h3>
-  <p style="margin-bottom:15px;">
-    Staying in line with the Canada Revenue Agency (CRA) rules matters a lot. We provide full CRA compliance with every tax filing. Our work meets all needed standards so your business stays safe from penalties or audits by the CRA.
-  </p>
-  <p style="margin-bottom:25px;">
-    Filing taxes on time matters big time. We help you meet corporate tax deadlines in North York without delay. That means no late penalties, no worries. You can trust us to file right when it counts and follow all CRA rules closely.
-  </p>
-
-  <!-- Table: Service Offered -->
-  <div style="overflow-x:auto; border:1px solid var(--border-gray); border-radius:12px; box-shadow:var(--shadow-sm); background:white;">
-    <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.9rem; line-height:1.5;">
-      <thead>
-        <tr style="background:var(--primary); color:white;">
-          <th style="padding:12px 15px; font-weight:600;">Service Offered</th>
-          <th style="padding:12px 15px; font-weight:600;">Key Benefit</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Corporation Tax Filing</td>
-          <td style="padding:12px 15px;">Accurate representation of financials</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Corporate Income Tax Preparation</td>
-          <td style="padding:12px 15px;">Maximized deductions</td>
-        </tr>
-        <tr>
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Audit Protection</td>
-          <td style="padding:12px 15px;">Peace of mind during reviews</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<!-- ================= SECTION 3: TAILORED SERVICES & PLANNING ================= -->
-<div style="background:var(--color-ivory-med); padding:35px; border-radius:16px; border:1px solid var(--border-gray); margin-bottom:35px; box-shadow:var(--shadow-sm);">
-  <h3 style="font-family:var(--font-serif); font-size:1.5rem; color:var(--primary); margin-top:0; margin-bottom:15px;">
-    <i class="fas fa-concierge-bell" style="margin-right:8px;"></i> Tax Filings Canada’s Tailored Corporate Tax Filing Services for North York
-  </h3>
-  <p style="margin-bottom:20px;">
-    Tax Filings Canada helps businesses in North York with corporation tax filing services. Our fully licensed tax professionals prepare corporate income tax returns and file T2 tax returns accurately. We follow CRA rules closely to avoid mistakes.
-  </p>
-
-  <h3 style="font-family:var(--font-serif); font-size:1.3rem; color:var(--primary); margin-bottom:12px;">
-    Corporate Tax Return Preparation and Filing: T2 and Schedules
-  </h3>
-  <p style="margin-bottom:15px;">Preparing corporate tax returns takes careful work. We prepare detailed T2 schedules and complete corporate tax returns that meet CRA guidelines. Here’s what we do:</p>
-  <ul style="list-style:none; padding-left:0; margin-bottom:20px;">
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-check-circle"></i></span>Collect all needed financial documents</li>
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-check-circle"></i></span>Fill out T2 forms based on current CRA rules</li>
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-check-circle"></i></span>Include business incorporation details if needed</li>
-  </ul>
-  <p style="margin-bottom:25px;">This method lowers penalty risks and helps your company’s taxes be as fair as possible. You can count on us to link your accounting records with tax filings without problems.</p>
-
-  <h3 style="font-family:var(--font-serif); font-size:1.3rem; color:var(--primary); margin-bottom:12px;">
-    Electronic Submission Expertise &amp; Ongoing Tax Planning
-  </h3>
-  <p style="margin-bottom:15px;">
-    Filing taxes on time is very important to avoid fees. Tax Filings Canada specializes in electronic tax submission using CRA-approved digital platforms. This makes filing easy and fast. Advantages include:
-  </p>
-  <ul style="list-style:none; padding-left:0; margin-bottom:25px;">
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-check-circle"></i></span>Quicker processing than paper filing</li>
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-check-circle"></i></span>Less chance of lost or late submissions</li>
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-check-circle"></i></span>Easy tracking through online portals</li>
-  </ul>
-
-  <!-- Table: Service Aspect -->
-  <div style="overflow-x:auto; border:1px solid var(--border-gray); border-radius:12px; box-shadow:var(--shadow-sm); background:white;">
-    <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.9rem; line-height:1.5;">
-      <thead>
-        <tr style="background:var(--primary); color:white;">
-          <th style="padding:12px 15px; font-weight:600;">Service Aspect</th>
-          <th style="padding:12px 15px; font-weight:600;">Benefits</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Accurate Corporate Income Tax Prep</td>
-          <td style="padding:12px 15px;">Cuts down errors; claims all deductions</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Detailed T2 &amp; Schedule Completion</td>
-          <td style="padding:12px 15px;">Meets CRA rules fully</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Electronic Submission</td>
-          <td style="padding:12px 15px;">Fast filing; instant confirmation</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Expert Accounting Firm Involvement</td>
-          <td style="padding:12px 15px;">Protects from audits; improves credit claims</td>
-        </tr>
-        <tr>
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Ongoing Tax Planning</td>
-          <td style="padding:12px 15px;">Saves money; lowers future liabilities</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<!-- ================= SECTION 4: SECTOR-SPECIFIC CONSIDERATIONS ================= -->
-<div style="background:white; padding:35px; border-radius:16px; border-top:4px solid var(--primary); margin-bottom:35px; box-shadow:var(--shadow-md);">
-  <h3 style="font-family:var(--font-serif); font-size:1.5rem; color:var(--primary); margin-top:0; margin-bottom:15px;">
-    <i class="fas fa-laptop-code" style="margin-right:8px;"></i> Sector-Specific Corporate Tax Considerations in North York
-  </h3>
-  <p style="margin-bottom:25px;">
-    Businesses in North York face tax rules that differ by industry. They need corporate tax planning that fits their sector. Knowing sector-specific tax considerations helps companies follow CRA rules and keep more money. Tax Filings Canada offers industry-specific tax solutions for retail, tech startups, and professional services firms in North York.
-  </p>
-
-  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
-    <div style="background:var(--color-ivory-light); padding:25px; border-radius:12px; box-shadow:var(--shadow-sm); border-top:3px solid var(--primary);">
-      <h4 style="margin-top:0; color:var(--primary); font-family:var(--font-serif); font-size:1.2rem; margin-bottom:12px;">
-        <i class="fas fa-store" style="margin-right:8px;"></i> Retail Sector Tax Expertise
-      </h4>
-      <p style="font-size:0.88rem; line-height:1.6; margin-bottom:12px;">Retail businesses in North York deal with inventory valuation, sales tax filings, and seasonal cash flow. Key focuses include:</p>
-      <ul style="list-style:none; padding-left:0; font-size:0.85rem; line-height:1.5;">
-        <li style="margin-bottom:8px; position:relative; padding-left:20px;"><span style="position:absolute; left:0; color:var(--primary);"><i class="fas fa-check"></i></span>Report goods sold and adjust inventory correctly.</li>
-        <li style="margin-bottom:8px; position:relative; padding-left:20px;"><span style="position:absolute; left:0; color:var(--primary);"><i class="fas fa-check"></i></span>Handle GST/HST rules that apply to retail sales.</li>
-        <li style="margin-bottom:8px; position:relative; padding-left:20px;"><span style="position:absolute; left:0; color:var(--primary);"><i class="fas fa-check"></i></span>Claim deductions for store costs and employee pay.</li>
-      </ul>
-    </div>
-    <div style="background:var(--color-ivory-light); padding:25px; border-radius:12px; box-shadow:var(--shadow-sm); border-top:3px solid var(--primary);">
-      <h4 style="margin-top:0; color:var(--primary); font-family:var(--font-serif); font-size:1.2rem; margin-bottom:12px;">
-        <i class="fas fa-rocket" style="margin-right:8px;"></i> Tech Startup Tax Strategies
-      </h4>
-      <p style="font-size:0.88rem; line-height:1.6; margin-bottom:12px;">Tech startups operate on rapid innovation cycles and require special tax considerations:</p>
-      <ul style="list-style:none; padding-left:0; font-size:0.85rem; line-height:1.5;">
-        <li style="margin-bottom:8px; position:relative; padding-left:20px;"><span style="position:absolute; left:0; color:var(--primary);"><i class="fas fa-check"></i></span>R&amp;D credits help cut corporate income taxes.</li>
-        <li style="margin-bottom:8px; position:relative; padding-left:20px;"><span style="position:absolute; left:0; color:var(--primary);"><i class="fas fa-check"></i></span>Special programs like SR&amp;ED give extra tax breaks.</li>
-        <li style="margin-bottom:8px; position:relative; padding-left:20px;"><span style="position:absolute; left:0; color:var(--primary);"><i class="fas fa-check"></i></span>Identify capital spending vs regular operational costs.</li>
-      </ul>
-    </div>
-    <div style="background:var(--color-ivory-light); padding:25px; border-radius:12px; box-shadow:var(--shadow-sm); border-top:3px solid var(--primary);">
-      <h4 style="margin-top:0; color:var(--primary); font-family:var(--font-serif); font-size:1.2rem; margin-bottom:12px;">
-        <i class="fas fa-user-tie" style="margin-right:8px;"></i> Professional Services Guidance
-      </h4>
-      <p style="font-size:0.88rem; line-height:1.6; margin-bottom:12px;">Professional service firms, such as legal or medical offices, benefit from tailored guidance:</p>
-      <ul style="list-style:none; padding-left:0; font-size:0.85rem; line-height:1.5;">
-        <li style="margin-bottom:8px; position:relative; padding-left:20px;"><span style="position:absolute; left:0; color:var(--primary);"><i class="fas fa-check"></i></span>Income splitting must match current CRA policies.</li>
-        <li style="margin-bottom:8px; position:relative; padding-left:20px;"><span style="position:absolute; left:0; color:var(--primary);"><i class="fas fa-check"></i></span>Deduct business travel, software subscriptions, and education costs.</li>
-        <li style="margin-bottom:8px; position:relative; padding-left:20px;"><span style="position:absolute; left:0; color:var(--primary);"><i class="fas fa-check"></i></span>Set up pension plans through Individual Pension Plans (IPPs).</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- ================= SECTION 5: UNIQUE NEEDS & PROCESS TIMELINE ================= -->
-<div style="background:var(--primary-light); padding:35px; border-radius:16px; border-left:6px solid var(--primary); margin-bottom:35px; box-shadow:var(--shadow-sm);">
-  <h3 style="font-family:var(--font-serif); font-size:1.5rem; color:var(--primary); margin-top:0; margin-bottom:15px;">
-    <i class="fas fa-users" style="margin-right:8px;"></i> Understanding the Unique Tax Needs of North York Businesses
-  </h3>
-  <p style="margin-bottom:20px;">
-    North York has many small and medium incorporated businesses across industries. Local Accounting Firm knowledge helps with tricky federal and provincial rules. Tax Filings Canada knows this area well and provides accurate corporate tax filing services clients trust.
-  </p>
-
-  <!-- Table: Service Area -->
-  <div style="overflow-x:auto; border:1px solid var(--border-gray); border-radius:12px; box-shadow:var(--shadow-sm); background:white; margin-bottom:30px;">
-    <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.9rem; line-height:1.5;">
-      <thead>
-        <tr style="background:var(--primary); color:white;">
-          <th style="padding:12px 15px; font-weight:600;">Service Area</th>
-          <th style="padding:12px 15px; font-weight:600;">Key Benefits</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Retail Industry Tax Filing</td>
-          <td style="padding:12px 15px;">Better inventory reports; GST/HST compliance; expense deductions</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Tech Startup Tax Advice</td>
-          <td style="padding:12px 15px;">More R&amp;D credits; SR&amp;ED claims; clear cost classification</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Professional Services Firms</td>
-          <td style="padding:12px 15px;">Income splitting tactics; optimized deductible expenses</td>
-        </tr>
-        <tr>
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">General Corporate Planning</td>
-          <td style="padding:12px 15px;">On-time filings; audit defense; updates on laws</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3 style="font-family:var(--font-serif); font-size:1.35rem; color:var(--primary); margin-bottom:12px;">
-    Streamlined Corporate Tax Filing Process with Tax Filings Canada
-  </h3>
-  <p style="margin-bottom:20px;">
-    Filing corporate taxes in North York can feel tricky. Tax Filings Canada makes it easier by keeping things simple and clear. They help you gather all needed documents, prepare your tax papers right, and submit them online without fuss. They use digital tax filing platforms that save time and cut mistakes.
-  </p>
-
-  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
-    <div style="background:white; padding:20px; border-radius:12px; box-shadow:var(--shadow-sm);">
-      <h4 style="margin-top:0; color:var(--primary); font-size:1.05rem; margin-bottom:8px;"><i class="fas fa-folder-open"></i> Document Collection</h4>
-      <p style="font-size:0.88rem; color:var(--body-text-light); margin-bottom:0;">Financial statements, expense records, previous tax documents, bank summaries, and payroll reports.</p>
-    </div>
-    <div style="background:white; padding:20px; border-radius:12px; box-shadow:var(--shadow-sm);">
-      <h4 style="margin-top:0; color:var(--primary); font-size:1.05rem; margin-bottom:8px;"><i class="fas fa-calculator"></i> Step-by-Step Preparation</h4>
-      <p style="font-size:0.88rem; color:var(--body-text-light); margin-bottom:0;">Drafting T2 forms, Schedule 1 reconciliation, Schedule 50 shareholder mappings, and capital cost allowance.</p>
-    </div>
-  </div>
-</div>
-
-<!-- ================= SECTION 6: DEADLINES & COMPLIANCE ================= -->
-<div style="background:var(--color-ivory-light); padding:35px; border-radius:16px; border:1px solid var(--border-gray); margin-bottom:35px; box-shadow:var(--shadow-sm);">
-  <h3 style="font-family:var(--font-serif); font-size:1.5rem; color:var(--primary); margin-top:0; margin-bottom:15px;">
-    <i class="fas fa-calendar-alt" style="margin-right:8px;"></i> Understanding North York Corporate Tax Filing: Deadlines and Requirements
-  </h3>
-  <p style="margin-bottom:20px;">
-    If you run a corporation in North York, you need to follow certain tax deadlines from the Canada Revenue Agency (CRA). Filing your annual corporate tax return, called the T2 return, is a must for any active business in Ontario. Filing on time keeps you clear of penalties and helps your company stay in good standing.
-  </p>
-
-  <!-- Table: Timeline for North York Deadlines -->
-  <div style="overflow-x:auto; border:1px solid var(--border-gray); border-radius:12px; box-shadow:var(--shadow-sm); background:white; margin-bottom:30px;">
-    <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.9rem; line-height:1.5;">
-      <thead>
-        <tr style="background:var(--primary); color:white;">
-          <th style="padding:12px 15px; font-weight:600;">Task</th>
-          <th style="padding:12px 15px; font-weight:600;">Deadline</th>
-          <th style="padding:12px 15px; font-weight:600;">Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Fiscal Year-End</td>
-          <td style="padding:12px 15px;">Varies by corporation</td>
-          <td style="padding:12px 15px; color:var(--body-text-light);">Marks when the clock starts ticking for deadlines</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Prepare Financial Statements</td>
-          <td style="padding:12px 15px;">Within 90 days post-year-end</td>
-          <td style="padding:12px 15px; color:var(--body-text-light);">Needed for accurate tax reporting</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Complete T2 &amp; Schedules</td>
-          <td style="padding:12px 15px;">Within 6 months post-year-end</td>
-          <td style="padding:12px 15px; color:var(--body-text-light);">All required forms must be finished</td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Submit Electronic Filing</td>
-          <td style="padding:12px 15px;">By deadline (6 months post-year)</td>
-          <td style="padding:12px 15px; color:var(--body-text-light);">Electronic submission is required</td>
-        </tr>
-        <tr>
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Pay Taxes Owed</td>
-          <td style="padding:12px 15px;">Within 2 or 3 months post-year-end*</td>
-          <td style="padding:12px 15px; color:var(--body-text-light);">Pay on time to avoid interest (*CCPCs have 3 months)</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3 style="font-family:var(--font-serif); font-size:1.35rem; color:var(--primary); margin-bottom:12px;">
-    What Taxes Must North York Corporations File?
-  </h3>
-  <p style="margin-bottom:15px;">
-    North York corporations have to file a few main tax returns to stay legal in Canada. The biggest one is the T2 Corporate Income Tax Return. This form covers federal corporate taxes and includes Ontario’s provincial taxes. It shows your corporation’s income, expenses, and any credits.
-  </p>
-  <p style="margin-bottom:20px;">
-    Besides the T2, you might also need to file GST/HST returns, payroll source deductions, and other filings depending on your business type.
-  </p>
-
-  <!-- Table: Deadlines -->
-  <div style="overflow-x:auto; border:1px solid var(--border-gray); border-radius:12px; box-shadow:var(--shadow-sm); background:white;">
-    <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.9rem; line-height:1.5;">
-      <thead>
-        <tr style="background:var(--primary); color:white;">
-          <th style="padding:12px 15px; font-weight:600;">Filing Type</th>
-          <th style="padding:12px 15px; font-weight:600;">Deadline</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid var(--border-gray);">
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">T2 Corporate Income Tax Return</td>
-          <td style="padding:12px 15px;">Six months after your fiscal year ends</td>
-        </tr>
-        <tr>
-          <td style="padding:12px 15px; font-weight:600; color:var(--primary);">Payment of Taxes Owed</td>
-          <td style="padding:12px 15px;">Two months after fiscal year-end* (three months for small CCPCs)</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<!-- ================= SECTION 7: AUDITS, DEDUCTIONS & OPTIMIZATION ================= -->
-<div style="background:white; padding:35px; border-radius:16px; border:1px solid var(--border-gray); margin-bottom:35px; box-shadow:var(--shadow-sm);">
-  <h3 style="font-family:var(--font-serif); font-size:1.5rem; color:var(--primary); margin-top:0; margin-bottom:15px;">
-    <i class="fas fa-shield-alt" style="margin-right:8px;"></i> How Can Expert Filing Reduce Audits for My Corporation?
-  </h3>
-  <p style="margin-bottom:15px;">
-    When experts handle your filing, audits happen less often. Here’s why:
-  </p>
-  <ul style="list-style:none; padding-left:0; margin-bottom:25px;">
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-check-circle"></i></span>They check documents closely so errors don’t slip through.</li>
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-check-circle"></i></span>They claim the right credits so CRA doesn’t get suspicious.</li>
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-check-circle"></i></span>They file on time so no late penalties draw extra attention.</li>
-  </ul>
-
-  <h3 style="font-family:var(--font-serif); font-size:1.35rem; color:var(--primary); margin-bottom:12px;">
-    What Documents &amp; Deductions Are Involved?
-  </h3>
-  <p style="margin-bottom:15px;">Start by gathering these documents for preparation:</p>
-  <ul style="list-style:none; padding-left:0; margin-bottom:25px;">
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-folder"></i></span>Income statement and balance sheet</li>
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-folder"></i></span>Bank statements and receipts backing up expenses</li>
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-folder"></i></span>Payroll records and past years’ tax returns</li>
-  </ul>
-
-  <p style="margin-bottom:15px;">We will leverage legitimate deductions to lower your taxable income:</p>
-  <ul style="list-style:none; padding-left:0; margin-bottom:25px;">
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-dollar-sign"></i></span>Business operating costs (rent, utilities, insurance)</li>
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-dollar-sign"></i></span>Employee wages, salaries, and bonuses</li>
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-dollar-sign"></i></span>Capital Cost Allowance (CCA) for depreciating assets</li>
-    <li style="margin-bottom:10px; position:relative; padding-left:25px;"><span style="position:absolute; left:0; top:4px; color:var(--primary);"><i class="fas fa-dollar-sign"></i></span>Fees for professional accounting and consulting support</li>
-  </ul>
-
-  <h3 style="font-family:var(--font-serif); font-size:1.35rem; color:var(--primary); margin-bottom:12px;">
-    Optimizing Strategy &amp; Handling Missed Deadlines
-  </h3>
-  <p style="margin-bottom:15px;">Optimize your corporate tax strategy through continuous action:</p>
-  <ol style="padding-left:20px; margin-bottom:20px; line-height:1.6;">
-    <li style="margin-bottom:8px;">Spot credits early, such as SR&amp;ED or regional investment perks.</li>
-    <li style="margin-bottom:8px;">Arrange shareholder dividends and compensation structures tax-efficiently.</li>
-    <li style="margin-bottom:8px;">Use mid-year financial forecasts to make necessary strategy adjustments.</li>
+<!-- gcpa-toc (Table of Contents) -->
+<div class="gcpa-toc">
+  <h5><i class="fas fa-list-ol"></i> Table of Contents</h5>
+  <ol>
+    <li><a href="#toc-overview">Corporate Tax Filing Services &amp; Overview</a></li>
+    <li><a href="#toc-why-choose">Why North York Businesses Choose Tax Filings Canada</a></li>
+    <li><a href="#toc-streamlining">Streamlining &amp; CRA Compliance In Canada</a></li>
+    <li><a href="#toc-tailored">Tailored Services, T2 &amp; Schedules</a></li>
+    <li><a href="#toc-sectors">Sector-Specific Corporate Tax Considerations</a></li>
+    <li><a href="#toc-needs">Understanding Local Corporate Tax Needs</a></li>
+    <li><a href="#toc-process">Step-by-Step Filing Process &amp; Document Collection</a></li>
+    <li><a href="#toc-deadlines">Deadlines, Payment Timelines &amp; Audits</a></li>
+    <li><a href="#toc-faqs">Frequently Asked Questions (FAQs)</a></li>
   </ol>
-  <p style="margin-bottom:0; color:var(--danger); font-size:0.92rem; font-weight:600;">
-    <i class="fas fa-exclamation-triangle"></i> Warning: Missing your filing deadline triggers an immediate 5% penalty on unpaid taxes plus 1% for each month it remains outstanding.
-  </p>
 </div>
 
-<!-- ================= SECTION 8: SPECIALIZATIONS, PRICING & CALLS ================= -->
-<div style="background:var(--color-ivory-med); padding:35px; border-radius:16px; border-left:6px solid var(--primary); margin-bottom:35px; box-shadow:var(--shadow-sm);">
-  <h3 style="font-family:var(--font-serif); font-size:1.5rem; color:var(--primary); margin-top:0; margin-bottom:15px;">
-    <i class="fas fa-briefcase" style="margin-right:8px;"></i> Corporate Operations, Pricing &amp; CRA Support
-  </h3>
-  <p style="margin-bottom:20px;">
-    We work closely with retail businesses, tech startups, and professional services firms in North York. Our corporate tax services are structured to stay affordable, offering transparent, flat-rate pricing with no hidden charges.
-  </p>
+<!-- ================= SECTION 1: OVERVIEW ================= -->
+<h2 id="toc-overview">Corporate Tax Filing Services &amp; Overview</h2>
+<p>
+  Accurate T2 corporate filing, HST compliance, and year-round bookkeeping are crucial to optimizing your business tax position and avoiding costly interest or audit penalties from the Canada Revenue Agency (CRA).
+</p>
 
-  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px; margin-bottom:25px;">
-    <div style="background:white; padding:20px; border-radius:12px; box-shadow:var(--shadow-sm);">
-      <h4 style="margin-top:0; color:var(--primary); font-size:1.05rem; margin-bottom:8px;"><i class="fas fa-tags"></i> Transparent Fees</h4>
-      <p style="font-size:0.88rem; color:var(--body-text-light); margin-bottom:0;">Competitive, clear rates structured to match competitor rates while delivering superior licensed oversight.</p>
-    </div>
-    <div style="background:white; padding:20px; border-radius:12px; box-shadow:var(--shadow-sm);">
-      <h4 style="margin-top:0; color:var(--primary); font-size:1.05rem; margin-bottom:8px;"><i class="fas fa-headset"></i> CRA Audits &amp; Notice Defense</h4>
-      <p style="font-size:0.88rem; color:var(--body-text-light); margin-bottom:0;">Full support if you receive tax notices, audits, or verification requests. Fast responses to resolve CRA issues.</p>
-    </div>
+<ul>
+  <li><strong>Accurate corporate tax filing reduces risk and penalties:</strong> North York businesses benefit from expert Accounting Firm oversight to ensure T2 filings, HST compliance, and timely payments, avoiding costly CRA penalties.</li>
+  <li><strong>Streamlined preparation saves time and stress:</strong> Document collection, T2 preparation, and electronic submission are handled efficiently, allowing business owners to focus on growth rather than paperwork.</li>
+  <li><strong>Expert involvement maximizes credits and deductions:</strong> Professional tax filing ensures eligible credits (like SR&amp;ED) and deductions are claimed correctly, improving cash flow and reducing overall tax liability.</li>
+  <li><strong>Ongoing guidance supports proactive tax planning:</strong> Continuous planning and periodic review of corporate tax strategy help North York corporations stay compliant, prepared for audits, and positioned for savings.</li>
+</ul>
+
+<div class="wp-block-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Service</th>
+        <th>Benefit</th>
+        <th>Ideal For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T2 Corporate Return Preparation</td>
+        <td>Accurate filing and CRA compliance</td>
+        <td>All North York corporations</td>
+      </tr>
+      <tr>
+        <td>HST Filing &amp; Remittance</td>
+        <td>Timely submissions to avoid interest</td>
+        <td>Businesses registered for HST</td>
+      </tr>
+      <tr>
+        <td>Document Collection &amp; Review</td>
+        <td>Saves time and ensures completeness</td>
+        <td>Small &amp; medium corporations</td>
+      </tr>
+      <tr>
+        <td>Electronic Submission</td>
+        <td>Fast, secure, CRA-approved filing</td>
+        <td>All incorporated businesses</td>
+      </tr>
+      <tr>
+        <td>Audit Support &amp; Risk Reduction</td>
+        <td>Minimize CRA audit risk</td>
+        <td>Corporations with complex structures</td>
+      </tr>
+      <tr>
+        <td>Tax Credit &amp; Deduction Optimization</td>
+        <td>Maximize eligible savings</td>
+        <td>Tech, manufacturing, and service sectors</td>
+      </tr>
+      <tr>
+        <td>Proactive Tax Planning</td>
+        <td>Year-round strategies for cash flow &amp; savings</td>
+        <td>Growing or multi-entity businesses</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= SECTION 2: WHY CHOOSE US ================= -->
+<h2 id="toc-why-choose">Why North York Businesses Choose Tax Filings Canada</h2>
+<p>
+  Many North York businesses pick Tax Filings Canada for their <strong>corporation tax filing services</strong>. We focus on corporate income tax preparation that follows CRA rules closely. Filing on time is important to avoid fines and keep your business in good shape.
+</p>
+<p>
+  Our team includes fully licensed tax pros who offer help with audit protection and risk reduction. We listen to what your business needs and give service that fits. Plus, we make sure you get the benefits you deserve.
+</p>
+
+<!-- Metrics Row -->
+<div class="gcpa-metrics">
+  <div class="gcpa-metric">
+    <div class="ic"><i class="fas fa-shield-alt"></i></div>
+    <div class="big">100%</div>
+    <div class="lbl">CRA Compliance &amp; Audit Defense</div>
   </div>
-
-  <p style="margin-bottom:0; font-style:italic;">
-    We offer virtual consultations across North York. New business clients can schedule a free initial call to discuss requirements.
-  </p>
-</div>
-
-<!-- ================= SECTION 9: GENERAL FAQS ================= -->
-<div style="background:var(--primary-light); padding:35px; border-radius:16px; border:1px solid var(--border-gray); margin-bottom:35px; box-shadow:var(--shadow-sm);">
-  <h3 style="font-family:var(--font-serif); font-size:1.5rem; color:var(--primary); margin-top:0; margin-bottom:20px;">
-    <i class="fas fa-question-circle" style="margin-right:8px;"></i> Frequently Asked Questions
-  </h3>
-  <div style="display:flex; flex-direction:column; gap:15px;">
-    <div style="background:white; padding:20px; border-radius:12px; box-shadow:var(--shadow-sm);">
-      <h4 style="margin:0 0 8px; color:var(--primary); font-size:1.05rem; font-weight:600;">What bookkeeping services do you offer in North York?</h4>
-      <p style="margin:0; font-size:0.92rem; color:var(--body-text-light);">We track income, expenses, and invoices, providing detailed reconciliations to ensure complete preparation for corporate tax submissions.</p>
-    </div>
-    <div style="background:white; padding:20px; border-radius:12px; box-shadow:var(--shadow-sm);">
-      <h4 style="margin:0 0 8px; color:var(--primary); font-size:1.05rem; font-weight:600;">How can payroll services in North York benefit my corporation?</h4>
-      <p style="margin:0; font-size:0.92rem; color:var(--body-text-light);">Our payroll services manage salary disbursements, source deductions, T4 slip preparation, and remittances to the CRA, preventing penalty assessments.</p>
-    </div>
-    <div style="background:white; padding:20px; border-radius:12px; box-shadow:var(--shadow-sm);">
-      <h4 style="margin:0 0 8px; color:var(--primary); font-size:1.05rem; font-weight:600;">Are corporate tax services affordable?</h4>
-      <p style="margin:0; font-size:0.92rem; color:var(--body-text-light);">Yes, we provide competitive, clear pricing with fee-matching guarantees to support growing local enterprises.</p>
-    </div>
-    <div style="background:white; padding:20px; border-radius:12px; box-shadow:var(--shadow-sm);">
-      <h4 style="margin:0 0 8px; color:var(--primary); font-size:1.05rem; font-weight:600;">How does ongoing support and tax planning help my business?</h4>
-      <p style="margin:0; font-size:0.92rem; color:var(--body-text-light);">Year-round strategies allow you to defer taxes legally, make informed asset purchases, and optimize cash reserves to maximize long-term wealth.</p>
-    </div>
+  <div class="gcpa-metric">
+    <div class="ic"><i class="fas fa-clock"></i></div>
+    <div class="big">On-Time</div>
+    <div class="lbl">Electronic EFILE Submissions</div>
+  </div>
+  <div class="gcpa-metric">
+    <div class="ic"><i class="fas fa-hand-holding-usd"></i></div>
+    <div class="big">Maximized</div>
+    <div class="lbl">Tax Credits &amp; Deductions Claimed</div>
   </div>
 </div>
 
-<!-- ================= SECTION 10: ADDITIONAL HIGHLIGHTS ================= -->
-<div style="background:white; padding:35px; border-radius:16px; border-top:4px solid var(--primary); margin-bottom:35px; box-shadow:var(--shadow-md);">
-  <h3 style="font-family:var(--font-serif); font-size:1.5rem; color:var(--primary); margin-top:0; margin-bottom:20px;">
-    <i class="fas fa-star" style="margin-right:8px;"></i> Additional Service Highlights by Tax Filings Canada
+<!-- ================= SECTION 3: STREAMLINING ================= -->
+<h2 id="toc-streamlining">Streamlining &amp; CRA Compliance In Canada</h2>
+<p>
+  We make corporate income tax preparation simple and accurate. Here’s what we do:
+</p>
+<ol>
+  <li>Prepare your T2 tax returns carefully.</li>
+  <li>Submit taxes electronically for speed.</li>
+  <li>Help if you’re setting up a new business.</li>
+</ol>
+<p>
+  Staying in line with the Canada Revenue Agency (CRA) rules matters a lot. We provide full CRA compliance with every tax filing. Our work meets all needed standards so your business stays safe from penalties or audits by the CRA.
+</p>
+
+<div class="gcpa-callout blue">
+  <span class="co-tag">CRA Audit Tip</span>
+  <p>Having a pro Accounting Firm by your side offers real perks: Get help with tax credit claims specific to North York businesses, and use smart strategies to lower audit risks.</p>
+</div>
+
+<div class="wp-block-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Service Offered</th>
+        <th>Key Benefit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Corporation Tax Filing</td>
+        <td>Accurate representation of financials</td>
+      </tr>
+      <tr>
+        <td>Corporate Income Tax Preparation</td>
+        <td>Maximized deductions</td>
+      </tr>
+      <tr>
+        <td>Audit Protection</td>
+        <td>Peace of mind during reviews</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= SECTION 4: TAILORED SERVICES ================= -->
+<h2 id="toc-tailored">Tailored Services, T2 &amp; Schedules</h2>
+<p>
+  Tax Filings Canada helps businesses in North York with corporation tax filing services. Our fully licensed tax professionals prepare corporate income tax returns and file T2 tax returns accurately. We follow CRA rules closely to avoid mistakes.
+</p>
+<p>
+  Our experienced Accounting Firm offer expert assistance, making sure your filings are done right. We focus on reducing errors and lowering audit risks for your company.
+</p>
+<p>
+  We also provide ongoing support and tax planning advice just for North York businesses. Whether you have a store, a startup, or a service firm, we know the challenges you face. Our team works to improve your financial results.
+</p>
+
+<div class="gcpa-callout teal">
+  <span class="co-tag">Electronic EFILE submission</span>
+  <p>Tax Filings Canada specializes in electronic tax submission using CRA-approved digital platforms. Advantages include quicker processing, less chance of lost or late submissions, and easy tracking through online portals.</p>
+</div>
+
+<div class="wp-block-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Service Aspect</th>
+        <th>Benefits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Accurate Corporate Income Tax Prep</td>
+        <td>Cuts down errors; claims all deductions</td>
+      </tr>
+      <tr>
+        <td>Detailed T2 &amp; Schedule Completion</td>
+        <td>Meets CRA rules fully</td>
+      </tr>
+      <tr>
+        <td>Electronic Submission</td>
+        <td>Fast filing; instant confirmation</td>
+      </tr>
+      <tr>
+        <td>Expert Accounting Firm Involvement</td>
+        <td>Protects from audits; improves credit claims</td>
+      </tr>
+      <tr>
+        <td>Ongoing Tax Planning</td>
+        <td>Saves money; lowers future liabilities</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= SECTION 5: SECTORS ================= -->
+<h2 id="toc-sectors">Sector-Specific Corporate Tax Considerations</h2>
+<p>
+  Businesses in North York face tax rules that differ by industry. They need corporate tax planning that fits their sector. Knowing sector-specific tax considerations helps companies follow CRA rules and keep more money. Tax Filings Canada offers industry-specific tax solutions for retail, tech startups, and professional services firms in North York.
+</p>
+
+<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px; margin:22px 0;">
+  <div style="background:var(--bg-alt); padding:22px; border-radius:12px; border-left:4px solid var(--primary); box-shadow:var(--shadow);">
+    <h4 style="margin-top:0; border:none; padding:0; color:var(--navy); font-size:1.15rem; font-family:var(--font-serif);"><i class="fas fa-store"></i> Retail Sector</h4>
+    <p style="font-size:0.88rem; margin:10px 0 0 0; color:var(--body-text-light);">Inventory value reporting, GST/HST retail sales filings, and claiming store operation costs and employee pay deductions.</p>
+  </div>
+  <div style="background:var(--bg-alt); padding:22px; border-radius:12px; border-left:4px solid var(--primary); box-shadow:var(--shadow);">
+    <h4 style="margin-top:0; border:none; padding:0; color:var(--navy); font-size:1.15rem; font-family:var(--font-serif);"><i class="fas fa-rocket"></i> Tech Startups</h4>
+    <p style="font-size:0.88rem; margin:10px 0 0 0; color:var(--body-text-light);">R&amp;D tax credits, scientific research (SR&amp;ED) claims, and classifying capital assets vs operational expense deductions.</p>
+  </div>
+  <div style="background:var(--bg-alt); padding:22px; border-radius:12px; border-left:4px solid var(--primary); box-shadow:var(--shadow);">
+    <h4 style="margin-top:0; border:none; padding:0; color:var(--navy); font-size:1.15rem; font-family:var(--font-serif);"><i class="fas fa-user-tie"></i> Professional Services</h4>
+    <p style="font-size:0.88rem; margin:10px 0 0 0; color:var(--body-text-light);">CRA income splitting policies compliance, business travel and education write-offs, and setting up Individual Pension Plans (IPPs).</p>
+  </div>
+</div>
+
+<!-- ================= SECTION 6: NEEDS ================= -->
+<h2 id="toc-needs">Understanding Local Corporate Tax Needs</h2>
+<p>
+  North York has many small and medium incorporated businesses across industries. Local Accounting Firm knowledge helps with tricky federal and provincial rules. Tax Filings Canada knows this area well and provides accurate corporate tax filing services clients trust.
+</p>
+
+<div class="wp-block-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Service Area</th>
+        <th>Key Benefits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Retail Industry Tax Filing</td>
+        <td>Better inventory reports; GST/HST compliance; expense deductions</td>
+      </tr>
+      <tr>
+        <td>Tech Startup Tax Advice</td>
+        <td>More R&amp;D credits; SR&amp;ED claims; clear cost classification</td>
+      </tr>
+      <tr>
+        <td>Professional Services Firms</td>
+        <td>Income splitting tactics; optimized deductible expenses</td>
+      </tr>
+      <tr>
+        <td>General Corporate Planning</td>
+        <td>On-time filings; audit defense; updates on laws</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="gcpa-callout gold">
+  <span class="co-tag">Proactive Tax Tip</span>
+  <p>Ongoing planning helps reduce taxes legally and avoid surprises at year-end. Talk to experts who keep up with your industry changes and use forecasts to optimize before filing.</p>
+</div>
+
+<!-- ================= SECTION 7: PROCESS & DOCUMENTS ================= -->
+<h2 id="toc-process">Step-by-Step Filing Process &amp; Document Collection</h2>
+<p>
+  Filing corporate taxes in North York can feel tricky. Tax Filings Canada makes it easier by keeping things simple and clear. They help you gather all needed documents, prepare your tax papers right, and submit them online without fuss. They use digital tax filing platforms that save time and cut mistakes.
+</p>
+
+<div class="gcpa-callout teal">
+  <span class="co-tag">Required Documents Checklist</span>
+  <p>Good tax filing needs good records. We recommend gathering financial statements, expense records, bank statements, payroll records, and previous years' returns.</p>
+</div>
+
+<div class="wp-block-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Deadline</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Document Collection</td>
+        <td>30 days before deadline</td>
+        <td>Gather all supporting documents</td>
+      </tr>
+      <tr>
+        <td>T2 Return Preparation</td>
+        <td>15 days before deadline</td>
+        <td>Complete return &amp; schedules</td>
+      </tr>
+      <tr>
+        <td>Electronic Submission</td>
+        <td>On or before deadline</td>
+        <td>Submit via certified digital platform</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= SECTION 8: DEADLINES & AUDITS ================= -->
+<h2 id="toc-deadlines">Deadlines, Payment Timelines &amp; Audits</h2>
+<p>
+  If you run a corporation in North York, you need to follow certain tax deadlines from the Canada Revenue Agency (CRA). Filing your annual corporate tax return, called the T2 return, is a must for any active business in Ontario. Filing on time keeps you clear of penalties and helps your company stay in good standing.
+</p>
+
+<div class="wp-block-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Deadline</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fiscal Year-End</td>
+        <td>Varies by corporation</td>
+        <td>Marks when the clock starts ticking for deadlines</td>
+      </tr>
+      <tr>
+        <td>Prepare Financial Statements</td>
+        <td>Within 90 days post-year-end</td>
+        <td>Needed for accurate tax reporting</td>
+      </tr>
+      <tr>
+        <td>Complete T2 &amp; Schedules</td>
+        <td>Within 6 months post-year-end</td>
+        <td>All required forms must be finished</td>
+      </tr>
+      <tr>
+        <td>Submit Electronic Filing</td>
+        <td>By deadline (6 months post-year)</td>
+        <td>Electronic submission is required</td>
+      </tr>
+      <tr>
+        <td>Pay Taxes Owed</td>
+        <td>Within 2 or 3 months post-year-end*</td>
+        <td>Pay on time to avoid interest (*small CCPCs have extra time)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="gcpa-callout red">
+  <span class="co-tag">Penalty Warning</span>
+  <p>If you miss these deadlines, you can get hit with penalties. They start at 5% of the unpaid tax plus 1% more each month. Interest will also add up on what you owe.</p>
+</div>
+
+<div class="gcpa-callout green">
+  <span class="co-tag">Reducing Audit Risk</span>
+  <p>When experts handle your filing, audits happen less often. Experienced Accounting Firm apply consistent accounting methods, flag potential red areas in advance, and maintain organized documentation—making your business less likely to attract CRA scrutiny.</p>
+</div>
+
+<!-- FAQ Accordion Container -->
+<h2 id="toc-faqs"><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+<div class="gcpa-faq">
+  <details>
+    <summary>What bookkeeping services do you offer in North York?</summary>
+    <div class="ans">Tax Filings Canada provides bookkeeping services. We track income, expenses, and financial records to support accurate tax filing and reporting.</div>
+  </details>
+  <details>
+    <summary>How can payroll services in North York benefit my corporation?</summary>
+    <div class="ans">Our payroll services handle employee pay, tax remittances, and reporting. This reduces errors and keeps your company compliant with CRA rules.</div>
+  </details>
+  <details>
+    <summary>Are our corporate tax services affordable?</summary>
+    <div class="ans">Yes. We offer clear pricing with no surprise invoices. Our fees match competitors and we guarantee complete client satisfaction.</div>
+  </details>
+  <details>
+    <summary>How does ongoing support and tax planning advice help my business?</summary>
+    <div class="ans">Continuous support helps optimize tax savings. We provide strategic planning and ongoing tax filing support to reduce liabilities and maximize refunds year-round.</div>
+  </details>
+  <details>
+    <summary>Why is timely filing important for corporations in North York?</summary>
+    <div class="ans">Timely filing avoids penalties and interest. It also lowers audit risk and keeps your corporation in good standing with the CRA.</div>
+  </details>
+  <details>
+    <summary>What audit protection measures do you provide?</summary>
+    <div class="ans">Our expert Accounting Firm prepare detailed, compliant filings to reduce audit risks. If audited, we assist with CRA communications to protect your interests.</div>
+  </details>
+  <details>
+    <summary>Can you help with GST/HST filing in North York?</summary>
+    <div class="ans">Yes, we help filing GST/HST returns accurately to ensure compliance and avoid penalties for retail and service businesses.</div>
+  </details>
+  <details>
+    <summary>Do you provide startup accounting services in North York?</summary>
+    <div class="ans">We specialize in startup accounting including business incorporation tax advice, bookkeeping setup, and initial corporate filings.</div>
+  </details>
+</div>
+
+<!-- Additional Highlights -->
+<div style="background:white; padding:30px; border-radius:16px; border:1px solid var(--border-gray); margin-bottom:35px; box-shadow:var(--shadow);">
+  <h3 style="font-family:var(--font-serif); font-size:1.4rem; color:var(--primary); margin-top:0; margin-bottom:18px;">
+    <i class="fas fa-star" style="margin-right:8px;"></i> Additional Service Highlights
   </h3>
-  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:15px; margin-bottom:25px;">
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:12px; margin-bottom:20px;">
     <div style="display:flex; gap:10px; align-items:flex-start; font-size:0.9rem;">
       <span style="color:var(--primary); margin-top:2px;"><i class="fas fa-check"></i></span>
       <span>Precise document collection for tax filing saves time and prevents errors.</span>
@@ -7437,39 +7330,18 @@ const blogPosts = [
       <span style="color:var(--primary); margin-top:2px;"><i class="fas fa-check"></i></span>
       <span>Clear competitive pricing with no hidden fees enhances client trust and satisfaction.</span>
     </div>
-    <div style="display:flex; gap:10px; align-items:flex-start; font-size:0.9rem;">
-      <span style="color:var(--primary); margin-top:2px;"><i class="fas fa-check"></i></span>
-      <span>Convenient virtual consultations allow flexible meetings across North York.</span>
-    </div>
-    <div style="display:flex; gap:10px; align-items:flex-start; font-size:0.9rem;">
-      <span style="color:var(--primary); margin-top:2px;"><i class="fas fa-check"></i></span>
-      <span>Proactive tax planning prevents surprises from changing tax laws or audits.</span>
-    </div>
-    <div style="display:flex; gap:10px; align-items:flex-start; font-size:0.9rem;">
-      <span style="color:var(--primary); margin-top:2px;"><i class="fas fa-check"></i></span>
-      <span>Tax penalty avoidance strategies keep your business safe from costly fines.</span>
-    </div>
-    <div style="display:flex; gap:10px; align-items:flex-start; font-size:0.9rem;">
-      <span style="color:var(--primary); margin-top:2px;"><i class="fas fa-check"></i></span>
-      <span>Tax notices resolution helps address CRA inquiries quickly and effectively.</span>
-    </div>
-    <div style="display:flex; gap:10px; align-items:flex-start; font-size:0.9rem;">
-      <span style="color:var(--primary); margin-top:2px;"><i class="fas fa-check"></i></span>
-      <span>Cross-border tax issues consultation supports companies operating internationally.</span>
-    </div>
-    <div style="display:flex; gap:10px; align-items:flex-start; font-size:0.9rem;">
-      <span style="color:var(--primary); margin-top:2px;"><i class="fas fa-check"></i></span>
-      <span>Corporate restructuring tax implications guidance helps optimize financial outcomes.</span>
-    </div>
   </div>
+</div>
 
-  <div style="border-top:1px solid var(--border-gray); padding-top:25px; text-align:center;">
-    <p style="font-size:1rem; font-weight:600; margin-bottom:15px; color:var(--dark-green);">
-      Ready to optimize your corporate taxes in North York?
-    </p>
-    <a href="/contact.html" class="btn btn-primary" style="display:inline-block; padding:12px 28px; border-radius:8px; font-weight:600; text-decoration:none;">
-      Schedule a Free Consultation
-    </a>
+<!-- gcpa-cta (CTA Box) -->
+<div class="gcpa-cta">
+  <h4>Schedule Your Free Virtual Consultation Today</h4>
+  <p>
+    Connect with our expert Accounting Firm to discuss your corporate tax return preparation, bookkeeping, or CRA compliance needs in North York.
+  </p>
+  <div class="gcpa-btnrow">
+    <a href="/contact.html" class="btn primary">Schedule Free Call</a>
+    <a href="/pricing.html" class="btn">View Corporate Pricing</a>
   </div>
 </div>
     `
@@ -7616,6 +7488,364 @@ blogPosts.forEach(p => {
   const htmlContent = `
     <!-- Custom styling to replicate WordPress Elementor blog design -->
     <style>
+      /* .gcpa-post Custom Styles to replicate high-end Elementor design flow */
+      .gcpa-post {
+        --navy: var(--primary);
+        --navy-2: var(--primary-dark);
+        --blue: var(--primary);
+        --blue-soft: var(--primary-light);
+        --teal: #0c8f8f;
+        --teal-soft: #e3f4f4;
+        --gold: #c9991f;
+        --gold-soft: #fbf3dc;
+        --green: var(--success);
+        --green-soft: #e6f5ec;
+        --red: var(--danger);
+        --red-soft: #fbeae8;
+        --ink: var(--body-text);
+        --muted: var(--body-text-light);
+        --line: var(--border-gray);
+        --bg: var(--white);
+        --bg-alt: var(--off-white);
+        --radius: 14px;
+        --shadow: 0 6px 22px rgba(25, 25, 25, 0.04);
+        --shadow-lg: 0 14px 40px rgba(25, 25, 25, 0.08);
+        font-family: var(--font-primary);
+        color: var(--ink);
+        line-height: 1.7;
+        font-size: 17px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 0 40px;
+      }
+      .gcpa-post * { box-sizing: border-box; }
+      .gcpa-post h2 {
+        font-family: var(--font-serif);
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: var(--navy);
+        line-height: 1.3;
+        margin: 48px 0 18px;
+        padding-bottom: 14px;
+        border-bottom: 3px solid var(--blue-soft);
+        position: relative;
+      }
+      .gcpa-post h2::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 70px;
+        height: 3px;
+        background: var(--blue);
+      }
+      .gcpa-post h3 {
+        font-family: var(--font-serif);
+        font-size: 1.45rem;
+        font-weight: 800;
+        color: var(--navy-2);
+        margin: 40px 0 14px;
+        line-height: 1.35;
+      }
+      .gcpa-post h4 {
+        font-family: var(--font-serif);
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--navy-2);
+        margin: 36px 0 12px;
+        line-height: 1.4;
+        padding-left: 16px;
+        border-left: 4px solid var(--teal);
+      }
+      .gcpa-post p {
+        margin: 0 0 16px;
+        color: var(--ink) !important;
+        font-size: 1.02rem;
+      }
+      .gcpa-post li {
+        color: var(--ink);
+      }
+      .gcpa-post a {
+        color: var(--blue);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .gcpa-post a:hover {
+        text-decoration: underline;
+      }
+      
+      /* Rotated Square Checklists */
+      .gcpa-post ul {
+        margin: 0 0 24px !important;
+        padding-left: 0 !important;
+        list-style: none !important;
+      }
+      .gcpa-post ul li {
+        position: relative;
+        padding: 10px 0 10px 34px;
+        margin: 0;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink);
+        list-style: none !important;
+      }
+      .gcpa-post ul li:last-child {
+        border-bottom: none;
+      }
+      .gcpa-post ul li::before {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 17px;
+        width: 8px;
+        height: 8px;
+        border-radius: 2px;
+        background: var(--teal);
+        transform: rotate(45deg);
+      }
+      
+      /* Solid Numbered Lists */
+      .gcpa-post ol {
+        counter-reset: gcpa;
+        margin: 0 0 24px !important;
+        padding-left: 0 !important;
+        list-style: none !important;
+      }
+      .gcpa-post ol li {
+        position: relative;
+        padding: 12px 0 12px 44px;
+        margin: 0 0 10px;
+        counter-increment: gcpa;
+        list-style: none !important;
+      }
+      .gcpa-post ol li::before {
+        content: counter(gcpa);
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 26px;
+        height: 26px;
+        border-radius: 8px;
+        background: var(--navy);
+        color: #fff;
+        font-weight: 700;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Tables styling */
+      .gcpa-post .wp-block-table, .gcpa-post figure.wp-block-table {
+        margin: 22px 0 26px;
+        overflow-x: auto;
+      }
+      .gcpa-post table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+      .gcpa-post thead th {
+        background: var(--navy);
+        color: #fff;
+        text-align: left;
+        padding: 14px 16px;
+        font-weight: 700;
+        border: 1px solid var(--navy-2);
+      }
+      .gcpa-post tbody td {
+        padding: 14px 16px;
+        border: 1px solid var(--line);
+        vertical-align: top;
+        color: var(--ink);
+      }
+      .gcpa-post tbody tr:nth-child(even) {
+        background: var(--bg-alt);
+      }
+      .gcpa-post tbody tr:hover {
+        background: var(--blue-soft);
+      }
+      .gcpa-post tbody td:first-child {
+        font-weight: 600;
+        color: var(--navy-2);
+      }
+
+      /* Callouts styling */
+      .gcpa-callout {
+        border-radius: var(--radius);
+        padding: 22px 24px;
+        margin: 24px 0;
+        border: 1px solid var(--line);
+        background: var(--bg-alt);
+        position: relative;
+      }
+      .gcpa-callout.blue { background: var(--blue-soft); border-color: #bcd9f6; }
+      .gcpa-callout.teal { background: var(--teal-soft); border-color: #b7e3e3; }
+      .gcpa-callout.gold { background: var(--gold-soft); border-color: #ecd79a; }
+      .gcpa-callout.green { background: var(--green-soft); border-color: #b6e2c6; }
+      .gcpa-callout.red { background: var(--red-soft); border-color: #f0c4be; }
+      .gcpa-callout .co-tag {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .6px;
+        text-transform: uppercase;
+        padding: 4px 11px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+      .gcpa-callout.blue .co-tag { background: var(--blue); }
+      .gcpa-callout.teal .co-tag { background: var(--teal); }
+      .gcpa-callout.gold .co-tag { background: var(--gold); }
+      .gcpa-callout.green .co-tag { background: var(--green); }
+      .gcpa-callout.red .co-tag { background: var(--red); }
+      .gcpa-callout p:last-child { margin-bottom: 0; }
+
+      /* Table of Contents */
+      .gcpa-toc {
+        background: var(--bg-alt);
+        border: 1px solid var(--line);
+        border-left: 5px solid var(--blue);
+        border-radius: var(--radius);
+        padding: 24px 26px;
+        margin: 30px 0 36px;
+        box-shadow: var(--shadow);
+      }
+      .gcpa-toc h5 {
+        margin: 0 0 14px;
+        font-size: 15px;
+        font-weight: 800;
+        color: var(--navy);
+        letter-spacing: .4px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+      }
+      .gcpa-toc h5 svg { width: 20px; height: 20px; color: var(--blue); }
+      .gcpa-toc ol {
+        counter-reset: toc;
+        margin: 0 !important;
+        padding: 0 !important;
+        columns: 2;
+        column-gap: 36px;
+        list-style: none !important;
+      }
+      @media(max-width: 768px) {
+        .gcpa-toc ol { columns: 1; }
+      }
+      .gcpa-toc ol li {
+        counter-increment: toc;
+        position: relative;
+        padding: 7px 0 7px 30px;
+        margin: 0;
+        border-bottom: 1px dashed var(--line);
+        break-inside: avoid;
+        list-style: none !important;
+      }
+      .gcpa-toc ol li::before {
+        content: counter(toc);
+        position: absolute;
+        left: 0;
+        top: 7px;
+        width: 21px;
+        height: 21px;
+        border-radius: 6px;
+        background: var(--blue-soft);
+        color: var(--blue);
+        font-size: 11px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .gcpa-toc a { color: var(--navy-2); font-weight: 600; font-size: 15px; }
+      .gcpa-toc a:hover { color: var(--blue); text-decoration: none; }
+
+      /* Metric Grid */
+      .gcpa-metrics {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin: 30px 0 36px;
+      }
+      .gcpa-metric {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-top: 4px solid var(--blue);
+        border-radius: var(--radius);
+        padding: 22px 20px;
+        box-shadow: var(--shadow);
+        transition: transform .2s, box-shadow .2s;
+      }
+      .gcpa-metric:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+      }
+      .gcpa-metric:nth-child(2) { border-top-color: var(--teal); }
+      .gcpa-metric:nth-child(3) { border-top-color: var(--gold); }
+      .gcpa-metric:nth-child(4) { border-top-color: var(--green); }
+      .gcpa-metric .ic {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: var(--blue-soft);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 14px;
+        color: var(--blue);
+        font-size: 1.1rem;
+      }
+      .gcpa-metric:nth-child(2) .ic { background: var(--teal-soft); color: var(--teal); }
+      .gcpa-metric:nth-child(3) .ic { background: var(--gold-soft); color: var(--gold); }
+      .gcpa-metric:nth-child(4) .ic { background: var(--green-soft); color: var(--green); }
+      .gcpa-metric .big { font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+      .gcpa-metric .lbl { font-size: 13.5px; color: var(--muted); line-height: 1.45; }
+
+      /* Accordion FAQs */
+      .gcpa-faq {
+        margin: 25px 0 35px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+      .gcpa-faq details { border-bottom: 1px solid var(--line); background: #fff; }
+      .gcpa-faq details:last-child { border-bottom: none; }
+      .gcpa-faq summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 18px 22px;
+        font-weight: 700;
+        color: var(--navy-2);
+        font-size: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 14px;
+        transition: background .15s;
+      }
+      .gcpa-faq summary::-webkit-details-marker { display: none; }
+      .gcpa-faq summary:hover { background: var(--bg-alt); }
+      .gcpa-faq summary::after {
+        content: "+";
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--blue);
+        transition: transform 0.2s;
+      }
+      .gcpa-faq details[open] summary::after {
+        content: "−";
+        color: var(--blue);
+      }
+      .gcpa-faq .ans { padding: 0 22px 20px; color: var(--ink); font-size: 15px; line-height: 1.65; }
+
       .blog-hero {
         background: linear-gradient(135deg, var(--color-slate-dark) 0%, var(--color-slate-med) 100%);
         padding: 60px 0;
@@ -7768,7 +7998,7 @@ blogPosts.forEach(p => {
               </ul>
             </div>
 
-            <div id="section-1">
+            <div id="section-1" class="${p.slug === 'expert-corporation-tax-filing-north-york' ? 'gcpa-post' : ''}">
               ${p.content}
             </div>
 
