@@ -3652,9 +3652,76 @@ services.forEach(s => {
     { q: `How do I start with ${s.name} services?`, a: 'You can start by booking a free 15-minute call. We will review your files, provide a fixed quote, and start working immediately.' }
   ];
 
-  const htmlContent = `
-    <!-- Custom styling to replicate WordPress Elementor service page layout -->
-    <style>
+  const heroStyles = isCorporateTax ? `
+      .srv-hero {
+        background: linear-gradient(to right, rgba(25, 25, 25, 0.88) 0%, rgba(25, 25, 25, 0.6) 100%), url('/images/office_team.png') no-repeat center center / cover;
+        padding: 90px 0 110px;
+        color: var(--white);
+        text-align: left;
+        overflow: hidden;
+      }
+      .srv-hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+      .srv-hero h1 {
+        font-size: 2.8rem;
+        font-weight: 800;
+        line-height: 1.25;
+        color: var(--white);
+        margin-bottom: 20px;
+      }
+      .srv-hero p {
+        font-size: 1.15rem;
+        line-height: 1.6;
+        color: #CBD5E1;
+        margin-bottom: 40px;
+      }
+      .srv-hero-right {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .stacked-card {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 14px 18px;
+        transition: all 0.3s ease;
+      }
+      .stacked-card:hover {
+        transform: translateY(-3px);
+        background: rgba(255, 255, 255, 0.12);
+        border-color: var(--primary);
+      }
+      .stacked-card h4 {
+        color: var(--white);
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .stacked-card h4 i {
+        color: var(--primary);
+      }
+      .stacked-card p {
+        font-size: 0.82rem;
+        line-height: 1.4;
+        color: #CBD5E1;
+        margin: 0;
+      }
+      @media (max-width: 991px) {
+        .srv-hero-grid {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+      }
+  ` : `
       .srv-hero {
         background: var(--color-slate-dark);
         padding: 80px 0 60px;
@@ -3689,6 +3756,65 @@ services.forEach(s => {
         display: block;
         height: auto;
       }
+  `;
+
+  const heroHtml = isCorporateTax ? `
+    <section class="srv-hero">
+      <div class="container">
+        <div class="srv-hero-grid">
+          <div class="srv-hero-left">
+            <h1>${title}</h1>
+            <p>${subtitle}</p>
+            <div class="btn-group">
+              <a href="/contact.html" class="btn btn-primary btn-lg">Book Free Consultation</a>
+              <a href="#service-pricing" class="btn btn-outline-white btn-lg">Explore Pricing</a>
+            </div>
+          </div>
+          <div class="srv-hero-right">
+            <div class="stacked-card">
+              <h4><i class="fas fa-file-invoice-dollar"></i> T2 Corporate Tax Return Filing</h4>
+              <p>Accurate corporate tax compilation &bull; Electronic EFILE to CRA &bull; Federal and provincial T2 filings &bull; Maximized eligible deductions</p>
+            </div>
+            <div class="stacked-card">
+              <h4><i class="fas fa-funnel-dollar"></i> Proactive Corporate Tax Planning</h4>
+              <p>Salary vs. dividend optimization &bull; Holding company structures &bull; Capital Cost Allowance (CCA) maximization &bull; Shareholder loan optimization</p>
+            </div>
+            <div class="stacked-card">
+              <h4><i class="fas fa-calculator"></i> GST/HST Compliance for Corporations</h4>
+              <p>Sales tax tracking &bull; Input Tax Credits (ITCs) recovery &bull; Accurate filing and tax remittances &bull; Provincial PST compliance</p>
+            </div>
+            <div class="stacked-card">
+              <h4><i class="fas fa-shield-alt"></i> Corporate CRA Audit Protection</h4>
+              <p>Direct CRA audit defense &bull; Response management &bull; Objection filings &bull; Notice of Assessment audits &bull; Dispute resolution</p>
+            </div>
+            <div class="stacked-card">
+              <h4><i class="fas fa-chart-line"></i> Strategic Financial Advisory</h4>
+              <p>Notice to Reader (NTR) financial statements &bull; Financial ratio analysis &bull; Startups and corporate tax structure planning</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  ` : `
+    <section class="srv-hero">
+      <div class="container">
+        <h1>${title}</h1>
+        <p>${subtitle}</p>
+        <div class="btn-group" style="justify-content:center;">
+          <a href="/contact.html" class="btn btn-primary btn-lg">Book Free Consultation</a>
+          <a href="#service-pricing" class="btn btn-outline-white btn-lg">Explore Pricing</a>
+        </div>
+        <div class="srv-collage-container">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&h=500&fit=crop" alt="Collage of Team & Credentials" class="srv-collage-img">
+        </div>
+      </div>
+    </section>
+  `;
+
+  const htmlContent = `
+    <!-- Custom styling to replicate WordPress Elementor service page layout -->
+    <style>
+      ${heroStyles}
       .google-reviews-bar {
         background: var(--white);
         padding: 20px 0;
@@ -3731,19 +3857,7 @@ services.forEach(s => {
     </style>
 
     <!-- 1. HERO BANNER -->
-    <section class="srv-hero">
-      <div class="container">
-        <h1>${title}</h1>
-        <p>${subtitle}</p>
-        <div class="btn-group" style="justify-content:center;">
-          <a href="/contact.html" class="btn btn-primary btn-lg">Book Free Consultation</a>
-          <a href="#service-pricing" class="btn btn-outline-white btn-lg">Explore Pricing</a>
-        </div>
-        <div class="srv-collage-container">
-          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&h=500&fit=crop" alt="Collage of Team & Credentials" class="srv-collage-img">
-        </div>
-      </div>
-    </section>
+    ${heroHtml}
 
     <!-- 2. GOOGLE REVIEWS BAR -->
     <div class="google-reviews-bar">
