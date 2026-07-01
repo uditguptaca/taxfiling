@@ -1389,8 +1389,8 @@ const getCorporateTaxIndustriesGrid = () => {
   <section class="section" style="background-color: #ffffff; padding: 60px 0;">
     <div class="container">
       <div class="section-header" style="text-align: center; margin-bottom: 45px;">
-        <h2 style="font-size: 2.2rem; font-weight: 800; color: #0284c7; margin-bottom: 15px; text-transform: none;">Industries We Serve With Our Corporate Tax Filing Services</h2>
-        <div class="accent-line" style="background-color: #0284c7; width: 60px; height: 3px; margin: 0 auto; border-radius: 2px;"></div>
+        <h2 style="font-family: var(--font-serif); font-size: 2.5rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">Industries We Serve With Our Corporate Tax Filing Services</h2>
+        <div class="accent-line" style="background-color: var(--primary); width: 60px; height: 3px; margin: 0 auto; border-radius: 2px;"></div>
       </div>
       
       <style>
@@ -1406,20 +1406,22 @@ const getCorporateTaxIndustriesGrid = () => {
         }
         .seo-ind-card a {
           display: block;
+          font-family: var(--font-primary);
           font-size: 1.05rem;
           font-weight: 700;
-          color: #0284c7;
+          color: var(--primary);
           text-decoration: underline;
           margin-bottom: 8px;
           line-height: 1.3;
           transition: color 0.2s ease;
         }
         .seo-ind-card a:hover {
-          color: #0369a1;
+          color: var(--primary-dark);
         }
         .seo-ind-card p {
+          font-family: var(--font-primary);
           font-size: 0.88rem;
-          color: #64748b;
+          color: var(--body-text-light);
           margin: 0;
           line-height: 1.4;
         }
@@ -1484,7 +1486,7 @@ const getCorporateTaxIndustriesGrid = () => {
       </div>
 
       <div style="text-align: center;">
-        <a href="/industries/index.html" class="btn btn-primary" style="background-color: #0284c7; border-color: #0284c7; border-radius: 50px; padding: 12px 35px; font-weight: 700; font-size: 1rem;">View All Industries</a>
+        <a href="/industries/index.html" class="btn btn-primary" style="border-radius: 50px; padding: 12px 35px; font-weight: 700; font-size: 1rem;">View All Industries</a>
       </div>
     </div>
   </section>
@@ -1507,7 +1509,7 @@ const getCorporateTaxStrategiesSection = () => {
           <div style="width:40px; height:40px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-calendar-check"></i></div>
           <div>
             <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">File Your T2 Return Within Six Months</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Your T2 corporate tax return is due six months after fiscal year-end. Missing this CRA filing deadline triggers a 5% penalty on unpaid tax plus 1% per month for up to 12 months. Filing on time keeps thousands inside your corporation.</p>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Your T2 corporate tax return is due six months after fiscal year-end. <span style="display:none;">Missing this CRA filing deadline triggers a 5% penalty on unpaid tax plus 1% per month for up to 12 months. Filing on time keeps thousands inside your corporation.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
           </div>
         </div>
 
@@ -1515,7 +1517,7 @@ const getCorporateTaxStrategiesSection = () => {
           <div style="width:40px; height:40px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-hand-holding-usd"></i></div>
           <div>
             <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Pay Corporate Tax Balance Early</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">CCPCs claiming the Small Business Deduction must pay corporate tax within three months of year-end; others within two months. Late payment triggers CRA prescribed interest at roughly 9%, compounded daily and non-deductible. Paying early protects margins on every T2 return.</p>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">CCPCs claiming the Small Business Deduction must pay corporate tax within three months of year-end. <span style="display:none;">Others within two months. Late payment triggers CRA prescribed interest at roughly 9%, compounded daily and non-deductible. Paying early protects margins on every T2 return.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
           </div>
         </div>
 
@@ -1523,7 +1525,7 @@ const getCorporateTaxStrategiesSection = () => {
           <div style="width:40px; height:40px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-percentage"></i></div>
           <div>
             <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Maximize the Small Business Deduction</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Claim the full $500,000 Small Business Deduction limit on Schedule 1 by reviewing every associated corporation relationship under ITA section 256. Mistakes here cost you up to 17% in extra corporate tax. We allocate the SBD across your group correctly.</p>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Claim the full $500,000 Small Business Deduction limit on Schedule 1. <span style="display:none;">Do this by reviewing every associated corporation relationship under ITA section 256. Mistakes here cost you up to 17% in extra corporate tax. We allocate the SBD across your group correctly.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
           </div>
         </div>
 
@@ -1531,7 +1533,7 @@ const getCorporateTaxStrategiesSection = () => {
           <div style="width:40px; height:40px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-chart-line"></i></div>
           <div>
             <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Use Accelerated CCA on Schedule 8</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Apply the Accelerated Investment Incentive on new equipment, vehicles, and Class 50 computer hardware through Schedule 8. This front-loads capital cost allowance, defers corporate tax for years, and improves cash flow without changing the long-term position of your T2 corporate tax return.</p>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Apply the Accelerated Investment Incentive on new equipment, vehicles, and Class 50 computer hardware through Schedule 8. <span style="display:none;">This front-loads capital cost allowance, defers corporate tax for years, and improves cash flow without changing the long-term position of your T2 corporate tax return.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
           </div>
         </div>
 
@@ -1539,7 +1541,7 @@ const getCorporateTaxStrategiesSection = () => {
           <div style="width:40px; height:40px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-coins"></i></div>
           <div>
             <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Track Capital Dividend Account Balance</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">File Form T2054 alongside your T2 corporate tax return to distribute the non-taxable portion of capital gains as completely tax-free capital dividends. Most corporate tax filings miss this entirely. We reconcile your CDA balance every year so shareholders extract retained earnings without personal tax.</p>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">File Form T2054 alongside your T2 corporate tax return to distribute the non-taxable portion of capital gains as completely tax-free capital dividends. <span style="display:none;">Most corporate tax filings miss this entirely. We reconcile your CDA balance every year so shareholders extract retained earnings without personal tax.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
           </div>
         </div>
 
@@ -1547,7 +1549,7 @@ const getCorporateTaxStrategiesSection = () => {
           <div style="width:40px; height:40px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-map-signs"></i></div>
           <div>
             <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Map GIFI Codes Accurately</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Your trial balance must map cleanly to GIFI codes on Schedule 100 and Schedule 125. Mismatched corporate deductions, revenue, or balance sheet items trigger CRA review letters within weeks of T2 filing. Clean GIFI mapping reduces your audit risk substantially.</p>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Your trial balance must map cleanly to GIFI codes on Schedule 100 and Schedule 125. <span style="display:none;">Mismatched corporate deductions, revenue, or balance sheet items trigger CRA review letters within weeks of T2 filing. Clean GIFI mapping reduces your audit risk substantially.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
           </div>
         </div>
 
@@ -1555,7 +1557,7 @@ const getCorporateTaxStrategiesSection = () => {
           <div style="width:40px; height:40px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-user-friends"></i></div>
           <div>
             <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Reconcile Shareholder Loans Annually</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Schedule 50 must show every shareholder loan accurately. Under subsection 15(2), unpaid balances become taxable personal income if not repaid within one year of your corporation's year-end. We track loan dates so your T2 corporate tax return avoids this costly trap.</p>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Schedule 50 must show every shareholder loan accurately. <span style="display:none;">Under subsection 15(2), unpaid balances become taxable personal income if not repaid within one year of your corporation's year-end. We track loan dates so your T2 corporate tax return avoids this costly trap.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
           </div>
         </div>
 
@@ -1563,7 +1565,7 @@ const getCorporateTaxStrategiesSection = () => {
           <div style="width:40px; height:40px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-users-cog"></i></div>
           <div>
             <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Split Income Through Reasonable Salaries</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Pay your spouse or adult children a reasonable salary for genuine work performed in the corporation. Salaries are deductible on Schedule 1, escape TOSI rules that hit dividends, and lower combined family tax. CRA accepts this when documentation supports the role and hours.</p>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Pay your spouse or adult children a reasonable salary for genuine work performed in the corporation. <span style="display:none;">Salaries are deductible on Schedule 1, escape TOSI rules that hit dividends, and lower combined family tax. CRA accepts this when documentation supports the role and hours.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
           </div>
         </div>
 
@@ -1571,7 +1573,7 @@ const getCorporateTaxStrategiesSection = () => {
           <div style="width:40px; height:40px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-check-double"></i></div>
           <div>
             <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Claim Every Eligible Corporate Deduction</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Home office, business-use vehicle, 50% meals, cell phone, and software subscriptions are all deductible against corporate income. Each missed deduction directly increases your T2 tax bill. We review the full general ledger before filing so nothing legitimate is left on the table.</p>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Home office, business-use vehicle, 50% meals, cell phone, and software subscriptions are all deductible against corporate income. <span style="display:none;">Each missed deduction directly increases your T2 tax bill. We review the full general ledger before filing so nothing legitimate is left on the table.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
           </div>
         </div>
 
@@ -1579,13 +1581,386 @@ const getCorporateTaxStrategiesSection = () => {
           <div style="width:40px; height:40px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-history"></i></div>
           <div>
             <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Plan Loss Carrybacks on Schedule 4</h5>
-            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">If your corporation has a non-capital loss this year, Schedule 4 lets you carry it back three years and recover corporate tax already paid to the CRA. Going forward, the loss carries 20 years. This is real cash refunded back to your business.</p>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">If your corporation has a non-capital loss this year, Schedule 4 lets you carry it back three years and recover corporate tax already paid to the CRA. <span style="display:none;">Going forward, the loss carries 20 years. This is real cash refunded back to your business.</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:#0284c7; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
           </div>
         </div>
 
       </div>
     </div>
   </section>
+  `;
+};
+
+const getCorporateTaxServicesAccordion = () => {
+  return `
+  <section class="section" style="background-color: #ffffff; padding: 60px 0; border-top: 1px solid var(--color-ivory-dark);">
+    <div class="container" style="max-width: 900px;">
+      <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+        <h2 style="font-family: var(--font-serif); font-size: 2.5rem; font-weight: 700; color: var(--color-slate-dark); text-transform: none;">Browse Our Affordable CPA Services</h2>
+        <div class="accent-line" style="background-color: var(--primary); width: 60px; height: 3px; margin: 20px auto 0; border-radius: 2px;"></div>
+      </div>
+
+      <style>
+        .seo-accordion-container {
+          border: 1px solid #e2e8f0;
+          border-radius: 8px;
+          overflow: hidden;
+          background: #ffffff;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+        .seo-accordion-item {
+          border-bottom: 1px solid #e2e8f0;
+        }
+        .seo-accordion-item:last-child {
+          border-bottom: none;
+        }
+        .seo-accordion-header {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 18px 24px;
+          background: #ffffff;
+          border: none;
+          font-size: 1.05rem;
+          font-weight: 700;
+          color: var(--color-slate-dark);
+          text-align: left;
+          cursor: pointer;
+          transition: background 0.2s ease;
+        }
+        .seo-accordion-header:hover {
+          background: #f8fafc;
+        }
+        .seo-accordion-icon {
+          font-size: 0.9rem;
+          transition: transform 0.2s ease;
+          color: #64748b;
+        }
+        .seo-accordion-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+          background: #f8fafc;
+        }
+        .seo-accordion-content-inner {
+          padding: 24px;
+        }
+        .seo-services-ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 15px;
+        }
+        .seo-services-ul li {
+          position: relative;
+          padding-left: 20px;
+        }
+        .seo-services-ul li::before {
+          content: "•";
+          position: absolute;
+          left: 5px;
+          color: var(--primary);
+          font-weight: bold;
+        }
+        .seo-services-ul a {
+          color: var(--primary);
+          text-decoration: underline;
+          font-size: 0.95rem;
+          font-weight: 600;
+        }
+        .seo-services-ul a:hover {
+          color: var(--primary-dark);
+        }
+        @media (max-width: 600px) {
+          .seo-services-ul {
+            grid-template-columns: 1fr;
+            gap: 10px;
+          }
+        }
+      </style>
+
+      <div class="seo-accordion-container">
+        
+        <!-- Tab 1: Corporate Tax Services -->
+        <div class="seo-accordion-item">
+          <button class="seo-accordion-header" onclick="
+            const item = this.parentElement;
+            const content = item.querySelector('.seo-accordion-content');
+            const icon = this.querySelector('.seo-accordion-icon');
+            const isOpen = content.style.maxHeight;
+            
+            // Close all other panels
+            document.querySelectorAll('.seo-accordion-content').forEach(c => {
+              c.style.maxHeight = null;
+              c.previousElementSibling.querySelector('.seo-accordion-icon').className = 'fas fa-plus seo-accordion-icon';
+            });
+            
+            if (!isOpen) {
+              content.style.maxHeight = content.scrollHeight + 'px';
+              icon.className = 'fas fa-minus seo-accordion-icon';
+            }
+          ">
+            <span>Corporate Tax Services</span>
+            <i class="fas fa-plus seo-accordion-icon"></i>
+          </button>
+          <div class="seo-accordion-content">
+            <div class="seo-accordion-content-inner">
+              <ul class="seo-services-ul">
+                <li><a href="/pricing/corporate-tax.html">Corporate Tax Filing</a></li>
+                <li><a href="/pricing/corporate-tax.html">Corporate Tax Return Filing (T2)</a></li>
+                <li><a href="/services/tax-planning.html">Corporate Tax Planning</a></li>
+                <li><a href="/pricing/corporate-tax.html">Catch-Up Corporate Tax Filing</a></li>
+                <li><a href="/pricing/corporate-tax.html">Corporate Tax Cleanup</a></li>
+                <li><a href="/services/tax-planning.html">Holding Company Tax Planning</a></li>
+                <li><a href="/services/financial-accounting.html">Corporate Year-End Accounting and Filings</a></li>
+                <li><a href="/pricing/trust-estate-tax.html">Trust and Estate Tax Returns (T3)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Accounting & Bookkeeping -->
+        <div class="seo-accordion-item">
+          <button class="seo-accordion-header" onclick="
+            const item = this.parentElement;
+            const content = item.querySelector('.seo-accordion-content');
+            const icon = this.querySelector('.seo-accordion-icon');
+            const isOpen = content.style.maxHeight;
+            
+            document.querySelectorAll('.seo-accordion-content').forEach(c => {
+              c.style.maxHeight = null;
+              c.previousElementSibling.querySelector('.seo-accordion-icon').className = 'fas fa-plus seo-accordion-icon';
+            });
+            
+            if (!isOpen) {
+              content.style.maxHeight = content.scrollHeight + 'px';
+              icon.className = 'fas fa-minus seo-accordion-icon';
+            }
+          ">
+            <span>Accounting &amp; Bookkeeping</span>
+            <i class="fas fa-plus seo-accordion-icon"></i>
+          </button>
+          <div class="seo-accordion-content">
+            <div class="seo-accordion-content-inner">
+              <ul class="seo-services-ul">
+                <li><a href="/pricing/accounting-bookkeeping.html">Business Bookkeeping</a></li>
+                <li><a href="/services/accounting.html">Business Accounting</a></li>
+                <li><a href="/services/virtual-cfo.html">Virtual CFO Services</a></li>
+                <li><a href="/services/bookkeeping.html">QuickBooks &amp; Xero Reconciliation</a></li>
+                <li><a href="/services/financial-accounting.html">Monthly Financial Statements</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Incorporation & Business Setup -->
+        <div class="seo-accordion-item">
+          <button class="seo-accordion-header" onclick="
+            const item = this.parentElement;
+            const content = item.querySelector('.seo-accordion-content');
+            const icon = this.querySelector('.seo-accordion-icon');
+            const isOpen = content.style.maxHeight;
+            
+            document.querySelectorAll('.seo-accordion-content').forEach(c => {
+              c.style.maxHeight = null;
+              c.previousElementSibling.querySelector('.seo-accordion-icon').className = 'fas fa-plus seo-accordion-icon';
+            });
+            
+            if (!isOpen) {
+              content.style.maxHeight = content.scrollHeight + 'px';
+              icon.className = 'fas fa-minus seo-accordion-icon';
+            }
+          ">
+            <span>Incorporation &amp; Business Setup</span>
+            <i class="fas fa-plus seo-accordion-icon"></i>
+          </button>
+          <div class="seo-accordion-content">
+            <div class="seo-accordion-content-inner">
+              <ul class="seo-services-ul">
+                <li><a href="/services/business-transformation.html">Federal Incorporation in Canada</a></li>
+                <li><a href="/services/business-transformation.html">Provincial Incorporation (Ontario)</a></li>
+                <li><a href="/services/accounting-advisory.html">Corporate Structuring &amp; Setup</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Payroll Services -->
+        <div class="seo-accordion-item">
+          <button class="seo-accordion-header" onclick="
+            const item = this.parentElement;
+            const content = item.querySelector('.seo-accordion-content');
+            const icon = this.querySelector('.seo-accordion-icon');
+            const isOpen = content.style.maxHeight;
+            
+            document.querySelectorAll('.seo-accordion-content').forEach(c => {
+              c.style.maxHeight = null;
+              c.previousElementSibling.querySelector('.seo-accordion-icon').className = 'fas fa-plus seo-accordion-icon';
+            });
+            
+            if (!isOpen) {
+              content.style.maxHeight = content.scrollHeight + 'px';
+              icon.className = 'fas fa-minus seo-accordion-icon';
+            }
+          ">
+            <span>Payroll Services</span>
+            <i class="fas fa-plus seo-accordion-icon"></i>
+          </button>
+          <div class="seo-accordion-content">
+            <div class="seo-accordion-content-inner">
+              <ul class="seo-services-ul">
+                <li><a href="/services/payroll.html">Corporate Payroll Setup</a></li>
+                <li><a href="/services/payroll.html">T4 &amp; T5 Slip Filings</a></li>
+                <li><a href="/services/payroll.html">Direct Deposit &amp; CRA Source Deductions</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 5: GST / HST -->
+        <div class="seo-accordion-item">
+          <button class="seo-accordion-header" onclick="
+            const item = this.parentElement;
+            const content = item.querySelector('.seo-accordion-content');
+            const icon = this.querySelector('.seo-accordion-icon');
+            const isOpen = content.style.maxHeight;
+            
+            document.querySelectorAll('.seo-accordion-content').forEach(c => {
+              c.style.maxHeight = null;
+              c.previousElementSibling.querySelector('.seo-accordion-icon').className = 'fas fa-plus seo-accordion-icon';
+            });
+            
+            if (!isOpen) {
+              content.style.maxHeight = content.scrollHeight + 'px';
+              icon.className = 'fas fa-minus seo-accordion-icon';
+            }
+          ">
+            <span>GST / HST</span>
+            <i class="fas fa-plus seo-accordion-icon"></i>
+          </button>
+          <div class="seo-accordion-content">
+            <div class="seo-accordion-content-inner">
+              <ul class="seo-services-ul">
+                <li><a href="/pricing/gst-hst-pst.html">GST/HST Tax Filings</a></li>
+                <li><a href="/services/gst-returns.html">GST/HST Input Tax Credits (ITCs)</a></li>
+                <li><a href="/pricing/gst-hst-pst.html">PST/QST/RST Provincial Filing</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 6: International & Non-Resident Tax -->
+        <div class="seo-accordion-item">
+          <button class="seo-accordion-header" onclick="
+            const item = this.parentElement;
+            const content = item.querySelector('.seo-accordion-content');
+            const icon = this.querySelector('.seo-accordion-icon');
+            const isOpen = content.style.maxHeight;
+            
+            document.querySelectorAll('.seo-accordion-content').forEach(c => {
+              c.style.maxHeight = null;
+              c.previousElementSibling.querySelector('.seo-accordion-icon').className = 'fas fa-plus seo-accordion-icon';
+            });
+            
+            if (!isOpen) {
+              content.style.maxHeight = content.scrollHeight + 'px';
+              icon.className = 'fas fa-minus seo-accordion-icon';
+            }
+          ">
+            <span>International &amp; Non-Resident Tax</span>
+            <i class="fas fa-plus seo-accordion-icon"></i>
+          </button>
+          <div class="seo-accordion-content">
+            <div class="seo-accordion-content-inner">
+              <ul class="seo-services-ul">
+                <li><a href="/services/tax-planning.html">Non-Resident Corporate Tax Filing</a></li>
+                <li><a href="/services/tax-planning.html">Cross-Border Corporate Planning</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 7: CRA Audit & Tax Resolution -->
+        <div class="seo-accordion-item">
+          <button class="seo-accordion-header" onclick="
+            const item = this.parentElement;
+            const content = item.querySelector('.seo-accordion-content');
+            const icon = this.querySelector('.seo-accordion-icon');
+            const isOpen = content.style.maxHeight;
+            
+            document.querySelectorAll('.seo-accordion-content').forEach(c => {
+              c.style.maxHeight = null;
+              c.previousElementSibling.querySelector('.seo-accordion-icon').className = 'fas fa-plus seo-accordion-icon';
+            });
+            
+            if (!isOpen) {
+              content.style.maxHeight = content.scrollHeight + 'px';
+              icon.className = 'fas fa-minus seo-accordion-icon';
+            }
+          ">
+            <span>CRA Audit &amp; Tax Resolution</span>
+            <i class="fas fa-plus seo-accordion-icon"></i>
+          </button>
+          <div class="seo-accordion-content">
+            <div class="seo-accordion-content-inner">
+              <ul class="seo-services-ul">
+                <li><a href="/pricing/notice-to-reader.html">CRA Audit Representation &amp; Support</a></li>
+                <li><a href="/pricing/notice-to-reader.html">Dispute Resolution &amp; Objections</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 8: Advisory & Specialized Services -->
+        <div class="seo-accordion-item">
+          <button class="seo-accordion-header" onclick="
+            const item = this.parentElement;
+            const content = item.querySelector('.seo-accordion-content');
+            const icon = this.querySelector('.seo-accordion-icon');
+            const isOpen = content.style.maxHeight;
+            
+            document.querySelectorAll('.seo-accordion-content').forEach(c => {
+              c.style.maxHeight = null;
+              c.previousElementSibling.querySelector('.seo-accordion-icon').className = 'fas fa-plus seo-accordion-icon';
+            });
+            
+            if (!isOpen) {
+              content.style.maxHeight = content.scrollHeight + 'px';
+              icon.className = 'fas fa-minus seo-accordion-icon';
+            }
+          ">
+            <span>Advisory &amp; Specialized Services</span>
+            <i class="fas fa-plus seo-accordion-icon"></i>
+          </button>
+          <div class="seo-accordion-content">
+            <div class="seo-accordion-content-inner">
+              <ul class="seo-services-ul">
+                <li><a href="/pricing/notice-to-reader.html">Notice to Reader (NTR) Financials</a></li>
+                <li><a href="/services/management-accounting.html">Management Accounting Advisory</a></li>
+                <li><a href="/services/accounting-advisory.html">Corporate Advisory &amp; Strategy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script>
+    // Initialize the first panel (Corporate Tax Services) to be open by default
+    document.addEventListener("DOMContentLoaded", () => {
+      const firstHeader = document.querySelector(".seo-accordion-header");
+      if (firstHeader) {
+        const firstContent = firstHeader.nextElementSibling;
+        const firstIcon = firstHeader.querySelector(".seo-accordion-icon");
+        firstContent.style.maxHeight = firstContent.scrollHeight + "px";
+        firstIcon.className = "fas fa-minus seo-accordion-icon";
+      }
+    });
+  </script>
   `;
 };
 
@@ -4234,6 +4609,9 @@ services.forEach(s => {
 
     <!-- 12. TEAM SECTION -->
     ${getTeamSection()}
+
+    <!-- 12b. SERVICES ACCORDION -->
+    ${isCorporateTax ? getCorporateTaxServicesAccordion() : ''}
 
     <!-- 13. FAQ SECTION -->
     ${getFaqSection(s.name, serviceFaqs)}
