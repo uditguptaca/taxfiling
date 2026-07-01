@@ -1440,7 +1440,7 @@ const getCorporateTaxIndustriesGrid = () => {
   }).join('\n');
 
   return `
-  <section class="section" style="background-color: #ffffff; padding: 60px 0;">
+  <section class="section" style="background-color: var(--color-ivory-light); padding: 60px 0;">
     <div class="container">
       <div class="section-header" style="text-align: center; margin-bottom: 45px;">
         <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">Industries We Serve</h2>
@@ -1581,7 +1581,7 @@ const getCorporateTaxStrategiesSection = () => {
   }).join('\n');
 
   return `
-  <section class="section" style="background-color: var(--color-ivory-light); padding: 80px 0; border-top: 1px solid var(--color-ivory-dark); border-bottom: 1px solid var(--color-ivory-dark);">
+  <section class="section" style="background-color: #ffffff; padding: 80px 0; border-top: 1px solid var(--color-ivory-dark); border-bottom: 1px solid var(--color-ivory-dark);">
     <div class="container">
       <div class="section-header" style="margin-bottom: 50px; text-align: center;">
         <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">9 Smart Corporate Tax Strategies</h2>
@@ -1876,7 +1876,7 @@ const getCorporateTaxDetailedServicesDropdown = () => {
   const accordionHtmlCol2 = generateColHtml(items.slice(3, 6));
 
   return `
-  <section class="section" style="background-color: var(--color-ivory-light); padding: 60px 0; border-top: 1px solid var(--color-ivory-dark); border-bottom: 1px solid var(--color-ivory-dark);">
+  <section class="section" style="background-color: #ffffff; padding: 60px 0; border-top: 1px solid var(--color-ivory-dark); border-bottom: 1px solid var(--color-ivory-dark);">
     <div class="container" style="max-width: 960px;">
       <div class="section-header" style="text-align: center; margin-bottom: 40px;">
         <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">Corporate Tax Filing Services</h2>
@@ -1966,7 +1966,7 @@ const getCorporateTaxLocationsSection = () => {
   }).join('\n');
 
   return `
-  <section class="section" style="background-color: #fafaf9; padding: 80px 0; border-top: 1px solid var(--color-ivory-dark);">
+  <section class="section" style="background-color: #ffffff; padding: 80px 0; border-top: 1px solid var(--color-ivory-dark);">
     <div class="container">
       <div class="section-header" style="text-align: center; margin-bottom: 50px;">
         <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">Pan-Canada Corporate Tax Coverage</h2>
@@ -1979,6 +1979,7 @@ const getCorporateTaxLocationsSection = () => {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 20px;
+          margin-bottom: 40px;
         }
         @media (max-width: 768px) {
           .seo-loc-grid {
@@ -1996,6 +1997,10 @@ const getCorporateTaxLocationsSection = () => {
 
       <div class="seo-loc-grid">
         ${cardsHtml}
+      </div>
+
+      <div style="text-align: center;">
+        <a href="/tax-accountant-firm/index.html" class="btn btn-primary" style="border-radius: 50px; padding: 12px 35px; font-weight: 700; font-size: 1rem;">View All Locations</a>
       </div>
     </div>
   </section>
@@ -2287,7 +2292,7 @@ const getFaqSection = (pageName, customFaqs = []) => {
   const faqs = customFaqs.length > 0 ? customFaqs : defaultFaqs;
 
   return `
-  <section class="section section-gray" id="faq">
+  <section class="section" id="faq" style="background-color: #ffffff; border-top: 1px solid var(--color-ivory-dark); border-bottom: 1px solid var(--color-ivory-dark);">
     <div class="container">
       <div class="section-header">
         <h2>${pageName} Service FAQs</h2>
