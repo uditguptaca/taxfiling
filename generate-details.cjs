@@ -1868,6 +1868,144 @@ const getCorporateTaxLocationsSection = () => {
   `;
 };
 
+const getCorporateTaxFeeComparisonSection = () => {
+  return `
+  <section class="section" style="background-color: var(--color-ivory-light); padding: 80px 0; border-top: 1px solid var(--color-ivory-dark); border-bottom: 1px solid var(--color-ivory-dark);">
+    <div class="container" style="max-width: 960px; margin: 0 auto;">
+      <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+        <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 12px; text-transform: none;">Corporate Tax Filing Fees: Gondaliya CPA vs Industry Average</h2>
+        <p style="font-size: 1rem; color: var(--color-cloud-dark); font-weight: 500; margin: 0 auto; max-width: 700px;">Based on 2026 CPA fee survey data across Ontario accounting firms.</p>
+        <div class="accent-line" style="background-color: var(--primary); margin: 15px auto 0;"></div>
+      </div>
+
+      <style>
+        .fee-table-container {
+          border: 1px solid var(--color-ivory-dark);
+          border-radius: 12px;
+          overflow: hidden;
+          background: #ffffff;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+          margin-bottom: 25px;
+        }
+        .fee-table {
+          width: 100%;
+          border-collapse: collapse;
+          text-align: center;
+          font-family: var(--font-primary);
+        }
+        .fee-table th {
+          padding: 18px 15px;
+          font-size: 0.95rem;
+          font-weight: 700;
+          color: var(--color-ivory-light);
+        }
+        .fee-table td {
+          padding: 22px 15px;
+          font-size: 1rem;
+          border-bottom: 1px solid var(--color-ivory-dark);
+        }
+        
+        /* Table Colors using Cloud / Slate / Brand Bookcloth palette */
+        .fee-col-service {
+          background-color: var(--color-slate-dark);
+          color: var(--color-ivory-light) !important;
+          text-align: left;
+          padding-left: 25px !important;
+          width: 35%;
+        }
+        .fee-col-avg {
+          background-color: var(--color-slate-light);
+          width: 20%;
+        }
+        .fee-col-gondaliya {
+          background-color: var(--primary); /* Highlighted column with Bookcloth/Primary */
+          width: 25%;
+        }
+        .fee-col-save {
+          background-color: var(--color-cloud-dark);
+          width: 20%;
+        }
+        
+        .fee-row-data td {
+          background-color: var(--color-ivory-light);
+          color: var(--color-slate-dark);
+          font-weight: 600;
+        }
+        .fee-row-data .fee-val-service {
+          font-weight: 700;
+          text-align: left;
+          padding-left: 25px;
+        }
+        .fee-row-data .fee-val-avg {
+          text-decoration: line-through;
+          color: #CC785C; /* highlight comparison in brand red-orange */
+        }
+        .fee-row-data .fee-val-gondaliya {
+          font-size: 1.1rem;
+          font-weight: 700;
+          color: var(--primary);
+          background-color: var(--color-manilla); /* manilla tint highlight for cell */
+        }
+        .fee-row-data .fee-val-save {
+          color: #2e7d32; /* green for savings value */
+          font-weight: 700;
+        }
+        
+        .fee-table-footer {
+          background-color: var(--color-ivory-med);
+          padding: 20px 25px;
+          border-top: 1px solid var(--color-ivory-dark);
+          font-size: 0.92rem;
+          line-height: 1.5;
+          color: var(--color-slate-dark);
+          font-weight: 600;
+          text-align: center;
+          border-radius: 0 0 12px 12px;
+        }
+        
+        @media (max-width: 600px) {
+          .fee-table th, .fee-table td {
+            padding: 12px 8px;
+            font-size: 0.85rem;
+          }
+          .fee-row-data .fee-val-gondaliya {
+            font-size: 0.95rem;
+          }
+          .fee-table-footer {
+            padding: 15px;
+            font-size: 0.85rem;
+          }
+        }
+      </style>
+
+      <div class="fee-table-container">
+        <table class="fee-table">
+          <thead>
+            <tr>
+              <th class="fee-col-service">Service</th>
+              <th class="fee-col-avg">Industry Average</th>
+              <th class="fee-col-gondaliya">Gondaliya CPA</th>
+              <th class="fee-col-save">You Save</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="fee-row-data">
+              <td class="fee-val-service">Corporate Tax (T2) Filing</td>
+              <td class="fee-val-avg">$1,200</td>
+              <td class="fee-val-gondaliya">From $400</td>
+              <td class="fee-val-save">$800+</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="fee-table-footer">
+          All fees include HST. No hourly billing. No hidden charges. 60-Day Fees-Matching Policy: if you find the same service cheaper from a licensed Ontario CPA, we match it.
+        </div>
+      </div>
+    </div>
+  </section>
+  `;
+};
+
 const getLocationServicesSection = (locName) => `
   <section class="section pt-0">
     <div class="container">
@@ -4166,10 +4304,17 @@ services.forEach(s => {
 
   // Custom FAQs
   const serviceFaqs = isCorporateTax ? [
-    { q: 'What makes Tax Filings Canada’s corporate tax services unique?', a: 'Tax Filings Canada offers a personalized, strategic approach to corporate tax planning, ensuring full compliance and maximizing tax benefits for your business.' },
-    { q: 'How do you ensure tax compliance for my business?', a: 'All filings are supervised or compiled by senior CPAs with deep experience in Canadian tax code and CRA guidelines.' },
-    { q: 'Can Tax Filings Canada help with corporate tax audits?', a: 'Absolutely! We offer support during tax audits, helping you navigate the process with confidence and minimizing any potential tax liabilities.' },
-    { q: 'How do you assist with tax planning for corporations?', a: 'We structure shareholder pay schemes, holding companies, and capital depreciations to minimize overall tax rates.' }
+    { q: "What makes Tax Filings Canada’s corporate tax services unique?", a: "Tax Filings Canada offers a personalized, strategic approach to corporate tax planning, ensuring full compliance and maximizing tax benefits for your business." },
+    { q: "How do you ensure tax compliance for my business?", a: "All filings are supervised or compiled by senior CPAs with deep experience in Canadian tax code and CRA guidelines." },
+    { q: "Can Tax Filings Canada help with corporate tax audits?", a: "Absolutely! We offer support during tax audits, helping you navigate the process with confidence and minimizing any potential tax liabilities." },
+    { q: "How do you assist with tax planning for corporations?", a: "We structure shareholder pay schemes, holding companies, and capital depreciations to minimize overall tax rates." },
+    { q: "When is my T2 corporate tax return due?", a: "Your T2 corporate tax return must be filed within six months of your corporation's fiscal year-end. However, if you owe any taxes, the payment balance deadline is usually two or three months after your year-end." },
+    { q: "What is the corporate tax rate for small businesses in Canada?", a: "The federal small business tax rate is 9% on active business income up to $500,000. Depending on your province, the combined federal and provincial small business tax rate ranges from 9% to 12.2% for Canadian-Controlled Private Corporations (CCPCs)." },
+    { q: "What documents do I need to provide for T2 filing?", a: "You will need to provide your year-end trial balance, general ledger, income statement, balance sheet, corporate bank statements, records of shareholder transactions, and copy of your previous year's T2 return/Notice of Assessment." },
+    { q: "What is the difference between a tax deduction and a tax credit?", a: "A tax deduction reduces your corporation's taxable income, meaning you pay tax on a smaller amount. A tax credit directly reduces the amount of tax you owe to the CRA dollar-for-dollar." },
+    { q: "Can I carry back a corporate tax loss?", a: "Yes, in Canada, you can carry back non-capital losses up to three years to recover corporate taxes paid in those years, or carry them forward up to 20 years to offset future corporate profits." },
+    { q: "What is the Small Business Deduction (SBD)?", a: "The Small Business Deduction is a CRA tax provision that reduces the federal corporate tax rate to 9% on the first $500,000 of active business income for CCPCs, helping small businesses retain more capital for growth." },
+    { q: "How do I split income between family members in my corporation?", a: "You can split income by paying reasonable salaries to family members for actual work they perform for the business. Note that dividends are subject to strict TOSI (Tax on Split Income) rules, making proper documentation crucial." }
   ] : [
     { q: `What is included in ${s.name} services?`, a: `Our ${s.name.toLowerCase()} services include complete filing, compliance management, and strategic advice customized to Canadian tax laws.` },
     { q: `How do I start with ${s.name} services?`, a: 'You can start by booking a free 15-minute call. We will review your files, provide a fixed quote, and start working immediately.' }
@@ -4509,7 +4654,7 @@ services.forEach(s => {
     ${isCorporateTax ? getCorporateTaxLocationsSection() : ''}
 
     <!-- 10. GLOBAL PRICING -->
-    ${isCorporateTax ? '' : getPricingSection()}
+    ${isCorporateTax ? getCorporateTaxFeeComparisonSection() : getPricingSection()}
 
     <!-- 11. CASE STUDIES -->
     ${getCaseStudiesSection()}
