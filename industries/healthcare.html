@@ -394,7 +394,7 @@
         gap: 10px;
         border: 1px solid rgba(0,0,0,0.03);
         transition: all 0.3s ease;
-        cursor: pointer;
+        cursor: default;
         min-height: auto;
         overflow: hidden;
         position: relative;
@@ -458,7 +458,7 @@
           padding: 12px 10px;
           border-radius: 12px;
           gap: 6px;
-          height: 110px;
+          height: auto;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -768,7 +768,7 @@
         
     <div class="specializations-grid">
       
-          <div class="spec-card card-manilla" data-index="0">
+          <div class="spec-card card-manilla">
             <div>
               <div class="spec-card-header">
                 <div class="spec-icon" style="background: rgba(251, 119, 13, 0.1); color: rgb(251, 119, 13);">
@@ -776,17 +776,11 @@
                 </div>
                 <h4 style="color: var(--dark-green);">Healthcare Corporate & MPCs</h4>
               </div>
-              <p class="spec-desc-text" style="font-size: 0.86rem; margin: 0; line-height: 1.45; color: var(--body-text-light); display: none;">Custom corporate tax structures designed for Medical Professional Corporations (MPCs). We align clinics with optimal shareholder and holding company frameworks to minimize tax exposure.</p>
-            </div>
-            
-            <div style="display: flex; align-items: center; margin-top: 5px; padding-top: 8px; border-top: 1px solid rgba(0,0,0,0.05);">
-              <span class="read-more-btn" style="font-size: 0.82rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 6px;">
-                Read More <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s ease;"></i>
-              </span>
+              <p class="spec-desc-text" style="font-size: 0.84rem; margin: 0; line-height: 1.45; color: var(--body-text-light);">Custom corporate tax structures designed for Medical Professional Corporations (MPCs). We align clinics with optimal shareholder and holding company frameworks.</p>
             </div>
           </div>
         
-          <div class="spec-card card-kraft" data-index="1">
+          <div class="spec-card card-kraft">
             <div>
               <div class="spec-card-header">
                 <div class="spec-icon" style="background: rgba(251, 119, 13, 0.1); color: rgb(251, 119, 13);">
@@ -794,17 +788,11 @@
                 </div>
                 <h4 style="color: var(--dark-green);">Clinic Overhead & Splits</h4>
               </div>
-              <p class="spec-desc-text" style="font-size: 0.86rem; margin: 0; line-height: 1.45; color: var(--body-text-light); display: none;">Accurate clinic overhead costing models, shared space expense splits, and associate payout calculations. We build robust templates that track billing revenue allocations between partners and staff.</p>
-            </div>
-            
-            <div style="display: flex; align-items: center; margin-top: 5px; padding-top: 8px; border-top: 1px solid rgba(0,0,0,0.05);">
-              <span class="read-more-btn" style="font-size: 0.82rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 6px;">
-                Read More <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s ease;"></i>
-              </span>
+              <p class="spec-desc-text" style="font-size: 0.84rem; margin: 0; line-height: 1.45; color: var(--body-text-light);">Accurate clinic overhead costing models, shared space expense splits, and associate payout calculations. We build templates that track billing allocations.</p>
             </div>
           </div>
         
-          <div class="spec-card card-cloud" data-index="2">
+          <div class="spec-card card-cloud">
             <div>
               <div class="spec-card-header">
                 <div class="spec-icon" style="background: rgba(251, 119, 13, 0.1); color: rgb(251, 119, 13);">
@@ -812,17 +800,11 @@
                 </div>
                 <h4 style="color: var(--dark-green);">Medical GST/HST Review</h4>
               </div>
-              <p class="spec-desc-text" style="font-size: 0.86rem; margin: 0; line-height: 1.45; color: var(--body-text-light); display: none;">In-depth review of exempt healthcare services versus taxable retail sales (e.g. medical devices, cosmetics). We optimize Input Tax Credit (ITC) allocations for mixed-billing clinical practices.</p>
-            </div>
-            
-            <div style="display: flex; align-items: center; margin-top: 5px; padding-top: 8px; border-top: 1px solid rgba(0,0,0,0.05);">
-              <span class="read-more-btn" style="font-size: 0.82rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 6px;">
-                Read More <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s ease;"></i>
-              </span>
+              <p class="spec-desc-text" style="font-size: 0.84rem; margin: 0; line-height: 1.45; color: var(--body-text-light);">In-depth review of exempt healthcare services versus taxable retail sales. We optimize Input Tax Credit (ITC) allocations for mixed-billing clinical practices.</p>
             </div>
           </div>
         
-          <div class="spec-card card-slate" data-index="3">
+          <div class="spec-card card-slate">
             <div>
               <div class="spec-card-header">
                 <div class="spec-icon" style="background: rgba(255, 255, 255, 0.15); color: #fff;">
@@ -830,17 +812,11 @@
                 </div>
                 <h4 style="color: #fff;">Late Filings & VDP Protection</h4>
               </div>
-              <p class="spec-desc-text" style="font-size: 0.86rem; margin: 0; line-height: 1.45; color: rgba(255,255,255,0.9); display: none;">Catch up on back taxes, file late corporate returns, and secure interest or penalty relief via the CRA Voluntary Disclosures Program (VDP). We restore clinic compliance status safely.</p>
-            </div>
-            
-            <div style="display: flex; align-items: center; margin-top: 5px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.1);">
-              <span class="read-more-btn" style="font-size: 0.82rem; font-weight: 700; color: #FAF8F5; display: flex; align-items: center; gap: 6px;">
-                Read More <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s ease;"></i>
-              </span>
+              <p class="spec-desc-text" style="font-size: 0.84rem; margin: 0; line-height: 1.45; color: rgba(255,255,255,0.95);">Catch up on back taxes, file late corporate returns, and secure interest or penalty relief via the CRA Voluntary Disclosures Program (VDP) safely.</p>
             </div>
           </div>
         
-          <div class="spec-card card-manilla" data-index="4">
+          <div class="spec-card card-manilla">
             <div>
               <div class="spec-card-header">
                 <div class="spec-icon" style="background: rgba(251, 119, 13, 0.1); color: rgb(251, 119, 13);">
@@ -848,17 +824,11 @@
                 </div>
                 <h4 style="color: var(--dark-green);">CRA Audit Defense</h4>
               </div>
-              <p class="spec-desc-text" style="font-size: 0.86rem; margin: 0; line-height: 1.45; color: var(--body-text-light); display: none;">Direct Accounting Firm representation and professional response coordination for reviews, tax audits, or dispute resolution. We defend your deductions and protect your practice's active business limits.</p>
-            </div>
-            
-            <div style="display: flex; align-items: center; margin-top: 5px; padding-top: 8px; border-top: 1px solid rgba(0,0,0,0.05);">
-              <span class="read-more-btn" style="font-size: 0.82rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 6px;">
-                Read More <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s ease;"></i>
-              </span>
+              <p class="spec-desc-text" style="font-size: 0.84rem; margin: 0; line-height: 1.45; color: var(--body-text-light);">Direct Accounting Firm representation and professional response coordination for reviews, tax audits, or dispute resolution. We defend your deductions.</p>
             </div>
           </div>
         
-          <div class="spec-card card-kraft" data-index="5">
+          <div class="spec-card card-kraft">
             <div>
               <div class="spec-card-header">
                 <div class="spec-icon" style="background: rgba(251, 119, 13, 0.1); color: rgb(251, 119, 13);">
@@ -866,17 +836,11 @@
                 </div>
                 <h4 style="color: var(--dark-green);">Holding Company Prep</h4>
               </div>
-              <p class="spec-desc-text" style="font-size: 0.86rem; margin: 0; line-height: 1.45; color: var(--body-text-light); display: none;">Set up holding companies to accumulate passive investment wealth tax-deferred. We transfer clinic surplus cash flow through tax-free inter-corporate dividends while maintaining small business limits.</p>
-            </div>
-            
-            <div style="display: flex; align-items: center; margin-top: 5px; padding-top: 8px; border-top: 1px solid rgba(0,0,0,0.05);">
-              <span class="read-more-btn" style="font-size: 0.82rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 6px;">
-                Read More <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s ease;"></i>
-              </span>
+              <p class="spec-desc-text" style="font-size: 0.84rem; margin: 0; line-height: 1.45; color: var(--body-text-light);">Set up holding companies to accumulate passive investment wealth tax-deferred. We transfer clinic surplus cash flow through tax-free inter-corporate dividends.</p>
             </div>
           </div>
         
-          <div class="spec-card card-cloud" data-index="6">
+          <div class="spec-card card-cloud">
             <div>
               <div class="spec-card-header">
                 <div class="spec-icon" style="background: rgba(251, 119, 13, 0.1); color: rgb(251, 119, 13);">
@@ -884,17 +848,11 @@
                 </div>
                 <h4 style="color: var(--dark-green);">Equipment CCA Prep</h4>
               </div>
-              <p class="spec-desc-text" style="font-size: 0.86rem; margin: 0; line-height: 1.45; color: var(--body-text-light); display: none;">Strategic Capital Cost Allowance (CCA) scheduling for medical, dental, and laboratory machinery. We optimize the write-off timing for high-value equipment purchases under CRA rules.</p>
-            </div>
-            
-            <div style="display: flex; align-items: center; margin-top: 5px; padding-top: 8px; border-top: 1px solid rgba(0,0,0,0.05);">
-              <span class="read-more-btn" style="font-size: 0.82rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 6px;">
-                Read More <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s ease;"></i>
-              </span>
+              <p class="spec-desc-text" style="font-size: 0.84rem; margin: 0; line-height: 1.45; color: var(--body-text-light);">Strategic Capital Cost Allowance (CCA) scheduling for medical, dental, and laboratory machinery. We optimize write-offs for high-value equipment.</p>
             </div>
           </div>
         
-          <div class="spec-card card-slate" data-index="7">
+          <div class="spec-card card-slate">
             <div>
               <div class="spec-card-header">
                 <div class="spec-icon" style="background: rgba(255, 255, 255, 0.15); color: #fff;">
@@ -902,48 +860,13 @@
                 </div>
                 <h4 style="color: #fff;">Succession & Sale Plan</h4>
               </div>
-              <p class="spec-desc-text" style="font-size: 0.86rem; margin: 0; line-height: 1.45; color: rgba(255,255,255,0.9); display: none;">Transition structures for medical partnerships, retiring doctors, and associate buy-ins. We optimize the Lifetime Capital Gains Exemption (LCGE) to ensure a tax-free practice transfer.</p>
-            </div>
-            
-            <div style="display: flex; align-items: center; margin-top: 5px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.1);">
-              <span class="read-more-btn" style="font-size: 0.82rem; font-weight: 700; color: #FAF8F5; display: flex; align-items: center; gap: 6px;">
-                Read More <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s ease;"></i>
-              </span>
+              <p class="spec-desc-text" style="font-size: 0.84rem; margin: 0; line-height: 1.45; color: rgba(255,255,255,0.95);">Transition structures for medical partnerships, retiring doctors, and buy-ins. We optimize the Lifetime Capital Gains Exemption (LCGE) for tax-free transfers.</p>
             </div>
           </div>
         
     </div>
 
-    <script>
-      (function() {
-        const initSpecCollapses = () => {
-          const cards = document.querySelectorAll('.spec-card');
-          cards.forEach(card => {
-            card.addEventListener('click', (e) => {
-              const descText = card.querySelector('.spec-desc-text');
-              const btn = card.querySelector('.read-more-btn');
-              const isExpanded = card.classList.contains('expanded');
-              
-              if (isExpanded) {
-                card.classList.remove('expanded');
-                descText.style.display = 'none';
-                btn.innerHTML = 'Read More <i class="fas fa-chevron-down" style="font-size: 0.7rem; transition: transform 0.3s ease;"></i>';
-              } else {
-                card.classList.add('expanded');
-                descText.style.display = 'block';
-                btn.innerHTML = 'Read Less <i class="fas fa-chevron-up" style="font-size: 0.7rem; transition: transform 0.3s ease; transform: rotate(180deg);"></i>';
-              }
-            });
-          });
-        };
 
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', initSpecCollapses);
-        } else {
-          initSpecCollapses();
-        }
-      })();
-    </script>
   
       </div>
     </section>
