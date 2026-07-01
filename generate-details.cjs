@@ -1661,7 +1661,7 @@ const getCorporateTaxServicesAccordion = () => {
           padding-left: 20px;
           margin: 0;
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 15px 30px;
         }
         .seo-services-ul li {
@@ -1677,13 +1677,7 @@ const getCorporateTaxServicesAccordion = () => {
         .seo-services-ul a:hover {
           color: var(--primary-dark);
         }
-        @media (max-width: 768px) {
-          .seo-services-ul {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px 20px;
-          }
-        }
-        @media (max-width: 480px) {
+        @media (max-width: 576px) {
           .seo-services-ul {
             grid-template-columns: 1fr;
             gap: 10px;
