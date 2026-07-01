@@ -2750,6 +2750,8 @@ p {
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   border: 1.5px solid var(--color-ivory-dark);
   width: 230px;
+  animation: floatCard 3s ease-in-out infinite;
+  animation-delay: 0.5s;
 }
 
 .hero-badge-item {
