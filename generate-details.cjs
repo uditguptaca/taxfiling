@@ -1381,7 +1381,212 @@ const getCorporateTaxTimeline4Steps = (customTitle = null, customSubtitle = null
       </div>
     </div>
   </section>
-`;
+  `;
+};
+
+const getCorporateTaxIndustriesGrid = () => {
+  return `
+  <section class="section" style="background-color: #ffffff; padding: 60px 0;">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 45px;">
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: #0284c7; margin-bottom: 15px; text-transform: none;">Industries We Serve With Our Corporate Tax Filing Services</h2>
+        <div class="accent-line" style="background-color: #0284c7; width: 60px; height: 3px; margin: 0 auto; border-radius: 2px;"></div>
+      </div>
+      
+      <style>
+        .seo-ind-grid {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 30px;
+          margin-bottom: 40px;
+        }
+        .seo-ind-card {
+          text-align: center;
+          padding: 10px;
+        }
+        .seo-ind-card a {
+          display: block;
+          font-size: 1.05rem;
+          font-weight: 700;
+          color: #0284c7;
+          text-decoration: underline;
+          margin-bottom: 8px;
+          line-height: 1.3;
+          transition: color 0.2s ease;
+        }
+        .seo-ind-card a:hover {
+          color: #0369a1;
+        }
+        .seo-ind-card p {
+          font-size: 0.88rem;
+          color: #64748b;
+          margin: 0;
+          line-height: 1.4;
+        }
+        @media (max-width: 1200px) {
+          .seo-ind-grid {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+        @media (max-width: 768px) {
+          .seo-ind-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        @media (max-width: 480px) {
+          .seo-ind-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+      </style>
+
+      <div class="seo-ind-grid">
+        <div class="seo-ind-card">
+          <a href="/industries/technology.html">Corporate Tax Filing for Startups</a>
+          <p>Specialized startup tax &amp; accounting</p>
+        </div>
+        <div class="seo-ind-card">
+          <a href="/industries/healthcare.html">Corporate Tax Filing for Healthcare</a>
+          <p>Specialized healthcare tax &amp; accounting</p>
+        </div>
+        <div class="seo-ind-card">
+          <a href="/industries/professional-services.html">Corporate Tax Filing for Consultants</a>
+          <p>Specialized consulting tax &amp; accounting</p>
+        </div>
+        <div class="seo-ind-card">
+          <a href="/services/small-business-accounting.html">Corporate Tax Filing for Small Businesses</a>
+          <p>Specialized small business tax &amp; accounting</p>
+        </div>
+        <div class="seo-ind-card">
+          <a href="/industries/restaurants.html">Corporate Tax Filing for Restaurants</a>
+          <p>Specialized restaurant tax &amp; accounting</p>
+        </div>
+        <div class="seo-ind-card">
+          <a href="/industries/restaurants.html">Corporate Tax Filing for Franchises</a>
+          <p>Specialized franchise tax &amp; accounting</p>
+        </div>
+        <div class="seo-ind-card">
+          <a href="/pricing/individual-tax.html">Corporate Tax Filing for Self-Employed</a>
+          <p>Specialized self-employed tax &amp; accounting</p>
+        </div>
+        <div class="seo-ind-card">
+          <a href="/industries/manufacturing.html">Corporate Tax Filing for Manufacturing</a>
+          <p>Specialized manufacturing tax &amp; accounting</p>
+        </div>
+        <div class="seo-ind-card">
+          <a href="/industries/ecommerce.html">Corporate Tax Filing for Grocery Stores</a>
+          <p>Specialized grocery tax &amp; accounting</p>
+        </div>
+        <div class="seo-ind-card">
+          <a href="/industries/transportation.html">Corporate Tax Filing for Import &amp; Export</a>
+          <p>Specialized import/export tax &amp; accounting</p>
+        </div>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="/industries/index.html" class="btn btn-primary" style="background-color: #0284c7; border-color: #0284c7; border-radius: 50px; padding: 12px 35px; font-weight: 700; font-size: 1rem;">View All Industries</a>
+      </div>
+    </div>
+  </section>
+  `;
+};
+
+const getCorporateTaxStrategiesSection = () => {
+  return `
+  <section class="section" style="background-color: var(--color-ivory-light); padding: 80px 0; border-top: 1px solid var(--color-ivory-dark); border-bottom: 1px solid var(--color-ivory-dark);">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 50px; text-align: center;">
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">10 Smart Corporate Tax Filing Strategies That Save You Money</h2>
+        <p style="font-size: 1.1rem; color: var(--color-slate-medium); max-width: 800px; margin: 0 auto;">Implement these proven tax-saving strategies to ensure compliance and maximize profitability for your business.</p>
+        <div class="accent-line" style="margin: 20px auto 0;"></div>
+      </div>
+
+      <div class="grid-2" style="gap: 30px;">
+        
+        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
+          <div style="width:40px; height:40px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-calendar-check"></i></div>
+          <div>
+            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">File Your T2 Return Within Six Months</h5>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Your T2 corporate tax return is due six months after fiscal year-end. Missing this CRA filing deadline triggers a 5% penalty on unpaid tax plus 1% per month for up to 12 months. Filing on time keeps thousands inside your corporation.</p>
+          </div>
+        </div>
+
+        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
+          <div style="width:40px; height:40px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-hand-holding-usd"></i></div>
+          <div>
+            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Pay Corporate Tax Balance Early</h5>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">CCPCs claiming the Small Business Deduction must pay corporate tax within three months of year-end; others within two months. Late payment triggers CRA prescribed interest at roughly 9%, compounded daily and non-deductible. Paying early protects margins on every T2 return.</p>
+          </div>
+        </div>
+
+        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
+          <div style="width:40px; height:40px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-percentage"></i></div>
+          <div>
+            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Maximize the Small Business Deduction</h5>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Claim the full $500,000 Small Business Deduction limit on Schedule 1 by reviewing every associated corporation relationship under ITA section 256. Mistakes here cost you up to 17% in extra corporate tax. We allocate the SBD across your group correctly.</p>
+          </div>
+        </div>
+
+        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
+          <div style="width:40px; height:40px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-chart-line"></i></div>
+          <div>
+            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Use Accelerated CCA on Schedule 8</h5>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Apply the Accelerated Investment Incentive on new equipment, vehicles, and Class 50 computer hardware through Schedule 8. This front-loads capital cost allowance, defers corporate tax for years, and improves cash flow without changing the long-term position of your T2 corporate tax return.</p>
+          </div>
+        </div>
+
+        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
+          <div style="width:40px; height:40px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-coins"></i></div>
+          <div>
+            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Track Capital Dividend Account Balance</h5>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">File Form T2054 alongside your T2 corporate tax return to distribute the non-taxable portion of capital gains as completely tax-free capital dividends. Most corporate tax filings miss this entirely. We reconcile your CDA balance every year so shareholders extract retained earnings without personal tax.</p>
+          </div>
+        </div>
+
+        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
+          <div style="width:40px; height:40px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-map-signs"></i></div>
+          <div>
+            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Map GIFI Codes Accurately</h5>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Your trial balance must map cleanly to GIFI codes on Schedule 100 and Schedule 125. Mismatched corporate deductions, revenue, or balance sheet items trigger CRA review letters within weeks of T2 filing. Clean GIFI mapping reduces your audit risk substantially.</p>
+          </div>
+        </div>
+
+        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
+          <div style="width:40px; height:40px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-user-friends"></i></div>
+          <div>
+            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Reconcile Shareholder Loans Annually</h5>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Schedule 50 must show every shareholder loan accurately. Under subsection 15(2), unpaid balances become taxable personal income if not repaid within one year of your corporation's year-end. We track loan dates so your T2 corporate tax return avoids this costly trap.</p>
+          </div>
+        </div>
+
+        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
+          <div style="width:40px; height:40px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-users-cog"></i></div>
+          <div>
+            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Split Income Through Reasonable Salaries</h5>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Pay your spouse or adult children a reasonable salary for genuine work performed in the corporation. Salaries are deductible on Schedule 1, escape TOSI rules that hit dividends, and lower combined family tax. CRA accepts this when documentation supports the role and hours.</p>
+          </div>
+        </div>
+
+        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
+          <div style="width:40px; height:40px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-check-double"></i></div>
+          <div>
+            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Claim Every Eligible Corporate Deduction</h5>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">Home office, business-use vehicle, 50% meals, cell phone, and software subscriptions are all deductible against corporate income. Each missed deduction directly increases your T2 tax bill. We review the full general ledger before filing so nothing legitimate is left on the table.</p>
+          </div>
+        </div>
+
+        <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
+          <div style="width:40px; height:40px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-history"></i></div>
+          <div>
+            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem; color: var(--color-slate-dark);">Plan Loss Carrybacks on Schedule 4</h5>
+            <p style="font-size:0.88rem; color:var(--color-slate-medium); line-height:1.55; margin:0;">If your corporation has a non-capital loss this year, Schedule 4 lets you carry it back three years and recover corporate tax already paid to the CRA. Going forward, the loss carries 20 years. This is real cash refunded back to your business.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  `;
 };
 
 const getLocationServicesSection = (locName) => `
@@ -4012,8 +4217,11 @@ services.forEach(s => {
     <!-- 7. RISK-FREE WORKFLOW -->
     ${getWorkflowSection()}
 
+    <!-- 7b. 10 SMART STRATEGIES -->
+    ${isCorporateTax ? getCorporateTaxStrategiesSection() : ''}
+
     <!-- 8. INDUSTRIES PARTNER -->
-    ${getIndustriesGridSection()}
+    ${isCorporateTax ? getCorporateTaxIndustriesGrid() : getIndustriesGridSection()}
 
     <!-- 9. CLIENTS BANNERS -->
     ${getClientsLogoSection()}
