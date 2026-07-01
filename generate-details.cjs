@@ -1597,7 +1597,6 @@ const getCorporateTaxServicesAccordion = () => {
     <div class="container" style="max-width: 900px;">
       <div class="section-header" style="text-align: center; margin-bottom: 40px;">
         <h2 style="font-family: var(--font-serif); font-size: 2.5rem; font-weight: 700; color: var(--color-slate-dark); text-transform: none;">Browse Our Affordable CPA Services</h2>
-        <div class="accent-line" style="background-color: var(--primary); width: 60px; height: 3px; margin: 20px auto 0; border-radius: 2px;"></div>
       </div>
 
       <style>
@@ -1633,9 +1632,11 @@ const getCorporateTaxServicesAccordion = () => {
           background: #f8fafc;
         }
         .seo-accordion-icon {
-          font-size: 0.9rem;
-          transition: transform 0.2s ease;
+          font-size: 1.25rem;
+          font-weight: 300;
           color: #64748b;
+          user-select: none;
+          line-height: 1;
         }
         .seo-accordion-content {
           max-height: 0;
@@ -1644,32 +1645,25 @@ const getCorporateTaxServicesAccordion = () => {
           background: #f8fafc;
         }
         .seo-accordion-content-inner {
-          padding: 24px;
+          padding: 24px 32px;
         }
         .seo-services-ul {
-          list-style: none;
-          padding: 0;
+          list-style-type: disc;
+          padding-left: 20px;
           margin: 0;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 15px;
+          gap: 15px 40px;
         }
         .seo-services-ul li {
-          position: relative;
-          padding-left: 20px;
-        }
-        .seo-services-ul li::before {
-          content: "•";
-          position: absolute;
-          left: 5px;
           color: var(--primary);
-          font-weight: bold;
         }
         .seo-services-ul a {
           color: var(--primary);
           text-decoration: underline;
           font-size: 0.95rem;
           font-weight: 600;
+          transition: color 0.2s ease;
         }
         .seo-services-ul a:hover {
           color: var(--primary-dark);
@@ -1695,16 +1689,16 @@ const getCorporateTaxServicesAccordion = () => {
             // Close all other panels
             document.querySelectorAll('.seo-accordion-content').forEach(c => {
               c.style.maxHeight = null;
-              c.previousElementSibling.querySelector('.seo-accordion-icon').className = 'fas fa-plus seo-accordion-icon';
+              c.previousElementSibling.querySelector('.seo-accordion-icon').innerText = '+';
             });
             
             if (!isOpen) {
               content.style.maxHeight = content.scrollHeight + 'px';
-              icon.className = 'fas fa-minus seo-accordion-icon';
+              icon.innerText = '−';
             }
           ">
             <span>Corporate Tax Services</span>
-            <i class="fas fa-plus seo-accordion-icon"></i>
+            <span class="seo-accordion-icon">+</span>
           </button>
           <div class="seo-accordion-content">
             <div class="seo-accordion-content-inner">
@@ -1732,16 +1726,16 @@ const getCorporateTaxServicesAccordion = () => {
             
             document.querySelectorAll('.seo-accordion-content').forEach(c => {
               c.style.maxHeight = null;
-              c.previousElementSibling.querySelector('.seo-accordion-icon').className = 'fas fa-plus seo-accordion-icon';
+              c.previousElementSibling.querySelector('.seo-accordion-icon').innerText = '+';
             });
             
             if (!isOpen) {
               content.style.maxHeight = content.scrollHeight + 'px';
-              icon.className = 'fas fa-minus seo-accordion-icon';
+              icon.innerText = '−';
             }
           ">
             <span>Accounting &amp; Bookkeeping</span>
-            <i class="fas fa-plus seo-accordion-icon"></i>
+            <span class="seo-accordion-icon">+</span>
           </button>
           <div class="seo-accordion-content">
             <div class="seo-accordion-content-inner">
@@ -1766,16 +1760,16 @@ const getCorporateTaxServicesAccordion = () => {
             
             document.querySelectorAll('.seo-accordion-content').forEach(c => {
               c.style.maxHeight = null;
-              c.previousElementSibling.querySelector('.seo-accordion-icon').className = 'fas fa-plus seo-accordion-icon';
+              c.previousElementSibling.querySelector('.seo-accordion-icon').innerText = '+';
             });
             
             if (!isOpen) {
               content.style.maxHeight = content.scrollHeight + 'px';
-              icon.className = 'fas fa-minus seo-accordion-icon';
+              icon.innerText = '−';
             }
           ">
             <span>Incorporation &amp; Business Setup</span>
-            <i class="fas fa-plus seo-accordion-icon"></i>
+            <span class="seo-accordion-icon">+</span>
           </button>
           <div class="seo-accordion-content">
             <div class="seo-accordion-content-inner">
@@ -1798,16 +1792,16 @@ const getCorporateTaxServicesAccordion = () => {
             
             document.querySelectorAll('.seo-accordion-content').forEach(c => {
               c.style.maxHeight = null;
-              c.previousElementSibling.querySelector('.seo-accordion-icon').className = 'fas fa-plus seo-accordion-icon';
+              c.previousElementSibling.querySelector('.seo-accordion-icon').innerText = '+';
             });
             
             if (!isOpen) {
               content.style.maxHeight = content.scrollHeight + 'px';
-              icon.className = 'fas fa-minus seo-accordion-icon';
+              icon.innerText = '−';
             }
           ">
             <span>Payroll Services</span>
-            <i class="fas fa-plus seo-accordion-icon"></i>
+            <span class="seo-accordion-icon">+</span>
           </button>
           <div class="seo-accordion-content">
             <div class="seo-accordion-content-inner">
@@ -1830,16 +1824,16 @@ const getCorporateTaxServicesAccordion = () => {
             
             document.querySelectorAll('.seo-accordion-content').forEach(c => {
               c.style.maxHeight = null;
-              c.previousElementSibling.querySelector('.seo-accordion-icon').className = 'fas fa-plus seo-accordion-icon';
+              c.previousElementSibling.querySelector('.seo-accordion-icon').innerText = '+';
             });
             
             if (!isOpen) {
               content.style.maxHeight = content.scrollHeight + 'px';
-              icon.className = 'fas fa-minus seo-accordion-icon';
+              icon.innerText = '−';
             }
           ">
             <span>GST / HST</span>
-            <i class="fas fa-plus seo-accordion-icon"></i>
+            <span class="seo-accordion-icon">+</span>
           </button>
           <div class="seo-accordion-content">
             <div class="seo-accordion-content-inner">
@@ -1862,16 +1856,16 @@ const getCorporateTaxServicesAccordion = () => {
             
             document.querySelectorAll('.seo-accordion-content').forEach(c => {
               c.style.maxHeight = null;
-              c.previousElementSibling.querySelector('.seo-accordion-icon').className = 'fas fa-plus seo-accordion-icon';
+              c.previousElementSibling.querySelector('.seo-accordion-icon').innerText = '+';
             });
             
             if (!isOpen) {
               content.style.maxHeight = content.scrollHeight + 'px';
-              icon.className = 'fas fa-minus seo-accordion-icon';
+              icon.innerText = '−';
             }
           ">
             <span>International &amp; Non-Resident Tax</span>
-            <i class="fas fa-plus seo-accordion-icon"></i>
+            <span class="seo-accordion-icon">+</span>
           </button>
           <div class="seo-accordion-content">
             <div class="seo-accordion-content-inner">
@@ -1893,16 +1887,16 @@ const getCorporateTaxServicesAccordion = () => {
             
             document.querySelectorAll('.seo-accordion-content').forEach(c => {
               c.style.maxHeight = null;
-              c.previousElementSibling.querySelector('.seo-accordion-icon').className = 'fas fa-plus seo-accordion-icon';
+              c.previousElementSibling.querySelector('.seo-accordion-icon').innerText = '+';
             });
             
             if (!isOpen) {
               content.style.maxHeight = content.scrollHeight + 'px';
-              icon.className = 'fas fa-minus seo-accordion-icon';
+              icon.innerText = '−';
             }
           ">
             <span>CRA Audit &amp; Tax Resolution</span>
-            <i class="fas fa-plus seo-accordion-icon"></i>
+            <span class="seo-accordion-icon">+</span>
           </button>
           <div class="seo-accordion-content">
             <div class="seo-accordion-content-inner">
@@ -1924,16 +1918,16 @@ const getCorporateTaxServicesAccordion = () => {
             
             document.querySelectorAll('.seo-accordion-content').forEach(c => {
               c.style.maxHeight = null;
-              c.previousElementSibling.querySelector('.seo-accordion-icon').className = 'fas fa-plus seo-accordion-icon';
+              c.previousElementSibling.querySelector('.seo-accordion-icon').innerText = '+';
             });
             
             if (!isOpen) {
               content.style.maxHeight = content.scrollHeight + 'px';
-              icon.className = 'fas fa-minus seo-accordion-icon';
+              icon.innerText = '−';
             }
           ">
             <span>Advisory &amp; Specialized Services</span>
-            <i class="fas fa-plus seo-accordion-icon"></i>
+            <span class="seo-accordion-icon">+</span>
           </button>
           <div class="seo-accordion-content">
             <div class="seo-accordion-content-inner">
@@ -1957,7 +1951,7 @@ const getCorporateTaxServicesAccordion = () => {
         const firstContent = firstHeader.nextElementSibling;
         const firstIcon = firstHeader.querySelector(".seo-accordion-icon");
         firstContent.style.maxHeight = firstContent.scrollHeight + "px";
-        firstIcon.className = "fas fa-minus seo-accordion-icon";
+        firstIcon.innerText = "−";
       }
     });
   </script>
