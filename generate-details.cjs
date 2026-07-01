@@ -1197,8 +1197,8 @@ const getWhyChooseUsSection = (pageName, customTitle = null, customSubtitle = nu
   return `
   <section class="section section-gray" style="padding: 70px 0; background-color: var(--color-ivory-med);">
     <div class="container">
-      <div class="grid-2" style="align-items: center; gap: 50px;">
-        <div>
+      <div class="grid-2" style="align-items: stretch; gap: 50px;">
+        <div style="display:flex; flex-direction:column; justify-content:center;">
           <div class="section-header" style="text-align:left; margin-bottom:30px; max-width:100%;">
             <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--color-slate-dark); margin-bottom: 12px; line-height: 1.25;">${title}</h2>
             <div class="accent-line" style="margin:15px 0 0 0; display:block !important; width:50px; height:3px; background:var(--color-bookcloth); border-radius:2px;"></div>
@@ -1207,8 +1207,8 @@ const getWhyChooseUsSection = (pageName, customTitle = null, customSubtitle = nu
             ${cardsHtml}
           </div>
         </div>
-        <div style="display:flex; align-items:center; justify-content:center;">
-          <img src="${imgUrl}" alt="CPA Tax Experts" style="border-radius:16px; box-shadow:0 12px 30px rgba(0,0,0,0.08); max-width:100%; height:370px; width:100%; object-fit:cover; object-position:center; border:1px solid var(--color-ivory-dark);">
+        <div style="display:flex; align-items:stretch; justify-content:center; width:100%; height:100%;">
+          <img src="${imgUrl}" alt="CPA Tax Experts" style="border-radius:16px; box-shadow:0 12px 30px rgba(0,0,0,0.08); max-width:100%; height:100%; width:100%; object-fit:cover; object-position:center; border:1px solid var(--color-ivory-dark);">
         </div>
       </div>
     </div>
