@@ -1555,7 +1555,7 @@ const getCorporateTaxStrategiesSection = () => {
         <div class="accent-line" style="margin: 20px auto 0;"></div>
       </div>
 
-      <div class="grid-2" style="gap: 30px;">
+      <div class="grid-3" style="gap: 30px;">
         
         <div class="service-card" style="text-align:left; background:#ffffff; padding:25px; border-radius:12px; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02); display:flex; gap:20px; align-items:flex-start;">
           <div style="width:40px; height:40px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="fas fa-calendar-check"></i></div>
