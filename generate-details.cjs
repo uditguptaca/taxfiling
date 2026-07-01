@@ -1345,6 +1345,45 @@ const getCorporateTaxTimeline = (customTitle = null, customSubtitle = null) => {
 `;
 };
 
+const getCorporateTaxTimeline4Steps = (customTitle = null, customSubtitle = null) => {
+  const title = customTitle || 'Corporate Tax Process Phases';
+  const subtitle = customSubtitle || 'Our clear four-step workflow ensuring absolute tax optimization and complete CRA compliance.';
+
+  return `
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>${title}</h2>
+        <p>${subtitle}</p>
+        <div class="accent-line"></div>
+      </div>
+      <div class="grid-4">
+        <div class="service-card" style="text-align:left;border-top:4px solid var(--primary);padding:25px;">
+          <div style="font-size:1.25rem;font-weight:700;color:var(--primary);margin-bottom:10px;"><i class="fas fa-calendar-alt"></i> Step 1</div>
+          <h5 style="font-weight:700;margin-bottom:8px;font-size:1.05rem;">Initial Consultation</h5>
+          <p style="font-size:0.88rem;color:var(--body-text-light);line-height:1.55;">Start with a free, no-obligation consultation to review your business’s tax filing needs and outline our affordable corporate tax solutions in Toronto.</p>
+        </div>
+        <div class="service-card" style="text-align:left;border-top:4px solid var(--teal);padding:25px;">
+          <div style="font-size:1.25rem;font-weight:700;color:var(--teal);margin-bottom:10px;"><i class="fas fa-folder-open"></i> Step 2</div>
+          <h5 style="font-weight:700;margin-bottom:8px;font-size:1.05rem;">Document Collection</h5>
+          <p style="font-size:0.88rem;color:var(--body-text-light);line-height:1.55;">Receive a comprehensive checklist and securely provide the required financial records and documents.</p>
+        </div>
+        <div class="service-card" style="text-align:left;border-top:4px solid var(--primary);padding:25px;">
+          <div style="font-size:1.25rem;font-weight:700;color:var(--primary);margin-bottom:10px;"><i class="fas fa-calculator"></i> Step 3</div>
+          <h5 style="font-weight:700;margin-bottom:8px;font-size:1.05rem;">Transparent Preparation &amp; Review</h5>
+          <p style="font-size:0.88rem;color:var(--body-text-light);line-height:1.55;">Our tax accountant carefully prepare your tax return, identify all applicable deductions and credits, and conduct thorough reviews.</p>
+        </div>
+        <div class="service-card" style="text-align:left;border-top:4px solid var(--teal);padding:25px;">
+          <div style="font-size:1.25rem;font-weight:700;color:var(--teal);margin-bottom:10px;"><i class="fas fa-paper-plane"></i> Step 4</div>
+          <h5 style="font-weight:700;margin-bottom:8px;font-size:1.05rem;">Electronic Tax Filing &amp; Ongoing Support</h5>
+          <p style="font-size:0.88rem;color:var(--body-text-light);line-height:1.55;">We file your corporate tax return electronically with the Canada Revenue Agency (CRA) on time and provide post-filing support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+`;
+};
+
 const getLocationServicesSection = (locName) => `
   <section class="section pt-0">
     <div class="container">
@@ -3968,7 +4007,7 @@ services.forEach(s => {
     ${getWhyChooseUsSection(s.name, chooseTitle, chooseSubtitle, choosePoints)}
 
     <!-- 6. CORPORATE TAX PROCESS PHASES (ONLY FOR CORPORATE TAX OR RELEVANT) -->
-    ${isCorporateTax ? getCorporateTaxTimeline('Corporate Tax Process Phases', 'Our clear three-stage workflow ensuring absolute tax optimization and complete CRA compliance.') : getCorporateTaxTimeline(`${s.name} Execution Phases`, `Our simplified delivery timeline for ${s.name.toLowerCase()} services.`)}
+    ${isCorporateTax ? getCorporateTaxTimeline4Steps('Corporate Tax Process Phases', 'Our clear four-stage workflow ensuring absolute tax optimization and complete CRA compliance.') : getCorporateTaxTimeline(`${s.name} Execution Phases`, `Our simplified delivery timeline for ${s.name.toLowerCase()} services.`)}
 
     <!-- 7. RISK-FREE WORKFLOW -->
     ${getWorkflowSection()}
