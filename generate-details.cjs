@@ -1182,14 +1182,20 @@ const getWhyChooseUsSection = (pageName, customTitle = null, customSubtitle = nu
   const imgUrl = customImage || 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=450&fit=crop';
 
   const cardsHtml = points.map((pt, idx) => {
+    // Alternate backgrounds to make them highly distinctive: idx 0 & 3 are Manilla, 1 & 2 are White
+    const isManilla = idx === 0 || idx === 3;
+    const cardBg = isManilla ? 'var(--color-manilla)' : '#ffffff';
+    const cardBorder = isManilla ? 'rgba(25, 25, 25, 0.08)' : 'var(--color-ivory-dark)';
+    const descColor = isManilla ? 'var(--color-slate-dark)' : 'var(--color-slate-medium)';
+
     // Alternate checkmarks between Book Cloth (#CC785C) and Kraft (#D4A27F) from brand palette
-    const bg = idx % 2 === 0 ? 'rgba(204, 120, 92, 0.12)' : 'rgba(212, 162, 127, 0.15)';
+    const bg = idx % 2 === 0 ? 'rgba(204, 120, 92, 0.15)' : 'rgba(212, 162, 127, 0.2)';
     const color = idx % 2 === 0 ? '#CC785C' : '#D4A27F';
-    return '<div style="display:flex; gap:15px; align-items:flex-start; background:var(--color-ivory-light); padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.02); border:1px solid var(--color-ivory-dark);">' +
+    return '<div style="display:flex; gap:15px; align-items:flex-start; background:' + cardBg + '; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid ' + cardBorder + ';">' +
       '<div style="width:36px; height:36px; border-radius:50%; background:' + bg + '; color:' + color + '; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div>' +
       '<div>' +
         '<h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">' + pt.title + '</h5>' +
-        '<p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-medium);">' + pt.desc + '</p>' +
+        '<p style="font-size:0.86rem; margin:0; line-height:1.45; color:' + descColor + ';">' + pt.desc + '</p>' +
       '</div>' +
     '</div>';
   }).join('');
