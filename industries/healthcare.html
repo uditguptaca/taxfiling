@@ -3326,16 +3326,26 @@
           </div>
         </div><!-- Right Side: Details Card -->
         <div style="height: 100%;">
-          <div id="locator-detail-card" style="background: var(--dark-green); color: var(--white); border-radius: 20px; padding: 35px; box-shadow: var(--shadow-lg); display: flex; flex-direction: column; justify-content: space-between; height: 100%; min-height: 380px; position: relative; overflow: hidden; box-sizing: border-box;">
+          <div id="locator-detail-card" style="background: var(--dark-green); color: var(--white); border-radius: 20px; padding: 35px; box-shadow: var(--shadow-lg); display: flex; flex-direction: column; justify-content: space-between; height: 100%; min-height: 480px; position: relative; overflow: hidden; box-sizing: border-box;">
             <div>
-              <span style="background: rgba(255,255,255,0.15); padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Service Location</span>
-              <h3 id="loc-card-title" style="font-size: 1.8rem; font-weight: 800; margin-top: 15px; margin-bottom: 10px; color: var(--white);"><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> Toronto, ON</h3>
+              <span style="background: rgba(255,255,255,0.15); padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Accounting Firm Service Location</span>
+              <h3 id="loc-card-title" style="font-size: 1.8rem; font-weight: 800; margin-top: 15px; margin-bottom: 10px; color: var(--white);"><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> TaxFiling Toronto, ON</h3>
               <p id="loc-card-desc" style="font-size: 0.95rem; line-height: 1.6; color: var(--white); opacity: 0.9; margin-bottom: 25px;">
                 Expert clinic corporate tax filing, practitioner T1 returns, and comprehensive medical Accounting Firm accounting in Toronto.
               </p>
               <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 20px; font-size: 0.9rem; margin-bottom: 25px;">
                 <div style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="width: 20px; color: var(--primary);"></i> Full Province-Wide Service Coverage</div>
-                <div><i class="fas fa-phone-alt" style="width: 20px; color: var(--primary);"></i> +1 (416) 619-0068</div>
+                <div style="margin-bottom: 15px;"><i class="fas fa-phone-alt" style="width: 20px; color: var(--primary);"></i> +1 (416) 619-0068</div>
+                
+                <div style="margin-top: 15px; border-top: 1px dashed rgba(255,255,255,0.15); padding-top: 15px;">
+                  <div style="font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.6); margin-bottom: 10px;">Healthcare Services Included:</div>
+                  <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem;">
+                    <div><i class="fas fa-file-medical" style="width: 20px; color: var(--primary);"></i> Clinic Tax Filing (T2 &amp; Corporate)</div>
+                    <div><i class="fas fa-user-md" style="width: 20px; color: var(--primary);"></i> Practitioner T1 Tax Returns</div>
+                    <div><i class="fas fa-calculator" style="width: 20px; color: var(--primary);"></i> Clinic Overhead &amp; Associate Splits</div>
+                    <div><i class="fas fa-shield-virus" style="width: 20px; color: var(--primary);"></i> GST/HST Mixed Billing Review</div>
+                  </div>
+                </div>
               </div>
             </div>
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
@@ -3382,8 +3392,30 @@
               .replace(/personal returns/gi, 'practitioner T1 returns');
           }
           
-          const cityName = item.getAttribute('data-city') === 'More Locations' ? 'More Locations' : item.textContent;
-          cardTitle.innerHTML = `<i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> ` + cityName;
+          const provCodes = {
+            'ontario': 'ON',
+            'bc': 'BC',
+            'alberta': 'AB',
+            'quebec': 'QC',
+            'manitoba': 'MB',
+            'saskatchewan': 'SK',
+            'novascotia': 'NS',
+            'newbrunswick': 'NB',
+            'pei': 'PE',
+            'newfoundland': 'NL'
+          };
+          const prov = item.getAttribute('data-prov');
+          const city = item.getAttribute('data-city');
+          const provCode = provCodes[prov] || '';
+          
+          let displayTitle = '';
+          if (city === 'More Locations') {
+            displayTitle = 'More Locations';
+          } else {
+            displayTitle = 'TaxFiling ' + city + ', ' + provCode;
+          }
+          
+          cardTitle.innerHTML = `<i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> ` + displayTitle;
           cardDesc.textContent = desc;
         }
         
