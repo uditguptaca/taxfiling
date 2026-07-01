@@ -1422,13 +1422,13 @@ const getCorporateTaxIndustriesGrid = () => {
       : 'background:#ffffff; border:1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.01);';
 
     return `
-        <div class="seo-ind-card \${styleClass}" style="display:flex; align-items:flex-start; gap:12px; padding:12px 15px; border-radius:8px; \${cardStyle}">
-          <div class="seo-ind-bullet" style="width:18px; height:18px; border-radius:50%; border:2px solid \${bulletColor}; background:transparent; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:3px;">
-            <div style="width:6px; height:6px; border-radius:50%; background:\${bulletColor};"></div>
+        <div class="seo-ind-card ${styleClass}" style="display:flex; align-items:flex-start; gap:12px; padding:12px 15px; border-radius:8px; ${cardStyle}">
+          <div class="seo-ind-bullet" style="width:18px; height:18px; border-radius:50%; border:2px solid ${bulletColor}; background:transparent; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:3px;">
+            <div style="width:6px; height:6px; border-radius:50%; background:${bulletColor};"></div>
           </div>
-          <div class="seo-ind-info" style="font-family:var(--font-primary); font-size:0.88rem; line-height:1.35; color:\${descColor}; font-weight:500; text-align:left;">
-            <a href="\${ind.link}" style="display:block; font-weight:700; color:\${linkColor}; text-decoration:underline; margin-bottom:4px;">\${ind.title}</a>
-            \${ind.desc}
+          <div class="seo-ind-info" style="font-family:var(--font-primary); font-size:0.88rem; line-height:1.35; color:${descColor}; font-weight:500; text-align:left;">
+            <a href="${ind.link}" style="display:block; font-weight:700; color:${linkColor}; text-decoration:underline; margin-bottom:4px;">${ind.title}</a>
+            ${ind.desc}
           </div>
         </div>
     `;
@@ -1573,11 +1573,11 @@ const getCorporateTaxStrategiesSection = () => {
       : 'background:#ffffff; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02);';
 
     return `
-        <div class="service-card \${s.styleClass}" style="text-align:left; padding:25px; border-radius:12px; display:flex; gap:20px; align-items:flex-start; \${cardStyle}">
-          <div style="width:40px; height:40px; border-radius:50%; background:\${iconBg}; color:\${iconColor}; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="\${s.iconClass}"></i></div>
+        <div class="service-card ${s.styleClass}" style="text-align:left; padding:25px; border-radius:12px; display:flex; gap:20px; align-items:flex-start; ${cardStyle}">
+          <div style="width:40px; height:40px; border-radius:50%; background:${iconBg}; color:${iconColor}; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="${s.iconClass}"></i></div>
           <div>
-            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem;">\${s.title}</h5>
-            <p style="font-size:0.88rem; line-height:1.55; margin:0; opacity:0.95;">\${s.summary} <span style="display:none;">\${s.details}</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:\${linkColor}; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
+            <h5 style="font-weight:700; margin-bottom:8px; font-size:1.05rem;">${s.title}</h5>
+            <p style="font-size:0.88rem; line-height:1.55; margin:0; opacity:0.95;">${s.summary} <span style="display:none;">${s.details}</span><a href="javascript:void(0);" onclick="const s = this.previousElementSibling; const open = s.style.display === 'inline'; s.style.display = open ? 'none' : 'inline'; this.innerText = open ? 'Read More...' : ' Show Less';" style="color:${linkColor}; font-weight:700; text-decoration:underline; margin-left:5px;">Read More...</a></p>
           </div>
         </div>
     `;
@@ -1661,7 +1661,7 @@ const getCorporateTaxServicesAccordion = () => {
           padding-left: 20px;
           margin: 0;
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 15px 30px;
         }
         .seo-services-ul li {
@@ -1676,11 +1676,6 @@ const getCorporateTaxServicesAccordion = () => {
         }
         .seo-services-ul a:hover {
           color: var(--primary-dark);
-        }
-        @media (max-width: 1200px) {
-          .seo-services-ul {
-            grid-template-columns: repeat(3, 1fr);
-          }
         }
         @media (max-width: 768px) {
           .seo-services-ul {
@@ -2016,13 +2011,13 @@ const getCorporateTaxLocationsSection = () => {
       : 'background:#ffffff; border:1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.01);';
 
     return `
-        <div class="seo-loc-card \${styleClass}" style="display:flex; align-items:center; gap:12px; padding:15px 20px; border-radius:8px; \${cardStyle}">
-          <div class="seo-loc-bullet" style="width:18px; height:18px; border-radius:50%; border:2px solid \${bulletColor}; background:transparent; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0;">
-            <div style="width:6px; height:6px; border-radius:50%; background:\${bulletColor};"></div>
+        <div class="seo-loc-card ${styleClass}" style="display:flex; align-items:center; gap:12px; padding:15px 20px; border-radius:8px; ${cardStyle}">
+          <div class="seo-loc-bullet" style="width:18px; height:18px; border-radius:50%; border:2px solid ${bulletColor}; background:transparent; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0;">
+            <div style="width:6px; height:6px; border-radius:50%; background:${bulletColor};"></div>
           </div>
-          <div class="seo-loc-info" style="font-family:var(--font-primary); font-size:0.9rem; line-height:1.35; color:\${textColor}; font-weight:500;">
+          <div class="seo-loc-info" style="font-family:var(--font-primary); font-size:0.9rem; line-height:1.35; color:${textColor}; font-weight:500;">
             Corporate Tax Filing
-            <a href="\${loc.path}" style="display:block; font-weight:700; color:\${linkColor}; text-decoration:underline;">in \${loc.name}</a>
+            <a href="${loc.path}" style="display:block; font-weight:700; color:${linkColor}; text-decoration:underline;">in ${loc.name}</a>
           </div>
         </div>
     `;
