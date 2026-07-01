@@ -1445,14 +1445,9 @@ const getCorporateTaxIndustriesGrid = () => {
       <style>
         .seo-ind-grid {
           display: grid;
-          grid-template-columns: repeat(5, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 15px;
           margin-bottom: 40px;
-        }
-        @media (max-width: 1100px) {
-          .seo-ind-grid {
-            grid-template-columns: repeat(3, 1fr);
-          }
         }
         @media (max-width: 768px) {
           .seo-ind-grid {
@@ -2031,6 +2026,26 @@ const getCorporateTaxLocationsSection = () => {
         <p style="font-size: 1.1rem; color: var(--color-slate-medium); max-width: 850px; margin: 0 auto; line-height: 1.6;">Our CPA team provides reliable corporate tax filing services to businesses throughout all Canadian provinces. We understand provincial tax credits, local regulations, and CRA compliance needs specific to each region. Corporate tax filing is available virtually to corporations across Canada.</p>
         <div class="accent-line" style="background-color: var(--primary); margin: 20px auto 0;"></div>
       </div>
+
+      <style>
+        .seo-loc-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+        }
+        @media (max-width: 768px) {
+          .seo-loc-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+          }
+        }
+        @media (max-width: 480px) {
+          .seo-loc-grid {
+            grid-template-columns: 1fr;
+            gap: 12px;
+          }
+        }
+      </style>
 
       <div class="seo-loc-grid">
         ${cardsHtml}
