@@ -1403,7 +1403,7 @@ const getCorporateTaxIndustriesGrid = () => {
     { title: "Corporate Tax Filing for Logistics & Freight", desc: "Specialized logistics tax & accounting", link: "/industries/transportation.html" }
   ];
 
-  const classes = ["", "card-manilla", "card-cloud", "card-kraft", "card-bookcloth"];
+  const classes = [""];
 
   const cardsHtml = industries.map((ind, idx) => {
     const styleClass = classes[idx % classes.length];
@@ -1546,27 +1546,28 @@ const getCorporateTaxStrategiesSection = () => {
   ];
 
   const cardsHtml = strategies.map(s => {
+    const styleClass = "";
     // Determine icon colors based on card class
     let iconBg = 'rgba(204, 120, 92, 0.15)';
     let iconColor = '#CC785C';
     let linkColor = 'var(--primary)';
     
-    if (s.styleClass === 'card-manilla' || s.styleClass === 'card-kraft' || s.styleClass === 'card-cloud') {
+    if (styleClass === 'card-manilla' || styleClass === 'card-kraft' || styleClass === 'card-cloud') {
       iconBg = 'rgba(25, 25, 25, 0.08)';
       iconColor = 'var(--color-slate-dark)';
       linkColor = 'var(--color-slate-dark)';
-    } else if (s.styleClass === 'card-bookcloth') {
+    } else if (styleClass === 'card-bookcloth') {
       iconBg = 'rgba(255, 255, 255, 0.15)';
       iconColor = 'var(--color-ivory-light)';
       linkColor = 'var(--color-ivory-light)';
     }
 
-    const cardStyle = s.styleClass 
+    const cardStyle = styleClass 
       ? '' 
       : 'background:#ffffff; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02);';
 
     return `
-        <div class="service-card ${s.styleClass}" style="text-align:left; padding:15px 18px; border-radius:10px; display:flex; gap:14px; align-items:flex-start; ${cardStyle}">
+        <div class="service-card ${styleClass}" style="text-align:left; padding:15px 18px; border-radius:10px; display:flex; gap:14px; align-items:flex-start; ${cardStyle}">
           <div style="width:34px; height:34px; border-radius:50%; background:${iconBg}; color:${iconColor}; display:flex; align-items:center; justify-content:center; font-size:0.95rem; flex-shrink:0; margin-top:2px;"><i class="${s.iconClass}"></i></div>
           <div style="flex-grow:1;">
             <h5 style="font-weight:700; margin-bottom:4px; font-size:0.95rem; line-height:1.3; min-height: 2.6rem; display: flex; align-items: center; color: var(--color-slate-dark);">${s.title}</h5>
@@ -1928,7 +1929,7 @@ const getCorporateTaxLocationsSection = () => {
     { name: "Northwest Territories", path: "/locations/index.html" }
   ];
 
-  const classes = ["", "card-manilla", "card-cloud", "card-kraft", "card-bookcloth"];
+  const classes = [""];
 
   const cardsHtml = locations.map((loc, idx) => {
     const styleClass = classes[idx % classes.length];
