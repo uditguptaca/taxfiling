@@ -7233,32 +7233,70 @@ blogPosts.forEach(p => {
     <!-- 3. WHY CHOOSE US -->
     ${getWhyChooseUsSection('Tax Filings Canada')}
 
-    <!-- 4. RISK-FREE WORKFLOW -->
-    ${getWorkflowSection()}
+    ${p.slug === 'expert-corporation-tax-filing-north-york' ? `
+      <!-- Process Timeline -->
+      ${getCorporateTaxTimeline4Steps('Corporate Tax Process Phases', 'Our clear four-stage workflow ensuring absolute tax optimization and complete CRA compliance.')}
 
-    <!-- 5. INDUSTRIES PARTNER -->
-    ${getIndustriesGridSection()}
+      <!-- Workflow Split Section -->
+      ${getWorkflowSection('', '/images/toronto_office_cn_tower.png')}
 
-    <!-- 6. CLIENTS LOGO BANNER -->
-    ${getClientsLogoSection()}
+      <!-- Smart Strategies -->
+      ${getCorporateTaxStrategiesSection()}
 
-    <!-- 7. PRICING SECTION -->
-    ${getPricingSection()}
+      <!-- Industries Partner -->
+      ${getCorporateTaxIndustriesGrid()}
 
-    <!-- 8. CASE STUDIES SECTION -->
-    ${getCaseStudiesSection()}
+      <!-- Pan-Canada Locations -->
+      ${getCorporateTaxLocationsSection()}
 
-    <!-- 9. TEAM SECTION -->
-    ${getTeamSection()}
+      <!-- Global Pricing -->
+      ${getCorporateTaxFeeComparisonSection()}
 
-    <!-- 10. FAQ SECTION -->
-    ${getFaqSection('Filing', [
-      { q: 'Can I file taxes in Canada completely online?', a: 'Yes. CRA allows electronic filing (EFILE) for personal T1 and corporate T2 returns through certified software packages.' },
-      { q: 'What happens if I miss the filing deadline?', a: 'CRA charges a late-filing penalty of 5% of your balance owing, plus 1% for each full month that the return is late, up to 12 months.' }
-    ])}
+      <!-- Case Studies -->
+      ${getCaseStudiesSection()}
+
+      <!-- Team Section -->
+      ${getTeamSection()}
+
+      <!-- Services Accordion -->
+      ${getCorporateTaxDetailedServicesDropdown()}
+
+      <!-- Insights Section -->
+      ${getCorporateTaxInsightsSection()}
+
+      <!-- FAQ Section -->
+      ${getFaqSection('Corporate Tax', [
+        { q: 'What corporate tax filing services do you offer in North York?', a: 'We offer full T2 corporate tax return preparation, bookkeeping reconciliation, GIFI mapping, corporate tax planning, and CRA audit representation.' },
+        { q: 'What is the cost of filing corporate taxes for a North York business?', a: 'Our corporate tax filing fees start from $90. We offer simple holding company filings as well as active business returns at transparent, flat rates.' }
+      ])}
+    ` : `
+      <!-- 4. RISK-FREE WORKFLOW -->
+      ${getWorkflowSection()}
+
+      <!-- 5. INDUSTRIES PARTNER -->
+      ${getIndustriesGridSection()}
+
+      <!-- 6. CLIENTS LOGO BANNER -->
+      ${getClientsLogoSection()}
+
+      <!-- 7. PRICING SECTION -->
+      ${getPricingSection()}
+
+      <!-- 8. CASE STUDIES SECTION -->
+      ${getCaseStudiesSection()}
+
+      <!-- 9. TEAM SECTION -->
+      ${getTeamSection()}
+
+      <!-- 10. FAQ SECTION -->
+      ${getFaqSection('Filing', [
+        { q: 'Can I file taxes in Canada completely online?', a: 'Yes. CRA allows electronic filing (EFILE) for personal T1 and corporate T2 returns through certified software packages.' },
+        { q: 'What happens if I miss the filing deadline?', a: 'CRA charges a late-filing penalty of 5% of your balance owing, plus 1% for each full month that the return is late, up to 12 months.' }
+      ])}
+    `}
 
     <!-- 11. CTA BANNER -->
-    ${getCtaBanner('Filing')}
+    ${getCtaBanner(p.slug === 'expert-corporation-tax-filing-north-york' ? 'Corporate Tax' : 'Filing')}
   `;
 
   // Write to standard folder
