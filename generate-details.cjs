@@ -3812,59 +3812,7 @@ services.forEach(s => {
   `;
 
   const customIntroHtml = isCorporateTax ? `
-    <section class="section section-gray" style="padding: 70px 0; background-color: var(--color-ivory-med);">
-      <div class="container">
-        <div class="grid-2" style="align-items: stretch; gap: 50px;">
-          <div style="display:flex; flex-direction:column; justify-content:center;">
-            <div class="section-header" style="text-align:left; margin-bottom:30px; max-width:100%;">
-              <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--color-slate-dark); margin-bottom: 12px; line-height: 1.25;">Expert Tax Solutions for Businesses Across Canada</h2>
-              <p style="display:block !important; font-size:0.95rem; line-height:1.55; color: var(--color-slate-medium); margin: 10px 0 15px 0;">Filing corporate tax return in Canada is super easy now. Stay compliant and minimize liabilities/ deductions with our specialized corporate tax services.</p>
-              <div class="accent-line" style="margin:0; display:block !important; width:50px; height:3px; background:var(--color-bookcloth); border-radius:2px;"></div>
-            </div>
-            <div class="grid-2" style="gap:20px; margin-bottom:25px;">
-              
-              <div style="display:flex; gap:15px; align-items:flex-start; background:var(--color-manilla); padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid rgba(25, 25, 25, 0.08);">
-                <div style="width:36px; height:36px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
-                <div>
-                  <h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">Corporate Tax Compliance &amp; Filing</h5>
-                  <p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-dark);">Professional T2 compilation and direct CRA EFILE submissions to keep your corporation fully compliant.</p>
-                </div>
-              </div>
-
-              <div style="display:flex; gap:15px; align-items:flex-start; background:#ffffff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid var(--color-ivory-dark);">
-                <div style="width:36px; height:36px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
-                <div>
-                  <h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">Corporate Tax Planning &amp; Preparation</h5>
-                  <p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-medium);">Strategic corporate structure planning, salary/dividend optimization, and deduction maximization.</p>
-                </div>
-              </div>
-
-              <div style="display:flex; gap:15px; align-items:flex-start; background:#ffffff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid var(--color-ivory-dark);">
-                <div style="width:36px; height:36px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
-                <div>
-                  <h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">Corporate Sales Tax &amp; GST/HST</h5>
-                  <p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-medium);">Seamless GST/HST input tax credit tracking, calculations, and timely federal filing support.</p>
-                </div>
-              </div>
-
-              <div style="display:flex; gap:15px; align-items:flex-start; background:var(--color-manilla); padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid rgba(25, 25, 25, 0.08);">
-                <div style="width:36px; height:36px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
-                <div>
-                  <h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">CRA Audit &amp; Dispute Resolution</h5>
-                  <p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-dark);">Dedicated representation, notice of assessment audits, objection filings, and professional defense.</p>
-                </div>
-              </div>
-
-            </div>
-            ${getMeetingCtaBox('Book a Meeting with an Expert TAX Accountant')}
-          </div>
-          <div style="position:relative; display:flex; align-items:stretch; justify-content:center; width:100%; height:100%; border-radius:16px; overflow:hidden; box-shadow:0 12px 30px rgba(0,0,0,0.08); border:1px solid var(--color-ivory-dark);">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=800&fit=crop" alt="CPA Tax Experts" style="max-width:100%; height:100%; width:100%; object-fit:cover; object-position:center; filter: grayscale(100%) sepia(20%) brightness(0.9) contrast(1.1);">
-            <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(135deg, rgba(204, 120, 92, 0.25) 0%, rgba(25, 25, 25, 0.4) 100%); mix-blend-mode: multiply; pointer-events:none;"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+    ${getPricingSection()}
   ` : `
     <!-- 3. INTRO BLOCK -->
     <section class="section" style="padding-bottom: 20px;">

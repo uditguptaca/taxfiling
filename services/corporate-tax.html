@@ -443,70 +443,320 @@
 
     <!-- 3. INTRO BLOCK -->
     
-    <section class="section section-gray" style="padding: 70px 0; background-color: var(--color-ivory-med);">
-      <div class="container">
-        <div class="grid-2" style="align-items: stretch; gap: 50px;">
-          <div style="display:flex; flex-direction:column; justify-content:center;">
-            <div class="section-header" style="text-align:left; margin-bottom:30px; max-width:100%;">
-              <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--color-slate-dark); margin-bottom: 12px; line-height: 1.25;">Expert Tax Solutions for Businesses Across Canada</h2>
-              <p style="display:block !important; font-size:0.95rem; line-height:1.55; color: var(--color-slate-medium); margin: 10px 0 15px 0;">Filing corporate tax return in Canada is super easy now. Stay compliant and minimize liabilities/ deductions with our specialized corporate tax services.</p>
-              <div class="accent-line" style="margin:0; display:block !important; width:50px; height:3px; background:var(--color-bookcloth); border-radius:2px;"></div>
+    
+  <section class="section section-gray" id="pricing" style="padding: 80px 0; background-color: var(--color-ivory-med); border-top: 1px solid var(--border-gray); border-bottom: 1px solid var(--border-gray);">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 50px;">
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: var(--dark-green); letter-spacing: -0.5px;">Canada Tax Fixed Pricing</h2>
+        <p style="font-size: 1.1rem; color: var(--body-text-light); max-width: 700px; margin: 15px auto 0;">Transparent, fixed-fee pricing with zero hidden fees. Pay only after your work is completed and filed.</p>
+        <div class="accent-line"></div>
+      </div>
+
+      <style>
+        .pricing-hub-container {
+          display: flex;
+          flex-direction: column;
+          gap: 35px;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        .pricing-tabs {
+          display: flex;
+          justify-content: center;
+          gap: 15px;
+          background: #FFFFFF;
+          padding: 8px;
+          border-radius: 50px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+          border: 1px solid rgba(0,0,0,0.05);
+          width: fit-content;
+          margin: 0 auto;
+        }
+        .pricing-tab {
+          padding: 14px 28px;
+          border-radius: 50px;
+          font-size: 0.95rem;
+          font-weight: 700;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          border: none;
+          background: transparent;
+          color: var(--body-text-light);
+          font-family: inherit;
+        }
+        .pricing-tab.active {
+          background: var(--primary);
+          color: var(--white);
+          box-shadow: 0 8px 16px rgba(251, 119, 13, 0.15);
+        }
+        .pricing-grids-container {
+          position: relative;
+        }
+        .pricing-grid-panel {
+          display: none;
+          opacity: 0;
+          transition: opacity 0.4s ease;
+          gap: 20px;
+        }
+        .pricing-grid-panel.active {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          opacity: 1;
+        }
+        .pricing-showcase-card {
+          flex: 1;
+          min-width: 220px;
+          background: #FFFFFF;
+          border: 1px solid rgba(0,0,0,0.06);
+          border-radius: 20px;
+          padding: 30px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          min-height: 330px;
+        }
+        .pricing-showcase-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+          border-color: rgba(251, 119, 13, 0.2);
+        }
+        .pricing-card-header h4 {
+          font-size: 1.25rem;
+          font-weight: 800;
+          color: var(--dark-green);
+          margin: 0 0 15px 0;
+        }
+        .pricing-card-price {
+          font-size: 2.2rem;
+          font-weight: 900;
+          color: var(--primary);
+          display: flex;
+          align-items: baseline;
+          gap: 5px;
+          margin-bottom: 20px;
+          border-bottom: 1px solid rgba(0,0,0,0.06);
+          padding-bottom: 20px;
+        }
+        .pricing-card-price span {
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: var(--body-text-light);
+        }
+        .pricing-card-includes {
+          font-size: 0.92rem;
+          line-height: 1.6;
+          color: #475569;
+          margin-bottom: 25px;
+          flex-grow: 1;
+        }
+        .pricing-showcase-card {
+          border-top: 5px solid transparent !important;
+        }
+        .pricing-showcase-card.card-manilla {
+          background-color: #FFFFFF !important;
+          border-color: var(--border-gray) !important;
+          border-top-color: #D4A27F !important;
+        }
+        .pricing-showcase-card.card-ivory {
+          background-color: #FAF9F5 !important;
+          border-color: var(--border-gray) !important;
+          border-top-color: #CC785C !important;
+        }
+        .pricing-showcase-card.card-bookcloth {
+          background-color: #FFFFFF !important;
+          border-color: var(--border-gray) !important;
+          border-top-color: #262625 !important;
+        }
+        .pricing-showcase-card.card-slate {
+          background-color: #FAF9F5 !important;
+          border-color: var(--border-gray) !important;
+          border-top-color: #BFBFBA !important;
+        }
+        .pricing-showcase-card h4,
+        .pricing-showcase-card p,
+        .pricing-showcase-card li,
+        .pricing-showcase-card div,
+        .pricing-showcase-card span {
+          color: #262625 !important;
+        }
+        .pricing-showcase-card .pricing-card-price {
+          color: #262625 !important;
+        }
+        .pricing-showcase-card .pricing-card-price span {
+          color: #666663 !important;
+        }
+        .pricing-showcase-card li i {
+          color: #CC785C !important;
+        }
+        .pricing-showcase-card .btn {
+          background-color: #CC785C !important;
+          border-color: #CC785C !important;
+          color: #FAFAF7 !important;
+        }
+        .pricing-showcase-card .btn:hover {
+          background-color: #191919 !important;
+          border-color: #191919 !important;
+          color: #FAFAF7 !important;
+        }
+        @media (max-width: 991px) {
+          .pricing-grid-panel.active {
+            flex-wrap: wrap;
+          }
+          .pricing-showcase-card {
+            flex: 1 1 calc(50% - 20px);
+          }
+        }
+        @media (max-width: 768px) {
+          .pricing-tabs {
+            flex-direction: column;
+            border-radius: 20px;
+            width: 100%;
+            padding: 12px;
+          }
+          .pricing-tab {
+            width: 100%;
+            text-align: center;
+          }
+        }
+        @media (max-width: 576px) {
+          .pricing-showcase-card {
+            flex: 1 1 100%;
+          }
+        }
+      </style>
+
+      <div class="pricing-hub-container">
+        <!-- Tabs -->
+        <div class="pricing-tabs">
+          <button class="pricing-tab active" data-target="pricing-panel-corporate">Corporate &amp; Business Tax</button>
+          <button class="pricing-tab" data-target="pricing-panel-accounting">Accounting &amp; Bookkeeping</button>
+          <button class="pricing-tab" data-target="pricing-panel-personal">Personal &amp; Sales Tax</button>
+        </div>
+
+        <!-- Panels -->
+        <div class="pricing-grids-container">
+          <!-- Panel 1: Corporate & Business Tax -->
+          <div class="pricing-grid-panel active" id="pricing-panel-corporate">
+            <!-- Corporate Tax -->
+            <div class="pricing-showcase-card card-manilla">
+              <div class="pricing-card-header">
+                <h4>Corporate Tax Filing</h4>
+                <div class="pricing-card-price">$90<span>/One-time filing fee</span></div>
+                <p class="pricing-card-includes">T2 corporate tax filing, balance sheets, income statements compilation, corporate tax optimization, and direct CRA representation.</p>
+              </div>
+              <a href="/pricing/corporate-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
-            <div class="grid-2" style="gap:20px; margin-bottom:25px;">
-              
-              <div style="display:flex; gap:15px; align-items:flex-start; background:var(--color-manilla); padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid rgba(25, 25, 25, 0.08);">
-                <div style="width:36px; height:36px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
-                <div>
-                  <h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">Corporate Tax Compliance &amp; Filing</h5>
-                  <p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-dark);">Professional T2 compilation and direct CRA EFILE submissions to keep your corporation fully compliant.</p>
-                </div>
+            <!-- Partnership Tax -->
+            <div class="pricing-showcase-card card-ivory">
+              <div class="pricing-card-header">
+                <h4>Partnership Tax Filing</h4>
+                <div class="pricing-card-price">$250<span>/Partnership return</span></div>
+                <p class="pricing-card-includes">T5013 partnership information returns, K-1 partner schedule allocations, structural planning, and tax minimization advisory.</p>
               </div>
-
-              <div style="display:flex; gap:15px; align-items:flex-start; background:#ffffff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid var(--color-ivory-dark);">
-                <div style="width:36px; height:36px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
-                <div>
-                  <h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">Corporate Tax Planning &amp; Preparation</h5>
-                  <p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-medium);">Strategic corporate structure planning, salary/dividend optimization, and deduction maximization.</p>
-                </div>
-              </div>
-
-              <div style="display:flex; gap:15px; align-items:flex-start; background:#ffffff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid var(--color-ivory-dark);">
-                <div style="width:36px; height:36px; border-radius:50%; background:rgba(204, 120, 92, 0.15); color:#CC785C; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
-                <div>
-                  <h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">Corporate Sales Tax &amp; GST/HST</h5>
-                  <p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-medium);">Seamless GST/HST input tax credit tracking, calculations, and timely federal filing support.</p>
-                </div>
-              </div>
-
-              <div style="display:flex; gap:15px; align-items:flex-start; background:var(--color-manilla); padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.03); border:1px solid rgba(25, 25, 25, 0.08);">
-                <div style="width:36px; height:36px; border-radius:50%; background:rgba(212, 162, 127, 0.2); color:#D4A27F; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0;"><i class="fas fa-check-circle"></i></div>
-                <div>
-                  <h5 style="margin-bottom:6px; font-weight:700; color:var(--color-slate-dark); font-size:0.95rem; line-height:1.3;">CRA Audit &amp; Dispute Resolution</h5>
-                  <p style="font-size:0.86rem; margin:0; line-height:1.45; color:var(--color-slate-dark);">Dedicated representation, notice of assessment audits, objection filings, and professional defense.</p>
-                </div>
-              </div>
-
+              <a href="/pricing/partnership-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
             </div>
-            
-  <div class="cta-banner-box" style="text-align:left; margin-top:40px; padding:30px; background:linear-gradient(135deg, #FAF8F5 0%, #F5F1EB 100%); border:1px solid rgba(251, 119, 13, 0.15); border-radius:16px; box-shadow:var(--shadow-sm);">
-    <h4 style="margin:0 0 15px 0; font-size:1.25rem; font-weight:800; color:var(--dark-green); display:flex; align-items:center; gap:10px;"><i class="fas fa-handshake" style="color:var(--primary);"></i> Book a Meeting with an Expert TAX Accountant</h4>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:15px 25px; margin-bottom:25px;">
-      <div style="display:flex; align-items:center; gap:10px; font-size:0.95rem; font-weight:600; color:var(--body-text);"><i class="fas fa-check-circle" style="color:var(--primary); font-size:1.1rem; flex-shrink:0;"></i> Free initial consultation</div>
-      <div style="display:flex; align-items:center; gap:10px; font-size:0.95rem; font-weight:600; color:var(--teal-light);"><i class="fas fa-check-circle" style="color:var(--teal-light); font-size:1.1rem; flex-shrink:0;"></i> No obligations</div>
-      <div style="display:flex; align-items:center; gap:10px; font-size:0.95rem; font-weight:600; color:var(--body-text);"><i class="fas fa-check-circle" style="color:var(--primary); font-size:1.1rem; flex-shrink:0;"></i> Speak directly with expert CPA/CA</div>
-      <div style="display:flex; align-items:center; gap:10px; font-size:0.95rem; font-weight:600; color:var(--body-text);"><i class="fas fa-check-circle" style="color:var(--teal-light); font-size:1.1rem; flex-shrink:0;"></i> Tailored tax planning strategies</div>
-    </div>
-    <a href="/contact.html" class="btn btn-primary" style="padding:10px 30px; border-radius:50px; font-weight:700;">Get Started <i class="fas fa-arrow-right" style="margin-left:8px;"></i></a>
-  </div>
-
+            <!-- Non-Profit Tax -->
+            <div class="pricing-showcase-card card-bookcloth">
+              <div class="pricing-card-header">
+                <h4>Non-Profit Tax Filing</h4>
+                <div class="pricing-card-price">$250<span>/NPO filing fee</span></div>
+                <p class="pricing-card-includes">T3010 registered charity returns, T1044 NPO return filing, financial summaries compilation, and compliance audits support.</p>
+              </div>
+              <a href="/pricing/non-profit-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
+            </div>
+            <!-- Trust-Estate Tax -->
+            <div class="pricing-showcase-card card-slate">
+              <div class="pricing-card-header">
+                <h4>Trust-Estate Tax Filing</h4>
+                <div class="pricing-card-price">$300<span>/Trust return</span></div>
+                <p class="pricing-card-includes">T3 trust tax return filing, testamentary trust setups, estate distribution allocations, and strategic inheritance planning.</p>
+              </div>
+              <a href="/pricing/trust-estate-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
+            </div>
           </div>
-          <div style="position:relative; display:flex; align-items:stretch; justify-content:center; width:100%; height:100%; border-radius:16px; overflow:hidden; box-shadow:0 12px 30px rgba(0,0,0,0.08); border:1px solid var(--color-ivory-dark);">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=800&fit=crop" alt="CPA Tax Experts" style="max-width:100%; height:100%; width:100%; object-fit:cover; object-position:center; filter: grayscale(100%) sepia(20%) brightness(0.9) contrast(1.1);">
-            <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(135deg, rgba(204, 120, 92, 0.25) 0%, rgba(25, 25, 25, 0.4) 100%); mix-blend-mode: multiply; pointer-events:none;"></div>
+
+          <!-- Panel 2: Accounting & Bookkeeping -->
+          <div class="pricing-grid-panel" id="pricing-panel-accounting">
+            <!-- Business Bookkeeping -->
+            <div class="pricing-showcase-card card-manilla">
+              <div class="pricing-card-header">
+                <h4>Business Bookkeeping</h4>
+                <div class="pricing-card-price">$100<span>/Month (Up to 50 txns)</span></div>
+                <p class="pricing-card-includes">Bank &amp; credit card reconciliations, monthly balance sheet and P&amp;L preparation, payroll ledger syncing, and QuickBooks/Xero ledger support.</p>
+              </div>
+              <a href="/pricing/accounting-bookkeeping.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
+            </div>
+            <!-- Notice to Reader -->
+            <div class="pricing-showcase-card card-bookcloth">
+              <div class="pricing-card-header">
+                <h4>Notice to Reader (NTR)</h4>
+                <div class="pricing-card-price">$500<span>/Compilation year</span></div>
+                <p class="pricing-card-includes">Compilation engagement report, corporate financial statement compilation, trial balance adjustments, and full T2 return integration.</p>
+              </div>
+              <a href="/pricing/notice-to-reader.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
+            </div>
+          </div>
+
+          <!-- Panel 3: Personal & Sales Tax -->
+          <div class="pricing-grid-panel" id="pricing-panel-personal">
+            <!-- Personal Tax Filing -->
+            <div class="pricing-showcase-card card-ivory">
+              <div class="pricing-card-header">
+                <h4>Personal Tax Filing</h4>
+                <div class="pricing-card-price">$25<span>/Return starting fee</span></div>
+                <p class="pricing-card-includes">T1 tax returns compilation for students, salaried employees, and self-employed. Covers T4/T5 matching, RRSP credits, and medical deductions.</p>
+              </div>
+              <a href="/pricing/individual-tax.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
+            </div>
+            <!-- GST/HST Tax Filings -->
+            <div class="pricing-showcase-card card-slate">
+              <div class="pricing-card-header">
+                <h4>GST/HST Sales Tax Filing</h4>
+                <div class="pricing-card-price">$75<span>/Filing cycle</span></div>
+                <p class="pricing-card-includes">Sales tax ledger reconciliation, Input Tax Credits (ITCs) verification, Netfile electronic submission to CRA, and provincial compliance checks.</p>
+              </div>
+              <a href="/pricing/gst-hst-pst.html" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 50px; font-weight: 700;">Explore Details</a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+
+      <script>
+        (function() {
+          const initPricingTabs = () => {
+            const tabs = document.querySelectorAll('.pricing-tab');
+            const panels = document.querySelectorAll('.pricing-grid-panel');
+
+            tabs.forEach(tab => {
+              tab.addEventListener('click', () => {
+                // Remove active class
+                tabs.forEach(t => t.classList.remove('active'));
+                panels.forEach(p => p.classList.remove('active'));
+
+                // Add active class
+                tab.classList.add('active');
+                const targetId = tab.getAttribute('data-target');
+                const targetPanel = document.getElementById(targetId);
+                if (targetPanel) {
+                  targetPanel.classList.add('active');
+                }
+              });
+            });
+          };
+
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initPricingTabs);
+          } else {
+            initPricingTabs();
+          }
+        })();
+      </script>
+    </div>
+  </section>
+  
   
 
     <!-- 4. SERVICE TIERS -->
