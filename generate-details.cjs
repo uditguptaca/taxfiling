@@ -1208,8 +1208,9 @@ const getWhyChooseUsSection = (pageName, customTitle = null, customSubtitle = nu
             ${cardsHtml}
           </div>
         </div>
-        <div style="display:flex; align-items:stretch; justify-content:center; width:100%; height:100%;">
-          <img src="${imgUrl}" alt="CPA Tax Experts" style="border-radius:16px; box-shadow:0 12px 30px rgba(0,0,0,0.08); max-width:100%; height:100%; width:100%; object-fit:cover; object-position:center; border:1px solid var(--color-ivory-dark);">
+        <div style="position:relative; display:flex; align-items:stretch; justify-content:center; width:100%; height:100%; border-radius:16px; overflow:hidden; box-shadow:0 12px 30px rgba(0,0,0,0.08); border:1px solid var(--color-ivory-dark);">
+          <img src="${imgUrl}" alt="CPA Tax Experts" style="max-width:100%; height:100%; width:100%; object-fit:cover; object-position:center; filter: grayscale(100%) sepia(20%) brightness(0.9) contrast(1.1);">
+          <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(135deg, rgba(204, 120, 92, 0.25) 0%, rgba(25, 25, 25, 0.4) 100%); mix-blend-mode: multiply; pointer-events:none;"></div>
         </div>
       </div>
     </div>
