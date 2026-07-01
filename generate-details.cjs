@@ -7989,6 +7989,7 @@ blogPosts.forEach(p => {
             <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=400&fit=crop" alt="${p.title}" style="border-radius:12px;margin-bottom:30px;width:100%;box-shadow:var(--shadow-sm);">
             
             <!-- Table of Contents -->
+            ${p.slug === 'expert-corporation-tax-filing-north-york' ? '' : `
             <div class="toc-box">
               <h4>Table of Contents</h4>
               <ul>
@@ -7997,6 +7998,7 @@ blogPosts.forEach(p => {
                 <li><a href="#section-3">3. Key Takeaways &amp; Next Steps</a></li>
               </ul>
             </div>
+            `}
 
             <div id="section-1" class="${p.slug === 'expert-corporation-tax-filing-north-york' ? 'gcpa-post' : ''}">
               ${p.content}
