@@ -289,7 +289,7 @@ writePage(
         <div class="fade-in">
           <h2>Our Story & Mission</h2>
           <p>Founded with a vision to simplify Canadian tax and accounting compliance, Tax Filings Canada provides affordable, high-quality, and transparent financial solutions for individuals and businesses across Canada.</p>
-          <p>We leverage modern cloud-based technology to offer completely remote, paperless tax filing services that save you time and money. Our team of CPAs and tax specialists is committed to maximizing your tax refunds and reducing your tax prep fees by up to 75% compared to traditional brick-and-mortar firms.</p>
+          <p>We leverage modern cloud-based technology to offer completely remote, paperless tax filing services that save you time and money. Our team of Accounting Firms and tax specialists is committed to maximizing your tax refunds and reducing your tax prep fees by up to 75% compared to traditional brick-and-mortar firms.</p>
           <div class="btn-group mt-20">
             <a href="/services.html" class="btn btn-primary">Our Services</a>
             <a href="/contact.html" class="btn btn-outline">Free Consultation</a>
@@ -353,8 +353,8 @@ writePage(
 // 2. Team
 writePage(
   path.join(rootDir, 'team.html'),
-  'Meet Our Tax Experts | Professional CPAs',
-  'Meet the professional Chartered Professional Accountants (CPAs) and tax specialists at Tax Filings Canada, serving all provinces.',
+  'Meet Our Tax Experts | Accounting Firms',
+  'Meet the professional Chartered Accounting Firms (Accounting Firms) and tax specialists at Tax Filings Canada, serving all provinces.',
   'about',
   `
   ${pageBanner('Our Tax Experts', [{ text: 'About', link: '/about.html' }, { text: 'Our Experts' }])}
@@ -362,7 +362,7 @@ writePage(
     <div class="container">
       <div class="section-header">
         <h2>Expert Tax & Accounting Professionals</h2>
-        <p>Our team consists of Chartered Professional Accountants (CPA), Chartered Accountants (CA), and tax specialists with Big 4 consulting experience, dedicated to handling your taxes with extreme precision.</p>
+        <p>Our team consists of Chartered Accounting Firms (Accounting Firm), Chartered Accountants (CA), and tax specialists with Big 4 consulting experience, dedicated to handling your taxes with extreme precision.</p>
         <div class="accent-line"></div>
       </div>
       <div class="grid-4" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:30px;">
@@ -371,7 +371,7 @@ writePage(
           <div class="team-info">
             <h3 class="team-name">Udit Gupta</h3>
             <div class="team-role">CEO &amp; Founder</div>
-            <div class="team-credentials">CA, CPA (ICAI &amp; MIA), CPA Canada In-Depth Tax, Tax Expert</div>
+            <div class="team-credentials">CA, Accounting Firm (ICAI &amp; MIA), Accounting Firm Canada In-Depth Tax, Tax Expert</div>
           </div>
         </div>
         <div class="team-card">
@@ -395,7 +395,7 @@ writePage(
           <div class="team-info">
             <h3 class="team-name">Anmol Mittal</h3>
             <div class="team-role">Canada Tax Expert</div>
-            <div class="team-credentials">CPA Canada, CPA USA, CA (ICAI), Canada Tax Expert</div>
+            <div class="team-credentials">Accounting Firm Canada, Accounting Firm USA, CA (ICAI), Canada Tax Expert</div>
           </div>
         </div>
         <div class="team-card">
@@ -403,7 +403,7 @@ writePage(
           <div class="team-info">
             <h3 class="team-name">Vinayak Indolia</h3>
             <div class="team-role">CFO Advisory</div>
-            <div class="team-credentials">CPA, CA. - CFO Advisory | Fractional CFO</div>
+            <div class="team-credentials">Accounting Firm, CA. - CFO Advisory | Fractional CFO</div>
           </div>
         </div>
         <div class="team-card">
@@ -466,8 +466,8 @@ writePage(
           <img src="https://taxccount.com/wp-content/uploads/2025/12/Untitled-design-20.png" alt="Gurjot Singh" class="team-photo" style="object-fit:cover;">
           <div class="team-info">
             <h3 class="team-name">Gurjot Singh</h3>
-            <div class="team-role">CPA Canada</div>
-            <div class="team-credentials">CPA Canada, Canada Tax Expert</div>
+            <div class="team-role">Accounting Firm Canada</div>
+            <div class="team-credentials">Accounting Firm Canada, Canada Tax Expert</div>
           </div>
         </div>
       </div>
@@ -668,7 +668,7 @@ writePage(
     <div class="container">
       <div class="section-header">
         <h2>Downloadable E-Books & Technical Guides</h2>
-        <p>Boost your tax knowledge with our free resources written by professional CPAs.</p>
+        <p>Boost your tax knowledge with our free resources written by Accounting Firms.</p>
         <div class="accent-line"></div>
       </div>
       <div class="grid-3">

@@ -642,7 +642,7 @@ const getCaseStudiesSection = (indSlug) => {
   
   const cs1Title = isHealthcare ? 'CRA Audit for MPCs – Saving Our Medical Clinic Over $70,000' : 'CRA Audit for GST/HST – Saving Our Client Over $70,000';
   const cs1Desc = isHealthcare ? 'A family medicine practice faced a $75,000 audit regarding overhead expenses split with associates. We defended their shareholder loan agreements and corporate division of income, reducing the reassessment to $3,500.' : 'A mid-sized e-commerce business faced a $75,000 CRA GST/HST audit. We identified filing errors and restructured their compliance. The CRA reassessed and reduced the total liability to $3,500, saving the client $71,500.';
-  const cs1Long = isHealthcare ? 'In-depth review of clinic financial statements revealed that the CRA was disputing overhead allocation splits (40/60) with associate physicians, attempting to classify the revenue as clinic business income subject to full HST. Our CPA team gathered the overhead agreement contracts, documented direct expenses, and proved that the splits complied with CRA medical practitioner rules. We successfully defended the structures, slashing the reassessment from $75,000 to just $3,500.' : 'A mid-sized Canadian e-commerce business was audited by the CRA for GST/HST filings over a 3-year period. The auditor proposed a $75,000 reassessment based on mismatched input tax credits (ITCs) and shipping logs. We audited all invoices, matched shipping records to provincial tax rules, and submitted structured reconciliations. The CRA reduced the reassessment to $3,500, saving the client $71,500.';
+  const cs1Long = isHealthcare ? 'In-depth review of clinic financial statements revealed that the CRA was disputing overhead allocation splits (40/60) with associate physicians, attempting to classify the revenue as clinic business income subject to full HST. Our Accounting Firm team gathered the overhead agreement contracts, documented direct expenses, and proved that the splits complied with CRA medical practitioner rules. We successfully defended the structures, slashing the reassessment from $75,000 to just $3,500.' : 'A mid-sized Canadian e-commerce business was audited by the CRA for GST/HST filings over a 3-year period. The auditor proposed a $75,000 reassessment based on mismatched input tax credits (ITCs) and shipping logs. We audited all invoices, matched shipping records to provincial tax rules, and submitted structured reconciliations. The CRA reduced the reassessment to $3,500, saving the client $71,500.';
   
   const cs2Title = isHealthcare ? 'CRA Audit for Personal Tax – Defending Malpractice Expense Claims' : 'CRA Audit for Personal Tax – Avoiding Unfair Tax Adjustments';
   const cs2Desc = isHealthcare ? 'A surgeon was audited on $20,000 of professional malpractice fees and travel expenses. We gathered clinic billing documentation and defended the deductions. The CRA accepted 90% of claims.' : 'A self-employed IT consultant faced an audit on $20,000 of expense claims. We gathered documentation and defended the deductions. The CRA accepted 90% of claims, saving the client $18,800.';
@@ -726,7 +726,7 @@ const getTeamSection = (isHealthcare = false) => `
   <section class="section section-gray">
     <div class="container">
       <div class="section-header">
-        <h2>${isHealthcare ? 'Clinic Expert CPA &amp; Accounting Team' : 'Our Expert CPA &amp; Accounting Team'}</h2>
+        <h2>${isHealthcare ? 'Clinic Expert Accounting Firm &amp; Accounting Team' : 'Our Expert Accounting Firm &amp; Accounting Team'}</h2>
         <p>${isHealthcare ? 'Our Partners Are Alumni of the World\'s Top Medical &amp; Corporate Tax Institutions' : 'Our Partners Are Alumni of the World\'s Top Accounting and Tax Institutions'}</p>
         <div class="accent-line"></div>
       </div>
@@ -738,7 +738,7 @@ const getTeamSection = (isHealthcare = false) => `
           <div class="team-info" style="padding:15px; text-align:left;">
             <h3 class="team-name" style="font-size:1.1rem; margin-bottom: 2px;">Udit Gupta</h3>
             <div class="team-role" style="font-weight: 600; color: var(--primary); font-size: 0.85rem;">CEO &amp; Founder</div>
-            <p style="font-size:0.75rem; margin-top:8px; line-height:1.4; color: #555;">CA, CPA (ICAI &amp; MIA), CPA Canada In-Depth Tax, Tax Expert</p>
+            <p style="font-size:0.75rem; margin-top:8px; line-height:1.4; color: #555;">CA, Accounting Firm (ICAI &amp; MIA), Accounting Firm Canada In-Depth Tax, Tax Expert</p>
           </div>
         </div>
         <div class="team-card">
@@ -768,7 +768,7 @@ const getTeamSection = (isHealthcare = false) => `
           <div class="team-info" style="padding:15px; text-align:left;">
             <h3 class="team-name" style="font-size:1.1rem; margin-bottom: 2px;">Anmol Mittal</h3>
             <div class="team-role" style="font-weight: 600; color: var(--primary); font-size: 0.85rem;">Canada Tax Expert</div>
-            <p style="font-size:0.75rem; margin-top:8px; line-height:1.4; color: #555;">CPA Canada, CPA USA, CA (ICAI), Canada Tax Expert</p>
+            <p style="font-size:0.75rem; margin-top:8px; line-height:1.4; color: #555;">Accounting Firm Canada, Accounting Firm USA, CA (ICAI), Canada Tax Expert</p>
           </div>
         </div>
         <div class="team-card">
@@ -778,7 +778,7 @@ const getTeamSection = (isHealthcare = false) => `
           <div class="team-info" style="padding:15px; text-align:left;">
             <h3 class="team-name" style="font-size:1.1rem; margin-bottom: 2px;">Vinayak Indolia</h3>
             <div class="team-role" style="font-weight: 600; color: var(--primary); font-size: 0.85rem;">CFO Advisory</div>
-            <p style="font-size:0.75rem; margin-top:8px; line-height:1.4; color: #555;">CPA, CA. Fractional CFO and Senior Advisory Specialist</p>
+            <p style="font-size:0.75rem; margin-top:8px; line-height:1.4; color: #555;">Accounting Firm, CA. Fractional CFO and Senior Advisory Specialist</p>
           </div>
         </div>
       </div>
@@ -1215,7 +1215,7 @@ const getWhyChooseUsSection = (pageName, customTitle = null, customSubtitle = nu
           </div>
         </div>
         <div style="position:relative; display:flex; align-items:stretch; justify-content:center; width:100%; height:100%; border-radius:16px; overflow:hidden; box-shadow:0 12px 30px rgba(0,0,0,0.08); border:1px solid var(--color-ivory-dark);">
-          <img src="${imgUrl}" alt="CPA Tax Experts" style="max-width:100%; height:100%; width:100%; object-fit:cover; object-position:center; filter: grayscale(100%) sepia(20%) brightness(0.9) contrast(1.1);">
+          <img src="${imgUrl}" alt="Accounting Firm Tax Experts" style="max-width:100%; height:100%; width:100%; object-fit:cover; object-position:center; filter: grayscale(100%) sepia(20%) brightness(0.9) contrast(1.1);">
           <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(135deg, rgba(204, 120, 92, 0.25) 0%, rgba(25, 25, 25, 0.4) 100%); mix-blend-mode: multiply; pointer-events:none;"></div>
         </div>
       </div>
@@ -1741,7 +1741,7 @@ const getCorporateTaxServicesGrid = () => {
   <section class="section" style="background-color: var(--color-ivory-light); padding: 80px 0; border-top: 1px solid var(--color-ivory-dark); border-bottom: 1px solid var(--color-ivory-dark);">
     <div class="container">
       <div class="section-header" style="text-align: center; margin-bottom: 50px;">
-        <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">Browse Our Affordable CPA Services</h2>
+        <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">Browse Our Affordable Accounting Firm Services</h2>
         <div class="accent-line" style="background-color: var(--primary); margin: 20px auto 0;"></div>
       </div>
 
@@ -1842,7 +1842,7 @@ const getCorporateTaxDetailedServicesDropdown = () => {
     }
   ];
 
-  const accordionHtml = items.map(item => `
+  const generateColHtml = (colItems) => colItems.map(item => `
     <div class="srv-accordion-item" style="border: 1px solid var(--color-ivory-dark); border-radius: 8px; margin-bottom: 12px; background: #ffffff; overflow: hidden; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.01);">
       <div class="srv-accordion-header" style="padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; background: var(--color-ivory-light); user-select: none;" onclick="const body = this.nextElementSibling; const icon = this.querySelector('.arrow-icon'); const isOpen = body.style.display === 'block'; body.style.display = isOpen ? 'none' : 'block'; icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';">
         <div style="display: flex; align-items: center; gap: 14px;">
@@ -1871,9 +1871,12 @@ const getCorporateTaxDetailedServicesDropdown = () => {
     </div>
   `).join('\n');
 
+  const accordionHtmlCol1 = generateColHtml(items.slice(0, 3));
+  const accordionHtmlCol2 = generateColHtml(items.slice(3, 6));
+
   return `
   <section class="section" style="background-color: var(--color-ivory-light); padding: 60px 0; border-top: 1px solid var(--color-ivory-dark); border-bottom: 1px solid var(--color-ivory-dark);">
-    <div class="container" style="max-width: 900px;">
+    <div class="container" style="max-width: 960px;">
       <div class="section-header" style="text-align: center; margin-bottom: 40px;">
         <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">Corporate Tax Filing Services</h2>
         <p style="font-size: 1rem; color: var(--color-cloud-dark); font-weight: 500; margin: 0 auto; max-width: 800px; line-height: 1.6;">
@@ -1882,8 +1885,27 @@ const getCorporateTaxDetailedServicesDropdown = () => {
         <div class="accent-line" style="background-color: var(--primary); margin: 20px auto 0;"></div>
       </div>
 
-      <div class="srv-accordion-container">
-        ${accordionHtml}
+      <style>
+        .srv-accordion-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+        }
+        @media (max-width: 768px) {
+          .srv-accordion-grid {
+            grid-template-columns: 1fr;
+            gap: 12px;
+          }
+        }
+      </style>
+
+      <div class="srv-accordion-grid">
+        <div class="srv-accordion-col">
+          ${accordionHtmlCol1}
+        </div>
+        <div class="srv-accordion-col">
+          ${accordionHtmlCol2}
+        </div>
       </div>
     </div>
   </section>
@@ -1947,7 +1969,7 @@ const getCorporateTaxLocationsSection = () => {
     <div class="container">
       <div class="section-header" style="text-align: center; margin-bottom: 50px;">
         <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">Pan-Canada Corporate Tax Coverage</h2>
-        <p style="font-size: 1.1rem; color: var(--color-slate-medium); max-width: 850px; margin: 0 auto; line-height: 1.6;">Our CPA team provides reliable corporate tax filing services to businesses throughout all Canadian provinces. We understand provincial tax credits, local regulations, and CRA compliance needs specific to each region. Corporate tax filing is available virtually to corporations across Canada.</p>
+        <p style="font-size: 1.1rem; color: var(--color-slate-medium); max-width: 850px; margin: 0 auto; line-height: 1.6;">Our Accounting Firm team provides reliable corporate tax filing services to businesses throughout all Canadian provinces. We understand provincial tax credits, local regulations, and CRA compliance needs specific to each region. Corporate tax filing is available virtually to corporations across Canada.</p>
         <div class="accent-line" style="background-color: var(--primary); margin: 20px auto 0;"></div>
       </div>
 
@@ -1985,7 +2007,7 @@ const getCorporateTaxFeeComparisonSection = () => {
     <div class="container" style="max-width: 960px; margin: 0 auto;">
       <div class="section-header" style="text-align: center; margin-bottom: 30px;">
         <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 12px; text-transform: none;">Corporate Tax Filing Fees: Tax Filings Canada vs Industry Average</h2>
-        <p style="font-size: 1rem; color: var(--color-cloud-dark); font-weight: 500; margin: 0 auto; max-width: 700px;">Based on 2026 CPA fee survey data across Ontario accounting firms.</p>
+        <p style="font-size: 1rem; color: var(--color-cloud-dark); font-weight: 500; margin: 0 auto; max-width: 700px;">Based on 2026 Accounting Firm fee survey data across Ontario accounting firms.</p>
         <div class="accent-line" style="background-color: var(--primary); margin: 15px auto 0;"></div>
       </div>
 
@@ -2028,7 +2050,7 @@ const getCorporateTaxFeeComparisonSection = () => {
           background-color: var(--color-slate-light);
           width: 20%;
         }
-        .fee-col-gondaliya {
+        .fee-col-brand {
           background-color: var(--primary); /* Highlighted column with Bookcloth/Primary */
           width: 25%;
         }
@@ -2051,7 +2073,7 @@ const getCorporateTaxFeeComparisonSection = () => {
           text-decoration: line-through;
           color: #CC785C; /* highlight comparison in brand red-orange */
         }
-        .fee-row-data .fee-val-gondaliya {
+        .fee-row-data .fee-val-brand {
           font-size: 1.1rem;
           font-weight: 700;
           color: var(--primary);
@@ -2079,7 +2101,7 @@ const getCorporateTaxFeeComparisonSection = () => {
             padding: 12px 8px;
             font-size: 0.85rem;
           }
-          .fee-row-data .fee-val-gondaliya {
+          .fee-row-data .fee-val-brand {
             font-size: 0.95rem;
           }
           .fee-table-footer {
@@ -2095,7 +2117,7 @@ const getCorporateTaxFeeComparisonSection = () => {
             <tr>
               <th class="fee-col-service">Service</th>
               <th class="fee-col-avg">Industry Average</th>
-              <th class="fee-col-gondaliya">Tax Filings Canada</th>
+              <th class="fee-col-brand">Tax Filings Canada</th>
               <th class="fee-col-save">You Save</th>
             </tr>
           </thead>
@@ -2103,13 +2125,13 @@ const getCorporateTaxFeeComparisonSection = () => {
             <tr class="fee-row-data">
               <td class="fee-val-service">Corporate Tax (T2) Filing</td>
               <td class="fee-val-avg">$1,200</td>
-              <td class="fee-val-gondaliya">From $90</td>
+              <td class="fee-val-brand">From $90</td>
               <td class="fee-val-save">$1,110+</td>
             </tr>
           </tbody>
         </table>
         <div class="fee-table-footer">
-          All fees include HST. No hourly billing. No hidden charges. 60-Day Fees-Matching Policy: if you find the same service cheaper from a licensed Ontario CPA, we match it.
+          All fees include HST. No hourly billing. No hidden charges. 60-Day Fees-Matching Policy: if you find the same service cheaper from a licensed Ontario Accounting Firm, we match it.
         </div>
       </div>
     </div>
@@ -2166,7 +2188,7 @@ const getCorporateTaxInsightsSection = () => {
             <a href="/blog/${b.slug}.html" style="color:var(--color-slate-dark); text-decoration:none; transition:color 0.2s ease;">${b.title}</a>
           </h3>
           <div style="font-size:0.82rem; color:var(--color-cloud-dark); display:flex; align-items:center; gap:8px;">
-            <span><i class="far fa-user"></i> Sharad Gondaliya CPA</span>
+            <span><i class="far fa-user"></i> Anmol Mittal CPA</span>
             <span>•</span>
             <span><i class="far fa-calendar-alt"></i> ${b.date}</span>
           </div>
@@ -2258,7 +2280,7 @@ const getLocationServicesSection = (locName) => `
 const getFaqSection = (pageName, customFaqs = []) => {
   const defaultFaqs = [
     { q: 'What does "Pay After Service" mean?', a: 'Our Pay After Service model means you review and approve all deliverables before making any payment. We prepare your returns or financial files, you review them, and only then do you pay. This ensures 100% satisfaction.' },
-    { q: 'How does price matching work?', a: 'If you find a lower verified quote from another professional accounting firm in Canada for the same scope of services, we will match it immediately. Simply provide a written quote from the competitor.' },
+    { q: 'How does price matching work?', a: 'If you find a lower verified quote from another Accounting Firm in Canada for the same scope of services, we will match it immediately. Simply provide a written quote from the competitor.' },
     { q: 'How do I submit my tax documents?', a: 'We support completely secure digital uploads via our client portal, or you can email them to us. We support files from QuickBooks, Xero, Excel, and scan/photo documents.' }
   ];
   const faqs = customFaqs.length > 0 ? customFaqs : defaultFaqs;
@@ -2307,7 +2329,7 @@ const getIndustrySpecializations = (indSlug, indName) => {
       { title: 'Clinic Overhead & Splits', desc: 'Accurate clinic overhead costing models, shared space expense splits, and associate payout calculations. We build robust templates that track billing revenue allocations between partners and staff.', icon: 'fa-percent', color: 'card-kraft' },
       { title: 'Medical GST/HST Review', desc: 'In-depth review of exempt healthcare services versus taxable retail sales (e.g. medical devices, cosmetics). We optimize Input Tax Credit (ITC) allocations for mixed-billing clinical practices.', icon: 'fa-file-invoice', color: 'card-cloud' },
       { title: 'Late Filings & VDP Protection', desc: 'Catch up on back taxes, file late corporate returns, and secure interest or penalty relief via the CRA Voluntary Disclosures Program (VDP). We restore clinic compliance status safely.', icon: 'fa-history', color: 'card-slate' },
-      { title: 'CRA Audit Defense', desc: 'Direct CPA representation and professional response coordination for reviews, tax audits, or dispute resolution. We defend your deductions and protect your practice\'s active business limits.', icon: 'fa-shield-alt', color: 'card-manilla' },
+      { title: 'CRA Audit Defense', desc: 'Direct Accounting Firm representation and professional response coordination for reviews, tax audits, or dispute resolution. We defend your deductions and protect your practice\'s active business limits.', icon: 'fa-shield-alt', color: 'card-manilla' },
       { title: 'Holding Company Prep', desc: 'Set up holding companies to accumulate passive investment wealth tax-deferred. We transfer clinic surplus cash flow through tax-free inter-corporate dividends while maintaining small business limits.', icon: 'fa-briefcase', color: 'card-kraft' },
       { title: 'Equipment CCA Prep', desc: 'Strategic Capital Cost Allowance (CCA) scheduling for medical, dental, and laboratory machinery. We optimize the write-off timing for high-value equipment purchases under CRA rules.', icon: 'fa-microscope', color: 'card-cloud' },
       { title: 'Succession & Sale Plan', desc: 'Transition structures for medical partnerships, retiring doctors, and associate buy-ins. We optimize the Lifetime Capital Gains Exemption (LCGE) to ensure a tax-free practice transfer.', icon: 'fa-handshake', color: 'card-slate' }
@@ -2317,14 +2339,14 @@ const getIndustrySpecializations = (indSlug, indName) => {
       { title: 'Rental Property Accounting', desc: 'Detailed rental property bookkeeping, depreciation/CCA claims, and cash flow analysis.', icon: 'fa-home', color: 'card-kraft' },
       { title: 'Capital Gains Planning', desc: 'Tax deferral plans, capital gains vs. business income categorization, and property flipping tax audits.', icon: 'fa-chart-line', color: 'card-cloud' },
       { title: 'GST/HST New Housing Rebate', desc: 'Preparation and filing of new residential property GST/HST rebates and builder sales tax compliance.', icon: 'fa-receipt', color: 'card-slate' },
-      { title: 'CRA Audit Support', desc: 'Direct CPA representation for real estate audits, PREC compliance reviews, and expense verification.', icon: 'fa-shield-alt', color: 'card-manilla' }
+      { title: 'CRA Audit Support', desc: 'Direct Accounting Firm representation for real estate audits, PREC compliance reviews, and expense verification.', icon: 'fa-shield-alt', color: 'card-manilla' }
     ],
     construction: [
       { title: 'Progress Billing & Costing', desc: 'Accurate job costing, progress billing, and Work-in-Progress (WIP) tracking for builders.', icon: 'fa-hard-hat', color: 'card-manilla' },
       { title: 'Subcontractor Compliance', desc: 'T5018 slip preparation, subcontractor tracking, and reporting to ensure full CRA compliance.', icon: 'fa-users', color: 'card-kraft' },
       { title: 'WSIB & EHT Compliance', desc: 'Timely filing of WSIB, employer health tax, and provincial payroll remittances to avoid penalties.', icon: 'fa-shield-alt', color: 'card-cloud' },
       { title: 'Equipment Depreciation', desc: 'Capital Cost Allowance (CCA) optimization on heavy machinery, tools, and company vehicles.', icon: 'fa-truck-pickup', color: 'card-slate' },
-      { title: 'CRA Audit Defense', desc: 'CPA representation for trade business audits, expense claims validation, and tax dispute resolution.', icon: 'fa-gavel', color: 'card-manilla' }
+      { title: 'CRA Audit Defense', desc: 'Accounting Firm representation for trade business audits, expense claims validation, and tax dispute resolution.', icon: 'fa-gavel', color: 'card-manilla' }
     ]
   };
 
@@ -2410,7 +2432,7 @@ const getMeetingCtaBox = (customTitle = null) => {
     <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:15px 25px; margin-bottom:25px;">
       <div style="display:flex; align-items:center; gap:10px; font-size:0.95rem; font-weight:600; color:var(--body-text);"><i class="fas fa-check-circle" style="color:var(--primary); font-size:1.1rem; flex-shrink:0;"></i> Free initial consultation</div>
       <div style="display:flex; align-items:center; gap:10px; font-size:0.95rem; font-weight:600; color:var(--teal-light);"><i class="fas fa-check-circle" style="color:var(--teal-light); font-size:1.1rem; flex-shrink:0;"></i> No obligations</div>
-      <div style="display:flex; align-items:center; gap:10px; font-size:0.95rem; font-weight:600; color:var(--body-text);"><i class="fas fa-check-circle" style="color:var(--primary); font-size:1.1rem; flex-shrink:0;"></i> Speak directly with expert CPA/CA</div>
+      <div style="display:flex; align-items:center; gap:10px; font-size:0.95rem; font-weight:600; color:var(--body-text);"><i class="fas fa-check-circle" style="color:var(--primary); font-size:1.1rem; flex-shrink:0;"></i> Speak directly with expert Accounting Firm/CA</div>
       <div style="display:flex; align-items:center; gap:10px; font-size:0.95rem; font-weight:600; color:var(--body-text);"><i class="fas fa-check-circle" style="color:var(--teal-light); font-size:1.1rem; flex-shrink:0;"></i> Tailored tax planning strategies</div>
     </div>
     <a href="/contact.html" class="btn btn-primary" style="padding:10px 30px; border-radius:50px; font-weight:700;">Get Started <i class="fas fa-arrow-right" style="margin-left:8px;"></i></a>
@@ -3284,7 +3306,7 @@ const getGoogleReviewsMarquee = () => `
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               <i class="fab fa-google google-icon"></i>
             </div>
-            <p class="review-text">"Excellent CPA services! They saved me thousands on my business tax return this year. Highly recommended."</p>
+            <p class="review-text">"Excellent Accounting Firm services! They saved me thousands on my business tax return this year. Highly recommended."</p>
             <div class="reviewer">
               <div class="reviewer-avatar">S</div>
               <span class="reviewer-name">Sarah Jenkins</span>
@@ -3354,7 +3376,7 @@ const getGoogleReviewsMarquee = () => `
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               <i class="fab fa-google google-icon"></i>
             </div>
-            <p class="review-text">"Excellent CPA services! They saved me thousands on my business tax return this year. Highly recommended."</p>
+            <p class="review-text">"Excellent Accounting Firm services! They saved me thousands on my business tax return this year. Highly recommended."</p>
             <div class="reviewer">
               <div class="reviewer-avatar">S</div>
               <span class="reviewer-name">Sarah Jenkins</span>
@@ -3384,7 +3406,7 @@ const getLocationsSelectorSection = (isHealthcare = false) => {
     <div class="container">
       <div class="section-header">
         <h2>${isHealthcare ? 'Clinic Accounting &amp; Tax Locations' : 'Accounting Firm &amp; Tax Filing Locations'}</h2>
-        <p>${isHealthcare ? 'Use our office finder below to select your nearest medical CPA tax planner.' : 'Use our office finder below to select your nearest tax professional or search by city name.'}</p>
+        <p>${isHealthcare ? 'Use our office finder below to select your nearest medical Accounting Firm tax planner.' : 'Use our office finder below to select your nearest tax professional or search by city name.'}</p>
         <div class="accent-line"></div>
       </div>
 
@@ -3498,8 +3520,8 @@ const getLocationsSelectorSection = (isHealthcare = false) => {
           <!-- List of Cities -->
           <div class="loc-list-grid">
             <!-- Ontario Cities (20) -->
-            <div class="loc-item active" data-prov="ontario" data-city="Toronto" data-desc="Expert corporate tax filing, personal returns, and comprehensive CPA accounting services in Toronto.">Toronto, ON</div>
-            <div class="loc-item" data-prov="ontario" data-city="Ottawa" data-desc="Professional bookkeeping, corporate tax preparation, and local CPA solutions in Ottawa.">Ottawa, ON</div>
+            <div class="loc-item active" data-prov="ontario" data-city="Toronto" data-desc="Expert corporate tax filing, personal returns, and comprehensive Accounting Firm accounting services in Toronto.">Toronto, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Ottawa" data-desc="Professional bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Ottawa.">Ottawa, ON</div>
             <div class="loc-item" data-prov="ontario" data-city="Mississauga" data-desc="Top-rated tax planners, corporate filing, and Virtual CFO support in Mississauga.">Mississauga, ON</div>
             <div class="loc-item" data-prov="ontario" data-city="Brampton" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Brampton.">Brampton, ON</div>
             <div class="loc-item" data-prov="ontario" data-city="Hamilton" data-desc="Affordable corporate tax filing, accounting services, and payroll setups in Hamilton.">Hamilton, ON</div>
@@ -3510,13 +3532,13 @@ const getLocationsSelectorSection = (isHealthcare = false) => {
             <div class="loc-item" data-prov="ontario" data-city="Kitchener" data-desc="Comprehensive business accounting and corporate tax returns in Kitchener.">Kitchener, ON</div>
             <div class="loc-item" data-prov="ontario" data-city="Waterloo" data-desc="Advanced tax optimization and virtual CFO advisory services in Waterloo.">Waterloo, ON</div>
             <div class="loc-item" data-prov="ontario" data-city="Oakville" data-desc="Premium corporate tax preparation, bookkeeping, and payroll management in Oakville.">Oakville, ON</div>
-            <div class="loc-item" data-prov="ontario" data-city="Burlington" data-desc="Expert CPA services, company filings, and payroll support in Burlington.">Burlington, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Burlington" data-desc="Expert Accounting Firm services, company filings, and payroll support in Burlington.">Burlington, ON</div>
             <div class="loc-item" data-prov="ontario" data-city="Richmond Hill" data-desc="Professional corporate tax filing and business bookkeeping in Richmond Hill.">Richmond Hill, ON</div>
             <div class="loc-item" data-prov="ontario" data-city="Barrie" data-desc="Reliable accounting, GST/HST filing, and corporate tax returns in Barrie.">Barrie, ON</div>
             <div class="loc-item" data-prov="ontario" data-city="Oshawa" data-desc="Local tax filing and small business bookkeeping services in Oshawa.">Oshawa, ON</div>
             <div class="loc-item" data-prov="ontario" data-city="Guelph" data-desc="Quality accounting, payroll management, and corporate tax consulting in Guelph.">Guelph, ON</div>
             <div class="loc-item" data-prov="ontario" data-city="Kingston" data-desc="Expert tax planning, bookkeeping, and business return services in Kingston.">Kingston, ON</div>
-            <div class="loc-item" data-prov="ontario" data-city="Cambridge" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Cambridge.">Cambridge, ON</div>
+            <div class="loc-item" data-prov="ontario" data-city="Cambridge" data-desc="Full-service bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Cambridge.">Cambridge, ON</div>
             <div class="loc-item" data-prov="ontario" data-city="St. Catharines" data-desc="Corporate tax audits, business tax return prep, and payroll management in St. Catharines.">St. Catharines, ON</div>
             
             <!-- BC Cities (20) -->
@@ -3533,11 +3555,11 @@ const getLocationsSelectorSection = (isHealthcare = false) => {
             <div class="loc-item" data-prov="bc" data-city="Nanaimo" data-desc="CRA audit assistance, business setup, and monthly bookkeeping in Nanaimo." style="display: none;">Nanaimo, BC</div>
             <div class="loc-item" data-prov="bc" data-city="Kamloops" data-desc="Experienced corporate tax filing and business accounting in Kamloops." style="display: none;">Kamloops, BC</div>
             <div class="loc-item" data-prov="bc" data-city="Chilliwack" data-desc="Quality accounting, payroll management, and corporate tax consulting in Chilliwack." style="display: none;">Chilliwack, BC</div>
-            <div class="loc-item" data-prov="bc" data-city="North Vancouver" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in North Vancouver." style="display: none;">N. Vancouver, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="North Vancouver" data-desc="Full-service bookkeeping, corporate tax preparation, and local Accounting Firm solutions in North Vancouver." style="display: none;">N. Vancouver, BC</div>
             <div class="loc-item" data-prov="bc" data-city="Prince George" data-desc="Corporate tax audits, business tax return prep, and payroll management in Prince George." style="display: none;">Prince George, BC</div>
             <div class="loc-item" data-prov="bc" data-city="Vernon" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Vernon." style="display: none;">Vernon, BC</div>
             <div class="loc-item" data-prov="bc" data-city="Port Coquitlam" data-desc="Professional tax services and payroll administration in Port Coquitlam." style="display: none;">Port Coquitlam, BC</div>
-            <div class="loc-item" data-prov="bc" data-city="Maple Ridge" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Maple Ridge." style="display: none;">Maple Ridge, BC</div>
+            <div class="loc-item" data-prov="bc" data-city="Maple Ridge" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local Accounting Firm accounting in Maple Ridge." style="display: none;">Maple Ridge, BC</div>
             <div class="loc-item" data-prov="bc" data-city="New Westminster" data-desc="Certified tax returns, corporate filings, and general ledger support services in New Westminster." style="display: none;">New West., BC</div>
             <div class="loc-item" data-prov="bc" data-city="Penticton" data-desc="Expert tax planning, bookkeeping, and business return services in Penticton." style="display: none;">Penticton, BC</div>
             
@@ -3548,20 +3570,20 @@ const getLocationsSelectorSection = (isHealthcare = false) => {
             <div class="loc-item" data-prov="alberta" data-city="Lethbridge" data-desc="Quality bookkeeping, payroll, and business tax return services in Lethbridge." style="display: none;">Lethbridge, AB</div>
             <div class="loc-item" data-prov="alberta" data-city="Wood Buffalo" data-desc="Corporate tax returns, accounting, and compliance in Wood Buffalo." style="display: none;">Wood Buffalo, AB</div>
             <div class="loc-item" data-prov="alberta" data-city="Medicine Hat" data-desc="Bookkeeping, payroll, and business tax filing in Medicine Hat." style="display: none;">Medicine Hat, AB</div>
-            <div class="loc-item" data-prov="alberta" data-city="Grande Prairie" data-desc="CPA accounting, corporate tax preparation, and bookkeeping in Grande Prairie." style="display: none;">Grande Prairie, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Grande Prairie" data-desc="Accounting Firm accounting, corporate tax preparation, and bookkeeping in Grande Prairie." style="display: none;">Grande Prairie, AB</div>
             <div class="loc-item" data-prov="alberta" data-city="Airdrie" data-desc="Professional tax services and payroll administration in Airdrie." style="display: none;">Airdrie, AB</div>
-            <div class="loc-item" data-prov="alberta" data-city="Spruce Grove" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Spruce Grove." style="display: none;">Spruce Grove, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Spruce Grove" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local Accounting Firm accounting in Spruce Grove." style="display: none;">Spruce Grove, AB</div>
             <div class="loc-item" data-prov="alberta" data-city="Leduc" data-desc="Certified tax returns, corporate filings, and general ledger support services in Leduc." style="display: none;">Leduc, AB</div>
             <div class="loc-item" data-prov="alberta" data-city="Fort Saskatchewan" data-desc="Expert tax planning, bookkeeping, and business return services in Fort Saskatchewan." style="display: none;">Fort Sask., AB</div>
             <div class="loc-item" data-prov="alberta" data-city="Lloydminster" data-desc="Corporate tax preparation, payroll management, and bookkeeping in Lloydminster." style="display: none;">Lloydminster, AB</div>
-            <div class="loc-item" data-prov="alberta" data-city="Camrose" data-desc="Professional bookkeeping, corporate tax preparation, and local CPA solutions in Camrose." style="display: none;">Camrose, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Camrose" data-desc="Professional bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Camrose." style="display: none;">Camrose, AB</div>
             <div class="loc-item" data-prov="alberta" data-city="Brooks" data-desc="Reliable corporate tax audits, payroll services, and bookkeeping near Brooks." style="display: none;">Brooks, AB</div>
             <div class="loc-item" data-prov="alberta" data-city="Wetaskiwin" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Wetaskiwin." style="display: none;">Wetaskiwin, AB</div>
             <div class="loc-item" data-prov="alberta" data-city="Canmore" data-desc="Top-rated tax planners, corporate filing, and Virtual CFO support in Canmore." style="display: none;">Canmore, AB</div>
             <div class="loc-item" data-prov="alberta" data-city="Cochrane" data-desc="CRA audit assistance, business setup, and monthly bookkeeping in Cochrane." style="display: none;">Cochrane, AB</div>
             <div class="loc-item" data-prov="alberta" data-city="Okotoks" data-desc="Experienced corporate tax filing and business accounting in Okotoks." style="display: none;">Okotoks, AB</div>
             <div class="loc-item" data-prov="alberta" data-city="High River" data-desc="Quality accounting, payroll management, and corporate tax consulting in High River." style="display: none;">High River, AB</div>
-            <div class="loc-item" data-prov="alberta" data-city="Stony Plain" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Stony Plain." style="display: none;">Stony Plain, AB</div>
+            <div class="loc-item" data-prov="alberta" data-city="Stony Plain" data-desc="Full-service bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Stony Plain." style="display: none;">Stony Plain, AB</div>
             
             <!-- Quebec Cities (20) -->
             <div class="loc-item" data-prov="quebec" data-city="Montreal" data-desc="Corporate tax planning, sales tax compliance, and Virtual CFO bookkeeping services in Montreal." style="display: none;">Montreal, QC</div>
@@ -3573,39 +3595,39 @@ const getLocationsSelectorSection = (isHealthcare = false) => {
             <div class="loc-item" data-prov="quebec" data-city="Saguenay" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Saguenay." style="display: none;">Saguenay, QC</div>
             <div class="loc-item" data-prov="quebec" data-city="Levis" data-desc="Experienced corporate tax filing and business accounting in Lévis." style="display: none;">Lévis, QC</div>
             <div class="loc-item" data-prov="quebec" data-city="Trois-Rivieres" data-desc="Quality accounting, payroll management, and corporate tax consulting in Trois-Rivières." style="display: none;">Trois-Rivières, QC</div>
-            <div class="loc-item" data-prov="quebec" data-city="Terrebonne" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Terrebonne." style="display: none;">Terrebonne, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Terrebonne" data-desc="Full-service bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Terrebonne." style="display: none;">Terrebonne, QC</div>
             <div class="loc-item" data-prov="quebec" data-city="Saint-Jean-sur-Richelieu" data-desc="Corporate tax audits, business tax return prep, and payroll management in Saint-Jean-sur-Richelieu." style="display: none;">St-Jean-sur-Rich., QC</div>
             <div class="loc-item" data-prov="quebec" data-city="Brossard" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Brossard." style="display: none;">Brossard, QC</div>
             <div class="loc-item" data-prov="quebec" data-city="Repentigny" data-desc="Professional tax services and payroll administration in Repentigny." style="display: none;">Repentigny, QC</div>
-            <div class="loc-item" data-prov="quebec" data-city="Saint-Jerome" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Saint-Jérôme." style="display: none;">St-Jérôme, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Saint-Jerome" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local Accounting Firm accounting in Saint-Jérôme." style="display: none;">St-Jérôme, QC</div>
             <div class="loc-item" data-prov="quebec" data-city="Granby" data-desc="Certified tax returns, corporate filings, and general ledger support services in Granby." style="display: none;">Granby, QC</div>
             <div class="loc-item" data-prov="quebec" data-city="Drummondville" data-desc="Expert tax planning, bookkeeping, and business return services in Drummondville." style="display: none;">Drummondville, QC</div>
             <div class="loc-item" data-prov="quebec" data-city="Saint-Hyacinthe" data-desc="Corporate tax preparation, payroll management, and bookkeeping in Saint-Hyacinthe." style="display: none;">St-Hyacinthe, QC</div>
-            <div class="loc-item" data-prov="quebec" data-city="Shawinigan" data-desc="Professional bookkeeping, corporate tax preparation, and local CPA solutions in Shawinigan." style="display: none;">Shawinigan, QC</div>
+            <div class="loc-item" data-prov="quebec" data-city="Shawinigan" data-desc="Professional bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Shawinigan." style="display: none;">Shawinigan, QC</div>
             <div class="loc-item" data-prov="quebec" data-city="Beloeil" data-desc="Reliable corporate tax audits, payroll services, and bookkeeping near Beloeil." style="display: none;">Beloeil, QC</div>
             <div class="loc-item" data-prov="quebec" data-city="Blainville" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Blainville." style="display: none;">Blainville, QC</div>
             
             <!-- Manitoba Cities (20) -->
-            <div class="loc-item" data-prov="manitoba" data-city="Winnipeg" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Winnipeg." style="display: none;">Winnipeg, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Winnipeg" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local Accounting Firm accounting in Winnipeg." style="display: none;">Winnipeg, MB</div>
             <div class="loc-item" data-prov="manitoba" data-city="Brandon" data-desc="Local business accounting and corporate tax return services in Brandon." style="display: none;">Brandon, MB</div>
             <div class="loc-item" data-prov="manitoba" data-city="Steinbach" data-desc="Experienced corporate tax filing and business accounting in Steinbach." style="display: none;">Steinbach, MB</div>
             <div class="loc-item" data-prov="manitoba" data-city="Portage la Prairie" data-desc="Quality bookkeeping, payroll, and business tax return services in Portage la Prairie." style="display: none;">Portage la Prairie, MB</div>
             <div class="loc-item" data-prov="manitoba" data-city="Thompson" data-desc="Corporate tax returns, accounting, and compliance in Thompson." style="display: none;">Thompson, MB</div>
             <div class="loc-item" data-prov="manitoba" data-city="Winkler" data-desc="Bookkeeping, payroll, and business tax filing in Winkler." style="display: none;">Winkler, MB</div>
-            <div class="loc-item" data-prov="manitoba" data-city="Selkirk" data-desc="CPA accounting, corporate tax preparation, and bookkeeping in Selkirk." style="display: none;">Selkirk, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Selkirk" data-desc="Accounting Firm accounting, corporate tax preparation, and bookkeeping in Selkirk." style="display: none;">Selkirk, MB</div>
             <div class="loc-item" data-prov="manitoba" data-city="Dauphin" data-desc="Professional tax services and payroll administration in Dauphin." style="display: none;">Dauphin, MB</div>
-            <div class="loc-item" data-prov="manitoba" data-city="Morden" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Morden." style="display: none;">Morden, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Morden" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local Accounting Firm accounting in Morden." style="display: none;">Morden, MB</div>
             <div class="loc-item" data-prov="manitoba" data-city="The Pas" data-desc="Certified tax returns, corporate filings, and general ledger support services in The Pas." style="display: none;">The Pas, MB</div>
             <div class="loc-item" data-prov="manitoba" data-city="Flin Flon" data-desc="Expert tax planning, bookkeeping, and business return services in Flin Flon." style="display: none;">Flin Flon, MB</div>
             <div class="loc-item" data-prov="manitoba" data-city="Stonewall" data-desc="Corporate tax preparation, payroll management, and bookkeeping in Stonewall." style="display: none;">Stonewall, MB</div>
-            <div class="loc-item" data-prov="manitoba" data-city="Niverville" data-desc="Professional bookkeeping, corporate tax preparation, and local CPA solutions in Niverville." style="display: none;">Niverville, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Niverville" data-desc="Professional bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Niverville." style="display: none;">Niverville, MB</div>
             <div class="loc-item" data-prov="manitoba" data-city="Neepawa" data-desc="Reliable corporate tax audits, payroll services, and bookkeeping near Neepawa." style="display: none;">Neepawa, MB</div>
             <div class="loc-item" data-prov="manitoba" data-city="Oakbank" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Oakbank." style="display: none;">Oakbank, MB</div>
             <div class="loc-item" data-prov="manitoba" data-city="Altona" data-desc="Top-rated tax planners, corporate filing, and Virtual CFO support in Altona." style="display: none;">Altona, MB</div>
             <div class="loc-item" data-prov="manitoba" data-city="Swan River" data-desc="CRA audit assistance, business setup, and monthly bookkeeping in Swan River." style="display: none;">Swan River, MB</div>
             <div class="loc-item" data-prov="manitoba" data-city="Virden" data-desc="Experienced corporate tax filing and business accounting in Virden." style="display: none;">Virden, MB</div>
             <div class="loc-item" data-prov="manitoba" data-city="Minnedosa" data-desc="Quality accounting, payroll management, and corporate tax consulting in Minnedosa." style="display: none;">Minnedosa, MB</div>
-            <div class="loc-item" data-prov="manitoba" data-city="Beausejour" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Beausejour." style="display: none;">Beausejour, MB</div>
+            <div class="loc-item" data-prov="manitoba" data-city="Beausejour" data-desc="Full-service bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Beausejour." style="display: none;">Beausejour, MB</div>
             
             <!-- Saskatchewan Cities (20) -->
             <div class="loc-item" data-prov="saskatchewan" data-city="Saskatoon" data-desc="Certified tax returns, corporate filings, and general ledger support services in Saskatoon." style="display: none;">Saskatoon, SK</div>
@@ -3614,20 +3636,20 @@ const getLocationsSelectorSection = (isHealthcare = false) => {
             <div class="loc-item" data-prov="saskatchewan" data-city="Moose Jaw" data-desc="Quality bookkeeping, payroll, and business tax return services in Moose Jaw." style="display: none;">Moose Jaw, SK</div>
             <div class="loc-item" data-prov="saskatchewan" data-city="Swift Current" data-desc="Corporate tax returns, accounting, and compliance in Swift Current." style="display: none;">Swift Current, SK</div>
             <div class="loc-item" data-prov="saskatchewan" data-city="Yorkton" data-desc="Bookkeeping, payroll, and business tax filing in Yorkton." style="display: none;">Yorkton, SK</div>
-            <div class="loc-item" data-prov="saskatchewan" data-city="North Battleford" data-desc="CPA accounting, corporate tax preparation, and bookkeeping in North Battleford." style="display: none;">N. Battleford, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="North Battleford" data-desc="Accounting Firm accounting, corporate tax preparation, and bookkeeping in North Battleford." style="display: none;">N. Battleford, SK</div>
             <div class="loc-item" data-prov="saskatchewan" data-city="Estevan" data-desc="Professional tax services and payroll administration in Estevan." style="display: none;">Estevan, SK</div>
-            <div class="loc-item" data-prov="saskatchewan" data-city="Weyburn" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Weyburn." style="display: none;">Weyburn, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Weyburn" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local Accounting Firm accounting in Weyburn." style="display: none;">Weyburn, SK</div>
             <div class="loc-item" data-prov="saskatchewan" data-city="Martensville" data-desc="Certified tax returns, corporate filings, and general ledger support services in Martensville." style="display: none;">Martensville, SK</div>
             <div class="loc-item" data-prov="saskatchewan" data-city="Warman" data-desc="Expert tax planning, bookkeeping, and business return services in Warman." style="display: none;">Warman, SK</div>
             <div class="loc-item" data-prov="saskatchewan" data-city="Melfort" data-desc="Corporate tax preparation, payroll management, and bookkeeping in Melfort." style="display: none;">Melfort, SK</div>
-            <div class="loc-item" data-prov="saskatchewan" data-city="Humboldt" data-desc="Professional bookkeeping, corporate tax preparation, and local CPA solutions in Humboldt." style="display: none;">Humboldt, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Humboldt" data-desc="Professional bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Humboldt." style="display: none;">Humboldt, SK</div>
             <div class="loc-item" data-prov="saskatchewan" data-city="Meadow Lake" data-desc="Reliable corporate tax audits, payroll services, and bookkeeping near Meadow Lake." style="display: none;">Meadow Lake, SK</div>
             <div class="loc-item" data-prov="saskatchewan" data-city="Melville" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Melville." style="display: none;">Melville, SK</div>
             <div class="loc-item" data-prov="saskatchewan" data-city="Kindersley" data-desc="Top-rated tax planners, corporate filing, and Virtual CFO support in Kindersley." style="display: none;">Kindersley, SK</div>
             <div class="loc-item" data-prov="saskatchewan" data-city="Nipawin" data-desc="CRA audit assistance, business setup, and monthly bookkeeping in Nipawin." style="display: none;">Nipawin, SK</div>
             <div class="loc-item" data-prov="saskatchewan" data-city="Battleford" data-desc="Experienced corporate tax filing and business accounting in Battleford." style="display: none;">Battleford, SK</div>
             <div class="loc-item" data-prov="saskatchewan" data-city="Tisdale" data-desc="Quality accounting, payroll management, and corporate tax consulting in Tisdale." style="display: none;">Tisdale, SK</div>
-            <div class="loc-item" data-prov="saskatchewan" data-city="Outlook" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Outlook." style="display: none;">Outlook, SK</div>
+            <div class="loc-item" data-prov="saskatchewan" data-city="Outlook" data-desc="Full-service bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Outlook." style="display: none;">Outlook, SK</div>
             
             <!-- Nova Scotia Cities (20) -->
             <div class="loc-item" data-prov="novascotia" data-city="Halifax" data-desc="Professional bookkeeping, corporate tax returns, and Virtual CFO advisory services in Halifax." style="display: none;">Halifax, NS</div>
@@ -3636,20 +3658,20 @@ const getLocationsSelectorSection = (isHealthcare = false) => {
             <div class="loc-item" data-prov="novascotia" data-city="Truro" data-desc="Quality bookkeeping, payroll, and business tax return services in Truro." style="display: none;">Truro, NS</div>
             <div class="loc-item" data-prov="novascotia" data-city="New Glasgow" data-desc="Corporate tax returns, accounting, and compliance in New Glasgow." style="display: none;">New Glasgow, NS</div>
             <div class="loc-item" data-prov="novascotia" data-city="Glace Bay" data-desc="Bookkeeping, payroll, and business tax filing in Glace Bay." style="display: none;">Glace Bay, NS</div>
-            <div class="loc-item" data-prov="novascotia" data-city="Kentville" data-desc="CPA accounting, corporate tax preparation, and bookkeeping in Kentville." style="display: none;">Kentville, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Kentville" data-desc="Accounting Firm accounting, corporate tax preparation, and bookkeeping in Kentville." style="display: none;">Kentville, NS</div>
             <div class="loc-item" data-prov="novascotia" data-city="Amherst" data-desc="Professional tax services and payroll administration in Amherst." style="display: none;">Amherst, NS</div>
-            <div class="loc-item" data-prov="novascotia" data-city="Bridgewater" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Bridgewater." style="display: none;">Bridgewater, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Bridgewater" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local Accounting Firm accounting in Bridgewater." style="display: none;">Bridgewater, NS</div>
             <div class="loc-item" data-prov="novascotia" data-city="Yarmouth" data-desc="Certified tax returns, corporate filings, and general ledger support services in Yarmouth." style="display: none;">Yarmouth, NS</div>
             <div class="loc-item" data-prov="novascotia" data-city="Greenwood" data-desc="Expert tax planning, bookkeeping, and business return services in Greenwood." style="display: none;">Greenwood, NS</div>
             <div class="loc-item" data-prov="novascotia" data-city="Antigonish" data-desc="Corporate tax preparation, payroll management, and bookkeeping in Antigonish." style="display: none;">Antigonish, NS</div>
-            <div class="loc-item" data-prov="novascotia" data-city="Wolfville" data-desc="Professional bookkeeping, corporate tax preparation, and local CPA solutions in Wolfville." style="display: none;">Wolfville, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Wolfville" data-desc="Professional bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Wolfville." style="display: none;">Wolfville, NS</div>
             <div class="loc-item" data-prov="novascotia" data-city="Windsor" data-desc="Reliable corporate tax audits, payroll services, and bookkeeping near Windsor." style="display: none;">Windsor, NS</div>
             <div class="loc-item" data-prov="novascotia" data-city="Stellarton" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Stellarton." style="display: none;">Stellarton, NS</div>
             <div class="loc-item" data-prov="novascotia" data-city="Springhill" data-desc="Top-rated tax planners, corporate filing, and Virtual CFO support in Springhill." style="display: none;">Springhill, NS</div>
             <div class="loc-item" data-prov="novascotia" data-city="Pictou" data-desc="CRA audit assistance, business setup, and monthly bookkeeping in Pictou." style="display: none;">Pictou, NS</div>
             <div class="loc-item" data-prov="novascotia" data-city="Port Hawkesbury" data-desc="Experienced corporate tax filing and business accounting in Port Hawkesbury." style="display: none;">Port Hawkesbury, NS</div>
             <div class="loc-item" data-prov="novascotia" data-city="Digby" data-desc="Quality accounting, payroll management, and corporate tax consulting in Digby." style="display: none;">Digby, NS</div>
-            <div class="loc-item" data-prov="novascotia" data-city="Lunenburg" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Lunenburg." style="display: none;">Lunenburg, NS</div>
+            <div class="loc-item" data-prov="novascotia" data-city="Lunenburg" data-desc="Full-service bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Lunenburg." style="display: none;">Lunenburg, NS</div>
             
             <!-- New Brunswick Cities (20) -->
             <div class="loc-item" data-prov="newbrunswick" data-city="Moncton" data-desc="HST/GST compliance netfiling, payroll services, and corporate accounting in Moncton." style="display: none;">Moncton, NB</div>
@@ -3662,15 +3684,15 @@ const getLocationsSelectorSection = (isHealthcare = false) => {
             <div class="loc-item" data-prov="newbrunswick" data-city="Edmundston" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Edmundston." style="display: none;">Edmundston, NB</div>
             <div class="loc-item" data-prov="newbrunswick" data-city="Bathurst" data-desc="Experienced corporate tax filing and business accounting in Bathurst." style="display: none;">Bathurst, NB</div>
             <div class="loc-item" data-prov="newbrunswick" data-city="Rothesay" data-desc="Quality accounting, payroll management, and corporate tax consulting in Rothesay." style="display: none;">Rothesay, NB</div>
-            <div class="loc-item" data-prov="newbrunswick" data-city="Campbellton" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Campbellton." style="display: none;">Campbellton, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Campbellton" data-desc="Full-service bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Campbellton." style="display: none;">Campbellton, NB</div>
             <div class="loc-item" data-prov="newbrunswick" data-city="Oromocto" data-desc="Corporate tax audits, business tax return prep, and payroll management in Oromocto." style="display: none;">Oromocto, NB</div>
             <div class="loc-item" data-prov="newbrunswick" data-city="Grand Falls" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Grand Falls." style="display: none;">Grand Falls, NB</div>
             <div class="loc-item" data-prov="newbrunswick" data-city="Shediac" data-desc="Professional tax services and payroll administration in Shediac." style="display: none;">Shediac, NB</div>
-            <div class="loc-item" data-prov="newbrunswick" data-city="Sackville" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Sackville." style="display: none;">Sackville, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Sackville" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local Accounting Firm accounting in Sackville." style="display: none;">Sackville, NB</div>
             <div class="loc-item" data-prov="newbrunswick" data-city="Woodstock" data-desc="Certified tax returns, corporate filings, and general ledger support services in Woodstock." style="display: none;">Woodstock, NB</div>
             <div class="loc-item" data-prov="newbrunswick" data-city="Caraquet" data-desc="Expert tax planning, bookkeeping, and business return services in Caraquet." style="display: none;">Caraquet, NB</div>
             <div class="loc-item" data-prov="newbrunswick" data-city="Saint-Stephen" data-desc="Corporate tax preparation, payroll management, and bookkeeping in Saint-Stephen." style="display: none;">St. Stephen, NB</div>
-            <div class="loc-item" data-prov="newbrunswick" data-city="Sussex" data-desc="Professional bookkeeping, corporate tax preparation, and local CPA solutions in Sussex." style="display: none;">Sussex, NB</div>
+            <div class="loc-item" data-prov="newbrunswick" data-city="Sussex" data-desc="Professional bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Sussex." style="display: none;">Sussex, NB</div>
             <div class="loc-item" data-prov="newbrunswick" data-city="Hampton" data-desc="Reliable corporate tax audits, payroll services, and bookkeeping near Hampton." style="display: none;">Hampton, NB</div>
             
             <!-- PEI Cities (20) -->
@@ -3680,42 +3702,42 @@ const getLocationsSelectorSection = (isHealthcare = false) => {
             <div class="loc-item" data-prov="pei" data-city="Cornwall" data-desc="Professional bookkeeping, payroll setups, and tax returns in Cornwall." style="display: none;">Cornwall, PE</div>
             <div class="loc-item" data-prov="pei" data-city="Montague" data-desc="Experienced corporate tax filing and business accounting in Montague." style="display: none;">Montague, PE</div>
             <div class="loc-item" data-prov="pei" data-city="Kensington" data-desc="Quality accounting, payroll management, and corporate tax consulting in Kensington." style="display: none;">Kensington, PE</div>
-            <div class="loc-item" data-prov="pei" data-city="Souris" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Souris." style="display: none;">Souris, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Souris" data-desc="Full-service bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Souris." style="display: none;">Souris, PE</div>
             <div class="loc-item" data-prov="pei" data-city="Alberton" data-desc="Corporate tax audits, business tax return prep, and payroll management in Alberton." style="display: none;">Alberton, PE</div>
             <div class="loc-item" data-prov="pei" data-city="Tignish" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Tignish." style="display: none;">Tignish, PE</div>
             <div class="loc-item" data-prov="pei" data-city="Georgetown" data-desc="Top-rated tax planners, corporate filing, and Virtual CFO support in Georgetown." style="display: none;">Georgetown, PE</div>
             <div class="loc-item" data-prov="pei" data-city="O'Leary" data-desc="CRA audit assistance, business setup, and monthly bookkeeping in O'Leary." style="display: none;">O'Leary, PE</div>
             <div class="loc-item" data-prov="pei" data-city="Borden-Carleton" data-desc="Experienced corporate tax filing and business accounting in Borden-Carleton." style="display: none;">Borden-Carleton, PE</div>
             <div class="loc-item" data-prov="pei" data-city="Crapaud" data-desc="Quality accounting, payroll management, and corporate tax consulting in Crapaud." style="display: none;">Crapaud, PE</div>
-            <div class="loc-item" data-prov="pei" data-city="Wellington" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Wellington." style="display: none;">Wellington, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Wellington" data-desc="Full-service bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Wellington." style="display: none;">Wellington, PE</div>
             <div class="loc-item" data-prov="pei" data-city="Miscouche" data-desc="Corporate tax audits, business tax return prep, and payroll management in Miscouche." style="display: none;">Miscouche, PE</div>
             <div class="loc-item" data-prov="pei" data-city="Kinkora" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Kinkora." style="display: none;">Kinkora, PE</div>
             <div class="loc-item" data-prov="pei" data-city="St. Peters Bay" data-desc="Professional tax services and payroll administration in St. Peters Bay." style="display: none;">St. Peters Bay, PE</div>
-            <div class="loc-item" data-prov="pei" data-city="Tyne Valley" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Tyne Valley." style="display: none;">Tyne Valley, PE</div>
+            <div class="loc-item" data-prov="pei" data-city="Tyne Valley" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local Accounting Firm accounting in Tyne Valley." style="display: none;">Tyne Valley, PE</div>
             <div class="loc-item" data-prov="pei" data-city="Hunter River" data-desc="Certified tax returns, corporate filings, and general ledger support services in Hunter River." style="display: none;">Hunter River, PE</div>
             <div class="loc-item" data-prov="pei" data-city="Mount Stewart" data-desc="Expert tax planning, bookkeeping, and business return services in Mount Stewart." style="display: none;">Mount Stewart, PE</div>
             
             <!-- Newfoundland Cities (20) -->
-            <div class="loc-item" data-prov="newfoundland" data-city="St. John's" data-desc="CPA accounting, corporate tax preparation, and bookkeeping in St. John's." style="display: none;">St. John's, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="St. John's" data-desc="Accounting Firm accounting, corporate tax preparation, and bookkeeping in St. John's." style="display: none;">St. John's, NL</div>
             <div class="loc-item" data-prov="newfoundland" data-city="Mount Pearl" data-desc="Professional tax services and payroll administration in Mount Pearl." style="display: none;">Mount Pearl, NL</div>
             <div class="loc-item" data-prov="newfoundland" data-city="Corner Brook" data-desc="Experienced corporate tax filing and business accounting in Corner Brook." style="display: none;">Corner Brook, NL</div>
             <div class="loc-item" data-prov="newfoundland" data-city="Conception Bay South" data-desc="Quality bookkeeping, payroll, and business tax return services in Conception Bay South." style="display: none;">Conception Bay S., NL</div>
             <div class="loc-item" data-prov="newfoundland" data-city="Paradise" data-desc="Corporate tax returns, accounting, and compliance in Paradise." style="display: none;">Paradise, NL</div>
             <div class="loc-item" data-prov="newfoundland" data-city="Gander" data-desc="Bookkeeping, payroll, and business tax filing in Gander." style="display: none;">Gander, NL</div>
-            <div class="loc-item" data-prov="newfoundland" data-city="Grand Falls-Windsor" data-desc="CPA accounting, corporate tax preparation, and bookkeeping in Grand Falls-Windsor." style="display: none;">Grand Falls, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Grand Falls-Windsor" data-desc="Accounting Firm accounting, corporate tax preparation, and bookkeeping in Grand Falls-Windsor." style="display: none;">Grand Falls, NL</div>
             <div class="loc-item" data-prov="newfoundland" data-city="Torbay" data-desc="Professional tax services and payroll administration in Torbay." style="display: none;">Torbay, NL</div>
-            <div class="loc-item" data-prov="newfoundland" data-city="Labrador City" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local CPA accounting in Labrador City." style="display: none;">Labrador City, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Labrador City" data-desc="Comprehensive corporate T2 returns, sales tax filings, and local Accounting Firm accounting in Labrador City." style="display: none;">Labrador City, NL</div>
             <div class="loc-item" data-prov="newfoundland" data-city="Happy Valley-Goose Bay" data-desc="Certified tax returns, corporate filings, and general ledger support services in Happy Valley-Goose Bay." style="display: none;">Goose Bay, NL</div>
             <div class="loc-item" data-prov="newfoundland" data-city="Stephenville" data-desc="Expert tax planning, bookkeeping, and business return services in Stephenville." style="display: none;">Stephenville, NL</div>
             <div class="loc-item" data-prov="newfoundland" data-city="Clarenville" data-desc="Corporate tax preparation, payroll management, and bookkeeping in Clarenville." style="display: none;">Clarenville, NL</div>
-            <div class="loc-item" data-prov="newfoundland" data-city="Bay Roberts" data-desc="Professional bookkeeping, corporate tax preparation, and local CPA solutions in Bay Roberts." style="display: none;">Bay Roberts, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Bay Roberts" data-desc="Professional bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Bay Roberts." style="display: none;">Bay Roberts, NL</div>
             <div class="loc-item" data-prov="newfoundland" data-city="Marystown" data-desc="Reliable corporate tax audits, payroll services, and bookkeeping near Marystown." style="display: none;">Marystown, NL</div>
             <div class="loc-item" data-prov="newfoundland" data-city="Deer Lake" data-desc="CRA audit defense, business setup, and monthly bookkeeping in Deer Lake." style="display: none;">Deer Lake, NL</div>
             <div class="loc-item" data-prov="newfoundland" data-city="Carbonear" data-desc="Top-rated tax planners, corporate filing, and Virtual CFO support in Carbonear." style="display: none;">Carbonear, NL</div>
             <div class="loc-item" data-prov="newfoundland" data-city="Placentia" data-desc="CRA audit assistance, business setup, and monthly bookkeeping in Placentia." style="display: none;">Placentia, NL</div>
             <div class="loc-item" data-prov="newfoundland" data-city="Holyrood" data-desc="Experienced corporate tax filing and business accounting in Holyrood." style="display: none;">Holyrood, NL</div>
             <div class="loc-item" data-prov="newfoundland" data-city="Channel-Port aux Basques" data-desc="Quality accounting, payroll management, and corporate tax consulting in Channel-Port aux Basques." style="display: none;">Port aux Basques, NL</div>
-            <div class="loc-item" data-prov="newfoundland" data-city="Bishops Falls" data-desc="Full-service bookkeeping, corporate tax preparation, and local CPA solutions in Bishop's Falls." style="display: none;">Bishop's Falls, NL</div>
+            <div class="loc-item" data-prov="newfoundland" data-city="Bishops Falls" data-desc="Full-service bookkeeping, corporate tax preparation, and local Accounting Firm solutions in Bishop's Falls." style="display: none;">Bishop's Falls, NL</div>
           </div>
         </div>
 
@@ -3727,8 +3749,8 @@ const getLocationsSelectorSection = (isHealthcare = false) => {
               <h3 id="loc-card-title" style="font-size: 1.8rem; font-weight: 800; margin-top: 15px; margin-bottom: 10px; color: var(--white);"><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> Toronto, ON</h3>
               <p id="loc-card-desc" style="font-size: 0.95rem; line-height: 1.6; color: var(--white); opacity: 0.9; margin-bottom: 25px;">
                 ${isHealthcare 
-                  ? 'Expert clinic corporate tax filing, practitioner T1 returns, and comprehensive medical CPA accounting in Toronto.' 
-                  : 'Expert corporate tax filing, personal returns, and comprehensive CPA accounting services in Toronto.'}
+                  ? 'Expert clinic corporate tax filing, practitioner T1 returns, and comprehensive medical Accounting Firm accounting in Toronto.' 
+                  : 'Expert corporate tax filing, personal returns, and comprehensive Accounting Firm accounting services in Toronto.'}
               </p>
               <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 20px; font-size: 0.9rem; margin-bottom: 25px;">
                 <div style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="width: 20px; color: var(--primary);"></i> Full Province-Wide Service Coverage</div>
@@ -3769,12 +3791,12 @@ const getLocationsSelectorSection = (isHealthcare = false) => {
               .replace(/small business/gi, 'medical practice')
               .replace(/accounting services/gi, 'clinic accounting services')
               .replace(/accounting systems/gi, 'clinical accounting systems')
-              .replace(/CPA accounting services/gi, 'medical CPA accounting')
-              .replace(/CPA solutions/gi, 'medical CPA solutions')
+              .replace(/Accounting Firm accounting services/gi, 'medical Accounting Firm accounting')
+              .replace(/Accounting Firm solutions/gi, 'medical Accounting Firm solutions')
               .replace(/tax planners/gi, 'medical tax planners')
               .replace(/tax planning/gi, 'medical tax planning')
               .replace(/tax accountants/gi, 'medical tax accountants')
-              .replace(/CPA services/gi, 'medical CPA services')
+              .replace(/Accounting Firm services/gi, 'medical Accounting Firm services')
               .replace(/company filings/gi, 'MPC clinic filings')
               .replace(/personal returns/gi, 'practitioner T1 returns');
           }
@@ -4477,7 +4499,7 @@ services.forEach(s => {
     t3Foot: 'Ideal for large corporations and high-revenue businesses needing strategic tax advisory, compliance, and CRA audit support.'
   } : {
     title: `${s.name} – Service Pricing Tiers`,
-    subtitle: `Providing transparent fixed pricing and high-quality CPA compliance for your ${s.name.toLowerCase()} requirements.`,
+    subtitle: `Providing transparent fixed pricing and high-quality Accounting Firm compliance for your ${s.name.toLowerCase()} requirements.`,
     t1Name: `Basic ${s.name}`,
     t1Price: '$150', t1Unit: '/monthly',
     t1Coverage: `Standard bookkeeping and ${s.name.toLowerCase()} preparation.`,
@@ -4493,7 +4515,7 @@ services.forEach(s => {
     t2Deliv: [
       `All features of Basic ${s.name.toLowerCase()}`,
       'GST/HST tracking & reconciliations support',
-      'Direct CPA communication portal access'
+      'Direct Accounting Firm communication portal access'
     ],
     t2Foot: 'Perfect for established small businesses.',
     t3Name: `Premium ${s.name}`,
@@ -4510,7 +4532,7 @@ services.forEach(s => {
   // Custom FAQs
   const serviceFaqs = isCorporateTax ? [
     { q: "What makes Tax Filings Canada’s corporate tax services unique?", a: "Tax Filings Canada offers a personalized, strategic approach to corporate tax planning, ensuring full compliance and maximizing tax benefits for your business." },
-    { q: "How do you ensure tax compliance for my business?", a: "All filings are supervised or compiled by senior CPAs with deep experience in Canadian tax code and CRA guidelines." },
+    { q: "How do you ensure tax compliance for my business?", a: "All filings are supervised or compiled by senior Accounting Firms with deep experience in Canadian tax code and CRA guidelines." },
     { q: "Can Tax Filings Canada help with corporate tax audits?", a: "Absolutely! We offer support during tax audits, helping you navigate the process with confidence and minimizing any potential tax liabilities." },
     { q: "How do you assist with tax planning for corporations?", a: "We structure shareholder pay schemes, holding companies, and capital depreciations to minimize overall tax rates." },
     { q: "When is my T2 corporate tax return due?", a: "Your T2 corporate tax return must be filed within six months of your corporation's fiscal year-end. However, if you owe any taxes, the payment balance deadline is usually two or three months after your year-end." },
@@ -4758,7 +4780,7 @@ services.forEach(s => {
             \${getMeetingCtaBox(null)}
           </div>
           <div class="intro-img-container">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop" alt="A Team of CPA Experts" class="intro-img">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop" alt="A Team of Accounting Firm Experts" class="intro-img">
           </div>
         </div>
       </div>
@@ -5044,7 +5066,7 @@ industries.forEach(ind => {
     { q: 'How do income tax and benefits apply to those in healthcare?', a: 'Healthcare workers are subject to federal and provincial brackets. If incorporated, you can defer taxes by retaining earnings in the corporation and choosing between salary or dividend payouts.' },
     { q: 'What does Risk-FREE Tax Filing mean for healthcare practitioners?', a: 'It means we prepare all returns, compilations, and GST filings first. You review and sign off on the deliverables before making any payment. We EFILE to the CRA only after payment is cleared.' },
     { q: 'How do expat tax services support Canadian healthcare workers abroad?', a: 'We help doctors, nurses, and researchers working abroad determine their residency status, file tax treaty disclosures, and declare foreign income accurately.' },
-    { q: 'Why should healthcare professionals work with a trusted tax accountant?', a: 'Healthcare taxes involve complex rules around GST/HST exemptions for medical services, overhead sharing agreements, and professional corporation regulations. Certified tax CPAs help protect you from audits and minimize liabilities.' }
+    { q: 'Why should healthcare professionals work with a trusted tax accountant?', a: 'Healthcare taxes involve complex rules around GST/HST exemptions for medical services, overhead sharing agreements, and professional corporation regulations. Certified tax Accounting Firms help protect you from audits and minimize liabilities.' }
   ] : [
     { q: `When are tax returns due in Canada for ${ind.name} businesses?`, a: `For corporations in the ${ind.name.toLowerCase()} sector, T2 tax filings are due within 6 months of the fiscal year-end. Personal returns for sole proprietors are due June 15, with balances payable by April 30.` },
     { q: `What tax deductions are available for ${ind.name} companies?`, a: `Common write-offs include operating expenses, inventory costs, technology software licenses, marketing, employee wages, home workspace allocation, and capital assets depreciation.` },
@@ -5545,7 +5567,7 @@ industries.forEach(ind => {
           <div>
             <div class="section-header" style="text-align:left;margin-bottom:30px;">
               <h2>Why ${isHealthcare ? 'Clinics' : ind.name + ' Firms'} Partner with Us</h2>
-              <p>We are a dedicated accounting firm with years of experience navigating complex CRA rules. Our CPA tax accountants protect your business and optimize overall tax efficiency.</p>
+              <p>We are a dedicated accounting firm with years of experience navigating complex CRA rules. Our Accounting Firm tax accountants protect your business and optimize overall tax efficiency.</p>
               <div class="accent-line" style="margin:0;"></div>
             </div>
             <div class="grid-2" style="gap:20px;">
@@ -5581,10 +5603,10 @@ industries.forEach(ind => {
           </div>
           <div style="display:flex;align-items:center;justify-content:center;">
             <div class="why-choose-revslider" style="width: 100%;">
-              <img src="${isHealthcare ? '/images/healthcare_cpa_desk.png' : 'https://taxccount.com/wp-content/uploads/2024/10/Udit-Gupta-Image-1.jpg'}" alt="${isHealthcare ? 'Clinic Financial Management' : 'Udit Gupta CPA'}" class="slider-main-img" style="object-position: top; object-fit: cover;">
+              <img src="${isHealthcare ? '/images/healthcare_cpa_desk.png' : 'https://taxccount.com/wp-content/uploads/2024/10/Udit-Gupta-Image-1.jpg'}" alt="${isHealthcare ? 'Clinic Financial Management' : 'Udit Gupta Accounting Firm'}" class="slider-main-img" style="object-position: top; object-fit: cover;">
               ${!isHealthcare ? `
               <div class="slider-badge-floating">
-                <h4>Udit Gupta, CPA</h4>
+                <h4>Udit Gupta, Accounting Firm</h4>
                 <p>Founder &amp; Managing Director &bull; Big4 Alumnus &bull; In-depth Corporate Tax Specialist</p>
               </div>
               ` : ''}
@@ -5883,7 +5905,7 @@ locations.forEach(loc => {
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               <i class="fab fa-google google-icon"></i>
             </div>
-            <p class="review-text">"Excellent CPA services! They saved me thousands on my business tax return this year. Highly recommended."</p>
+            <p class="review-text">"Excellent Accounting Firm services! They saved me thousands on my business tax return this year. Highly recommended."</p>
             <div class="reviewer">
               <div class="reviewer-avatar">S</div>
               <span class="reviewer-name">Sarah Jenkins</span>
@@ -5953,7 +5975,7 @@ locations.forEach(loc => {
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               <i class="fab fa-google google-icon"></i>
             </div>
-            <p class="review-text">"Excellent CPA services! They saved me thousands on my business tax return this year. Highly recommended."</p>
+            <p class="review-text">"Excellent Accounting Firm services! They saved me thousands on my business tax return this year. Highly recommended."</p>
             <div class="reviewer">
               <div class="reviewer-avatar">S</div>
               <span class="reviewer-name">Sarah Jenkins</span>
@@ -6105,7 +6127,7 @@ locations.forEach(loc => {
 
   const rightColumnHtml = isToronto ? `
             <div class="hero-image" style="position: relative; width: 100%; max-width: 440px; margin: 0 auto; display: block; text-align: left;">
-              <img src="/images/udit_hero_transparent.png" alt="Udit Gupta CPA, CA - Taxfilings Canada" class="hero-expert-img" style="width: 100%; height: auto; display: block;">
+              <img src="/images/udit_hero_transparent.png" alt="Udit Gupta Accounting Firm, CA - Taxfilings Canada" class="hero-expert-img" style="width: 100%; height: auto; display: block;">
               
               <!-- Left Stack of Badges -->
               <div class="hero-badge-stack">
@@ -6115,11 +6137,11 @@ locations.forEach(loc => {
                 </div>
                 <div class="hero-badge-item badge-blue">
                   <i class="fas fa-certificate"></i>
-                  <span>CA, CPA <small style="font-size: 0.85em; font-weight: normal; opacity: 0.95;">(ICAI, MIA)</small></span>
+                  <span>CA, Accounting Firm <small style="font-size: 0.85em; font-weight: normal; opacity: 0.95;">(ICAI, MIA)</small></span>
                 </div>
                 <div class="hero-badge-item badge-green">
                   <i class="fas fa-file-alt"></i>
-                  <span>CPA Canada <small style="font-size: 0.85em; font-weight: normal; opacity: 0.95;">(In-Depth Tax Program)</small></span>
+                  <span>Accounting Firm Canada <small style="font-size: 0.85em; font-weight: normal; opacity: 0.95;">(In-Depth Tax Program)</small></span>
                 </div>
                 <div class="hero-badge-item badge-dark">
                   <i class="fas fa-file-alt"></i>
@@ -6153,7 +6175,7 @@ locations.forEach(loc => {
             <div class="loc-hero-card">
               <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&h=400&fit=crop" alt="Top Tax Accountant in ${loc.name}">
               <div class="loc-hero-card-body">
-                <h4>Udit Gupta, CPA</h4>
+                <h4>Udit Gupta, Accounting Firm</h4>
                 <p>Tax Expert &amp; Founder &bull; Providing expert filings in ${loc.name}</p>
               </div>
             </div>
@@ -6651,7 +6673,7 @@ pricingPlans.forEach(plan => {
 
             <h3 class="mt-30">What is Covered under this pricing?</h3>
             <ul class="check-list mt-20" style="margin-bottom:30px;">
-              <li>Full compliance preparation and validation by a CPA</li>
+              <li>Full compliance preparation and validation by a Accounting Firm</li>
               <li>Price Match Guarantee against any verified competitor rate</li>
               <li>Electronic filing directly to CRA</li>
               <li>Dedicated communication portal and email support</li>
@@ -6817,7 +6839,7 @@ const blogPosts = [
       <p>You need to attach Form T2125 to your personal T1 tax return file.</p>
 
       <h2>File Taxes Accurately</h2>
-      <p>Reconciling multiple T-slips and schedules requires certified diligence. We recommend engaging a CPA tax accountant to ensure optimal compliance.</p>
+      <p>Reconciling multiple T-slips and schedules requires certified diligence. We recommend engaging a Accounting Firm tax accountant to ensure optimal compliance.</p>
     `
   },
   {
@@ -6870,7 +6892,7 @@ const blogPosts = [
       <p>North York is home to thousands of growing businesses and startups. Operating a corporation here requires meticulous tax management to satisfy both federal CRA expectations and provincial tax filings.</p>
       
       <h3>Key Tax Obligations for Corporations</h3>
-      <p>Every incorporated business must file a T2 corporate tax return annually, even if there is no taxable income or active operations. Having a certified CPA ensure your filings are completed accurately prevents audit triggers.</p>
+      <p>Every incorporated business must file a T2 corporate tax return annually, even if there is no taxable income or active operations. Having a certified Accounting Firm ensure your filings are completed accurately prevents audit triggers.</p>
       
       <h3>Maximizing Capital Cost Allowances</h3>
       <p>By claiming the Capital Cost Allowance (CCA) on company equipment, vehicles, and computers, North York corporations can defer tax obligations and redirect cash flow to hire local talent and scale operations.</p>
@@ -6880,7 +6902,7 @@ const blogPosts = [
     slug: 'ottawa-corporate-tax-filing-experts',
     title: 'Ottawa Corporate Tax Filing Experts: Avoiding Penalties and Late Fees',
     date: 'January 5, 2026',
-    desc: 'Learn how Ottawa businesses navigate T2 filing deadlines, avoid costly interest charges, and leverage professional CPA guidance for tax peace of mind.',
+    desc: 'Learn how Ottawa businesses navigate T2 filing deadlines, avoid costly interest charges, and leverage Accounting Firm guidance for tax peace of mind.',
     content: `
       <h2>Avoiding Corporate Tax Penalties in Ottawa</h2>
       <p>The Canada Revenue Agency (CRA) enforces strict deadlines for corporate tax filing. Late submissions and unpaid balances lead to compounded daily interest and major penalties.</p>
@@ -6918,7 +6940,7 @@ const blogPosts = [
       <p>Many small business owners delay filing their T2 returns because they fear unpredictable hourly accounting bills. Fixed-fee corporate tax packages provide clarity and confidence.</p>
       
       <h3>Holding Company vs Active Corporation Pricing</h3>
-      <p>A holding company with minimal investment transactions requires different filing effort compared to an active retail business. Certified CPA services offer custom pricing plans suited to your complexity.</p>
+      <p>A holding company with minimal investment transactions requires different filing effort compared to an active retail business. Certified Accounting Firm services offer custom pricing plans suited to your complexity.</p>
       
       <h3>Why Pay Only After Delivery Matters</h3>
       <p>A transparent "pay after filing is complete" policy guarantees that you receive excellent service, accurate schedules, and timely electronic submission before paying a single dollar.</p>
@@ -6947,7 +6969,7 @@ const blogPosts = [
     desc: 'Save time and money during tax season with our comprehensive list of financial records, trial balance requirements, and corporate tax schedules.',
     content: `
       <h2>The Ultimate T2 Filing Checklist</h2>
-      <p>Being prepared for tax season reduces stress and helps your CPA uncover additional deductions. Gather these crucial documents early.</p>
+      <p>Being prepared for tax season reduces stress and helps your Accounting Firm uncover additional deductions. Gather these crucial documents early.</p>
       
       <h3>Required Financial Records</h3>
       <ul>
@@ -7147,7 +7169,7 @@ blogPosts.forEach(p => {
         <h1>${p.title}</h1>
         <div class="blog-meta-bar">
           <span><i class="far fa-calendar-alt"></i> Published: ${p.date}</span>
-          <span><i class="fas fa-user"></i> Written by Udit Gupta, CPA</span>
+          <span><i class="fas fa-user"></i> Written by Udit Gupta, Accounting Firm</span>
           <span><i class="fas fa-folder"></i> Category: Tax Guides &amp; Tips</span>
         </div>
       </div>
@@ -7180,7 +7202,7 @@ blogPosts.forEach(p => {
               <div>
                 <div class="author-name">Udit Gupta</div>
                 <div class="author-role">Founder, Tax Filings Canada</div>
-                <p class="author-bio">Udit is a Chartered Professional Accountant (CPA) in Canada with years of corporate tax, bookkeeping, and advisory experience, helping entrepreneurs scale operations compliant with CRA guidelines.</p>
+                <p class="author-bio">Udit is a Chartered Accounting Firm (Accounting Firm) in Canada with years of corporate tax, bookkeeping, and advisory experience, helping entrepreneurs scale operations compliant with CRA guidelines.</p>
               </div>
             </div>
           </div>
