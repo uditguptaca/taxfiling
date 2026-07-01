@@ -1566,12 +1566,12 @@ const getCorporateTaxStrategiesSection = () => {
       : 'background:#ffffff; border:1px solid var(--color-ivory-dark); box-shadow: 0 4px 15px rgba(0,0,0,0.02);';
 
     return `
-        <div class="service-card ${s.styleClass}" style="text-align:left; padding:25px; border-radius:12px; display:flex; gap:20px; align-items:flex-start; ${cardStyle}">
-          <div style="width:40px; height:40px; border-radius:50%; background:${iconBg}; color:${iconColor}; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;"><i class="${s.iconClass}"></i></div>
-          <div>
-            <h5 style="font-weight:700; margin-bottom:6px; font-size:1.05rem; line-height:1.3; min-height: 2.8rem; display: flex; align-items: center;">${s.title}</h5>
-            <div style="font-size:0.88rem; line-height:1.5; margin:0; opacity:0.95;">
-              <div style="display:none; margin-bottom:6px;">${s.summary} ${s.details}</div>
+        <div class="service-card ${s.styleClass}" style="text-align:left; padding:15px 18px; border-radius:10px; display:flex; gap:14px; align-items:flex-start; ${cardStyle}">
+          <div style="width:34px; height:34px; border-radius:50%; background:${iconBg}; color:${iconColor}; display:flex; align-items:center; justify-content:center; font-size:0.95rem; flex-shrink:0; margin-top:2px;"><i class="${s.iconClass}"></i></div>
+          <div style="flex-grow:1;">
+            <h5 style="font-weight:700; margin-bottom:4px; font-size:0.95rem; line-height:1.3; min-height: 2.6rem; display: flex; align-items: center; color: var(--color-slate-dark);">${s.title}</h5>
+            <div style="font-size:0.82rem; line-height:1.4; margin:0; opacity:0.95;">
+              <div style="display:none; margin-bottom:4px; font-weight:normal;">${s.summary} ${s.details}</div>
               <a href="javascript:void(0);" onclick="const d = this.previousElementSibling; const open = d.style.display === 'block'; d.style.display = open ? 'none' : 'block'; this.innerText = open ? 'Read More...' : 'Show Less';" style="color:${linkColor}; font-weight:700; text-decoration:underline;">Read More...</a>
             </div>
           </div>
@@ -1863,10 +1863,10 @@ const getCorporateTaxLocationsSection = () => {
 
 const getCorporateTaxFeeComparisonSection = () => {
   return `
-  <section class="section" style="background-color: var(--color-ivory-light); padding: 80px 0; border-top: 1px solid var(--color-ivory-dark); border-bottom: 1px solid var(--color-ivory-dark);">
+  <section class="section" style="background-color: var(--color-ivory-light); padding: 50px 0; border-top: 1px solid var(--color-ivory-dark); border-bottom: 1px solid var(--color-ivory-dark);">
     <div class="container" style="max-width: 960px; margin: 0 auto;">
-      <div class="section-header" style="text-align: center; margin-bottom: 40px;">
-        <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 12px; text-transform: none;">Corporate Tax Filing Fees: Gondaliya CPA vs Industry Average</h2>
+      <div class="section-header" style="text-align: center; margin-bottom: 30px;">
+        <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 12px; text-transform: none;">Corporate Tax Filing Fees: Tax Filings Canada vs Industry Average</h2>
         <p style="font-size: 1rem; color: var(--color-cloud-dark); font-weight: 500; margin: 0 auto; max-width: 700px;">Based on 2026 CPA fee survey data across Ontario accounting firms.</p>
         <div class="accent-line" style="background-color: var(--primary); margin: 15px auto 0;"></div>
       </div>
@@ -1874,11 +1874,11 @@ const getCorporateTaxFeeComparisonSection = () => {
       <style>
         .fee-table-container {
           border: 1px solid var(--color-ivory-dark);
-          border-radius: 12px;
+          border-radius: 8px;
           overflow: hidden;
           background: #ffffff;
-          box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-          margin-bottom: 25px;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+          margin-bottom: 20px;
         }
         .fee-table {
           width: 100%;
@@ -1887,13 +1887,13 @@ const getCorporateTaxFeeComparisonSection = () => {
           font-family: var(--font-primary);
         }
         .fee-table th {
-          padding: 18px 15px;
+          padding: 12px 15px;
           font-size: 0.95rem;
           font-weight: 700;
           color: var(--color-ivory-light);
         }
         .fee-table td {
-          padding: 22px 15px;
+          padding: 16px 15px;
           font-size: 1rem;
           border-bottom: 1px solid var(--color-ivory-dark);
         }
@@ -1946,14 +1946,14 @@ const getCorporateTaxFeeComparisonSection = () => {
         
         .fee-table-footer {
           background-color: var(--color-ivory-med);
-          padding: 20px 25px;
+          padding: 12px 20px;
           border-top: 1px solid var(--color-ivory-dark);
           font-size: 0.92rem;
           line-height: 1.5;
           color: var(--color-slate-dark);
           font-weight: 600;
           text-align: center;
-          border-radius: 0 0 12px 12px;
+          border-radius: 0 0 8px 8px;
         }
         
         @media (max-width: 600px) {
@@ -1965,7 +1965,7 @@ const getCorporateTaxFeeComparisonSection = () => {
             font-size: 0.95rem;
           }
           .fee-table-footer {
-            padding: 15px;
+            padding: 12px 15px;
             font-size: 0.85rem;
           }
         }
@@ -1977,7 +1977,7 @@ const getCorporateTaxFeeComparisonSection = () => {
             <tr>
               <th class="fee-col-service">Service</th>
               <th class="fee-col-avg">Industry Average</th>
-              <th class="fee-col-gondaliya">Gondaliya CPA</th>
+              <th class="fee-col-gondaliya">Tax Filings Canada</th>
               <th class="fee-col-save">You Save</th>
             </tr>
           </thead>
@@ -1985,8 +1985,8 @@ const getCorporateTaxFeeComparisonSection = () => {
             <tr class="fee-row-data">
               <td class="fee-val-service">Corporate Tax (T2) Filing</td>
               <td class="fee-val-avg">$1,200</td>
-              <td class="fee-val-gondaliya">From $400</td>
-              <td class="fee-val-save">$800+</td>
+              <td class="fee-val-gondaliya">From $90</td>
+              <td class="fee-val-save">$1,110+</td>
             </tr>
           </tbody>
         </table>
