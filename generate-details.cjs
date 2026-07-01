@@ -3935,14 +3935,19 @@ services.forEach(s => {
     ${heroHtml}
 
     <!-- 2. GOOGLE REVIEWS BAR -->
-    <div class="google-reviews-bar">
-      <span class="badge-txt">Excellent</span>
-      <div class="stars">
-        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+    ${isCorporateTax ? `
+      ${getGoogleReviewsMarquee()}
+      ${getPricingSection()}
+    ` : `
+      <div class="google-reviews-bar">
+        <span class="badge-txt">Excellent</span>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <span class="rating">Based on 929 reviews</span>
+        <span style="font-weight:700;color:#4285F4;"><i class="fab fa-google"></i> Google Rating</span>
       </div>
-      <span class="rating">Based on 929 reviews</span>
-      <span style="font-weight:700;color:#4285F4;"><i class="fab fa-google"></i> Google Rating</span>
-    </div>
+    `}
 
     <!-- 3. INTRO BLOCK -->
     ${customIntroHtml}
@@ -3970,7 +3975,7 @@ services.forEach(s => {
     ${getClientsLogoSection()}
 
     <!-- 10. GLOBAL PRICING -->
-    ${getPricingSection()}
+    ${isCorporateTax ? '' : getPricingSection()}
 
     <!-- 11. CASE STUDIES -->
     ${getCaseStudiesSection()}
