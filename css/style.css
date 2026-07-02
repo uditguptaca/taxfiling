@@ -3098,7 +3098,9 @@ p {
 .workflow-section {
   padding: 45px 0;
   overflow: hidden;
-  background-color: var(--body-bg);
+  background-color: var(--color-ivory-med);
+  border-top: 1px solid var(--color-ivory-dark);
+  border-bottom: 1px solid var(--color-ivory-dark);
 }
 
 .workflow-grid {
