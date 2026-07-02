@@ -14,22 +14,7 @@ const head = (title, description) => `
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
 `;
 
-const topBar = () => `
-  <div class="top-bar">
-    <div class="container">
-      <div class="top-bar-left">
-        <a href="tel:+14166190068"><i class="fas fa-phone-alt"></i> +1 (416) 619-0068</a>
-        <a href="mailto:contact@taxfilings.ca"><i class="fas fa-envelope"></i> contact@taxfilings.ca</a>
-      </div>
-      <div class="top-bar-right">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-      </div>
-    </div>
-  </div>
-`;
+const topBar = () => '';
 
 const header = (activePage = '') => {
   const isServicesActive = activePage.startsWith('services') ? 'active' : '';

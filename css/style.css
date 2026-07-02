@@ -273,12 +273,7 @@ p {
 
 /* ── Top Bar ───────────────────────────────── */
 .top-bar {
-  background: var(--top-bar);
-  color: var(--white);
-  height: var(--top-bar-height);
-  display: flex;
-  align-items: center;
-  font-size: 0.85rem;
+  display: none !important;
 }
 
 .top-bar .container {
