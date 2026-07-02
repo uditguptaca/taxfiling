@@ -231,36 +231,47 @@
             </div>
           </div>
           <div class="prc-hero-right">
-            <div class="prc-sticky-card" style="padding: 25px 22px;">
-              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin-bottom: 15px; text-align: center;">Get a Secure Quote</h3>
-              <form action="/contact.html" method="GET" style="display: flex; flex-direction: column; gap: 12px;">
-                <div style="display: flex; flex-direction: column; gap: 4px;">
-                  <label for="form-name" style="font-size: 0.8rem; font-weight: 700; color: #262625;">Name</label>
-                  <input type="text" id="form-name" name="name" required placeholder="Your full name" style="padding: 9px 12px; font-size: 0.9rem; border: 1px solid var(--color-ivory-dark); border-radius: 6px; background-color: #FAFAF7; color: #262625;">
+            <div class="prc-sticky-card" style="padding: 20px 18px; max-width: 440px; margin: 0 auto;">
+              <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--dark-green); margin-bottom: 12px; text-align: center;">Get a Secure Quote</h3>
+              <form action="/contact.html" method="GET" style="display: flex; flex-direction: column; gap: 8px;">
+                
+                <!-- Name and Email Row -->
+                <div style="display: flex; gap: 10px; width: 100%;">
+                  <div style="display: flex; flex-direction: column; gap: 2px; flex: 1;">
+                    <label for="form-name" style="font-size: 0.76rem; font-weight: 700; color: #262625;">Name</label>
+                    <input type="text" id="form-name" name="name" required placeholder="Full name" style="padding: 7px 10px; font-size: 0.85rem; border: 1px solid var(--color-ivory-dark); border-radius: 6px; background-color: #FAFAF7; color: #262625; width: 100%; box-sizing: border-box;">
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 2px; flex: 1;">
+                    <label for="form-email" style="font-size: 0.76rem; font-weight: 700; color: #262625;">Email</label>
+                    <input type="email" id="form-email" name="email" required placeholder="Email address" style="padding: 7px 10px; font-size: 0.85rem; border: 1px solid var(--color-ivory-dark); border-radius: 6px; background-color: #FAFAF7; color: #262625; width: 100%; box-sizing: border-box;">
+                  </div>
                 </div>
-                <div style="display: flex; flex-direction: column; gap: 4px;">
-                  <label for="form-email" style="font-size: 0.8rem; font-weight: 700; color: #262625;">Email</label>
-                  <input type="email" id="form-email" name="email" required placeholder="Your email address" style="padding: 9px 12px; font-size: 0.9rem; border: 1px solid var(--color-ivory-dark); border-radius: 6px; background-color: #FAFAF7; color: #262625;">
+
+                <!-- Phone and Query Row -->
+                <div style="display: flex; gap: 10px; width: 100%;">
+                  <div style="display: flex; flex-direction: column; gap: 2px; flex: 1;">
+                    <label for="form-phone" style="font-size: 0.76rem; font-weight: 700; color: #262625;">Phone</label>
+                    <input type="tel" id="form-phone" name="phone" required placeholder="Phone number" style="padding: 7px 10px; font-size: 0.85rem; border: 1px solid var(--color-ivory-dark); border-radius: 6px; background-color: #FAFAF7; color: #262625; width: 100%; box-sizing: border-box;">
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 2px; flex: 1;">
+                    <label for="form-query" style="font-size: 0.76rem; font-weight: 700; color: #262625;">Service Query</label>
+                    <select id="form-query" name="query" style="padding: 7px 10px; font-size: 0.85rem; border: 1px solid var(--color-ivory-dark); border-radius: 6px; background-color: #FAFAF7; color: #262625; cursor: pointer; width: 100%; height: 33px; box-sizing: border-box;">
+                      <option value="student">Student Tax ($25)</option>
+                      <option value="employed">Employed Tax ($50)</option>
+                      <option value="self-employed">Self-Employed ($150)</option>
+                      <option value="cross-border">Cross-Border ($300)</option>
+                      <option value="other">Other Query</option>
+                    </select>
+                  </div>
                 </div>
-                <div style="display: flex; flex-direction: column; gap: 4px;">
-                  <label for="form-phone" style="font-size: 0.8rem; font-weight: 700; color: #262625;">Phone</label>
-                  <input type="tel" id="form-phone" name="phone" required placeholder="Your phone number" style="padding: 9px 12px; font-size: 0.9rem; border: 1px solid var(--color-ivory-dark); border-radius: 6px; background-color: #FAFAF7; color: #262625;">
+
+                <!-- Note -->
+                <div style="display: flex; flex-direction: column; gap: 2px; width: 100%;">
+                  <label for="form-note" style="font-size: 0.76rem; font-weight: 700; color: #262625;">Note</label>
+                  <textarea id="form-note" name="note" rows="1" placeholder="Additional details..." style="padding: 7px 10px; font-size: 0.85rem; border: 1px solid var(--color-ivory-dark); border-radius: 6px; background-color: #FAFAF7; color: #262625; resize: vertical; width: 100%; box-sizing: border-box;"></textarea>
                 </div>
-                <div style="display: flex; flex-direction: column; gap: 4px;">
-                  <label for="form-query" style="font-size: 0.8rem; font-weight: 700; color: #262625;">Service Query</label>
-                  <select id="form-query" name="query" style="padding: 9px 12px; font-size: 0.9rem; border: 1px solid var(--color-ivory-dark); border-radius: 6px; background-color: #FAFAF7; color: #262625; cursor: pointer;">
-                    <option value="student">Student Tax Return ($25)</option>
-                    <option value="employed">Employed Tax Return ($50)</option>
-                    <option value="self-employed">Self-Employed / Business ($150)</option>
-                    <option value="cross-border">Cross-Border Return ($300)</option>
-                    <option value="other">Other Query</option>
-                  </select>
-                </div>
-                <div style="display: flex; flex-direction: column; gap: 4px;">
-                  <label for="form-note" style="font-size: 0.8rem; font-weight: 700; color: #262625;">Note</label>
-                  <textarea id="form-note" name="note" rows="2" placeholder="Any additional details..." style="padding: 9px 12px; font-size: 0.9rem; border: 1px solid var(--color-ivory-dark); border-radius: 6px; background-color: #FAFAF7; color: #262625; resize: vertical;"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 50px; font-weight: 700; text-align: center; padding: 12px; background-color: var(--primary); border-color: var(--primary); color: #ffffff; margin-top: 5px;">Get Free Quote</button>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 50px; font-weight: 700; text-align: center; padding: 10px; background-color: var(--primary); border-color: var(--primary); color: #ffffff; margin-top: 6px; font-size: 0.9rem;">Get Free Quote</button>
               </form>
             </div>
           </div>
