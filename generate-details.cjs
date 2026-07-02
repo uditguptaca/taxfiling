@@ -1186,7 +1186,7 @@ const getWhyChooseUsSection = (pageName, customTitle = null, customSubtitle = nu
     const isManilla = idx === 0 || idx === 3;
     const cardBg = isManilla ? 'var(--color-manilla)' : '#ffffff';
     const cardBorder = isManilla ? 'rgba(25, 25, 25, 0.08)' : 'var(--color-ivory-dark)';
-    const descColor = isManilla ? 'var(--color-slate-dark)' : 'var(--color-slate-medium)';
+    const descColor = isManilla ? 'var(--color-slate-dark)' : 'var(--color-slate-med)';
 
     // Alternate checkmarks between Book Cloth (#CC785C) and Kraft (#D4A27F) from brand palette
     const bg = idx % 2 === 0 ? 'rgba(204, 120, 92, 0.15)' : 'rgba(212, 162, 127, 0.2)';
@@ -1207,7 +1207,7 @@ const getWhyChooseUsSection = (pageName, customTitle = null, customSubtitle = nu
         <div style="display:flex; flex-direction:column; justify-content:center;">
           <div class="section-header" style="text-align:left; margin-bottom:30px; max-width:100%;">
             <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--color-slate-dark); margin-bottom: 12px; line-height: 1.25;">${title}</h2>
-            <p style="display:block !important; font-size:0.95rem; line-height:1.55; color: var(--color-slate-medium); margin: 10px 0 15px 0;">${subtitle}</p>
+            <p style="display:block !important; font-size:0.95rem; line-height:1.55; color: var(--color-slate-med); margin: 10px 0 15px 0;">${subtitle}</p>
             <div class="accent-line" style="margin:0; display:block !important; width:50px; height:3px; background:var(--color-bookcloth); border-radius:2px;"></div>
           </div>
           <div class="grid-2" style="gap:20px;">
@@ -1857,7 +1857,7 @@ const getCorporateTaxDetailedServicesDropdown = () => {
         <i class="fas fa-chevron-down arrow-icon" style="transition: transform 0.3s ease; color: var(--color-cloud-dark); transform: rotate(0deg);"></i>
       </div>
       <div class="srv-accordion-body" style="display: none; padding: 20px 25px; border-top: 1px solid var(--color-ivory-dark); background: #ffffff;">
-        <p style="font-size: 0.9rem; line-height: 1.55; color: var(--color-slate-medium); margin-bottom: 15px;">
+        <p style="font-size: 0.9rem; line-height: 1.55; color: var(--color-slate-med); margin-bottom: 15px;">
           ${item.summary}
         </p>
         <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
@@ -1970,7 +1970,7 @@ const getCorporateTaxLocationsSection = () => {
     <div class="container">
       <div class="section-header" style="text-align: center; margin-bottom: 50px;">
         <h2 style="font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--color-slate-dark); margin-bottom: 15px; text-transform: none;">Pan-Canada Corporate Tax Coverage</h2>
-        <p style="font-size: 1.1rem; color: var(--color-slate-medium); max-width: 850px; margin: 0 auto; line-height: 1.6;">Our Accounting Firm team provides reliable corporate tax filing services to businesses throughout all Canadian provinces. We understand provincial tax credits, local regulations, and CRA compliance needs specific to each region. Corporate tax filing is available virtually to corporations across Canada.</p>
+        <p style="font-size: 1.1rem; color: var(--color-slate-med); max-width: 850px; margin: 0 auto; line-height: 1.6;">Our Accounting Firm team provides reliable corporate tax filing services to businesses throughout all Canadian provinces. We understand provincial tax credits, local regulations, and CRA compliance needs specific to each region. Corporate tax filing is available virtually to corporations across Canada.</p>
         <div class="accent-line" style="background-color: var(--primary); margin: 20px auto 0;"></div>
       </div>
 
