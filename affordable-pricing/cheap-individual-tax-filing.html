@@ -197,25 +197,12 @@
         color: var(--dark-green);
         margin-bottom: 15px;
       }
-      .prc-sticky-card p {
-        font-size: 0.9rem;
-        color: var(--body-text-light);
-        margin-bottom: 20px;
-        line-height: 1.5;
-      }
-      .prc-reviews-line {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-weight: 700;
-        font-size: 0.85rem;
-        color: var(--body-text);
-        margin-top: 20px;
-        border-top: 1px solid var(--border-gray);
-        padding-top: 15px;
-      }
-      .prc-reviews-line i {
-        color: var(--star-gold);
+      .prc-sticky-card input:focus, 
+      .prc-sticky-card select:focus, 
+      .prc-sticky-card textarea:focus {
+        border-color: var(--primary) !important;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(251, 119, 13, 0.15);
       }
       @media (max-width: 991px) {
         .prc-hero-grid {
@@ -244,15 +231,37 @@
             </div>
           </div>
           <div class="prc-hero-right">
-            <div class="prc-sticky-card">
-              <h3>Secure Fixed Quote</h3>
-              <p>Schedule a call with our tax experts to receive a customized service quote. Price Match &amp; Refund Guarantee included.</p>
-              <a href="/contact.html" class="btn btn-primary" style="width:100%;">Book Free Call</a>
-              <div class="prc-reviews-line">
-                <span>Excellent 4.9/5</span>
-                <div style="display:flex;gap:2px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <span>929+ Reviews</span>
-              </div>
+            <div class="prc-sticky-card" style="padding: 25px 22px;">
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--dark-green); margin-bottom: 15px; text-align: center;">Get a Secure Quote</h3>
+              <form action="/contact.html" method="GET" style="display: flex; flex-direction: column; gap: 12px;">
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                  <label for="form-name" style="font-size: 0.8rem; font-weight: 700; color: #262625;">Name</label>
+                  <input type="text" id="form-name" name="name" required placeholder="Your full name" style="padding: 9px 12px; font-size: 0.9rem; border: 1px solid var(--color-ivory-dark); border-radius: 6px; background-color: #FAFAF7; color: #262625;">
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                  <label for="form-email" style="font-size: 0.8rem; font-weight: 700; color: #262625;">Email</label>
+                  <input type="email" id="form-email" name="email" required placeholder="Your email address" style="padding: 9px 12px; font-size: 0.9rem; border: 1px solid var(--color-ivory-dark); border-radius: 6px; background-color: #FAFAF7; color: #262625;">
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                  <label for="form-phone" style="font-size: 0.8rem; font-weight: 700; color: #262625;">Phone</label>
+                  <input type="tel" id="form-phone" name="phone" required placeholder="Your phone number" style="padding: 9px 12px; font-size: 0.9rem; border: 1px solid var(--color-ivory-dark); border-radius: 6px; background-color: #FAFAF7; color: #262625;">
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                  <label for="form-query" style="font-size: 0.8rem; font-weight: 700; color: #262625;">Service Query</label>
+                  <select id="form-query" name="query" style="padding: 9px 12px; font-size: 0.9rem; border: 1px solid var(--color-ivory-dark); border-radius: 6px; background-color: #FAFAF7; color: #262625; cursor: pointer;">
+                    <option value="student">Student Tax Return ($25)</option>
+                    <option value="employed">Employed Tax Return ($50)</option>
+                    <option value="self-employed">Self-Employed / Business ($150)</option>
+                    <option value="cross-border">Cross-Border Return ($300)</option>
+                    <option value="other">Other Query</option>
+                  </select>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                  <label for="form-note" style="font-size: 0.8rem; font-weight: 700; color: #262625;">Note</label>
+                  <textarea id="form-note" name="note" rows="2" placeholder="Any additional details..." style="padding: 9px 12px; font-size: 0.9rem; border: 1px solid var(--color-ivory-dark); border-radius: 6px; background-color: #FAFAF7; color: #262625; resize: vertical;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 50px; font-weight: 700; text-align: center; padding: 12px; background-color: var(--primary); border-color: var(--primary); color: #ffffff; margin-top: 5px;">Get Free Quote</button>
+              </form>
             </div>
           </div>
         </div>
