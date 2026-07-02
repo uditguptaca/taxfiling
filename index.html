@@ -2108,22 +2108,6 @@
           color: #fff;
           box-shadow: 0 4px 6px -1px rgba(204, 120, 92, 0.2);
         }
-        .loc-item.view-more-btn {
-          border-color: #ef4444 !important;
-          color: #ef4444 !important;
-          background: rgba(239, 68, 68, 0.06) !important;
-        }
-        .loc-item.view-more-btn:hover {
-          background: #ef4444 !important;
-          color: #fff !important;
-          border-color: #ef4444 !important;
-        }
-        .loc-item.view-more-btn.active {
-          background: #ef4444 !important;
-          color: #fff !important;
-          border-color: #ef4444 !important;
-          box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.2) !important;
-        }
         @media (max-width: 991px) {
           .locator-widget-container {
             grid-template-columns: 1fr;
@@ -2140,16 +2124,16 @@
           
           <!-- Province selection pills -->
           <div class="prov-filter-container">
-            <button class="prov-btn active" data-prov="ontario">Accountant TaxFilings Ontario Accountant TaxFilings</button>
-            <button class="prov-btn" data-prov="bc">Accountant TaxFilings British Columbia Accountant TaxFilings</button>
-            <button class="prov-btn" data-prov="alberta">Accountant TaxFilings Alberta Accountant TaxFilings</button>
-            <button class="prov-btn" data-prov="quebec">Accountant TaxFilings Quebec Accountant TaxFilings</button>
-            <button class="prov-btn" data-prov="manitoba">Accountant TaxFilings Manitoba Accountant TaxFilings</button>
-            <button class="prov-btn" data-prov="saskatchewan">Accountant TaxFilings Saskatchewan Accountant TaxFilings</button>
-            <button class="prov-btn" data-prov="novascotia">Accountant TaxFilings Nova Scotia Accountant TaxFilings</button>
-            <button class="prov-btn" data-prov="newbrunswick">Accountant TaxFilings New Brunswick Accountant TaxFilings</button>
-            <button class="prov-btn" data-prov="pei">Accountant TaxFilings Prince Edward Island Accountant TaxFilings</button>
-            <button class="prov-btn" data-prov="newfoundland">Accountant TaxFilings Newfoundland &amp; Labrador Accountant TaxFilings</button>
+            <button class="prov-btn active" data-prov="ontario">Ontario Accountant TaxFilings</button>
+            <button class="prov-btn" data-prov="bc">British Columbia Accountant TaxFilings</button>
+            <button class="prov-btn" data-prov="alberta">Alberta Accountant TaxFilings</button>
+            <button class="prov-btn" data-prov="quebec">Quebec Accountant TaxFilings</button>
+            <button class="prov-btn" data-prov="manitoba">Manitoba Accountant TaxFilings</button>
+            <button class="prov-btn" data-prov="saskatchewan">Saskatchewan Accountant TaxFilings</button>
+            <button class="prov-btn" data-prov="novascotia">Nova Scotia Accountant TaxFilings</button>
+            <button class="prov-btn" data-prov="newbrunswick">New Brunswick Accountant TaxFilings</button>
+            <button class="prov-btn" data-prov="pei">Prince Edward Island Accountant TaxFilings</button>
+            <button class="prov-btn" data-prov="newfoundland">Newfoundland &amp; Labrador Accountant TaxFilings</button>
           </div>
 
           <!-- Cities section header -->
@@ -2333,30 +2317,7 @@
           
           const desc = item.getAttribute('data-desc');
           
-          const provCodes = {
-            'ontario': 'ON',
-            'bc': 'BC',
-            'alberta': 'AB',
-            'quebec': 'QC',
-            'manitoba': 'MB',
-            'saskatchewan': 'SK',
-            'novascotia': 'NS',
-            'newbrunswick': 'NB',
-            'pei': 'PE',
-            'newfoundland': 'NL'
-          };
-          const prov = item.getAttribute('data-prov');
-          const city = item.getAttribute('data-city');
-          const provCode = provCodes[prov] || '';
-          
-          let displayTitle = '';
-          if (city === 'More Locations') {
-            displayTitle = 'More Locations';
-          } else {
-            displayTitle = 'Accountant TaxFilings ' + city + ', ' + provCode;
-          }
-          
-          cardTitle.innerHTML = `<i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> ` + displayTitle;
+          cardTitle.innerHTML = `<i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> ` + item.textContent;
           cardDesc.textContent = desc;
         }
         
